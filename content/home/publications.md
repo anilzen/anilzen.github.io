@@ -11,10 +11,11 @@ headless: true
 weight: 90
 
 title: Selected Publications
-subtitle: 'Selection from different journals: Analysis & PDE, Physical Review Letters, Physical Review D, Physical Review X, Journal of Computational Physics, Nonlinearity, and Classical and Quantum Gravity. 
+subtitle: 'My work spans a wide range of topics including analysis of PDEs, gravitational waves, numerical relativity, perturbation theory, and computational methods. 
 <br>
 <br>
-My work spans a wide range of topics including analysis of PDEs, gravitational waves, numerical relativity, perturbation theory, and computational methods. '
+Selected papers from different journals: Analysis & PDE, Physical Review Letters, Physical Review D, Physical Review X, Journal of Computational Physics, Nonlinearity, and Classical and Quantum Gravity. 
+'
 
 content:
   # Page type to display. E.g. post, talk, publication...
