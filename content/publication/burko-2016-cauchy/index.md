@@ -8,9 +8,9 @@ authors:
 - Lior Burko
 - Gaurav Khanna
 - Anıl Zenginoğlu
-tags: [Hyperboloidal]
+tags: [Hyperboloidal, Kerr]
 categories: []
-date: '2016-01-01'
+date: '2016-02-09'
 lastmod: 2021-05-25T22:33:15-04:00
 featured: false
 draft: false
@@ -34,19 +34,26 @@ publication_types:
 - '2'
 abstract: The Cauchy horizon inside a perturbed Kerr black hole develops an instability
   that transforms it into a curvature singularity. We solve for the linearized Weyl
-  scalars ψ 0 and ψ 4 and for the curvature scalar R α β γ δ R α β γ δ along outgoing
+  scalars $ψ_0$ and $ψ_4$ and for the curvature scalar $R_{α β γ δ} R^{α β γ δ}$ along outgoing
   null rays approaching the Cauchy horizon in the interior of perturbed Kerr black
   holes using the Teukolsky equation, and compare our results with those found in
   perturbation analysis. Our results corroborate the previous perturbation analysis
   result that at its early parts the Cauchy horizon evolves into a deformationally
-  weak, null, scalar-curvature singularity. We find excellent agreement for ψ 0 (u=
-  const, v), where u, v are advanced and retarded times, respectively. We do find,
-  however, that the exponential growth rate of R α β γ δ R α β γ δ (u= const, v) approaching
+  weak, null, scalar-curvature singularity. We find excellent agreement for $ψ_0(u=$
+  const$, v)$, where $u, v$ are advanced and retarded times, respectively. We do find,
+  however, that the exponential growth rate of $R_{α β γ δ} R^{α β γ δ} (u=$const$, v)$ approaching
   the singularity is dramatically slower than that found in perturbation analysis,
-  and that the angular frequency is in …
-publication: '*PHYSICAL REVIEW D*'
+  and that the angular frequency is in excellent agreement.
+  <br>
+  <h4>Erratum</h4>
+  In this Erratum we correct the behavior of the Weyl scalar $ψ_4$ and of the
+  linearized curvature scalar $K≔ R_{αβγδ}R^{αβγδ}$ approaching the mass-inflation singularity
+  along an outgoing null direction. In the original paper... <br>
+publication: '*Physical Review D*'
 url_pdf: https://arxiv.org/pdf/1601.05120
 links:
   - name: Journal
     url: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.93.041501
+  - name: Erratum
+    url: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.96.129903
 ---
