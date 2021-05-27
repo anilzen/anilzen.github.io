@@ -14,7 +14,7 @@ title: Selected Publications
 subtitle: 'My work spans a wide range of topics including analysis of PDEs, gravitational waves, numerical relativity, perturbation theory, and computational methods. 
 <br>
 <br>
-Selected papers from different journals: Analysis & PDE, Physical Review Letters, Physical Review D, Physical Review X, Journal of Computational Physics, Nonlinearity, and Classical and Quantum Gravity. 
+Each paper on this list is from a different journal: Analysis & PDE, Physical Review Letters, Physical Review D, Physical Review X, Journal of Computational Physics, Nonlinearity, and Classical and Quantum Gravity. 
 '
 
 content:

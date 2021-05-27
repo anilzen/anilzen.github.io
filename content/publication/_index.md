@@ -14,6 +14,8 @@ header:
   caption: "" #"Digital Infinity"
   image: "Banner_Infinity.jpg"
 ---
-### Highlights
+
+
+<!-- ### Highlights
 - Solved the outer boundary problem for wave equation.
-- Two of my papers have been cited by the detection of gravitational waves.
+- Two of my papers have been cited by the detection of gravitational waves. -->
