@@ -7,11 +7,11 @@ subtitle: ''
 summary: ''
 authors:
 - Anıl Zenginoğlu
-- Dario Nunez
+- Darío Núñez
 - Sascha Husa
 tags: []
 categories: []
-date: '2009-01-01'
+date: '2009-01-13'
 lastmod: 2021-05-25T22:33:13-04:00
 featured: false
 draft: false

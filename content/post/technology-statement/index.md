@@ -1,6 +1,7 @@
 ---
+active: false
 title: Technology Statement
-subtitle: A concise description of my past contributions to scientific research, my current projects, and future plans.
+subtitle: Past contributions to scientific research, current projects, and future plans.
 
 # Summary for listings and search engines
 summary: Hyperboloidal foliations, wave equations, Helmholtz equations, applied relativity, adaptive Kalman regression for numerical weather forecasting, central schemes for conservation laws.
@@ -18,7 +19,7 @@ lastmod: "2021-05-01T00:00:00Z"
 draft: false
 
 # Show this page in the Featured widget?
-featured: true
+featured: false
 
 # # Featured image
 # # Place an image named `featured.jpg/png` in this page's folder and customize its options here.

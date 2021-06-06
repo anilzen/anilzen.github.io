@@ -1,4 +1,5 @@
 ---
+active: false
 title: Administrative Statement
 subtitle: What is my goal in administration in academia.
 
@@ -29,7 +30,7 @@ image:
   preview_only: false
 
 authors:
-- admin
+- anil
 
 tags:
 - Administration
@@ -39,11 +40,3 @@ categories:
 ---
 
 ## Administrative Statement
-
-Olllaaala 
-
-  <script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fnetwork%2Ffiles%2FtMY3L9YN96cbkrfji&commas=true&jsonp=1"></script> 
-  
- <div>
- Nedir
- </div>

@@ -1,9 +1,10 @@
 ---
 title: Research Statement
-subtitle: A concise description of my past contributions to scientific research, current projects, and future plans.
+subtitle: Past contributions to scientific research, current projects, and future plans
 
 # Summary for listings and search engines
-summary: Hyperboloidal foliations, wave equations, Helmholtz equations, applied relativity, adaptive Kalman regression for numerical weather forecasting, central schemes for conservation laws.
+summary: Past contributions to scientific research, current projects, and future plans.
+
 
 # Link this post with a project
 projects: []
@@ -37,14 +38,39 @@ tags:
 categories:
 - Research
 ---
+Most of my research can be summarized as *follow the light to infinity*. Below I explain these words in reverse order: infinity, light, follow.
+
+### Infinity
+
+> Mathematics is the science of the infinite.
+> <div class="float-right">Hermann Weyl (1930)</div>
+<br>
+
+You must have some familiarity with infinity if you're reading this. Most of us think of the in-finite as that which does not end. There are many approaches to this intriguing notion and if you go down the rabbit hole, Weyl's seemingly presumptuous assessment above starts making more sense. Infinity is everywhere in mathematics. Maybe you've wondered how space could end (what's on the other side of the end?), or thought about [Achilles overtaking the tortoise](https://plato.stanford.edu/entries/paradox-zeno/#AchTor) while you were racing your friends, or explained someone how you can fit infinitely many people infinitely many times into [Hilbert's Hotel](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel).
+
+But why would a physicist study it? All examples above are clearly mathematical constructs. Racers do overtake each other, and if a hotel is full you have to go find another one. After all, there is nothing *truly* infinite in the physical world.
+
+Infinity in physics is an excellent idealization in many circumstances. It is important here to make a distinction between **idealization** and **approximation**. Our best physical theories are idealizations of the natural world. Given [the unreasonable effectiveness of mathematics in the natural sciences](https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf), it is important to keep these idealizations in tact, instead of breaking them in approximations. 
+
+The infinitely far is an idealization of a very large distance. Just like the [real numbers](https://en.wikipedia.org/wiki/Real_number) are more convenient than [fuzzy numbers](https://en.wikipedia.org/wiki/Fuzzy_number), the infinitely far is more convenient than some arbitrary large distance. 
+
+
+### Light 
+
+> Henceforth space by itself, and time by itself, are doomed to fade away into mere shadows, and only a kind of union of the two will preserve an independent reality.
+> <div class="float-right">Hermann Minkowski (1908)</div>
+<br>
+
+### Follow
+
 
 ### Highlights
+- I pioneered the use of horizon-penetrating, hyperboloidal coordinates in black hole perturbation theory [[1]](/publication/zenginoglu-2008-hyperboloidal/), [[2]](/publication/zenginoglu-2011-geometric/) and performed the first numerical computations with such coordinates [[3]](/publication/zenginoglu-2008-tail/), [[4]](/publication/zenginoglu-2009-gravitational/), [[5]](/publication/zenginoglu-2010-asymptotics/).
+- I developed a practical method that solves the *outer boundary problem* and the *radiation extraction problem* in numerical calculations of wave equations [[6]](/publication/zenginoglu-2011-hyperboloidal/).
+- Together with Chad Galley, I computed the first global approximation of a black hole Green function in the time domain and explained the shape of caustic echoes from black holes by an optical effect discovered in 1890 [[7]](/publication/zenginoglu-2012-caustic/).
+- Together with Gaurav Khanna, I computed the first gravitational waves at null infinity on the background of a rotating black hole demonstrating an efficiency gain of at least 5000 in one simulation [[8]](/publication/zenginoglu-2011-null/).
+- Two of my papers published as part of the [Simulating-eXtreme-Spacetimes Collaboration](https://www.black-holes.org/) have been cited by the first detection of gravitational waves which led to the 2017 Nobel Prize in Physics [[9]](/publication/mroue-2013-catalog/), [[10]](/publication/pan-2014-eob/).
 
-- I constructed a solution to the outer boundary and the radiation extraction problems in numerical simulations of wave equations
-- I pioneered the use of horizon-penetrating, hyperboloidal coordinates in black hole perturbation theory by constructing general and suitable coordinates for hyperboloidal surfaces in black hole spacetimes ([2]), and performed the first numerical calculations with them ([3]). This approach is now commonly applied in the current literature and can be expected to have a lasting impact on black hole theory.
-- Two papers that I published ([4]) as part of the Simulating-eXtreme-Spacetimes collaboration during my time at Caltech have been cited by the announcement of the Nobel prize winning direct detection of gravitational waves from a binary black hole merger ([5]).
-- My latest collaboration exploring the interior singularity of rotating black holes ([6]) was featured in various news outlets ([7]) in 2016.
+## Current Projects
 
-### Main contribution
-
-
+## Future Plans

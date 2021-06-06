@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Saddle-point dynamics of a Yang-–Mills field on the exterior Schwarzschild
+title: Saddle-point dynamics of a Yang—Mills field on the exterior Schwarzschild
   spacetime
 subtitle: ''
 summary: ''
@@ -11,7 +11,7 @@ authors:
 - Anıl Zenginoğlu
 tags: [Hyperboloidal]
 categories: []
-date: '2010-01-01'
+date: '2010-07-16'
 lastmod: 2021-05-25T22:33:16-04:00
 featured: false
 draft: false

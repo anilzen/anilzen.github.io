@@ -6,9 +6,9 @@ subtitle: ''
 summary: ''
 authors:
 - Anıl Zenginoğlu
-tags: []
+tags: [hyperboloidal, horizon-penetrating]
 categories: []
-date: '2011-01-01'
+date: '2011-06-17'
 lastmod: 2021-05-25T22:33:14-04:00
 featured: false
 draft: false
@@ -17,8 +17,9 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ''
-  focal_point: ''
+  placement: 1
+  caption: 'Horizon-penetrating, hyperboloidal coordinates for black hole perturbation theory'
+  focal_point: 'Center'
   preview_only: false
 
 # Projects (optional).
@@ -38,4 +39,7 @@ abstract: Black hole perturbation theory is typically studied on time surfaces t
   of short-ranged potentials for the perturbation equations in frequency domain.
 publication: '*Physical Review D*'
 url_pdf: https://arxiv.org/pdf/1102.2451
+links:
+  - name: Journal
+    url: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.83.127502
 ---

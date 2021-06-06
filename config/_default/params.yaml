@@ -23,7 +23,7 @@ twitter: ''
 email: anil@umd.edu
 phone: 301-405-8886
 address:
-  street: 4254 Stadium Drive
+  street: 4223 Atlantic Bldg., 4254 Stadium Drive
   city: College Park
   region: MD
   postcode: '20742'
@@ -94,7 +94,7 @@ show_related:
 reading_time: true
 section_pager: false
 docs_section_pager: true
-sharing: true
+sharing: false
 copyright_license:
   enable: false
   allow_derivatives: false

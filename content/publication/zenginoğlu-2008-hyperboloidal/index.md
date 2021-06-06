@@ -6,7 +6,7 @@ subtitle: ''
 summary: ''
 authors:
 - Anıl Zenginoğlu
-tags: [Hyperboloidal]
+tags: [hyperboloidal, horizon-penetrating]
 categories: []
 date: '2008-06-19'
 lastmod: 2021-05-25T22:33:10-04:00
@@ -18,7 +18,7 @@ draft: false
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: 'First construction of horizon-penetrating, hyperboloidal coordinates.'
-  focal_point: ''
+  focal_point: 'Center'
   preview_only: false
 
 # Projects (optional).
