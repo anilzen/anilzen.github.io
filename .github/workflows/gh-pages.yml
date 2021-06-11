@@ -14,7 +14,7 @@ jobs:
           submodules: false  # Fetch Hugo themes as submodules if true
 
       - name: Setup Node for PostCSS
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: '14'
           check-latest: true
