@@ -146,9 +146,6 @@ marketing:
   google_site_verification: 'CVDtdnmvDztdvP8XA_Fh0StEBOfqy3DM5L6GyojfVgk'
   baidu_site_verification: ''
   baidu_tongji: ''
-# cms:
-#   branch: master
-#   local_backend: false
 icon:
   pack:
     ai: false
