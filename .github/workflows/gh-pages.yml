@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '16'
           check-latest: true
-      - run: npm install
-      - run: npm i @fullhuman/postcss-purgecss
+        run: npm install
+        run: npm i @fullhuman/postcss-purgecss
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
