@@ -20,11 +20,12 @@ bio: Researcher, administrator, and technologist; exploring spacetime infinity a
 
 # Interests to show in About widget
 interests:
+- Black Holes
 - Wave Equations
-- Null Infinity
+- Conservation Laws
 - Gravitational Waves
+- Hyperboloidal Foliations
 - Adaptive Kalman Regression
-- Fluid Dynamics
 - Digital Transformation
 - Philosophy
 
@@ -51,7 +52,7 @@ social:
   link: 'mailto:anil@umd.edu'
 - icon: linkedin
   icon_pack: fab
-  link: 'https://www.linkedin.com/in/anıl-zenginoğlu-9127a360/'
+  link: 'https://www.linkedin.com/in/anilzen/'
 - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: ai
   link: https://scholar.google.com/citations?user=M8NnUIQAAAAJ&hl=en
@@ -79,7 +80,7 @@ email: "anil@umd.edu"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am an Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu) with broad experience in research, administration, and information technologies.
+Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu) with broad experience in research, administration, and information technologies.
 
 As a researcher, I work on wave equations, null infinity, gravitational waves, weather forecasting, and conservation laws. As an administrator, I bring researchers together in thematically focused but geographically distributed networks. As a technologist, I drive digital transformation to increase the efficiency of business processes that support research and education. 
 

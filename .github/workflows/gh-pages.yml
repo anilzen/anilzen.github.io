@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main
 
 jobs:
   deploy:
@@ -11,13 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: false  # Fetch Hugo themes as submodules if true
+          submodules: false 
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
       - run: npm install
-
-        # run: npm i @fullhuman/postcss-purgecss
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
