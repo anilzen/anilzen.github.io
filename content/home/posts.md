@@ -1,5 +1,5 @@
 ---
-active: false
+active: true
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: featured
@@ -10,8 +10,8 @@ headless: true
 # Order that this section appears on the page.
 weight: 30
 
-title: Featured Posts
-subtitle:
+title: Posts
+subtitle: Please reach out if any of these thoughts resonate with you
 
 content:
   # Page type to display. E.g. post, talk, publication...
