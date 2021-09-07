@@ -11,7 +11,7 @@ headless: true
 weight: 30
 
 title: Posts
-subtitle: Please reach out if any of these thoughts resonate with you
+subtitle: Reach out at anil@umd.edu if my thoughts resonate with you
 
 content:
   # Page type to display. E.g. post, talk, publication...
