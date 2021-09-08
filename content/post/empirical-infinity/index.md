@@ -59,7 +59,9 @@ Below is a figure from a [paper of mine]({{< relref "/publication/zenginoğlu-20
 
 ![Decay rates by distance](featured.png "Decay rates in time at various distances from the source.")
 
-The long-time decay rate is -3 for any finite distance as the theory demonstrates. But the theory is valid for the asymptotic limit. Initially, the decay rate for distant observers is much closer to -2 than to -3. The top curve in the figure is the measurement at infinity, and the next closest curve is at 40,000 units of black hole mass (in these units, a solar mass corresponds to a distance of 1.5 km). For a small black hole of 5 solar masses, this observer is about 300,000 km away. This may sound far, but it's just one light second, about the distance between the Earth and the Moon. To compare, typical sources of gravitational waves are thousands and millions of light years away. The decay rate of perturbations from such a distant source would be indistinguishable from the infinity value. 
+The long-time decay rate is -3 for any finite distance as the theory demonstrates. But the theory is valid for the asymptotic limit. Initially, the decay rate for distant observers is much closer to -2 than to -3. The top curve in the figure is the measurement at infinity, and the next closest curve is at 40,000 units of black hole mass (in these units, a solar mass corresponds to a distance of 1.5 km). For a small black hole of 5 solar masses, this observer is about 300,000 km away. This may sound far, but it's just one light second, which is about the distance between the Earth and the Moon. To compare, typical sources of gravitational waves are thousands and millions of light years away. The decay rate of perturbations from such a distant source would be indistinguishable from the infinity value. 
+
+Infinity in astrophysics may be closer than the Moon.
 
 ### Wrap-up
 
