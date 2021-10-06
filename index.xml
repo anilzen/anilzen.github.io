@@ -1,4 +1,194 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anıl Zenginoğlu</title><link>https://anilzen.github.io/</link><atom:link href="https://anilzen.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Anıl Zenginoğlu</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_512x512_fill_lanczos_center_3.png</url><title>Anıl Zenginoğlu</title><link>https://anilzen.github.io/</link></image><item><title>How far is infinity?</title><link>https://anilzen.github.io/post/empirical-infinity/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/empirical-infinity/</guid><description>&lt;p>Most of my research uses infinity in numerical computations. When presenting my work, I often encounter the objection that infinity is not physical. But not all infinities are created equal, and some are more physical than others. In fact, we can &lt;strong>verify by experiment&lt;/strong> that we are at infinity with respect to distant sources of radiation.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anıl Zenginoğlu</title><link>https://anilzen.github.io/</link><atom:link href="https://anilzen.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Anıl Zenginoğlu</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Oct 2021 00:00:16 -0400</lastBuildDate><image><url>https://anilzen.github.io/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_512x512_fill_lanczos_center_3.png</url><title>Anıl Zenginoğlu</title><link>https://anilzen.github.io/</link></image><item><title>Hyperboloidal Holography</title><link>https://anilzen.github.io/post/hyperboloidal-holography/</link><pubDate>Wed, 06 Oct 2021 00:00:16 -0400</pubDate><guid>https://anilzen.github.io/post/hyperboloidal-holography/</guid><description>&lt;h3 id="brief-history-of-bekenstein-hawking-black-hole-entropy">Brief History of Bekenstein-Hawking Black-Hole Entropy&lt;/h3>
+&lt;p>When physicists want to understand something, they consider idealizations and extremes. To understand spacetime then, consider black holes.&lt;/p>
+&lt;blockquote>
+&lt;p>The black holes of nature are the most perfect macroscopic objects there are in the universe:
+the only elements in their construction are our concepts of space and time.&lt;/p>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Subrahmanyan_Chandrasekhar" target="_blank" rel="noopener">Chandrasekhar&lt;/a> (1983)&lt;/p>
+&lt;/blockquote>
+&lt;p>Black holes are simple with just two properties: mass and rotation. By dropping an object into a black hole, you can increase its mass and change its rotation.&lt;/p>
+&lt;p>The simplicity of black holes seems to contradict the second law of thermodynamics, which states that &lt;em>total entropy never decreases&lt;/em>. If black holes are that simple, you can reduce total entropy by dropping a high-entropy object, say a hot teacup, into the black hole.&lt;/p>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/John_Archibald_Wheeler" target="_blank" rel="noopener">Wheeler&lt;/a>, best known for coining the term &amp;ldquo;black hole,&amp;rdquo; tasked one of his graduate students at Princeton, the young &lt;a href="https://en.wikipedia.org/wiki/Jacob_Bekenstein" target="_blank" rel="noopener">Bekenstein&lt;/a>, with resolving this paradox. The &lt;a href="https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age" target="_blank" rel="noopener">golden age&lt;/a> of relativity was in full swing around 1970, and Princeton was among the best places to be. Christodoulou, another student of Wheeler, and Hawking had just shown that &lt;em>the area of a black hole horizon never decreases&lt;/em>. To resolve the entropy paradox, Bekenstein conjectured that black holes must have entropy and that the entropy must be proportional to the area of the black hole horizon in Planck units. The proportionality constant was determined by the discovery of &lt;a href="https://en.wikipedia.org/wiki/Hawking_radiation" target="_blank" rel="noopener">Hawking temperature&lt;/a>, which is why we call it the &lt;a href="http://www.scholarpedia.org/article/Bekenstein-Hawking_entropy" target="_blank" rel="noopener">Bekenstein-Hawking&lt;/a> Black-Hole entropy
+$$ S_{BH} = \frac{A}{4 L_P^2}$$
+where $L_P$ is the &lt;a href="https://en.wikipedia.org/wiki/Planck_length" target="_blank" rel="noopener">Planck length&lt;/a>, $S$ stands for entropy (probably after &lt;a href="https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot" target="_blank" rel="noopener">Sadi Carnot&lt;/a>), and BH stands for &lt;a href="#brief-history-of-bekenstein-hawking-black-hole-entropy">Brief History&lt;/a>.&lt;/p>
+&lt;p>You may think this is a curious result about curious objects called black holes with little relevance to our notion of spacetime. But consider the following question: what is the maximum entropy in a finite, say spherical region? If you take some high-entropy matter and squeeze it spherically (with your mind), eventually, you hit the Bekenstein-Hawking entropy, and the compressed matter forms a black hole. This thought experiment leads to the surprising conclusion that the entropy of any matter system is bound by the surface area of the smallest sphere that encloses it&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>We started with black holes and arrived at the&lt;/p>
+&lt;h3 id="holographic-principle">Holographic Principle&lt;/h3>
+&lt;p>Counterintuitively, the maximal entropy of a region scales with the area of its boundary, not its volume. The &lt;a href="https://en.wikipedia.org/wiki/Holographic_principle" target="_blank" rel="noopener">holographic principle&lt;/a> pushes this area-dependence further, suggesting that the dynamics in a volume of space is encoded on the boundary of that space. In other words, the information content of a spacetime region is encoded on the surface of that region.&lt;/p>
+&lt;p>Take a break and think about this for a moment. How can our three-dimensional world be encoded on a two-dimensional surface? What does it mean? Is the universe a &lt;a href="https://en.wikipedia.org/wiki/Simulation_hypothesis" target="_blank" rel="noopener">game&lt;/a> running on the screen of an alien child? Are we trapped in &lt;a href="https://en.wikipedia.org/wiki/The_Matrix" target="_blank" rel="noopener">The Matrix&lt;/a>? Are we &lt;a href="https://www.youtube.com/watch?v=7nqcL0mjMjw" target="_blank" rel="noopener">Livin' on the Edge&lt;/a>?&lt;/p>
+&lt;p>
+&lt;figure id="figure-aerosmith-livin-on-the-edge-video-1993">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Living on the Edge" srcset="
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_09bcc9471a5c8b21ac497a42026d293a.jpg 400w,
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_2463810934eaa6069c90274256f62d79.jpg 760w,
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_09bcc9471a5c8b21ac497a42026d293a.jpg"
+width="722"
+height="531"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Aerosmith: Livin' on the Edge (Video 1993)
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;h3 id="adscft-correspondence">AdS/CFT correspondence&lt;/h3>
+&lt;p>The most famous realization of the holographic principle is the &lt;a href="https://en.wikipedia.org/wiki/AdS/CFT_correspondence" target="_blank" rel="noopener">AdS/CFT correspondence&lt;/a>. Conjectured by &lt;a href="https://en.wikipedia.org/wiki/Juan_Mart%C3%ADn_Maldacena" target="_blank" rel="noopener">Maldacena&lt;/a> in 1997, the correspondence suggests an equivalence between a &lt;a href="https://en.wikipedia.org/wiki/String_theory" target="_blank" rel="noopener">string theory&lt;/a> in curved anti-de Sitter spacetime (AdS) and a strongly coupled &lt;a href="https://en.wikipedia.org/wiki/Conformal_field_theory" target="_blank" rel="noopener">conformal field theory&lt;/a> in a lower-dimensional flat spacetime. Aside from the details, the remarkable aspect of the conjecture is the duality between the bulk and the boundary of AdS.&lt;/p>
+&lt;p>Below is a visual image for the AdS$_3$/CFT$_2$ correspondence. The cylinder represents the three-dimensional AdS$_3$ spacetime. On the boundary of the cylinder lives the 1+1 dimensional CFT$_2$. Slices of constant time are &lt;a href="https://en.wikipedia.org/wiki/Hyperbolic_manifold" target="_blank" rel="noopener">hyperbolic manifolds&lt;/a> with negative curvature, drawn as &lt;a href="https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model" target="_blank" rel="noopener">Poincaré disks&lt;/a>. A gravity theory within the disks is dual to a gravity-free theory on the bounding circle. The boundary of space encodes the bulk.&lt;/p>
+&lt;p>
+&lt;figure id="figure-ads-is-hyperbolic-space-with-a-time-direction-wikimediahttpscommonswikimediaorgwikifileads3svg">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="AdS3" srcset="
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_23af80de35e5b1c5d4d32844b35a4cdb.png 400w,
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_62ce83adaaf6f5e369aa79a83ae609c8.png 760w,
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_1200x1200_fit_lanczos_3.png 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_23af80de35e5b1c5d4d32844b35a4cdb.png"
+width="472"
+height="480"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+AdS is hyperbolic space with a time direction. &lt;a href="https://commons.wikimedia.org/wiki/File:AdS3.svg">Wikimedia&lt;/a>
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>The negative curvature of AdS is a feature and a bug. It allows the realization of the holographic principle due to its hyperbolic slices, but it also makes AdS an unphysical model for our universe. At cosmological scales, the universe has positive curvature and resembles de Sitter space. At astrophysical and smaller scales, isolated systems are modeled by asymptotically flat spacetimes. Either way, anti-de Sitter spacetime, with all its &lt;a href="https://arxiv.org/abs/1611.01118" target="_blank" rel="noopener">bizarre&lt;/a> features, is not a good model for physical reality.&lt;/p>
+&lt;p>Can we establish the holographic principle for isolated systems?&lt;/p>
+&lt;h3 id="hyperbolic-hyperboloidal">Hyperbolic Hyperboloidal&lt;/h3>
+&lt;p>Consider the AdS$_3$ metric in static coordinates with curvature scale $L$
+$$ ds^2_{\rm{AdS}} = - \left(L^2+r^2\right) d\tau^2 + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2},$$
+Slices of constant time are hyperbolic spaces with negative curvature. Hyperbolic geometry has much more space near its conformal boundary than Euclidean space. It seems that flat spacetime with its Euclidean time slices and vanishing curvature would not allow such a description
+$$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\theta^2 . $$&lt;/p>
+&lt;p>But now consider the time-shifted spacetime hyperboloid with curvature radius $L$
+$$ (\tau-t)^2 - r^2 = L^2 $$
+This hypersurface is spacelike everywhere and extends to future null infinity. Such surfaces are called hyperboloidal. Solving for $\tau$, we get the new time coordinate
+$$ \tau=t-\sqrt{L^2+r^2}.$$
+In this hyperboloidal time, Minkowski metric has hyperbolic spatial slices
+$$ ds^2_{\rm{Mink}} = -d\tau^2 - \frac{2 r}{\sqrt{L^2+r^2}} d\tau dr + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2}. $$
+Just like AdS, flat spacetime takes the form of hyperbolic space with a time direction. You can draw the spacetime geometry as a cylinder, which is what Penrose did in his first publication on conformal infinity in 1963.&lt;/p>
+&lt;p>
+&lt;figure id="figure-the-cylinders-in-penroses-drawing-are-hyperbolic-spaces-with-a-time-direction-penrose-prl-1963httpsjournalsapsorgprlabstract101103physrevlett1066">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Penrose cylinder" srcset="
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_e271eda2582e44a791c10e855ddca0af.png 400w,
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_0644506f30853b64f349a9c991cf2b26.png 760w,
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_1200x1200_fit_lanczos_3.png 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_e271eda2582e44a791c10e855ddca0af.png"
+width="377"
+height="365"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+The cylinders in Penrose&amp;rsquo;s drawing are hyperbolic spaces with a time direction. &lt;a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.10.66">Penrose, PRL (1963)&lt;/a>
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>The agreement of the geometry of hyperboloidal and AdS slices is suggestive. Calculations in the AdS/CFT literature performed on time slices may carry over to flat spacetime in hyperboloidal coordinates. One such example is the Ryu-Takayanagi conjecture.&lt;/p>
+&lt;h3 id="rt-if-you-agree">RT if you agree&lt;/h3>
+&lt;p>Ryu and Takayanagi (RT) have &lt;a href="https://arxiv.org/abs/hep-th/0603001" target="_blank" rel="noopener">proposed&lt;/a> a relation between geometry in AdS and entropy in CFT.&lt;/p>
+&lt;p>One can interpret the Bekenstein-Hawking entropy as a measure of information lost to external observers. The black-hole horizon acts as a screen dividing space into two subsystems inside and outside the horizon. &lt;a href="https://en.wikipedia.org/wiki/Entropy_of_entanglement" target="_blank" rel="noopener">Entanglement entropy&lt;/a> is proportional to the area of this screen. The RT conjecture relates the entanglement entropy on CFT to the surface area of a screen in AdS that divides the AdS boundary into subdomains.&lt;/p>
+&lt;p>Words don&amp;rsquo;t do it justice, so let&amp;rsquo;s look at a picture. Below is a diagram from the &lt;a href="https://arxiv.org/abs/hep-th/0603001" target="_blank" rel="noopener">RT paper&lt;/a> for AdS$_3$ /CFT$_2$.&lt;/p>
+&lt;p>
+&lt;figure id="figure-diagram-demonstrating-rt-proposal-on-ads_3cft_2-ryu-and-takayanagi-arxiv-2006httpsarxivorgabshep-th0603001">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="RT conjecture" srcset="
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_9ae7d9edec8d811b2becaa438f00c586.png 400w,
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3dc5efc8eae60c426c98d0f43a020e6d.png 760w,
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_1200x1200_fit_lanczos_3.png 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_9ae7d9edec8d811b2becaa438f00c586.png"
+width="760"
+height="487"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Diagram demonstrating RT proposal on AdS$_3$/CFT$_2$. &lt;a href="https://arxiv.org/abs/hep-th/0603001">Ryu and Takayanagi, arXiv (2006)&lt;/a>
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>The two subsystems $A$ and $B$ of CFT$_2$ live on the boundary of AdS$_3$. They are separated by a screen $\gamma_A$ required to be an extremal surface in the bulk AdS$_3$. An extremal &amp;ldquo;surface&amp;rdquo; on a slice of AdS$_3$ is a geodesic line connecting the meeting points of the domains $A$ and $B$ on the bounding circle. The RT proposal states that the entanglement entropy of subsystem $A$ is proportional to the area of the screen $\gamma_A$:
+$$ S_A \sim \rm{Area\ of\ }\gamma_A $$
+In this case, we are talking about the length of a geodesic on a time slice. You can easily see that the calculation does not change whether you are in AdS or hyperboloidal Minkowski. In the &lt;a href="https://en.wikipedia.org/wiki/Ryu%E2%80%93Takayanagi_conjecture#Example" target="_blank" rel="noopener">example on Wikipedia&lt;/a>, the AdS$_3$ metric is written in the spatial coordinate $\rho$ defined through $r=\sinh \rho$, so
+$$ ds^2_{\rm{AdS}} = -\cosh^2\rho\ d\tau^2 + \textcolor{Blue}{d\rho^2 + \sinh^2\rho\ d\theta^2}. $$
+The same spatial geometry is obtained in hyperboloidal coordinates in Minkowski&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>
+$$ ds^2_{\rm{Mink}} = -d\tau^2 - \sinh\rho\ d\tau d\rho + \textcolor{Blue}{d\rho^2 + \sinh^2\rho\ d\theta^2}. $$
+This flat metric describes a stack of hyperbolic disks, just like the AdS metric. The length of the geodesic and its relation to entanglement entropy are the same in hyperboloidal coordinates. The original RT proposal applies directly to flat spacetime!&lt;/p>
+&lt;p>The RT proposal reveals an interesting interpretation for the area dependence of entropy. It is easier to understand that entanglement entropy should be proportional to the area of a screen and not to the volume behind it. But maybe we should ask first: What is volume?&lt;/p>
+&lt;h3 id="thinking-outside-the-ball">Thinking outside the ball&lt;/h3>
+&lt;p>When we think of volume, we typically envision a box or a ball and consider the space inside. Relativity modifies our intuition about space and time, so it is reasonable that our notion of volume is modified as well. The volume of a region $B$ is the integral of the volume form
+$$ V_B = \int_{B} \sqrt{\det h} \ d\Sigma, $$
+and depends on the spatial metric $h$. In flat space we have $\sqrt{\det h} =$ $r^2 \sin\theta$. The volume of a ball of radius $R$ gives us the usual formula that we memorize at school
+$$ V_{B(R)} = \int_{0}^{R} \int_0^{\pi} \int_0^{2 \pi} r^2 \sin\theta \ dr d\theta d\varphi= 4\pi \int_{0}^{R} r^2 dr = \frac{4\pi}{3}R^3. $$
+For the hyperboloidal foliation with $L=1$ we have
+$$ h = \frac{1}{1+r^2}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\varphi^2,\quad \sqrt{\det h} = \frac{r^2 \sin\theta}{\sqrt{1+r^2}}. $$
+The volume expression is a bit more complicated
+$$ V_{B(R)} = 4\pi \int_{0}^{R} \frac{r^2}{\sqrt{1+r^2}} dr = 2\pi \left[ r\sqrt{1+r^2} - \ln\left( r+\sqrt{1+r^2} \right) \right]_{0}^{R}. $$
+We can get a sense for it using Taylor expansions. For small spheres with $R\ll 1$, we get the usual result
+$$ V_{B(R)}=\frac{4\pi}{3}R^3+O(R^5).$$
+For large spheres, however, the series expansion for $R\gg 1$ gives
+$$ V_{B(R)}=2\pi R^2 + O(\ln R).$$
+Remarkably, volume and area scale the same way near the asymptotic boundary in hyperboloidal coordinates.&lt;/p>
+&lt;p>These are suggestive observations about the potential usefulness of hyperboloidal surfaces in holography. And indeed, there is a current effort using hyperboloidal surfaces for holography.&lt;/p>
+&lt;h3 id="celestial-holography">Celestial Holography&lt;/h3>
+&lt;p>In the context of quantum gravity, the holographic principle suggests duality between a gravity theory in the bulk and a quantum theory on the boundary. &lt;a href="https://arxiv.org/abs/2107.02075" target="_blank" rel="noopener">Celestial holography&lt;/a> suggests that asymptotically flat spacetimes are dual to a theory living on the &amp;ldquo;celestial sphere&amp;rdquo; at infinity.&lt;/p>
+&lt;p>The theory uses Bondi coordinates along null infinity to discuss asymptotic symmetries, and switches to a hyperboloidal slicing to discuss massive particles. The slices they use have been first proposed as a cosmological model by &lt;a href="https://en.wikipedia.org/wiki/Milne_model" target="_blank" rel="noopener">Milne&lt;/a> in 1935. Milne slices are level sets of
+$$ \tau^2 = t^2 - r^2.$$
+Introducing the spatial coordinate
+$$ \rho = \frac{r}{\sqrt{t^2-r^2}}, $$
+the Minkowski metric takes the form
+$$ ds^2_{\rm{Mink}} = -d\tau^2 + \tau^2 \left( \textcolor{RedViolet}{\frac{1}{1+\rho^2} d\rho^2 + \rho^2 d\sigma^2}\right). $$
+Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\tau$.&lt;/p>
+&lt;p>I suspect that the hyperboloidal foliation we discussed &lt;a href="#hyperbolic-hyperboloidal">above&lt;/a> is better than Milne slices for holography. Consider the Penrose diagram of Milne slices.
+&lt;figure id="figure-penrose-diagram-of-milne-slicing-strominger-arxiv-2017httpsarxivorgabshep-th0603001">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Hyperbolic slices" srcset="
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_4e342d9bb588d17373943d2add173f38.png 400w,
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_aa2d5f63f361230941e0a34e94b90ef1.png 760w,
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_1200x1200_fit_lanczos_3.png 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_4e342d9bb588d17373943d2add173f38.png"
+width="444"
+height="453"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Penrose diagram of Milne slicing. &lt;a href="https://arxiv.org/abs/hep-th/0603001">Strominger, arXiv (2017)&lt;/a>
+&lt;/figcaption>&lt;/figure>
+The Penrose diagram and the metric reveal some undesirable features of Milne slices compared to the hyperboloidal foliation:&lt;/p>
+&lt;ul>
+&lt;li>The slices intersect at null infinity.&lt;/li>
+&lt;li>The coordinates are time-dependent.&lt;/li>
+&lt;li>There is no analog of the AdS curvature scale.&lt;/li>
+&lt;/ul>
+&lt;p>In contrast, the hyperboloidal foliation has constant mean curvature, $K=3/L$, playing the same role as the curvature scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature. Mean curvature acts as a dial between characteristic and Cauchy surfaces.&lt;/p>
+&lt;p>
+&lt;figure id="figure-penrose-diagrams-of-hyperboloidal-foliations-with-different-mean-extrinsic-curvatures-k632-zenginoğlu-arxiv-2008httpsarxivorgabs07124333">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Hyperboloidal foliation" srcset="
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_081c7a635a61c1982bca91057f738b4e.png 400w,
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_c0fb6fa0b9d76903c2ec7789b395cd13.png 760w,
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_1200x1200_fit_lanczos_3.png 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_081c7a635a61c1982bca91057f738b4e.png"
+width="760"
+height="338"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K={6,3,2}$. &lt;a href="https://arxiv.org/abs/0712.4333">Zenginoğlu, arXiv (2008)&lt;/a>
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on &lt;a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392" target="_blank" rel="noopener">Forms of Relativistic Dynamics&lt;/a>. I&amp;rsquo;m not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.&lt;/p>
+&lt;p>Celestial holography is relatively new and developing rapidly. We don&amp;rsquo;t know the final version of the correspondence. That&amp;rsquo;s the excitement of research.&lt;/p>
+&lt;h3 id="wrap-up">Wrap up&lt;/h3>
+&lt;p>A few curious observations suggest that hyperboloidal coordinates are interesting for holography.&lt;/p>
+&lt;ul>
+&lt;li>Flat spacetime becomes a stack of hyperbolic disks, with a &lt;a href="#hyperbolic-hyperboloidal">cylinder&lt;/a> representing the global picture.&lt;/li>
+&lt;li>The original &lt;a href="#rt-if-you-agree">Ryu-Takayanagi calculations&lt;/a> apply to Minkowski spacetime.&lt;/li>
+&lt;li>&lt;a href="#thinking-outside-the-ball">Volume scales as area&lt;/a> near the conformal boundary.&lt;/li>
+&lt;li>Spacetime hyperboloids are essential in &lt;a href="#celestial-holography">celestial holography&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&amp;rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.&lt;/p>
+&lt;p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated &lt;a href="https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group" target="_blank" rel="noopener">symmetries&lt;/a> as celestial holography is attempting to do.&lt;/p>
+&lt;p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. &lt;a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target="_blank" rel="noopener">Watch this space!&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>There are various subtleties here that I&amp;rsquo;m glossing over. You can go down the rabbit hole following the &lt;a href="http://www.scholarpedia.org/article/Bekenstein_bound" target="_blank" rel="noopener">Bekenstein bound&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>Setting the curvature radius to unity for simplicity, $L=1$.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>How far is infinity?</title><link>https://anilzen.github.io/post/empirical-infinity/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/empirical-infinity/</guid><description>&lt;p>Most of my research uses infinity in numerical computations. When presenting my work, I often encounter the objection that infinity is not physical. But not all infinities are created equal, and some are more physical than others. In fact, we can &lt;strong>verify by experiment&lt;/strong> that we are at infinity with respect to distant sources of radiation.&lt;/p>
 &lt;p>Below I collect some thoughts on infinity and describe the experiment. Feel free to skip my ramblings and go directly to the &lt;a href="#a-thought-experiment">experiment&lt;/a>.&lt;/p>
 &lt;h3 id="we-dont-need-no-infinity">We don&amp;rsquo;t need no infinity&lt;/h3>
 &lt;p>Physicists are generally uncomfortable with infinity. First, it is argued, infinity cannot be the outcome of a physical experiment. Second, infinity as the outcome of a calculation indicates problems with the theory. Resolving such problems is important because they may reveal new research directions such as &lt;a href="https://en.wikipedia.org/wiki/Renormalization" target="_blank" rel="noopener">renormalization techniques&lt;/a>. Since infinity doesn&amp;rsquo;t make sense in experiment and should be avoided in theory, physicists are skeptical when it appears in mathematical descriptions of physical phenomena. A few examples: Max Tegmark argues that infinity is an idea that should be &lt;a href="https://www.edge.org/response-detail/25344" target="_blank" rel="noopener">retired from physics&lt;/a>; Nicolas Gisin aims to &lt;a href="https://www.quantamagazine.org/does-time-really-flow-new-clues-come-from-a-century-old-approach-to-math-20200407/" target="_blank" rel="noopener">understand time&lt;/a> without relying on infinitely precise numbers; and here is a quote from &lt;a href="https://www.nature.com/articles/s41567-018-0238-1" target="_blank" rel="noopener">The physics of infinity&lt;/a> by Ellis, Meissner, and Nicolai:&lt;/p>
