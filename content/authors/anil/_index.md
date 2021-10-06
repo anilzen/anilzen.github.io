@@ -20,15 +20,13 @@ bio: Researcher, administrator, and technologist; exploring spacetime infinity a
 
 # Interests to show in About widget
 interests:
+- Null Infinity
 - Black Holes
 - Wave Equations
 - Conservation Laws
 - Gravitational Waves
 - Hyperboloidal Foliations
-- Adaptive Kalman Regression
-- Digital Transformation
-- Philosophy
-
+#- Adaptive Kalman Regression
 # Education to show in About widget
 education:
   courses:
@@ -82,6 +80,6 @@ highlight_name: true
 ---
 Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu) with broad experience in research, administration, and information technologies.
 
-As a researcher, I work on wave equations, null infinity, gravitational waves, weather forecasting, and conservation laws. As an administrator, I bring researchers together in thematically focused but geographically distributed networks. As a technologist, I drive digital transformation to increase the efficiency of business processes that support research and education. 
+As a researcher, I work on wave equations, black holes, gravitational waves, and null infinity. As an administrator, I bring researchers together in thematically focused but geographically distributed networks. As a technologist, I drive digital transformation to increase the efficiency of business processes that support research and education. 
 
 <!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}CV{{< /staticref >}}. -->

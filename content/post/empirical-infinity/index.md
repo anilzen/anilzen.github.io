@@ -1,7 +1,7 @@
 ---
 title: How far is infinity?
 subtitle: Infinity may be closer than you think
-summary: Infinity may be closer than you think
+summary: Infinity may be closer than you think.
 
 projects: []
 date: "2021-09-08T00:00:00Z"
@@ -13,7 +13,7 @@ featured: true
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: '' #'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: ''
   focal_point: ""
   placement: 0
   preview_only: true
@@ -22,7 +22,7 @@ authors:
 - anil
 
 tags:
-- Infinity
+- infinity
 
 categories:
 - Research
