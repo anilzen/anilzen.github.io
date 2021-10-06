@@ -51,16 +51,16 @@ AdS is hyperbolic space with a time direction. &lt;a href="https://commons.wikim
 &lt;p>The negative curvature of AdS is a feature and a bug. It allows the realization of the holographic principle due to its hyperbolic slices, but it also makes AdS an unphysical model for our universe. At cosmological scales, the universe has positive curvature and resembles de Sitter space. At astrophysical and smaller scales, isolated systems are modeled by asymptotically flat spacetimes. Either way, anti-de Sitter spacetime, with all its &lt;a href="https://arxiv.org/abs/1611.01118" target="_blank" rel="noopener">bizarre&lt;/a> features, is not a good model for physical reality.&lt;/p>
 &lt;p>Can we establish the holographic principle for isolated systems?&lt;/p>
 &lt;h3 id="hyperbolic-hyperboloidal">Hyperbolic Hyperboloidal&lt;/h3>
-&lt;p>Consider the AdS$_3$ metric in static coordinates
-$$ ds^2_{\rm{AdS}} = - \left(1+r^2\right) d\tau^2 + \textcolor{RedViolet}{\frac{1}{1+r^2} dr^2 + r^2 d\theta^2},$$
+&lt;p>Consider the AdS$_3$ metric in static coordinates with curvature scale $L$
+$$ ds^2_{\rm{AdS}} = - \left(L^2+r^2\right) d\tau^2 + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2},$$
 Slices of constant time are hyperbolic spaces with negative curvature. Hyperbolic geometry has much more space near its conformal boundary than Euclidean space. It seems that flat spacetime with its Euclidean time slices and vanishing curvature would not allow such a description
 $$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\theta^2 . $$&lt;/p>
-&lt;p>But now consider the time-shifted spacetime hyperboloid
-$$ (\tau-t)^2 - r^2 = 1 $$
+&lt;p>But now consider the time-shifted spacetime hyperboloid with curvature radius $L$
+$$ (\tau-t)^2 - r^2 = L^2 $$
 This hypersurface is spacelike everywhere and extends to future null infinity. Such surfaces are called hyperboloidal. Solving for $\tau$, we get the new time coordinate
-$$ \tau=t-\sqrt{1+r^2}.$$
+$$ \tau=t-\sqrt{L^2+r^2}.$$
 In this hyperboloidal time, Minkowski metric has hyperbolic spatial slices
-$$ ds^2_{\rm{Mink}} = -d\tau^2 - \frac{2 r}{\sqrt{1+r^2}} d\tau dr + \textcolor{RedViolet}{\frac{1}{1+r^2} dr^2 + r^2 d\theta^2}. $$
+$$ ds^2_{\rm{Mink}} = -d\tau^2 - \frac{2 r}{\sqrt{L^2+r^2}} d\tau dr + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2}. $$
 Just like AdS, flat spacetime takes the form of hyperbolic space with a time direction. You can draw the spacetime geometry as a cylinder, which is what Penrose did in his first publication on conformal infinity in 1963.&lt;/p>
 &lt;p>
 &lt;figure id="figure-the-cylinders-in-penroses-drawing-are-hyperbolic-spaces-with-a-time-direction-penrose-prl-1963httpsjournalsapsorgprlabstract101103physrevlett1066">
@@ -101,7 +101,7 @@ Diagram demonstrating RT proposal on AdS$_3$/CFT$_2$. &lt;a href="https://arxiv.
 $$ S_A \sim \rm{Area\ of\ }\gamma_A $$
 In this case, we are talking about the length of a geodesic on a time slice. You can easily see that the calculation does not change whether you are in AdS or hyperboloidal Minkowski. In the &lt;a href="https://en.wikipedia.org/wiki/Ryu%E2%80%93Takayanagi_conjecture#Example" target="_blank" rel="noopener">example on Wikipedia&lt;/a>, the AdS$_3$ metric is written in the spatial coordinate $\rho$ defined through $r=\sinh \rho$, so
 $$ ds^2_{\rm{AdS}} = -\cosh^2\rho\ d\tau^2 + \textcolor{Blue}{d\rho^2 + \sinh^2\rho\ d\theta^2}. $$
-The same spatial geometry is obtained in hyperboloidal coordinates in Minkowski
+The same spatial geometry is obtained in hyperboloidal coordinates in Minkowski&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>
 $$ ds^2_{\rm{Mink}} = -d\tau^2 - \sinh\rho\ d\tau d\rho + \textcolor{Blue}{d\rho^2 + \sinh^2\rho\ d\theta^2}. $$
 This flat metric describes a stack of hyperbolic disks, just like the AdS metric. The length of the geodesic and its relation to entanglement entropy are the same in hyperboloidal coordinates. The original RT proposal applies directly to flat spacetime!&lt;/p>
 &lt;p>The RT proposal reveals an interesting interpretation for the area dependence of entropy. It is easier to understand that entanglement entropy should be proportional to the area of a screen and not to the volume behind it. But maybe we should ask first: What is volume?&lt;/p>
@@ -110,7 +110,7 @@ This flat metric describes a stack of hyperbolic disks, just like the AdS metric
 $$ V_B = \int_{B} \sqrt{\det h} \ d\Sigma, $$
 and depends on the spatial metric $h$. In flat space we have $\sqrt{\det h} =$ $r^2 \sin\theta$. The volume of a ball of radius $R$ gives us the usual formula that we memorize at school
 $$ V_{B(R)} = \int_{0}^{R} \int_0^{\pi} \int_0^{2 \pi} r^2 \sin\theta \ dr d\theta d\varphi= 4\pi \int_{0}^{R} r^2 dr = \frac{4\pi}{3}R^3. $$
-For the hyperboloidal foliation we have
+For the hyperboloidal foliation with $L=1$ we have
 $$ h = \frac{1}{1+r^2}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\varphi^2,\quad \sqrt{\det h} = \frac{r^2 \sin\theta}{\sqrt{1+r^2}}. $$
 The volume expression is a bit more complicated
 $$ V_{B(R)} = 4\pi \int_{0}^{R} \frac{r^2}{\sqrt{1+r^2}} dr = 2\pi \left[ r\sqrt{1+r^2} - \ln\left( r+\sqrt{1+r^2} \right) \right]_{0}^{R}. $$
@@ -128,7 +128,7 @@ Introducing the spatial coordinate
 $$ \rho = \frac{r}{\sqrt{t^2-r^2}}, $$
 the Minkowski metric takes the form
 $$ ds^2_{\rm{Mink}} = -d\tau^2 + \tau^2 \left( \textcolor{RedViolet}{\frac{1}{1+\rho^2} d\rho^2 + \rho^2 d\sigma^2}\right). $$
-Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\sqrt{\tau}$.&lt;/p>
+Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\tau$.&lt;/p>
 &lt;p>I suspect that the hyperboloidal foliation we discussed &lt;a href="#hyperbolic-hyperboloidal">above&lt;/a> is better than Milne slices for holography. Consider the Penrose diagram of Milne slices.
 &lt;figure id="figure-penrose-diagram-of-hyperbolic-slicing-strominger-arxiv-2017httpsarxivorgabshep-th0603001">
 &lt;div class="d-flex justify-content-center">
@@ -147,9 +147,9 @@ The Penrose diagram and the metric reveal some undesirable features of Milne sli
 &lt;ul>
 &lt;li>The slices intersect at null infinity.&lt;/li>
 &lt;li>The coordinates are time-dependent.&lt;/li>
-&lt;li>There is no analog of the AdS length scale.&lt;/li>
+&lt;li>There is no analog of the AdS curvature scale.&lt;/li>
 &lt;/ul>
-&lt;p>In contrast, the hyperboloidal foliation has constant mean curvature, playing the same role as the length scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature. Mean curvature acts as a dial between characteristic and Cauchy surfaces.&lt;/p>
+&lt;p>In contrast, the hyperboloidal foliation has constant mean curvature, $K=3/L$, playing the same role as the curvature scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature. Mean curvature acts as a dial between characteristic and Cauchy surfaces.&lt;/p>
 &lt;p>
 &lt;figure id="figure-penrose-diagrams-of-hyperboloidal-foliations-with-different-mean-extrinsic-curvatures-k632-zenginoğlu-arxiv-2008httpsarxivorgabs07124333">
 &lt;div class="d-flex justify-content-center">
@@ -165,24 +165,27 @@ loading="lazy" data-zoomable />&lt;/div>
 Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K={6,3,2}$. &lt;a href="https://arxiv.org/abs/0712.4333">Zenginoğlu, arXiv (2008)&lt;/a>
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
-&lt;p>Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on &lt;a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392" target="_blank" rel="noopener">Forms of Relativistic Dynamics&lt;/a>. I&amp;rsquo;m not sure how important this is. But Milne coordinates are also hyperboloidal. So in a sense, celestial holography is already closely related to hyperboloidal holography.&lt;/p>
-&lt;p>Celestial holography is still relatively new and developing rapidly. This post might be outdated in a few years. That&amp;rsquo;s the excitement of research.&lt;/p>
+&lt;p>Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on &lt;a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392" target="_blank" rel="noopener">Forms of Relativistic Dynamics&lt;/a>. I&amp;rsquo;m not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.&lt;/p>
+&lt;p>Celestial holography is relatively new and developing rapidly. We don&amp;rsquo;t know the final version of the correspondence. That&amp;rsquo;s the excitement of research.&lt;/p>
 &lt;h3 id="wrap-up">Wrap up&lt;/h3>
 &lt;p>A few curious observations suggest that hyperboloidal coordinates are interesting for holography.&lt;/p>
 &lt;ul>
 &lt;li>Flat spacetime becomes a stack of hyperbolic disks, with a &lt;a href="#hyperbolic-hyperboloidal">cylinder&lt;/a> representing the global picture.&lt;/li>
-&lt;li>The original &lt;a href="#rt-if-you-agree">Ryu-Takayanagi calculations&lt;/a> apply unaltered to Minkowski spacetime.&lt;/li>
+&lt;li>The original &lt;a href="#rt-if-you-agree">Ryu-Takayanagi calculations&lt;/a> apply to Minkowski spacetime.&lt;/li>
 &lt;li>&lt;a href="#thinking-outside-the-ball">Volume scales as area&lt;/a> near the conformal boundary.&lt;/li>
 &lt;li>Spacetime hyperboloids are essential in &lt;a href="#celestial-holography">celestial holography&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&amp;rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.&lt;/p>
-&lt;p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated &lt;a href="https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group" target="_blank" rel="noopener">symmetries&lt;/a>.&lt;/p>
-&lt;p>It would be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. &lt;a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target="_blank" rel="noopener">Watch this space!&lt;/a>&lt;/p>
+&lt;p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated &lt;a href="https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group" target="_blank" rel="noopener">symmetries&lt;/a> as celestial holography is attempting to do.&lt;/p>
+&lt;p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. &lt;a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target="_blank" rel="noopener">Watch this space!&lt;/a>&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
 &lt;p>There are various subtleties here that I&amp;rsquo;m glossing over. You can go down the rabbit hole following the &lt;a href="http://www.scholarpedia.org/article/Bekenstein_bound" target="_blank" rel="noopener">Bekenstein bound&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>Setting the curvature radius to unity for simplicity, $L=1$.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/section></description></item><item><title>Cauchy-horizon singularity inside perturbed Kerr black holes</title><link>https://anilzen.github.io/publication/burko-2016-cauchy/</link><pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/burko-2016-cauchy/</guid><description/></item><item><title>Testing numerically the null Cauchy horizon singularity inside Kerr black holes</title><link>https://anilzen.github.io/publication/burko-2015-testing/</link><pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/burko-2015-testing/</guid><description/></item><item><title>Horizon-absorption effects in coalescing black-hole binaries: An effective-one-body study of the nonspinning case</title><link>https://anilzen.github.io/publication/bernuzzi-2012-horizon/</link><pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2012-horizon/</guid><description/></item><item><title>A geometric framework for black hole perturbations</title><link>https://anilzen.github.io/publication/zenginoglu-2011-geometric/</link><pubDate>Fri, 17 Jun 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/zenginoglu-2011-geometric/</guid><description/></item><item><title>Binary black hole coalescence in the extreme-mass-ratio limit: testing and improving the effective-one-body multipolar waveform</title><link>https://anilzen.github.io/publication/bernuzzi-2011-binary/</link><pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2011-binary/</guid><description/></item><item><title>Binary black hole coalescence in the large-mass-ratio limit: the hyperboloidal layer method and waveforms at null infinity</title><link>https://anilzen.github.io/publication/bernuzzi-2011-layer/</link><pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2011-layer/</guid><description/></item><item><title>Saddle-point dynamics of a Yang—Mills field on the exterior Schwarzschild spacetime</title><link>https://anilzen.github.io/publication/bizon-2010-saddle/</link><pubDate>Fri, 16 Jul 2010 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bizon-2010-saddle/</guid><description/></item><item><title>Universality of global dynamics for the cubic wave equation</title><link>https://anilzen.github.io/publication/bizon-2009-universality/</link><pubDate>Thu, 10 Sep 2009 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bizon-2009-universality/</guid><description/></item><item><title>Hyperboloidal foliations and scri-fixing</title><link>https://anilzen.github.io/publication/zenginoglu-2008-hyperboloidal/</link><pubDate>Thu, 19 Jun 2008 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/zenginoglu-2008-hyperboloidal/</guid><description/></item></channel></rss>
