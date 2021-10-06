@@ -4,8 +4,8 @@ subtitle: "Hyperboloidal slices are hyperbolic manifolds. Can we use them to est
 summary: "Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"
 
 projects: []
-date: 2021-10-07T15:39:16-04:00
-lastmod: 2021-10-07T15:39:16-04:00
+date: 2021-10-06T15:39:16-04:00
+lastmod: 2021-10-06T15:39:16-04:00
 featured: true
 draft: false
 math: true
