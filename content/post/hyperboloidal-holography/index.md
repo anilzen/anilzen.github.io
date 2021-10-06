@@ -4,8 +4,8 @@ subtitle: "Hyperboloidal slices are hyperbolic manifolds. Can we use them to est
 summary: "Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"
 
 projects: []
-date: 2021-10-05T15:39:16-04:00
-lastmod: 2021-10-05T15:39:16-04:00
+date: 2021-10-07T15:39:16-04:00
+lastmod: 2021-10-07T15:39:16-04:00
 featured: true
 draft: false
 math: true
@@ -135,7 +135,7 @@ $$ ds^2_{\rm{Mink}} = -d\tau^2 + \tau^2 \left( \textcolor{RedViolet}{\frac{1}{1+
 Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\tau$. 
 
 I suspect that the hyperboloidal foliation we discussed [above](#hyperbolic-hyperboloidal) is better than Milne slices for holography. Consider the Penrose diagram of Milne slices.
-![Hyperbolic slices](hyperbolic.png "Penrose diagram of hyperbolic slicing. [Strominger, arXiv (2017)](https://arxiv.org/abs/hep-th/0603001)")
+![Hyperbolic slices](hyperbolic.png "Penrose diagram of Milne slicing. [Strominger, arXiv (2017)](https://arxiv.org/abs/hep-th/0603001)")
 The Penrose diagram and the metric reveal some undesirable features of Milne slices compared to the hyperboloidal foliation:
 - The slices intersect at null infinity.
 - The coordinates are time-dependent.
