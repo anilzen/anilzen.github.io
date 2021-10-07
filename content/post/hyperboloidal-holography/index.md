@@ -4,8 +4,8 @@ subtitle: "Hyperboloidal slices are hyperbolic manifolds. Can we use them to est
 summary: "Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"
 
 projects: []
-date: 2021-10-06T00:00:16-04:00
-lastmod: 2021-10-06T00:00:16-04:00
+date: 2021-10-07T00:00:16-04:00
+lastmod: 2021-10-07T00:00:16-04:00
 featured: true
 draft: false
 math: true
@@ -38,11 +38,11 @@ When physicists want to understand something, they consider idealizations and ex
 
 Black holes are simple with just two properties: mass and rotation. By dropping an object into a black hole, you can increase its mass and change its rotation.
 
-The simplicity of black holes seems to contradict the second law of thermodynamics, which states that *total entropy never decreases*. If black holes are that simple, you can reduce total entropy by dropping a high-entropy object, say a hot teacup, into the black hole.
+The simplicity of black holes contradicts the second law of thermodynamics, which states that *total entropy never decreases*. If black holes are that simple, you can reduce total entropy by dropping a high-entropy object, say a hot teacup, into the black hole.
 
-[Wheeler](https://en.wikipedia.org/wiki/John_Archibald_Wheeler), best known for coining the term "black hole," tasked one of his graduate students at Princeton, the young [Bekenstein](https://en.wikipedia.org/wiki/Jacob_Bekenstein), with resolving this paradox. The [golden age](https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age) of relativity was in full swing around 1970, and Princeton was among the best places to be. Christodoulou, another student of Wheeler, and Hawking had just shown that *the area of a black hole horizon never decreases*. To resolve the entropy paradox, Bekenstein conjectured that black holes must have entropy and that the entropy must be proportional to the area of the black hole horizon in Planck units. The proportionality constant was determined by the discovery of  [Hawking temperature](https://en.wikipedia.org/wiki/Hawking_radiation), which is why we call it the [Bekenstein-Hawking](http://www.scholarpedia.org/article/Bekenstein-Hawking_entropy) Black-Hole entropy
+[Wheeler](https://en.wikipedia.org/wiki/John_Archibald_Wheeler), best known for coining the term "black hole," tasked one of his graduate students at Princeton, the young [Bekenstein](https://en.wikipedia.org/wiki/Jacob_Bekenstein), with resolving this paradox. The [golden age](https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age) of relativity was in full swing around 1970, and Princeton was among the best places to be. [Christodoulou](https://en.wikipedia.org/wiki/Demetrios_Christodoulou), another student of Wheeler, and [Hawking](https://en.wikipedia.org/wiki/Stephen_Hawking) had just shown that *the area of a black hole horizon never decreases*. To resolve the entropy paradox, Bekenstein conjectured that black holes must have entropy and that the entropy must be proportional to the area of the black hole horizon in Planck units. The proportionality constant was determined by the discovery of  [Hawking temperature](https://en.wikipedia.org/wiki/Hawking_radiation), which is why we call it the [Bekenstein-Hawking](http://www.scholarpedia.org/article/Bekenstein-Hawking_entropy) Black-Hole entropy
 $$ S_{BH} = \frac{A}{4 L_P^2}$$
-where $L_P$ is the [Planck length](https://en.wikipedia.org/wiki/Planck_length), $S$ stands for entropy (probably after [Sadi Carnot](https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot)), and BH stands for [Brief History](#brief-history-of-bekenstein-hawking-black-hole-entropy).
+where $A$ is the horizon area, $L_P$ is the [Planck length](https://en.wikipedia.org/wiki/Planck_length), $S$ stands for entropy (probably after [Sadi Carnot](https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot)), and BH stands for [Brief History](#brief-history-of-bekenstein-hawking-black-hole-entropy).
 
 You may think this is a curious result about curious objects called black holes with little relevance to our notion of spacetime. But consider the following question: what is the maximum entropy in a finite, say spherical region? If you take some high-entropy matter and squeeze it spherically (with your mind), eventually, you hit the Bekenstein-Hawking entropy, and the compressed matter forms a black hole. This thought experiment leads to the surprising conclusion that the entropy of any matter system is bound by the surface area of the smallest sphere that encloses it[^1].
 
@@ -75,8 +75,8 @@ $$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\theta^2 . $$
 
 But now consider the time-shifted spacetime hyperboloid with curvature radius $L$ 
 $$ (\tau-t)^2 - r^2 = L^2 $$
-This hypersurface is spacelike everywhere and extends to future null infinity. Such surfaces are called hyperboloidal. Solving for $\tau$, we get the new time coordinate
-$$ \tau=t-\sqrt{L^2+r^2}.$$
+This hypersurface is spacelike everywhere and extends to null infinity. Such surfaces are called hyperboloidal. Solving for $\tau$, we choose the negative square root, so the surfaces extend to future null infinity.
+$$ \tau = t - \sqrt{L^2+r^2}.$$
 In this hyperboloidal time, Minkowski metric has hyperbolic spatial slices
 $$ ds^2_{\rm{Mink}} = -d\tau^2 - \frac{2 r}{\sqrt{L^2+r^2}} d\tau dr + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2}. $$
 Just like AdS, flat spacetime takes the form of hyperbolic space with a time direction. You can draw the spacetime geometry as a cylinder, which is what Penrose did in his first publication on conformal infinity in 1963.
@@ -134,20 +134,20 @@ the Minkowski metric takes the form
 $$ ds^2_{\rm{Mink}} = -d\tau^2 + \tau^2 \left( \textcolor{RedViolet}{\frac{1}{1+\rho^2} d\rho^2 + \rho^2 d\sigma^2}\right). $$
 Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\tau$. 
 
-I suspect that the hyperboloidal foliation we discussed [above](#hyperbolic-hyperboloidal) is better than Milne slices for holography. Consider the Penrose diagram of Milne slices.
+I suspect that the hyperboloidal foliation we discussed [above](#hyperbolic-hyperboloidal) is better than Milne slicing for holography. Consider the Penrose diagram of Milne slices.
 ![Hyperbolic slices](hyperbolic.png "Penrose diagram of Milne slicing. [Strominger, arXiv (2017)](https://arxiv.org/abs/hep-th/0603001)")
 The Penrose diagram and the metric reveal some undesirable features of Milne slices compared to the hyperboloidal foliation:
 - The slices intersect at null infinity.
 - The coordinates are time-dependent.
 - There is no analog of the AdS curvature scale.
 
-In contrast, the hyperboloidal foliation has constant mean curvature, $K=3/L$, playing the same role as the curvature scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature. Mean curvature acts as a dial between characteristic and Cauchy surfaces.
+In contrast, the hyperboloidal foliation has constant mean curvature, $K=3/L$, playing the same role as the curvature scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature, which acts as a dial between characteristic and Cauchy surfaces.
 
 ![Hyperboloidal foliation](hyperboloidal.png "Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K=\{6,3,2\}$. [Zenginoğlu, arXiv (2008)](https://arxiv.org/abs/0712.4333)")
 
-Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on [Forms of Relativistic Dynamics](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392). I'm not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.
+Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on [Forms of Relativistic Dynamics](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392) and it appears repeatedly in celestial holography. I'm not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.
 
-Celestial holography is relatively new and developing rapidly. We don't know the final version of the correspondence. That's the excitement of research.
+Celestial holography is relatively new and developing rapidly. We don't know how the final version will look like. That's the excitement of research.
 
 ### Wrap up
 
