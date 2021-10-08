@@ -10,7 +10,9 @@ headless: true
 weight: 130
 
 title: Contact
-subtitle:
+subtitle: '<div style="width:25%;margin:0 auto;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=dQ8lYiNN9pE52i0trH7rB8gVNEYDu9q1FN8zCFpNFnE"></script>
+</div>'
 
 content:
   # Automatically link email and phone or display as text?
