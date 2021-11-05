@@ -4,8 +4,8 @@ subtitle: Hyperboloids natural and powerful for relativity and beyond
 summary: Hyperbolic geometry provides a natural setting for special relativity. This viewpoint simplifies calculations, provides insights into the theory, and has applications beyond special relativity in machine learning and general relativity.
 
 projects: []
-date: "2021-11-05T00:00:00Z"
-lastmod: "2021-11-05T00:00:00Z"
+date: "2021-11-06T00:00:00Z"
+lastmod: "2021-11-06T00:00:00Z"
 draft: false
 math: true
 featured: true
@@ -83,7 +83,7 @@ $$ L(v)= \begin{pmatrix}
 where we defined the rescaled speed $\beta:=\tfrac{v}{c}$ and the Lorentz factor $\gamma:=1/\sqrt{1-\beta^2}$. The hyperbolic angle is related to the Lorentz factor through $\gamma=\cosh w$ and the rescaled speed through $\beta=\tanh w$. So the Lorentz transformation is simply a rotation in hyperbolic space with an angle, $w$, related to the observer's speed as $v=c \ \mathrm{arctanh}\ w$.
 
 Now, what does the addition of hyperbolic angles, $w=w_1+w_2$, mean in terms of speeds?
-$$ \beta = \tanh w = \tanh (w_1+w_2) = \frac{\tanh w_1+\tanh w_2}{1+\tanh w_1 \tanh w_2} = \frac{\beta_1+\beta_2}{1+\beta_1 \beta_2}. $$
+$\ \beta = \tanh w = \tanh (w_1+w_2) = \frac{\tanh w_1+\tanh w_2}{1+\tanh w_1 \tanh w_2} = \frac{\beta_1+\beta_2}{1+\beta_1 \beta_2}. $\
 Einstein's velocity addition (\ref{1}) becomes a consequence of hyperbolic identities. 
 
 There is much more that one can simplify or understand with this viewpoint. For example, the non-commutativity of Lorentz boosts becomes immediately apparent: Lorentz boosts do not commute just like rotations do not commute. The formula for the Doppler shift is just $e^w$. Many other calculations and ideas in special relativity translate to simple exercises in hyperbolic geometry. 
@@ -114,7 +114,7 @@ $$ (\tau - t)^2 - x^2 = 1 $$
 Using $\tau$ as the new time coordinate, the Minkowski metric becomes
 $$ ds^2 = -d\tau^2 + \frac{2x}{\sqrt{1+x^2}} d\tau dx + \frac{1}{1+x^2} dx^2.$$
 Level sets of $\tau$ are hyperbolic spaces. We can bring them into the more recognizable Poincaré form by making the spatial transformation $x=2 \rho/(1-\rho^2)$.
-$$ ds^2 = -d\tau^2 + \frac{8\rho}{(1-\rho^2)^2} d\tau d\rho + \frac{4}{(1-\rho^2)^4} d\rho^2.$$
+$$ ds^2 = -d\tau^2 + \frac{4}{(1-\rho^2)^2} \left(2\rho d\tau d\rho + d\rho^2\right).$$
 This construction generalizes to [curved spacetimes](../../publication/zenginoglu-2008-hyperboloidal/). It's favorable for numerically solving wave equations because the coefficients don't depend on time. Some of the problems appearing in standard coordinates, such as the outer boundary and radiation extraction problems, [don't arise with this approach](../../publication/zenginoglu-2011-hyperboloidal/) because we can solve the wave equation on the infinite spatial domain $\rho\in[0,1]$.
 
 Hyperboloidal coordinates may seem unnatural at first, but that's because we are used to thinking about space and time in Newtonian terms. Once you spend some time with them, you see that hyperboloidal coordinates are as valuable in Lorentzian geometry as spherical coordinates in Riemannian geometry. I devoted most of my [work](../../publication/) exploring properties of these surfaces and I find their relation to special relativity fascinating.
