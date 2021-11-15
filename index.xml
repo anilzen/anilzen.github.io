@@ -216,13 +216,12 @@ and depends on the spatial metric $h$. In flat space we have $\sqrt{\det h} =$ $
 $$ V_{B(R)} = \int_{0}^{R} \int_0^{\pi} \int_0^{2 \pi} r^2 \sin\theta \ dr d\theta d\varphi= 4\pi \int_{0}^{R} r^2 dr = \frac{4\pi}{3}R^3. $$
 For the hyperboloidal foliation with $L=1$ we have
 $$ h = \frac{1}{1+r^2}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\varphi^2,\quad \sqrt{\det h} = \frac{r^2 \sin\theta}{\sqrt{1+r^2}}. $$
-The volume expression is a bit more complicated
-$$
-V_{B(R)} = 4\pi \int_{0}^{R} \frac{r^2}{\sqrt{1+r^2}} dr = 2\pi
-\left[ r\sqrt{1+r^2} - \ln\left( r+\sqrt{1+r^2} \right) \right]&lt;em>{0}^{R}.
-$$
-We can get a sense for it using Taylor expansions. For small spheres with $R\ll 1$, we get the usual result
-$$ V&lt;/em>{B(R)}=\frac{4\pi}{3}R^3+O(R^5).$$
+The volume expression is different
+$$ V_{B(R)} = 4\pi \int_{0}^{R} \frac{r^2}{\sqrt{1+r^2}} dr.
+% = 2\pi \left[ r\sqrt{1+r^2} - \ln\left( r+\sqrt{1+r^2} \right) \right]_{0}^{R}.
+$$&lt;/p>
+&lt;p>We can get a sense for it using Taylor expansions. For small spheres with $R \ll 1$, we get the usual result
+$$ V_{B(R)}=\frac{4\pi}{3}R^3+O(R^5).$$
 For large spheres, however, the series expansion for $R\gg 1$ gives
 $$ V_{B(R)}=2\pi R^2 + O(\ln R).$$
 Remarkably, volume and area scale the same way near the asymptotic boundary in hyperboloidal coordinates.&lt;/p>
