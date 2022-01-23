@@ -1,0 +1,297 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.3.0 for Hugo">
+<meta name=google-site-verification content="CVDtdnmvDztdvP8XA_Fh0StEBOfqy3DM5L6GyojfVgk">
+<meta name=author content="Anıl Zenginoğlu">
+<meta name=description content="If you are a physicist jealous of hyperbolic fish living in [Escher](https://en.wikipedia.org/wiki/M._C._Escher)'s [Circle Limit III](https://en.wikipedia.org/wiki/Circle_Limit_III), I have good news for you! The asymptotic geometry of space is hyperbolic if you want it to be.">
+<link rel=alternate hreflang=en-us href=https://anilzen.github.io/post/2022/jealous-of-fish/>
+<meta name=theme-color content="#1565c0">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous media=print onload="this.media='all'">
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=stylesheet href="/css/wowchemy.528f88455f9ead372844b88b6c743842.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q5LP68RP1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','G-1Q5LP68RP1',{}),gtag('set',{cookie_flags:'SameSite=None;Secure'}),document.addEventListener('click',onClickCallback,!1)</script>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://anilzen.github.io/post/2022/jealous-of-fish/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@AnilZenginoglu">
+<meta property="twitter:creator" content="@AnilZenginoglu">
+<meta property="og:site_name" content="Anıl Zenginoğlu">
+<meta property="og:url" content="https://anilzen.github.io/post/2022/jealous-of-fish/">
+<meta property="og:title" content="Jealous of hyperbolic fish | Anıl Zenginoğlu">
+<meta property="og:description" content="If you are a physicist jealous of hyperbolic fish living in [Escher](https://en.wikipedia.org/wiki/M._C._Escher)'s [Circle Limit III](https://en.wikipedia.org/wiki/Circle_Limit_III), I have good news for you! The asymptotic geometry of space is hyperbolic if you want it to be."><meta property="og:image" content="https://anilzen.github.io/post/2022/jealous-of-fish/featured.jpg">
+<meta property="twitter:image" content="https://anilzen.github.io/post/2022/jealous-of-fish/featured.jpg"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2022-01-23T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-01-23T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://anilzen.github.io/post/2022/jealous-of-fish/"},"headline":"Jealous of hyperbolic fish","image":["https://anilzen.github.io/post/2022/jealous-of-fish/featured.jpg"],"datePublished":"2022-01-23T00:00:00Z","dateModified":"2022-01-23T00:00:00Z","author":{"@type":"Person","name":"Anıl Zenginoğlu"},"publisher":{"@type":"Organization","name":"University of Maryland","logo":{"@type":"ImageObject","url":"https://anilzen.github.io/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_192x192_fill_lanczos_center_3.png"}},"description":"If you are a physicist jealous of hyperbolic fish living in [Escher](https://en.wikipedia.org/wiki/M._C._Escher)'s [Circle Limit III](https://en.wikipedia.org/wiki/Circle_Limit_III), I have good news for you! The asymptotic geometry of space is hyperbolic if you want it to be."}</script>
+<title>Jealous of hyperbolic fish | Anıl Zenginoğlu</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=12a2aebd1f912f5f54ad3421e12fa9c3>
+<script src=/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js></script>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Anıl Zenginoğlu</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Anıl Zenginoğlu</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#posts><span>Posts</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact><span>Contact</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Jealous of hyperbolic fish</h1>
+<p class=page-subtitle>Time transformations make space hyperbolic</p>
+<div class=article-metadata>
+<div>
+<span class=author-highlighted>
+Anıl Zenginoğlu</span>
+</div>
+<span class=article-date>
+Jan 23, 2022
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+9 min read
+</span>
+<span class=middot-divider></span>
+<span class=article-categories>
+<i class="fas fa-folder mr-1"></i><a href=/category/research/>Research</a></span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<p>Inspired by the following tweet from the great <a href=https://www.quantamagazine.org/ target=_blank rel=noopener>Quanta Magazine</a>.
+<blockquote class=twitter-tweet><p lang=en dir=ltr>Physicists are jealous of these fish drawn by M.C. Escher. If we lived in a world with a geometry like theirs, we may have a much simpler time formulating theories about the quantum nature of gravity. <a href=https://t.co/RuZFkM4pCO>https://t.co/RuZFkM4pCO</a> <a href=https://t.co/2LAHKuGW8C>pic.twitter.com/2LAHKuGW8C</a></p>&mdash; Quanta Magazine (@QuantaMagazine) <a href="https://twitter.com/QuantaMagazine/status/1478861128553971718?ref_src=twsrc%5Etfw">January 5, 2022</a></blockquote>
+<script async src=https://platform.twitter.com/widgets.js></script>
+</p>
+<h3 id=kusturica-against-wallace>Kusturica against Wallace</h3>
+<p>The featured image on the tweet above shows <a href=https://en.wikipedia.org/wiki/M._C._Escher target=_blank rel=noopener>Escher</a> &rsquo;s <a href=https://en.wikipedia.org/wiki/Circle_Limit_III target=_blank rel=noopener>Circle Limit III</a> depicting the Poincaré model of hyperbolic geometry. Escher made <a href=https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration target=_blank rel=noopener>four</a> such demonstrations of hyperbolic geometry. These woodcuts are fruits of a collaboration between Escher and the brilliant geometer <a href=https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter target=_blank rel=noopener>Coxeter</a>. Coxeter was fascinated by Escher&rsquo;s drawings and sent him a reprint of one of his lectures, which kindled Escher&rsquo;s interest in constructing an infinitely repeating pattern in a finite figure. The <a href=http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit target=_blank rel=noopener>story</a> of how Escher managed to draw these images, is fascinating.</p>
+<p>The original <a href=https://www.quantamagazine.org/cosmologists-close-in-on-logical-laws-for-the-big-bang-20211110/ target=_blank rel=noopener>Quanta article</a> in the tweet above reports the difficulties in constructing something like the AdS/CFT correspondence for physical spacetimes. While we have a satisfying realization of holographic duality on anti-de Sitter spacetimes, a similar construction on flat or de Sitter spacetimes has been elusive, supposedly because these spacetimes do not possess hyperbolic geometry. A week after the tweet above, there was another <a href=https://www.quantamagazine.org/symmetries-reveal-clues-about-the-holographic-universe-20220112/ target=_blank rel=noopener>Quanta article</a> with hyperbolic geometry as its featured image. There is some hype around hyperbolic geometry.</p>
+<p>The main argument is that spatial slices of AdS are hyperbolic, which seems to be essential for the construction of AdS/CFT, so living in hyperbolic geometry would make it easier to construct quantum gravity. The fish in Escher&rsquo;s drawing may already know quantum gravity.</p>
+<blockquote>
+<p>The fish doesn&rsquo;t think because the fish knows everything.</p>
+<p><a href=https://en.wikipedia.org/wiki/Emir_Kusturica target=_blank rel=noopener>Kusturica</a> (1993) from the movie <a href=https://en.wikipedia.org/wiki/Arizona_Dream target=_blank rel=noopener>Arizona Dream</a></p>
+</blockquote>
+<p>We are, however, not like those fish; we want to discover quantum gravity. The obstacle remains that our physical models for spacetime are either asymptotically flat (for isolated systems) or de Sitter (for cosmology).</p>
+<p>I argue below that there is no need to be jealous of the fish. We do live in hyperbolic geometry; we just don&rsquo;t know it yet.</p>
+<blockquote>
+<p>There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says &ldquo;Morning, boys. How&rsquo;s the water?&rdquo; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes &ldquo;What the hell is water?&rdquo;</p>
+<p><a href=https://en.wikipedia.org/wiki/David_Foster_Wallace target=_blank rel=noopener>Wallace</a> (2005) from his commencement speech <a href=https://en.wikipedia.org/wiki/This_Is_Water target=_blank rel=noopener>This Is Water</a>.</p>
+</blockquote>
+<h3 id=little-fish-big-fish>Little fish, big fish</h3>
+<p>Let&rsquo;s start with a short review of the hyperbolic fish in Escher&rsquo;s drawing. Hyperbolic geometry is typically introduced in a fictitious higher dimensional Minkowski space using the equation for a hyperboloid in Cartesian coordinates. I&rsquo;ll be using spherical coordinates foreshadowing an application below, so we have the Minkowski space with line element
+$$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\sigma^2,$$
+where $d\sigma^2=d\sigma^2+\sin^2\theta \ d\varphi^2$ is the metric on the usual unit sphere.</p>
+<p>Just like the unit sphere is the set of points at unit Euclidean distance from the origin, the unit hyperboloid is the set of points at unit Minkowski distance from the origin: the hyperboloid is simply a (pseudo)sphere of Minkowski spacetime
+$$-t^2+r^2=-1. \tag{1} \label{1}$$</p>
+<p>We already have the first hint that we live in hyperbolic geometry! The hyperboloid describes the <a href=../../hyperbolic-relativity/>kinematic space of special relativity</a>. But this was rather anticlimactic so let&rsquo;s go a bit further.</p>
+<p>We can derive and represent the intrinsic metric of hyperbolic geometry in various equivalent ways. For example, setting $t=\cosh \xi$ and $r=\sinh \xi$ satisfies the equation for the hyperboloid (\ref{1}) identically, and gives us the hyperbolic line element
+$$ ds^2_{\mathbb{H}^3} = d\xi^2+ \sinh^2\xi \ d\sigma^2.$$
+Note the similarity of this hyperbolic metric with the metric on the unit sphere.
+We will use slightly different coordinates. Instead of introducing hyperbolic functions, we solve (\ref{1}) directly
+$$ t = \sqrt{1+r^2}. \tag{2} \label{2} $$
+Replacing the $dt$ term with the differential of this relation in the Minkowski metric, we get
+$$ ds^2_{\mathbb{H}^3} = \textcolor{purple}{\frac{1}{1+r^2}dr^2 + r^2 d\sigma^2}. \tag{3} \label{3} $$</p>
+<p>Escher&rsquo;s image shows hyperbolic geometry not in the hyperboloid model but as a disk. To map the hyperboloid model with its infinite range in $r$ to the unit <a href=https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model target=_blank rel=noopener>Poincaré disk model</a>, we relabel the radial points using
+$$ r = \frac{2\rho}{1-\rho^2}. \tag{4}\label{4}$$
+We get the familiar <a href=https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model#Metric_and_curvature target=_blank rel=noopener>line element for the Poincaré ball</a><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>
+$$ ds^2_{\mathbb{H}^3} = \textcolor{darkorange}{\frac{4}{1-\rho^2}\left( d\rho^2 + \rho^2 d\sigma^2 \right)}. $$
+The metric blows up near the boundary, which is how Escher packs the infinitely many fish in a repeating pattern into the disk. Remember that the fish have the same size. The Poincaré disk is a conformal model of hyperbolic geometry distorting sizes but keeping the shapes (or rather local angles) invariant, so the fish actually don&rsquo;t know that they are packed so densely, contrary to claims about their omniscient nature<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>. As far as the fish are concerned, they might think they live in flat space 😉.</p>
+<h3 id=swimming-in-anti-de-sitter>Swimming in anti-de Sitter</h3>
+<p>The reason for all the hype around hyperbolic geometry among quanta is that spatial cuts of AdS are hyperbolic. In fact, AdS is introduced very similarly to hyperbolic geometry: starting with a fictitious higher dimensional Minkowski space. This Minkowski space, however, has two time dimensions (which is rather awkward): $ds^2 = -dt_1^2 - dt_2^2 + dr^2 + r^2 d\sigma^2$. We write the hyperboloid as $-t_1^2-t_2^2+r^2=-1$. This relation is solved identically by $t_1 = \sqrt{1+r^2} \cos t$ and $t_2 = \sqrt{1+r^2} \sin t$, giving the <a href=https://en.wikipedia.org/wiki/Anti-de_Sitter_space#Global_coordinates target=_blank rel=noopener>AdS metric in global coordinates</a>
+$$ ds^2_{\rm{AdS}} = - \left(1+r^2\right) dt^2 + \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2},$$
+AdS spacetime has many <a href=%28https://arxiv.org/abs/1611.01118%29>counterintuitive aspects</a>; it&rsquo;s not even stable against <a href=https://arxiv.org/abs/1312.5544 target=_blank rel=noopener>perturbations</a>. But you can immediately see that its $t$ slices have hyperbolic geometry by comparing them to the metric (\ref{3}). The hyperbolic geometry of the $t$ slices is the crucial aspect for quantum gravity.</p>
+<p>I promised you an end to jealousy, but so far, I&rsquo;ve just been pressing on the wound. The question remains: how do we obtain from our usual flat spacetime with line element
+$$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\sigma^2$$
+the hyperbolic three-metric as time slices? Yes, we get the kinematic space of special relativity, but that&rsquo;s not a spacetime metric; time is missing! Considering the usual time slices, there is nothing hyperbolic about the flat geometry of $dr^2 + r^2 d\sigma^2$.</p>
+<h3 id=time-heals-all-wounds>Time heals all wounds</h3>
+<p>In relativity, there is no notion of absolute time; we can develop our own simultaneity to connect observers and call it a proper day. The geometry of the three-space is not invariant but depends on a choice of time. Many familiar notions such as simultaneity, volume, area become unfamiliar through such reparametrizations of spacetime.</p>
+<p>The choice of time also determines whether the geometry of the three-space is Euclidean or hyperbolic. You are free to pick your preferred time coordinate so let&rsquo;s pick a time that makes space hyperbolic and end the jealousy.</p>
+<p>We&rsquo;ve already seen this when we encountered the kinematic space of special relativity in our derivation of the hyperboloid model of hyperbolic geometry. Now, instead of finding intrinsic coordinates as in (\ref{2}), we introduce a new time coordinate as
+$$ \tau = t - \sqrt{1+r^2}. \tag{5} \label{5} $$
+The resulting metric is not a two-dimensional intrinsic spatial metric but a transformed Minkowski metric with timelike, null, and spacelike directions
+$$ ds^2 = -d\tau^2 - \frac{2r}{\sqrt{1+r^2}} d\tau dr + \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2}.$$
+Voilà! The $\tau$ slices have hyperbolic geometry. The transformation (\ref{4}) brings us to a foliation whose sections are given by the Poincaré ball
+$$ ds^2 = -d\tau^2 + \frac{8\rho}{(1-\rho^2)^2} d\tau d\rho + \textcolor{darkorange}{\frac{4}{(1-\rho^2)^2} \left( d\rho^2 + \rho^2 d\sigma^2\right)}.$$
+Note that this metric is still the flat Minkowski metric with all its usual geometric properties, such as vanishing curvature. The difference is that the points along the <a href=https://en.wikipedia.org/wiki/End_%28topology%29 target=_blank rel=noopener>ideal boundary</a> do not sit on spatial infinity but null infinity. In fact, the cuts $\rho=1$ along each $\tau$ slice corresponds to what is nowadays called a celestial sphere. These transformations</p>
+<p>The ideal boundary seems like an ideal place for quantum gravity.</p>
+<h3 id=hyperbolic-de-sitter>Hyperbolic de Sitter</h3>
+<p>The Quanta article discusses the difficulties in constructing an AdS/CFT correspondence in de Sitter spacetimes. One can use coordinates to make the time slices hyperbolic. In this case, the transformations are a bit more tricky. Consider the de Sitter metric in static coordinates
+$$ ds^2_{\rm{dS}} = - \left(1-r^2\right) dt^2 + \frac{1}{1-r^2} dr^2 + r^2 d\sigma^2.$$
+The metric is singular at $r=1$, corresponding to the <a href=https://en.wikipedia.org/wiki/Cosmological_horizon target=_blank rel=noopener>cosmological horizon</a>. The horizon singularity is a coordinate singularity similar to the singularity at the black hole horizon of Schwarzschild spacetime.</p>
+<p>The de Sitter space has a very different conformal geometry. For one, infinity is spacelike (as opposed to timelike for AdS and null for Minkowski). This throws people off, but there is a solution: the cosmological horizon.</p>
+<p>Here&rsquo;s the monstrous transformation that gets us to hyperbolic time slices
+$$ r = \sinh \xi \sinh \tau, \qquad t = \mathrm{arccosh} \left(\frac{\cosh \tau}{\sqrt{1-\sinh^2 \xi \sinh^2\tau}}\right) $$
+The transformed metric is comparatively simple
+$$ ds^2_{\rm{dS}} = - d\tau^2 + \sinh ^2 \tau \left( d\xi^2 + \sinh^2\xi\ d\sigma^2 \right).$$
+We recognize the hyperbolic geometry on $\tau=$const. slices. Abusing notation and using the same letter for $r=\sinh\xi$, we get
+$$ ds^2_{\rm{dS}} = - d\tau^2 + \sinh ^2 \tau \left( \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2} \right).$$
+Again, we recognize the hyperbolic metric in purple. The Poincaré disk follows from a simple relabeling of the radial points (\ref{4}). This representation of the de Sitter metric is called <a href=https://en.wikipedia.org/wiki/De_Sitter_space#Open_slicing target=_blank rel=noopener>open slicing</a>. I&rsquo;m ignoring subtleties, such as the domain of transformations and the region covered by coordinates in the conformal diagram. My goal is simply to demonstrate that you can choose to live in hyperbolic geometry if you want to, even in de Sitter spacetimes.</p>
+<p>The problem with the de Sitter metric in open slicing is its time-dependence. Especially for numerical studies, coordinates in which the metric is explicitly static are preferable. A better approach to construct a hyperbolic slicing is to consider the static patch and make a transformation similar to the flat case. First we push the horizon to infinity
+$$ r_* = \int \frac{1}{1-r^2}dr = \rm{arctanh} \ r $$
+The de Sitter metric on the static patch becomes
+$$ ds^2_{\rm{dS}} = \frac{1}{\cosh^2 r_<em>} \left(-dt^2 + dr_</em>^2 \right) +\tanh^2 r_* d\sigma^2. $$
+Now we can do the same transformation as in (\ref{5}), take $\tau=$const., and get the following metric on the time slices</p>
+<p>$$ \frac{1}{\cosh^2 r_<em>} \left(\frac{1}{1+r_</em>^2} dr_<em>^2 + \sinh^2 r_</em> d\sigma^2 \right). $$
+This is not quite the hyperbolic metric, but has other nice properties for numerical calculations that I&rsquo;ll write about in another post.</p>
+<h3 id=this-is-water>This is Water</h3>
+<p>The point of this post is that you can find a suitable time slice on which space is hyperbolic. There is nothing to be jealous about the little fish, big fish, swimming in Escher&rsquo;s hyperbolic space. It may well be that physically motivated time slices of flat spacetime are naturally hyperbolic but we don&rsquo;t experience it because the speed of light is so large.</p>
+<p>Are these time transformations physically motivated? What do they mean? Doesn&rsquo;t a preferred time slice contradict the principle of covariance? I&rsquo;ll leave those questions for another post.</p>
+<p>Enjoy the swim.</p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p>To get the disk model, just replace $d\sigma^2$ with $d\theta^2$.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p>The fish could, in principle, find out that they do live in hyperbolic space by making local measurements of curvature.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/infinity/>infinity</a>
+<a class="badge badge-light" href=/tag/hyperboloidal/>hyperboloidal</a>
+<a class="badge badge-light" href=/tag/hyperbolic/>hyperbolic</a>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://anilzen.github.io><img class="avatar mr-3 avatar-circle" src=/authors/anil/avatar_hubdbe8f760004904350d82355aac46df7_167987_270x270_fill_q75_lanczos_center.jpg alt="Anıl Zenginoğlu"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://anilzen.github.io>Anıl Zenginoğlu</a></h5>
+<h6 class=card-subtitle>Assistant Research Scientist</h6>
+<p class=card-text>Researcher, administrator, and technologist; exploring spacetime infinity and establishing operational efficiency in academia.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=mailto:anil@umd.edu>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/anilzen/ target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=M8NnUIQAAAAJ&hl=en" target=_blank rel=noopener>
+<i class="ai ai-google-scholar"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/anilzen target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://orcid.org/0000-0001-7896-6268 target=_blank rel=noopener>
+<i class="fab fa-orcid"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/AnilZenginoglu target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="article-widget content-widget-hr">
+<h3>Related</h3>
+<ul>
+<li><a href=/post/hyperbolic-relativity/>Special relativity as hyperbolic geometry</a></li>
+<li><a href=/post/hyperboloidal-holography/>Hyperboloidal Holography</a></li>
+<li><a href=/post/empirical-infinity/>How far is infinity?</a></li>
+<li><a href=/publication/burko-2015-testing/>Testing numerically the null Cauchy horizon singularity inside Kerr black holes</a></li>
+<li><a href=/publication/bizon-2010-saddle/>Saddle-point dynamics of a Yang—Mills field on the exterior Schwarzschild spacetime</a></li>
+</ul>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=/en/js/wowchemy.min.4273a72ba000ef1d25a1e7f8c1e94110.js></script>
+</body>
+</html>
