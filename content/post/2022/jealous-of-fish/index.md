@@ -31,14 +31,14 @@ categories:
 ---
 
 Inspired by the following tweet from the great [Quanta Magazine](https://www.quantamagazine.org/).
-{{< tweet 1478861128553971718 >}}
+{{< tweet QuantaMagazine 1478861128553971718 >}}
 
 ### Kusturica against Wallace
-The featured image on the tweet above shows [Escher](https://en.wikipedia.org/wiki/M._C._Escher) 's [Circle Limit III](https://en.wikipedia.org/wiki/Circle_Limit_III) depicting the Poincaré model of hyperbolic geometry. Escher made [four](https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration) such demonstrations of hyperbolic geometry. These woodcuts are fruits of a collaboration between Escher and the brilliant geometer [Coxeter](https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter). Coxeter was fascinated by Escher's drawings and sent him a reprint of one of his lectures, which kindled Escher's interest in constructing an infinitely repeating pattern in a finite figure. The [story](http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit) of how Escher managed to draw these images, is fascinating.
+The featured image on the tweet above shows [Escher](https://en.wikipedia.org/wiki/M._C._Escher) 's [Circle Limit III](https://en.wikipedia.org/wiki/Circle_Limit_III) depicting the Poincaré model of hyperbolic geometry. Escher was interested in constructing an infinitely repeating pattern in a finite figure. A reprint of a lecture on hyperbolic geometry, sent to him by the brilliant geometer [Coxeter](https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter), gave him a means to construct [four](https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration) such [tessalations](https://en.wikipedia.org/wiki/Tessellation). The [story](http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit) of how Escher managed to create these woodcuts is fascinating.
 
-The original [Quanta article](https://www.quantamagazine.org/cosmologists-close-in-on-logical-laws-for-the-big-bang-20211110/) in the tweet above reports the difficulties in constructing something like the AdS/CFT correspondence for physical spacetimes. While we have a satisfying realization of holographic duality on anti-de Sitter spacetimes, a similar construction on flat or de Sitter spacetimes has been elusive, supposedly because these spacetimes do not possess hyperbolic geometry. A week after the tweet above, there was another [Quanta article](https://www.quantamagazine.org/symmetries-reveal-clues-about-the-holographic-universe-20220112/) with hyperbolic geometry as its featured image. There is some hype around hyperbolic geometry.
+The original [Quanta article](https://www.quantamagazine.org/cosmologists-close-in-on-logical-laws-for-the-big-bang-20211110/) in the tweet above reports the difficulties in constructing something like the [AdS/CFT correspondence](https://en.wikipedia.org/wiki/AdS/CFT_correspondence) for physical spacetimes. While we have a satisfying realization of holographic duality on anti-de Sitter spacetimes, a similar construction on flat or de Sitter spacetimes has been elusive, supposedly because these spacetimes do not possess hyperbolic geometry. A week after the tweet above, there was another [Quanta article](https://www.quantamagazine.org/symmetries-reveal-clues-about-the-holographic-universe-20220112/) with hyperbolic geometry as its featured image. Clearly, there is some hype around hyperbolic geometry.
 
-The main argument is that spatial slices of AdS are hyperbolic, which seems to be essential for the construction of AdS/CFT, so living in hyperbolic geometry would make it easier to construct quantum gravity. The fish in Escher's drawing may already know quantum gravity.
+The main argument is that spatial slices of AdS are hyperbolic, which seems to be essential for AdS/CFT, so living in hyperbolic geometry makes it easier for the fish in Escher's drawing to know quantum gravity.
 
 >The fish doesn't think because the fish knows everything.
 >
@@ -54,19 +54,19 @@ I argue below that there is no need to be jealous of the fish. We do live in hyp
 
 ### Little fish, big fish
 
-Let's start with a short review of the hyperbolic fish in Escher's drawing. Hyperbolic geometry is typically introduced in a fictitious higher dimensional Minkowski space using the equation for a hyperboloid in Cartesian coordinates. I'll be using spherical coordinates foreshadowing an application below, so we have the Minkowski space with line element
+Let's start with a short review of the hyperbolic fish in Escher's drawing. Hyperbolic geometry is typically introduced in a fictitious higher dimensional Minkowski space using the equation for a [hyperboloid](https://en.wikipedia.org/wiki/Hyperboloid) in Cartesian coordinates. I'll be using spherical coordinates foreshadowing an application below, so we have the Minkowski space with line element
 $$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\sigma^2,$$
-where $d\sigma^2=d\sigma^2+\sin^2\theta \ d\varphi^2$ is the metric on the usual unit sphere. 
+where $d\sigma^2=d\sigma^2+\sin^2\theta \ d\varphi^2$ is the usual metric on the unit sphere. 
 
-Just like the unit sphere is the set of points at unit Euclidean distance from the origin, the unit hyperboloid is the set of points at unit Minkowski distance from the origin: the hyperboloid is simply a (pseudo)sphere of Minkowski spacetime 
-$$-t^2+r^2=-1. \tag{1} \label{1}$$
+Spheres and hyperboloids may seem very different, but mathematically they are analogous to each other. Just like the unit sphere is the set of points at unit Euclidean distance from the origin, the unit hyperboloid is the set of points at unit Minkowski distance from the origin: the hyperboloid is simply a (pseudo)sphere of Minkowski space 
+$$t^2-r^2=1. \tag{1} \label{1}$$
 
 We already have the first hint that we live in hyperbolic geometry! The hyperboloid describes the [kinematic space of special relativity](../../hyperbolic-relativity/). But this was rather anticlimactic so let's go a bit further.
 
 We can derive and represent the intrinsic metric of hyperbolic geometry in various equivalent ways. For example, setting $t=\cosh \xi$ and $r=\sinh \xi$ satisfies the equation for the hyperboloid (\ref{1}) identically, and gives us the hyperbolic line element
 $$ ds^2_{\mathbb{H}^3} = d\xi^2+ \sinh^2\xi \ d\sigma^2.$$
 Note the similarity of this hyperbolic metric with the metric on the unit sphere.
-We will use slightly different coordinates. Instead of introducing hyperbolic functions, we solve (\ref{1}) directly
+Coordinates are just labels and it's helpful to see hyperbolic geometry in different representations. Instead of introducing hyperbolic functions, let's solve (\ref{1}) directly
 $$ t = \sqrt{1+r^2}. \tag{2} \label{2} $$
 Replacing the $dt$ term with the differential of this relation in the Minkowski metric, we get
 $$ ds^2_{\mathbb{H}^3} = \textcolor{purple}{\frac{1}{1+r^2}dr^2 + r^2 d\sigma^2}.  \tag{3} \label{3} $$
@@ -75,55 +75,54 @@ Escher's image shows hyperbolic geometry not in the hyperboloid model but as a d
 $$ r = \frac{2\rho}{1-\rho^2}. \tag{4}\label{4}$$
 We get the familiar [line element for the Poincaré ball](https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model#Metric_and_curvature)[^1]
 $$ ds^2_{\mathbb{H}^3} = \textcolor{darkorange}{\frac{4}{1-\rho^2}\left( d\rho^2 + \rho^2 d\sigma^2 \right)}. $$
-The metric blows up near the boundary, which is how Escher packs the infinitely many fish in a repeating pattern into the disk. Remember that the fish have the same size. The Poincaré disk is a conformal model of hyperbolic geometry distorting sizes but keeping the shapes (or rather local angles) invariant, so the fish actually don't know that they are packed so densely, contrary to claims about their omniscient nature[^2]. As far as the fish are concerned, they might think they live in flat space :wink:.
+The metric blows up near the boundary, which is how Escher packs the infinitely many fish in a repeating pattern into the disk. Remember that the fish have the same size. The Poincaré disk is a conformal model of hyperbolic geometry distorting sizes but keeping the shapes (or rather local angles) invariant, so the fish actually don't know that they are packed so densely, contrary to claims about their omniscient nature. As far as the fish are concerned, they don't see the distortions and might even think they live in flat space[^2] :wink:.
 
 ### Swimming in anti-de Sitter
-The reason for all the hype around hyperbolic geometry among quanta is that spatial cuts of AdS are hyperbolic. In fact, AdS is introduced very similarly to hyperbolic geometry: starting with a fictitious higher dimensional Minkowski space. This Minkowski space, however, has two time dimensions (which is rather awkward): $ds^2 = -dt_1^2 - dt_2^2 + dr^2 + r^2 d\sigma^2$. We write the hyperboloid as $-t_1^2-t_2^2+r^2=-1$. This relation is solved identically by $t_1 = \sqrt{1+r^2} \cos t$ and $t_2 = \sqrt{1+r^2} \sin t$, giving the [AdS metric in global coordinates](https://en.wikipedia.org/wiki/Anti-de_Sitter_space#Global_coordinates)
-$$ ds^2_{\rm{AdS}} = - \left(1+r^2\right) dt^2 + \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2},$$
-AdS spacetime has many [counterintuitive aspects]((https://arxiv.org/abs/1611.01118)); it's not even stable against [perturbations](https://arxiv.org/abs/1312.5544). But you can immediately see that its $t$ slices have hyperbolic geometry by comparing them to the metric (\ref{3}). The hyperbolic geometry of the $t$ slices is the crucial aspect for quantum gravity.
+The hype around hyperbolic geometry among quanta is because cuts of AdS are hyperbolic spaces. In fact, AdS is introduced very similarly to hyperbolic geometry---starting with a fictitious higher dimensional Minkowski space. This Minkowski space, however, has two time dimensions (which is rather awkward): $ds^2 = -dt_1^2 - dt_2^2 + dr^2 + r^2 d\sigma^2$. We write the hyperboloid as $-t_1^2-t_2^2+r^2=-1$. This relation can be solved identically by $t_1 = \sqrt{1+r^2} \cos t$ and $t_2 = \sqrt{1+r^2} \sin t$, giving the [AdS metric in global coordinates](https://en.wikipedia.org/wiki/Anti-de_Sitter_space#Global_coordinates)
+$$ ds^2_{\rm{AdS}} = - \left(1+r^2\right) dt^2 + \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2}.$$
+AdS spacetime has many [counterintuitive aspects]((https://arxiv.org/abs/1611.01118)); it's not even stable against small [perturbations](https://arxiv.org/abs/1312.5544). But you can immediately see that its $t$ slices have hyperbolic geometry by comparing them to the metric (\ref{3}), which is the crucial aspect for quantum gravity.
 
 I promised you an end to jealousy, but so far, I've just been pressing on the wound. The question remains: how do we obtain from our usual flat spacetime with line element
 $$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\sigma^2$$
-the hyperbolic three-metric as time slices? Yes, we get the kinematic space of special relativity, but that's not a spacetime metric; time is missing! Considering the usual time slices, there is nothing hyperbolic about the flat geometry of $dr^2 + r^2 d\sigma^2$. 
+the hyperbolic three-metric as time slices? Yes, we get the kinematic space of special relativity, but that's not a spacetime metric---time is missing! Considering the usual time slices, there is nothing hyperbolic about the flat geometry of $dr^2 + r^2 d\sigma^2$. 
 
 ### Time heals all wounds
 
-In relativity, there is no notion of absolute time; we can develop our own simultaneity to connect observers and call it a proper day. The geometry of the three-space is not invariant but depends on a choice of time. Many familiar notions such as simultaneity, volume, area become unfamiliar through such reparametrizations of spacetime. 
+In relativity, there is no notion of absolute time; we can develop our own simultaneity to connect observers and call it a proper day. Therefore, the geometry of the three-space connecting these observers is also not invariant but depends on a choice of time. Many familiar notions such as simultaneity, volume, area become unfamiliar through such reparametrizations of spacetime. 
 
-The choice of time also determines whether the geometry of the three-space is Euclidean or hyperbolic. You are free to pick your preferred time coordinate so let's pick a time that makes space hyperbolic and end the jealousy.
+The choice of time also determines whether the geometry of the three-space is Euclidean or hyperbolic. If we are free to pick our preferred time coordinate, let's pick a time that makes space hyperbolic and end the jealousy.
 
 We've already seen this when we encountered the kinematic space of special relativity in our derivation of the hyperboloid model of hyperbolic geometry. Now, instead of finding intrinsic coordinates as in (\ref{2}), we introduce a new time coordinate as
 $$ \tau = t - \sqrt{1+r^2}. \tag{5} \label{5} $$
-The resulting metric is not a two-dimensional intrinsic spatial metric but a transformed Minkowski metric with timelike, null, and spacelike directions
+The resulting metric is not a three-dimensional intrinsic spatial metric but a transformed Minkowski metric with timelike, null, and spacelike directions
 $$ ds^2 = -d\tau^2 - \frac{2r}{\sqrt{1+r^2}} d\tau dr + \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2}.$$
-Voilà! The $\tau$ slices have hyperbolic geometry. The transformation (\ref{4}) brings us to a foliation whose sections are given by the Poincaré ball
+Voilà! The $\tau$ slices have hyperbolic geometry. Relabeling the radial points as in (\ref{4}) brings us to a foliation whose sections are the Poincaré balls
 $$ ds^2 = -d\tau^2 + \frac{8\rho}{(1-\rho^2)^2} d\tau d\rho + \textcolor{darkorange}{\frac{4}{(1-\rho^2)^2} \left( d\rho^2 + \rho^2 d\sigma^2\right)}.$$
-Note that this metric is still the flat Minkowski metric with all its usual geometric properties, such as vanishing curvature. The difference is that the points along the [ideal boundary](https://en.wikipedia.org/wiki/End_(topology)) do not sit on spatial infinity but null infinity. In fact, the cuts $\rho=1$ along each $\tau$ slice corresponds to what is nowadays called a celestial sphere. These transformations 
+Note that this metric is still the flat Minkowski metric with all its usual geometric properties, such as vanishing curvature. The important difference is that the points along the [ideal boundary](https://en.wikipedia.org/wiki/End_(topology)) do not sit at spatial infinity but null infinity. The cuts $\rho=1$ along each $\tau$ slice corresponds to what is called a celestial sphere. This allows us to make the connection back to quantum gravity, because the celestial sphere is indeed the stage for an attempt at a [holographic description](../../hyperboloidal-holography/) called [celestial holography](https://arxiv.org/abs/2107.02075).
 
 The ideal boundary seems like an ideal place for quantum gravity.
 
 ### Hyperbolic de Sitter
-The Quanta article discusses the difficulties in constructing an AdS/CFT correspondence in de Sitter spacetimes. One can use coordinates to make the time slices hyperbolic. In this case, the transformations are a bit more tricky. Consider the de Sitter metric in static coordinates
+The [Quanta article]([Quanta article](https://www.quantamagazine.org/cosmologists-close-in-on-logical-laws-for-the-big-bang-20211110/)) discusses the difficulties in constructing an AdS/CFT correspondence in de Sitter spacetimes. Again, one can use coordinates to make the time slices of de Sitter hyperbolic, but the transformations are a bit tricky because de Sitter space has a different conformal geometry. For example, conformal infinity is spacelike (as opposed to timelike for AdS and null for Minkowski). There is, however, another infinity that depends on coordinates and is useful for us.
+
+Consider the de Sitter metric in static coordinates
 $$ ds^2_{\rm{dS}} = - \left(1-r^2\right) dt^2 + \frac{1}{1-r^2} dr^2 + r^2 d\sigma^2.$$
 The metric is singular at $r=1$, corresponding to the [cosmological horizon](https://en.wikipedia.org/wiki/Cosmological_horizon). The horizon singularity is a coordinate singularity similar to the singularity at the black hole horizon of Schwarzschild spacetime.
 
-The de Sitter space has a very different conformal geometry. For one, infinity is spacelike (as opposed to timelike for AdS and null for Minkowski). This throws people off, but there is a solution: the cosmological horizon.
-
-Here's the monstrous transformation that gets us to hyperbolic time slices
-$$ r = \sinh \xi \sinh \tau, \qquad t = \mathrm{arccosh} \left(\frac{\cosh \tau}{\sqrt{1-\sinh^2 \xi \sinh^2\tau}}\right) $$
+Here's the transformation that gets us to hyperbolic time slices
+$$ r = \sinh \xi \sinh \tau, \qquad \cosh t = \frac{\cosh \tau}{\sqrt{1-\sinh^2 \xi \sinh^2\tau}} $$
 The transformed metric is comparatively simple
 $$ ds^2_{\rm{dS}} = - d\tau^2 + \sinh ^2 \tau \left( d\xi^2 + \sinh^2\xi\ d\sigma^2 \right).$$
-We recognize the hyperbolic geometry on $\tau=$const. slices. Abusing notation and using the same letter for $r=\sinh\xi$, we get
+We recognize the hyperbolic geometry on $\tau=$const. slices. Alternatively, we can abuse notation and use the same letter for $r=\sinh\xi$ to get the purple representation of the hyperbolic metric 
 $$ ds^2_{\rm{dS}} = - d\tau^2 + \sinh ^2 \tau \left( \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2} \right).$$
-Again, we recognize the hyperbolic metric in purple. The Poincaré disk follows from a simple relabeling of the radial points (\ref{4}). This representation of the de Sitter metric is called [open slicing](https://en.wikipedia.org/wiki/De_Sitter_space#Open_slicing). I'm ignoring subtleties, such as the domain of transformations and the region covered by coordinates in the conformal diagram. My goal is simply to demonstrate that you can choose to live in hyperbolic geometry if you want to, even in de Sitter spacetimes.
+The Poincaré disk follows from a simple relabeling of the radial points (\ref{4}). This representation of the de Sitter metric is called [open slicing](https://en.wikipedia.org/wiki/De_Sitter_space#Open_slicing). I'm ignoring subtleties, such as the domain of transformations and the region covered by coordinates in the conformal diagram. My goal is simply to demonstrate that you can choose to live in hyperbolic geometry if you want to, even in de Sitter spacetimes.
 
 The problem with the de Sitter metric in open slicing is its time-dependence. Especially for numerical studies, coordinates in which the metric is explicitly static are preferable. A better approach to construct a hyperbolic slicing is to consider the static patch and make a transformation similar to the flat case. First we push the horizon to infinity 
-$$ r_* = \int \frac{1}{1-r^2}dr = \rm{arctanh} \ r $$
+$$ r_\ast = \int \frac{1}{1-r^2}dr = \mathrm{arctanh} \ r. $$
 The de Sitter metric on the static patch becomes
-$$ ds^2_{\rm{dS}} = \frac{1}{\cosh^2 r_*} \left(-dt^2 + dr_*^2 \right)  +\tanh^2 r_* d\sigma^2. $$
+$$ ds^2_{\mathrm{dS}} = \frac{1}{\cosh^2 r_\ast} \left( -dt^2 + dr_\ast^2 \right) + \tanh^2 r_\ast d\sigma^2. $$
 Now we can do the same transformation as in (\ref{5}), take $\tau=$const., and get the following metric on the time slices
-<!-- $$ ds^2_{\rm{dS}} = \frac{1}{\cosh^2 r_*} \left(-d\tau^2 - \frac{2r_*}{\sqrt{1+r_*^2}} d\tau dr + \frac{1}{1+r_*^2} dr_*^2 \right)  +\tanh^2 r_* d\sigma^2. $$ -->
-$$ \frac{1}{\cosh^2 r_*} \left(\frac{1}{1+r_*^2} dr_*^2 + \sinh^2 r_* d\sigma^2 \right). $$
+$$ \frac{1}{\cosh^2 r_\ast} \left(\frac{1}{1+r_\ast^2} dr_\ast^2 + \sinh^2 r_\ast d\sigma^2 \right). $$
 This is not quite the hyperbolic metric, but has other nice properties for numerical calculations that I'll write about in another post.
 
 
@@ -136,4 +135,4 @@ Enjoy the swim.
 
 
 [^1]: To get the disk model, just replace $d\sigma^2$ with $d\theta^2$.
-[^2]: The fish could, in principle, find out that they do live in hyperbolic space by making local measurements of curvature.
+[^2]: The fish could, in principle, find out that they do live in hyperbolic space by making local measurements of *intrinsic* curvature.
