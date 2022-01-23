@@ -16,7 +16,7 @@ organizations:
   url: https://umd.edu
 
 # Short bio (displayed in user profile at end of posts)
-bio: Researcher, administrator, and technologist; exploring spacetime infinity and establishing operational efficiency in academia.
+bio: Researcher, administrator, and technologist; exploring spacetime infinity and working towards operational efficiency in academia.
 
 # Interests to show in About widget
 interests:
