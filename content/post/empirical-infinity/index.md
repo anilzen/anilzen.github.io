@@ -69,8 +69,6 @@ If we ever get to measure the power-law decay from black-hole perturbations, we 
 
 I think most people agree that actual infinity doesn't exist in the real world. But the number 3 also doesn't exist in the real world. Numbers are useful concepts abstracted from observations and represented in mathematical models. The decay rate experiment demonstrates that infinity is a useful concept in describing astrophysical observations. We should embrace empirical infinity and its appearance in our formalisms as long as it improves our calculations.
 
-<!-- {{< tweet 666616452582129664 >}} -->
-
 [^1]: The observation of a radiative field at infinity gives the part of the field that falls off as $1/r$. In other words, for a radiative field $\phi$, its observation at infinity is $\lim_{r\to\infty} r \phi$.
 [^2]: This was first discussed in detail by Richard Price in his 1972 paper [Nonspherical Perturbations of Relativistic Gravitational Collapse. I. Scalar and Gravitational Perturbations](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.5.2419). The decay rate depends on initial data and mode of perturbation.
 [^3]: C. Gundlach, R. H. Price, and J. Pullin. [Late-time behavior of stellar collapse and explosions. I. Linearized perturbations.](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.49.883) Physical Review D 49.2, 883 (1994).

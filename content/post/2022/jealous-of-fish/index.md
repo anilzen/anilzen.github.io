@@ -56,7 +56,7 @@ I argue below that there is no need to be jealous of the fish. We do live in hyp
 
 Let's start with a short review of the hyperbolic fish in Escher's drawing. Hyperbolic geometry is typically introduced in a fictitious higher dimensional Minkowski space using the equation for a [hyperboloid](https://en.wikipedia.org/wiki/Hyperboloid) in Cartesian coordinates. I'll be using spherical coordinates foreshadowing an application below, so we have the Minkowski space with line element
 $$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\sigma^2,$$
-where $d\sigma^2=d\sigma^2+\sin^2\theta \ d\varphi^2$ is the usual metric on the unit sphere. 
+where $d\sigma^2=d\sigma^2+\sin^2\theta \ d\varphi^2$, the usual metric on the unit sphere. 
 
 Spheres and hyperboloids may seem very different, but they are analogous to each other. Just like the unit sphere is the set of points at unit Euclidean distance from the origin, the unit hyperboloid is the set of points at unit Minkowski distance from the origin: the hyperboloid is simply a (pseudo)sphere of Minkowski space 
 $$t^2-r^2=1. \tag{1} \label{1}$$
@@ -74,13 +74,13 @@ $$ ds^2_{\mathbb{H}^3} = \textcolor{purple}{\frac{1}{1+r^2}dr^2 + r^2 d\sigma^2}
 To get Escher's image of a disk, we need to map the hyperboloid model with its infinite range in $r$ to the unit [Poincaré disk model](https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model). We relabel the radial points using
 $$ r = \frac{2\rho}{1-\rho^2}, \tag{4}\label{4}$$
 and obtain the familiar [line element for the Poincaré ball](https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model#Metric_and_curvature)[^1]
-$$ ds^2_{\mathbb{H}^3} = \textcolor{darkorange}{\frac{4}{1-\rho^2}\left( d\rho^2 + \rho^2 d\sigma^2 \right)}. $$
+$$ ds^2_{\mathbb{H}^3} = \textcolor{darkorange}{\frac{4}{(1-\rho^2)^2}\left( d\rho^2 + \rho^2 d\sigma^2 \right)}. $$
 The metric blows up near the boundary, which is how Escher packs the infinitely many fish in a repeating pattern into the disk. Remember that the fish have the same size. The Poincaré disk is a conformal model of hyperbolic geometry distorting sizes but keeping the shapes (or rather local angles) invariant, so the fish actually don't know that they are packed so densely, contrary to claims about their omniscient nature. As far as the fish are concerned, they don't see the distortions and might even think they live in flat space[^2] :wink:.
 
 ### Swimming in anti-de Sitter
 The hype around hyperbolic geometry among quanta is because cuts of AdS are hyperbolic spaces. In fact, AdS is introduced very similarly to hyperbolic geometry---starting with a fictitious higher dimensional Minkowski space. This Minkowski space, however, has two time dimensions (which is rather awkward): $ds^2 = -dt_1^2 - dt_2^2 + dr^2 + r^2 d\sigma^2$. We write the hyperboloid as $-t_1^2-t_2^2+r^2=-1$. This relation can be solved identically by $t_1 = \sqrt{1+r^2} \cos t$ and $t_2 = \sqrt{1+r^2} \sin t$, giving the [AdS metric in global coordinates](https://en.wikipedia.org/wiki/Anti-de_Sitter_space#Global_coordinates)
 $$ ds^2_{\rm{AdS}} = - \left(1+r^2\right) dt^2 + \textcolor{purple}{\frac{1}{1+r^2} dr^2 + r^2 d\sigma^2}.$$
-AdS spacetime has many [counterintuitive aspects]((https://arxiv.org/abs/1611.01118)); it's not even stable against small [perturbations](https://arxiv.org/abs/1312.5544). But you can immediately see that its $t$-slices have hyperbolic geometry by comparing them to the metric (\ref{3}), which is the crucial aspect for quantum gravity.
+AdS spacetime has many [counterintuitive aspects](https://arxiv.org/abs/1611.01118); it's not even stable against small [perturbations](https://arxiv.org/abs/1312.5544). But you can immediately see that its $t$-slices have hyperbolic geometry by comparing them to the metric (\ref{3}), which is the crucial aspect for quantum gravity.
 
 I promised you to end your jealousy, but so far, I've just been pressing on the wound. The question remains: how do we go from our usual flat spacetime with line element
 $$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\sigma^2$$
