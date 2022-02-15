@@ -13,7 +13,7 @@
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous media=print onload="this.media='all'">
 <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
-<link rel=stylesheet href="/css/wowchemy.528f88455f9ead372844b88b6c743842.css">
+<link rel=stylesheet href="/css/wowchemy.9fa319edef9f704111a1a5ce88ada434.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q5LP68RP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','G-1Q5LP68RP1',{}),gtag('set',{cookie_flags:'SameSite=None;Secure'}),document.addEventListener('click',onClickCallback,!1)</script>
 <link rel=manifest href=/manifest.webmanifest>
@@ -199,11 +199,9 @@ $$ V_{B(R)} = \int_{0}^{R} \int_0^{\pi} \int_0^{2 \pi} r^2 \sin\theta \ dr d\the
 For the hyperboloidal foliation with $L=1$ we have
 $$ h = \frac{1}{1+r^2}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\varphi^2,\quad \sqrt{\det h} = \frac{r^2 \sin\theta}{\sqrt{1+r^2}}. $$
 The volume expression changes to
-$$ V_{B(R)} = 4\pi \int_{0}^{R} \frac{r^2}{\sqrt{1+r^2}} dr.
-% = 2\pi \left[ r\sqrt{1+r^2} - \ln\left( r+\sqrt{1+r^2} \right) \right]<em>{0}^{R}.
-$$
+$$ V_{B(R)} = 4\pi \int_{0}^{R} \frac{r^2}{\sqrt{1+r^2}} dr. $$
 We can get a sense for it using Taylor expansions. For small spheres with $R \ll 1$, we get the usual result
-$$ V</em>{B(R)}=\frac{4\pi}{3}R^3+O(R^5).$$
+$$ V_{B(R)}=\frac{4\pi}{3}R^3+O(R^5).$$
 For large spheres, however, the series expansion for $R\gg 1$ gives
 $$ V_{B(R)}=2\pi R^2 + O(\ln R).$$
 Remarkably, volume and area scale the same way near the asymptotic boundary in hyperboloidal coordinates.</p>
