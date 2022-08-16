@@ -13,7 +13,7 @@ date: '2014-05-30'
 lastmod: 2021-05-25T22:33:16-04:00
 featured: true
 draft: false
-math: true
+
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

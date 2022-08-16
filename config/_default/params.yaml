@@ -3,144 +3,119 @@
 # Documentation: https://wowchemy.com/docs/
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-# Appearance
 
-theme: Minimal #Minimal #Ocean  #Dark #Apogee #1950s
-day_night: true
-font: 'native'
-font_size: L
+appearance:
+  theme_day: minimal
+  theme_night: minimal
+  font: native
+  font_size: M
 
 # SEO
 
-site_type: Person
-local_business_type: ''
-org_name: 'University of Maryland'
-description: 'Scientist at the Institute for Physical Science and Technology; Black holes, hyperboloidal foliations, null infinity'
-twitter: 'AnilZenginoglu'
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'Scientist at the Institute for Physical Science and Technology; Black holes, hyperboloidal foliations, null infinity'
+    twitter: 'AnilZenginoglu'
+  analytics:
+    google_analytics: 'G-1Q5LP68RP1'
+    baidu_tongji: ''
+  verification:
+    google: 'CVDtdnmvDztdvP8XA_Fh0StEBOfqy3DM5L6GyojfVgk'
+    baidu: ''
 
-# Contact (edit or remove options as required)
-
-email: anil@umd.edu
-address:
-  street: 4223 Atlantic Bldg., 4254 Stadium Drive
-  city: College Park
-  region: MD
-  postcode: '20742'
-  country: United States
-  country_code: US
-coordinates:
-  latitude: '38.99107986913304'
-  longitude: '-76.94243161846255'
-directions: 
-office_hours:
-appointment_url: 
-contact_links:
-  - icon: twitter
-    icon_pack: fab
-    name: Twitter DM
-    link: 'https://twitter.com/AnilZenginoglu'
-  - icon: linkedin
-    icon_pack: fab
-    name: LinkedIn Message
-    link: 'https://www.linkedin.com/in/anilzen/'
 
 # Site header
 
-main_menu:
-  enable: true
-  align: r
-  show_logo: true
-  show_language: false
-  show_day_night: true
-  show_search: false
-  highlight_active_link: true
+header:
+  navbar:
+    enable: true
+    align: l
+    show_logo: true
+    show_language: false
+    show_day_night: true
+    show_search: true
+    highlight_active_link: true
+
+# Site footer
+
+footer:
+  copyright:
+    notice: '© {year} Me. This work is licensed under {license}'
+    license:
+      enable: true
+      allow_derivatives: false
+      share_alike: true
+      allow_commercial: false
 
 # Localization
 
-date_format: 'Jan 2, 2006'
-time_format: '3:04 PM'
-address_format: en-us
+locale:
+  date_format: 'Jan 2, 2006'
+  time_format: '3:04 PM'
+  address_format: en-us
 
 # Site features
 
-highlight: false
-# highlight_languages:
-#   - r
-#   - python
-#   - html
-math: false
-diagram: false
-privacy_pack: false
-edit_page:
-  repo_url: ''
-  content_dir: ''
-  repo_branch: main
-  editable:
-    page: false
-    post: false
-    book: false
-show_related:
-  book: true
-  page: false
-  post: true
-  project: true
-  publication: true
-  event: true
-reading_time: true
-section_pager: false
-docs_section_pager: true
-sharing: false
-copyright_license:
-  enable: false
-  allow_derivatives: false
-  share_alike: true
-  allow_commercial: false
-  notice: 'This work is licensed under {license}'
-abstract_length: 135
-plugins_js: []
-avatar:
-  gravatar: false
-  shape: circle
-publications:
-  date_format: January 2006
-  citation_style: apa
-projects:
-  post_view: 2
-  publication_view: 2
-  talk_view: 2
-breadcrumb:
-  page_types:
-    book: true
-comments:
-  provider: ''
-  commentable:
-    post: true
-    book: true
-    project: true
-    publication: true
-    event: true
-  disqus:
-    shortname: ''
-    show_count: true
-  commento:
-    url: ''
-# search:
-#   provider: wowchemy
-#   algolia:
-#     app_id: ''
-#     api_key: ''
-#     index_name: ''
-#     show_logo: false
-map:
-  provider: ''
-  api_key: ''
-  zoom: 15
-marketing:
-  google_analytics: 'G-1Q5LP68RP1'
-  google_tag_manager: ''
-  google_site_verification: 'CVDtdnmvDztdvP8XA_Fh0StEBOfqy3DM5L6GyojfVgk'
-  baidu_site_verification: ''
-  baidu_tongji: ''
-icon:
-  pack:
-    ai: true
+features:
+  syntax_highlighter:
+    enable: true
+    extra_languages:
+      - python
+      - html
+      - latex
+    highlight_style: "solarized-dark"
+  math:
+    enable: true
+  privacy_pack:
+    enable: false
+  repository:
+    url: 'https://github.com/anilzen/anilzen.github.io'
+    content_dir: content
+    branch: main
+  avatar:
+    gravatar: false
+    shape: circle
+  comment:
+    provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+  search:
+    provider: wowchemy
+    algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: false
+  map:
+    provider: ''
+    api_key: ''
+    zoom: 15
+
+# Extensions
+
+extensions:
+  # cms:
+  #   branch: main
+  #   local_backend: false
+  academicons:
+    enable: true
+
+# Security
+
+security:
+  # Allow frame for embedding speaker notes in slides
+  allow_frame: true
+
+
+# icon:
+#   pack:
+#     ai: true
+
+
+

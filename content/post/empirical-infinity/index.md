@@ -7,7 +7,7 @@ projects: []
 date: "2021-09-08T00:00:00Z"
 lastmod: "2021-09-08T00:00:00Z"
 draft: false
-math: true
+
 featured: true
 
 # Featured image

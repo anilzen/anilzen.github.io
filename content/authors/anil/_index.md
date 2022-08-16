@@ -20,25 +20,25 @@ bio: Researcher, administrator, and technologist; exploring spacetime infinity a
 
 # Interests to show in About widget
 interests:
-- Null Infinity
-- Black Holes
-- Wave Equations
-- Conservation Laws
-- Gravitational Waves
-- Hyperboloidal Foliations
-#- Adaptive Kalman Regression
-# Education to show in About widget
+# - Null Infinity
+# - Black Holes
+# - Wave Equations
+# - Conservation Laws
+# - Gravitational Waves
+# - Hyperboloidal Foliations
+# #- Adaptive Kalman Regression
+# # Education to show in About widget
 education:
-  courses:
-  - course: PhD (Dr. rer. nat.) in General Relativity
-    institution: Max Planck Institute for Gravitational Physics and University of Potsdam, Germany 
-    year: 2007
-  - course: MSc (Mag. rer. nat.) in Theoretical Physics
-    institution: University of Vienna, Austria
-    year: 2003
-  - course: BSc (1st Diploma) in Physics
-    institution: University of Graz, Austria
-    year: 1999
+  # courses:
+  # - course: PhD (Dr. rer. nat.) in General Relativity
+  #   institution: Max Planck Institute for Gravitational Physics and University of Potsdam, Germany 
+  #   year: 2007
+  # - course: MSc (Mag. rer. nat.) in Theoretical Physics
+  #   institution: University of Vienna, Austria
+  #   year: 2003
+  # - course: BSc (1st Diploma) in Physics
+  #   institution: University of Graz, Austria
+  #   year: 1999
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -78,8 +78,8 @@ email: "anil@umd.edu"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu) with broad experience in research, administration, and information technologies.
+I'm a researcher and administrator at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu). Here, you'll find information about my [research](publication/) and [thoughts](post/). 
 
-As a researcher, I work on wave equations, black holes, gravitational waves, and null infinity. As an administrator, I bring researchers together in thematically focused but geographically distributed networks. As a technologist, I drive digital transformation to increase the efficiency of business processes that support research and education. 
+My [research](publication/) is about numerical computations in infinite domains. Much of my work concerns gravitational waves, but I also like to apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography. 
 
-<!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}CV{{< /staticref >}}. -->
+I regard science administration as the highest form of public service and enjoy bringing researchers together in thematically focused but geographically distributed networks. My administrative work started in 2014 with an NSF-funded research network on kinetic theory called [Ki-Net](https://www.ki-net.umd.edu/). I took on various roles such as Coordinator, Community Manager, IT Manager, and Acting Business Director. Currently, I serve the UMD [University Senate](https://www.senate.umd.edu/), the APS [Data Science Education Community of Practice](https://dsecop.org), the [Burgers Program in Fluid Dynamics](https://ipst.umd.edu/research/burgers), and the research program for undergraduates [TREND](https://ireap.umd.edu/trend). 
