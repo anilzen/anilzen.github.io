@@ -1,198 +1,40 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Wowchemy 5.3.0 for Hugo">
-<meta name=google-site-verification content="CVDtdnmvDztdvP8XA_Fh0StEBOfqy3DM5L6GyojfVgk">
-<meta name=author content="Anıl Zenginoğlu">
-<meta name=description content="Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?">
-<link rel=alternate hreflang=en-us href=https://anilzen.github.io/post/hyperboloidal-holography/>
-<meta name=theme-color content="#1565c0">
-<script src=/js/mathjax-config.js></script>
-<link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous media=print onload="this.media='all'">
-<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
-<link rel=stylesheet href="/css/wowchemy.9fa319edef9f704111a1a5ce88ada434.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q5LP68RP1"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','G-1Q5LP68RP1',{}),gtag('set',{cookie_flags:'SameSite=None;Secure'}),document.addEventListener('click',onClickCallback,!1)</script>
-<link rel=manifest href=/manifest.webmanifest>
-<link rel=icon type=image/png href=/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_32x32_fill_lanczos_center_3.png>
-<link rel=apple-touch-icon type=image/png href=/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://anilzen.github.io/post/hyperboloidal-holography/>
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:site" content="@AnilZenginoglu">
-<meta property="twitter:creator" content="@AnilZenginoglu">
-<meta property="og:site_name" content="Anıl Zenginoğlu">
-<meta property="og:url" content="https://anilzen.github.io/post/hyperboloidal-holography/">
-<meta property="og:title" content="Hyperboloidal Holography | Anıl Zenginoğlu">
-<meta property="og:description" content="Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"><meta property="og:image" content="https://anilzen.github.io/post/hyperboloidal-holography/featured.png">
-<meta property="twitter:image" content="https://anilzen.github.io/post/hyperboloidal-holography/featured.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2021-10-07T00:00:16-04:00">
-<meta property="article:modified_time" content="2021-10-07T00:00:16-04:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://anilzen.github.io/post/hyperboloidal-holography/"},"headline":"Hyperboloidal Holography","image":["https://anilzen.github.io/post/hyperboloidal-holography/featured.png"],"datePublished":"2021-10-07T00:00:16-04:00","dateModified":"2021-10-07T00:00:16-04:00","author":{"@type":"Person","name":"Anıl Zenginoğlu"},"publisher":{"@type":"Organization","name":"University of Maryland","logo":{"@type":"ImageObject","url":"https://anilzen.github.io/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_192x192_fill_lanczos_center_3.png"}},"description":"Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"}</script>
-<title>Hyperboloidal Holography | Anıl Zenginoğlu</title>
-</head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=dd4de48dc06b2d8e3910e390a3505a2c>
-<script src=/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js></script>
-<div class=page-header>
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
-<div class=container-xl>
-<div class="d-none d-lg-inline-flex">
-<a class=navbar-brand href=/>Anıl Zenginoğlu</a>
-</div>
-<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
-<span><i class="fas fa-bars"></i></span>
-</button>
-<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-<a class=navbar-brand href=/>Anıl Zenginoğlu</a>
-</div>
-<div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content>
-<ul class="navbar-nav d-md-inline-flex">
-<li class=nav-item>
-<a class=nav-link href=/#about><span>Home</span></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=/#posts><span>Posts</span></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=/#publications><span>Publications</span></a>
-</li>
-<li class=nav-item>
-<a class=nav-link href=/#contact><span>Contact</span></a>
-</li>
-</ul>
-</div>
-<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-<li class="nav-item dropdown theme-dropdown">
-<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
-<i class="fas fa-moon" aria-hidden=true></i>
-</a>
-<div class=dropdown-menu>
-<a href=# class="dropdown-item js-set-theme-light">
-<span>Light</span>
-</a>
-<a href=# class="dropdown-item js-set-theme-dark">
-<span>Dark</span>
-</a>
-<a href=# class="dropdown-item js-set-theme-auto">
-<span>Automatic</span>
-</a>
-</div>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-<div class=page-body>
-<article class=article>
-<div class="article-container pt-3">
-<h1>Hyperboloidal Holography</h1>
-<p class=page-subtitle>Hyperboloidal slices are hyperbolic manifolds. Can we use them to establish holography for isolated systems?</p>
-<div class=article-metadata>
-<span class=article-date>
-Oct 7, 2021
-</span>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.6.0 for Hugo"><meta name=author content="Anıl Zenginoğlu"><meta name=description content="Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"><link rel=alternate hreflang=en-us href=https://anilzen.github.io/post/hyperboloidal-holography/><meta name=theme-color content="#1565c0"><script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css media=print onload='this.media="all"'><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin=anonymous media=print onload='this.media="all"'><script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=stylesheet href=/css/wowchemy.2bde192b69af735dad4bae1a5d756e35.css><link rel=stylesheet href=/css/libs/chroma/github-light.min.css title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=/css/libs/chroma/dracula.min.css title=hl-dark media=print onload='this.media="all"' disabled><meta name=google-site-verification content="CVDtdnmvDztdvP8XA_Fh0StEBOfqy3DM5L6GyojfVgk"><script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q5LP68RP1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(e,t){gtag("event","click",{event_category:"outbound",event_label:e,transport_type:"beacon",event_callback:function(){t!=="_blank"&&(document.location=e)}}),console.debug("Outbound link clicked: "+e)}function onClickCallback(e){if(e.target.tagName!=="A"||e.target.host===window.location.host)return;trackOutboundLink(e.target,e.target.getAttribute("target"))}gtag("js",new Date),gtag("config","G-1Q5LP68RP1",{}),gtag("set",{cookie_flags:"SameSite=None;Secure"}),document.addEventListener("click",onClickCallback,!1)</script><link rel=manifest href=/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_180x180_fill_lanczos_center_3.png><link rel=canonical href=https://anilzen.github.io/post/hyperboloidal-holography/><meta property="twitter:card" content="summary_large_image"><meta property="twitter:site" content="@AnilZenginoglu"><meta property="twitter:creator" content="@AnilZenginoglu"><meta property="og:site_name" content="Anıl Zenginoğlu"><meta property="og:url" content="https://anilzen.github.io/post/hyperboloidal-holography/"><meta property="og:title" content="Hyperboloidal Holography | Anıl Zenginoğlu"><meta property="og:description" content="Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"><meta property="og:image" content="https://anilzen.github.io/post/hyperboloidal-holography/featured.png"><meta property="twitter:image" content="https://anilzen.github.io/post/hyperboloidal-holography/featured.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2021-10-07T00:00:16-04:00"><meta property="article:modified_time" content="2021-10-07T00:00:16-04:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://anilzen.github.io/post/hyperboloidal-holography/"},"headline":"Hyperboloidal Holography","image":["https://anilzen.github.io/post/hyperboloidal-holography/featured.png"],"datePublished":"2021-10-07T00:00:16-04:00","dateModified":"2021-10-07T00:00:16-04:00","author":{"@type":"Person","name":"Anıl Zenginoğlu"},"publisher":{"@type":"Organization","name":"Anıl Zenginoğlu","logo":{"@type":"ImageObject","url":"https://anilzen.github.io/media/icon_hu6b147281c14d31ddea9d4b1ec87dcb1f_1135_192x192_fill_lanczos_center_3.png"}},"description":"Minkowski spacetime in hyperboloidal coordinates takes the form of a stack of hyperbolic manifolds with the same spatial geometry as anti-de Sitter spacetime. Is there a hyperboloidal realization of holography for isolated systems?"}</script><title>Hyperboloidal Holography | Anıl Zenginoğlu</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=dd4de48dc06b2d8e3910e390a3505a2c><script src=/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js></script><aside class=search-modal id=search><div class=container><section class=search-header><div class="row no-gutters justify-content-between mb-3"><div class=col-6><h1>Search</h1></div><div class="col-6 col-search-close"><a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a></div></div><div id=search-box><input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...></div></section><section class=section-search-results><div id=search-hits></div></section></div></aside><div class=page-header><header class=header--fixed><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/>Anıl Zenginoğlu</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/>Anıl Zenginoğlu</a></div><div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/#about><span>Home</span></a></li><li class=nav-item><a class=nav-link href=/#posts><span>Posts</span></a></li><li class=nav-item><a class=nav-link href=/#publications><span>Publications</span></a></li><li class=nav-item><a class=nav-link href=/#contact><span>Contact</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class=nav-item><a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a></li><li class="nav-item dropdown theme-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences"><i class="fas fa-moon" aria-hidden=true></i></a><div class=dropdown-menu><a href=# class="dropdown-item js-set-theme-light"><span>Light</span></a>
+<a href=# class="dropdown-item js-set-theme-dark"><span>Dark</span></a>
+<a href=# class="dropdown-item js-set-theme-auto"><span>Automatic</span></a></div></li></ul></div></nav></header></div><div class=page-body><article class=article><div class="article-container pt-3"><h1>Hyperboloidal Holography</h1><p class=page-subtitle>Hyperboloidal slices are hyperbolic manifolds. Can we use them to establish holography for isolated systems?</p><div class=article-metadata><span class=article-date>Oct 7, 2021</span>
 <span class=middot-divider></span>
-<span class=article-reading-time>
-11 min read
-</span>
+<span class=article-reading-time>11 min read</span>
 <span class=middot-divider></span>
-<span class=article-categories>
-<i class="fas fa-folder mr-1"></i><a href=/category/research/>Research</a></span>
-</div>
-</div>
-<div class=article-container>
-<div class=article-style>
-<h3 id=brief-history-of-bekenstein-hawking-black-hole-entropy>Brief History of Bekenstein-Hawking Black-Hole Entropy</h3>
-<p>When physicists want to understand something, they consider idealizations and extremes. To understand spacetime then, consider black holes.</p>
-<blockquote>
-<p>The black holes of nature are the most perfect macroscopic objects there are in the universe:
-the only elements in their construction are our concepts of space and time.</p>
-<p><a href=https://en.wikipedia.org/wiki/Subrahmanyan_Chandrasekhar target=_blank rel=noopener>Chandrasekhar</a> (1983)</p>
-</blockquote>
-<p>Black holes are simple with just two properties: mass and rotation. By dropping an object into a black hole, you can increase its mass and change its rotation.</p>
-<p>The simplicity of black holes contradicts the second law of thermodynamics, which states that <em>total entropy never decreases</em>. If black holes are that simple, you can reduce total entropy by dropping a high-entropy object, say a hot teacup, into the black hole.</p>
-<p><a href=https://en.wikipedia.org/wiki/John_Archibald_Wheeler target=_blank rel=noopener>Wheeler</a>, best known for coining the term &ldquo;black hole,&rdquo; tasked one of his graduate students at Princeton, the young <a href=https://en.wikipedia.org/wiki/Jacob_Bekenstein target=_blank rel=noopener>Bekenstein</a>, with resolving this paradox. The <a href=https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age target=_blank rel=noopener>golden age</a> of relativity was in full swing around 1970, and Princeton was among the best places to be. <a href=https://en.wikipedia.org/wiki/Demetrios_Christodoulou target=_blank rel=noopener>Christodoulou</a>, another student of Wheeler, and <a href=https://en.wikipedia.org/wiki/Stephen_Hawking target=_blank rel=noopener>Hawking</a> had just shown that <em>the area of a black hole horizon never decreases</em>. To resolve the entropy paradox, Bekenstein conjectured that black holes must have entropy and that the entropy must be proportional to the area of the black hole horizon in Planck units. The proportionality constant was determined by the discovery of <a href=https://en.wikipedia.org/wiki/Hawking_radiation target=_blank rel=noopener>Hawking temperature</a>, which is why we call it the <a href=http://www.scholarpedia.org/article/Bekenstein-Hawking_entropy target=_blank rel=noopener>Bekenstein-Hawking</a> Black-Hole entropy
+<span class=article-categories><i class="fas fa-folder mr-1"></i><a href=/category/research/>Research</a></span></div></div><div class=article-container><div class=article-style><h3 id=brief-history-of-bekenstein-hawking-black-hole-entropy>Brief History of Bekenstein-Hawking Black-Hole Entropy</h3><p>When physicists want to understand something, they consider idealizations and extremes. To understand spacetime then, consider black holes.</p><blockquote><p>The black holes of nature are the most perfect macroscopic objects there are in the universe:
+the only elements in their construction are our concepts of space and time.</p><p><a href=https://en.wikipedia.org/wiki/Subrahmanyan_Chandrasekhar target=_blank rel=noopener>Chandrasekhar</a> (1983)</p></blockquote><p>Black holes are simple with just two properties: mass and rotation. By dropping an object into a black hole, you can increase its mass and change its rotation.</p><p>The simplicity of black holes contradicts the second law of thermodynamics, which states that <em>total entropy never decreases</em>. If black holes are that simple, you can reduce total entropy by dropping a high-entropy object, say a hot teacup, into the black hole.</p><p><a href=https://en.wikipedia.org/wiki/John_Archibald_Wheeler target=_blank rel=noopener>Wheeler</a>, best known for coining the term &ldquo;black hole,&rdquo; tasked one of his graduate students at Princeton, the young <a href=https://en.wikipedia.org/wiki/Jacob_Bekenstein target=_blank rel=noopener>Bekenstein</a>, with resolving this paradox. The <a href=https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age target=_blank rel=noopener>golden age</a> of relativity was in full swing around 1970, and Princeton was among the best places to be. <a href=https://en.wikipedia.org/wiki/Demetrios_Christodoulou target=_blank rel=noopener>Christodoulou</a>, another student of Wheeler, and <a href=https://en.wikipedia.org/wiki/Stephen_Hawking target=_blank rel=noopener>Hawking</a> had just shown that <em>the area of a black hole horizon never decreases</em>. To resolve the entropy paradox, Bekenstein conjectured that black holes must have entropy and that the entropy must be proportional to the area of the black hole horizon in Planck units. The proportionality constant was determined by the discovery of <a href=https://en.wikipedia.org/wiki/Hawking_radiation target=_blank rel=noopener>Hawking temperature</a>, which is why we call it the <a href=http://www.scholarpedia.org/article/Bekenstein-Hawking_entropy target=_blank rel=noopener>Bekenstein-Hawking</a> Black-Hole entropy
 $$ S_{BH} = \frac{A}{4 L_P^2}$$
-where $A$ is the horizon area, $L_P$ is the <a href=https://en.wikipedia.org/wiki/Planck_length target=_blank rel=noopener>Planck length</a>, $S$ stands for entropy (probably after <a href=https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot target=_blank rel=noopener>Sadi Carnot</a>), and BH stands for <a href=#brief-history-of-bekenstein-hawking-black-hole-entropy>Brief History</a>.</p>
-<p>You may think this is a curious result about curious objects called black holes with little relevance to our notion of spacetime. But consider the following question: what is the maximum entropy in a finite, say spherical region? If you take some high-entropy matter and squeeze it spherically (with your mind), eventually, you hit the Bekenstein-Hawking entropy, and the compressed matter forms a black hole. This thought experiment leads to the surprising conclusion that the entropy of any matter system is bound by the surface area of the smallest sphere that encloses it<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p>
-<p>We started with black holes and arrived at the</p>
-<h3 id=holographic-principle>Holographic Principle</h3>
-<p>Counterintuitively, the maximal entropy of a region scales with the area of its boundary, not its volume. The <a href=https://en.wikipedia.org/wiki/Holographic_principle target=_blank rel=noopener>holographic principle</a> pushes this area-dependence further, suggesting that the dynamics in a volume of space is encoded on the boundary of that space. In other words, the information content of a spacetime region is encoded on the surface of that region.</p>
-<p>Take a break and think about this for a moment. How can our three-dimensional world be encoded on a two-dimensional surface? What does it mean? Is the universe a <a href=https://en.wikipedia.org/wiki/Simulation_hypothesis target=_blank rel=noopener>game</a> running on the screen of an alien child? Are we trapped in <a href=https://en.wikipedia.org/wiki/The_Matrix target=_blank rel=noopener>The Matrix</a>? Are we <a href="https://www.youtube.com/watch?v=7nqcL0mjMjw" target=_blank rel=noopener>Livin' on the Edge</a>?</p>
-<p>
-<figure id=figure-aerosmith-livin-on-the-edge-video-1993>
-<div class="d-flex justify-content-center">
-<div class=w-100><img alt="Living on the Edge" srcset="/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_09bcc9471a5c8b21ac497a42026d293a.jpg 400w,
-/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_2463810934eaa6069c90274256f62d79.jpg 760w,
-/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_1200x1200_fit_q75_lanczos.jpg 1200w" src=/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_09bcc9471a5c8b21ac497a42026d293a.jpg width=722 height=531 loading=lazy data-zoomable></div>
-</div><figcaption>
-Aerosmith: Livin' on the Edge (Video 1993)
-</figcaption></figure>
-</p>
-<h3 id=adscft-correspondence>AdS/CFT correspondence</h3>
-<p>The most famous realization of the holographic principle is the <a href=https://en.wikipedia.org/wiki/AdS/CFT_correspondence target=_blank rel=noopener>AdS/CFT correspondence</a>. Conjectured by <a href=https://en.wikipedia.org/wiki/Juan_Mart%C3%ADn_Maldacena target=_blank rel=noopener>Maldacena</a> in 1997, the correspondence suggests an equivalence between a <a href=https://en.wikipedia.org/wiki/String_theory target=_blank rel=noopener>string theory</a> in curved anti-de Sitter spacetime (AdS) and a strongly coupled <a href=https://en.wikipedia.org/wiki/Conformal_field_theory target=_blank rel=noopener>conformal field theory</a> in a lower-dimensional flat spacetime. Aside from the details, the remarkable aspect of the conjecture is the duality between the bulk and the boundary of AdS.</p>
-<p>Below is a visual image for the AdS$_3$/CFT$_2$ correspondence. The cylinder represents the three-dimensional AdS$_3$ spacetime. On the boundary of the cylinder lives the 1+1 dimensional CFT$_2$. Slices of constant time are <a href=https://en.wikipedia.org/wiki/Hyperbolic_manifold target=_blank rel=noopener>hyperbolic manifolds</a> with negative curvature, drawn as <a href=https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model target=_blank rel=noopener>Poincaré disks</a>. A gravity theory within the disks is dual to a gravity-free theory on the bounding circle. The boundary of space encodes the bulk.</p>
-<p>
-<figure id=figure-ads-is-hyperbolic-space-with-a-time-direction-wikimediahttpscommonswikimediaorgwikifileads3svg>
-<div class="d-flex justify-content-center">
-<div class=w-100><img alt=AdS3 srcset="/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_23af80de35e5b1c5d4d32844b35a4cdb.png 400w,
-/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_62ce83adaaf6f5e369aa79a83ae609c8.png 760w,
-/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_1200x1200_fit_lanczos_3.png 1200w" src=/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_23af80de35e5b1c5d4d32844b35a4cdb.png width=472 height=480 loading=lazy data-zoomable></div>
-</div><figcaption>
-AdS is hyperbolic space with a time direction. <a href=https://commons.wikimedia.org/wiki/File:AdS3.svg>Wikimedia</a>
-</figcaption></figure>
-</p>
-<p>The negative curvature of AdS is a feature and a bug. It allows the realization of the holographic principle due to its hyperbolic slices, but it also makes AdS an unphysical model for our universe. At cosmological scales, the universe has positive curvature and resembles de Sitter space. At astrophysical and smaller scales, isolated systems are modeled by asymptotically flat spacetimes. Either way, anti-de Sitter spacetime, with all its <a href=https://arxiv.org/abs/1611.01118 target=_blank rel=noopener>bizarre</a> features, is not a good model for physical reality.</p>
-<p>Can we establish the holographic principle for isolated systems?</p>
-<h3 id=hyperbolic-hyperboloidal>Hyperbolic Hyperboloidal</h3>
-<p>Consider the AdS$_3$ metric in static coordinates with curvature scale $L$
+where $A$ is the horizon area, $L_P$ is the <a href=https://en.wikipedia.org/wiki/Planck_length target=_blank rel=noopener>Planck length</a>, $S$ stands for entropy (probably after <a href=https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot target=_blank rel=noopener>Sadi Carnot</a>), and BH stands for <a href=#brief-history-of-bekenstein-hawking-black-hole-entropy>Brief History</a>.</p><p>You may think this is a curious result about curious objects called black holes with little relevance to our notion of spacetime. But consider the following question: what is the maximum entropy in a finite, say spherical region? If you take some high-entropy matter and squeeze it spherically (with your mind), eventually, you hit the Bekenstein-Hawking entropy, and the compressed matter forms a black hole. This thought experiment leads to the surprising conclusion that the entropy of any matter system is bound by the surface area of the smallest sphere that encloses it<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p><p>We started with black holes and arrived at the</p><h3 id=holographic-principle>Holographic Principle</h3><p>Counterintuitively, the maximal entropy of a region scales with the area of its boundary, not its volume. The <a href=https://en.wikipedia.org/wiki/Holographic_principle target=_blank rel=noopener>holographic principle</a> pushes this area-dependence further, suggesting that the dynamics in a volume of space is encoded on the boundary of that space. In other words, the information content of a spacetime region is encoded on the surface of that region.</p><p>Take a break and think about this for a moment. How can our three-dimensional world be encoded on a two-dimensional surface? What does it mean? Is the universe a <a href=https://en.wikipedia.org/wiki/Simulation_hypothesis target=_blank rel=noopener>game</a> running on the screen of an alien child? Are we trapped in <a href=https://en.wikipedia.org/wiki/The_Matrix target=_blank rel=noopener>The Matrix</a>? Are we <a href="https://www.youtube.com/watch?v=7nqcL0mjMjw" target=_blank rel=noopener>Livin&rsquo; on the Edge</a>?</p><p><figure id=figure-aerosmith-livin-on-the-edge-video-1993><div class="d-flex justify-content-center"><div class=w-100><img alt="Living on the Edge" srcset="/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_c7a240253d106fdf4dedfdaa3a7ac972.webp 400w,
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_207a77ccf2abf58e87d6f804fcaac0b9.webp 760w,
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_1200x1200_fit_q75_h2_lanczos.webp 1200w" src=/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_c7a240253d106fdf4dedfdaa3a7ac972.webp width=722 height=531 loading=lazy data-zoomable></div></div><figcaption>Aerosmith: Livin&rsquo; on the Edge (Video 1993)</figcaption></figure></p><h3 id=adscft-correspondence>AdS/CFT correspondence</h3><p>The most famous realization of the holographic principle is the <a href=https://en.wikipedia.org/wiki/AdS/CFT_correspondence target=_blank rel=noopener>AdS/CFT correspondence</a>. Conjectured by <a href=https://en.wikipedia.org/wiki/Juan_Mart%C3%ADn_Maldacena target=_blank rel=noopener>Maldacena</a> in 1997, the correspondence suggests an equivalence between a <a href=https://en.wikipedia.org/wiki/String_theory target=_blank rel=noopener>string theory</a> in curved anti-de Sitter spacetime (AdS) and a strongly coupled <a href=https://en.wikipedia.org/wiki/Conformal_field_theory target=_blank rel=noopener>conformal field theory</a> in a lower-dimensional flat spacetime. Aside from the details, the remarkable aspect of the conjecture is the duality between the bulk and the boundary of AdS.</p><p>Below is a visual image for the AdS$_3$/CFT$_2$ correspondence. The cylinder represents the three-dimensional AdS$_3$ spacetime. On the boundary of the cylinder lives the 1+1 dimensional CFT$_2$. Slices of constant time are <a href=https://en.wikipedia.org/wiki/Hyperbolic_manifold target=_blank rel=noopener>hyperbolic manifolds</a> with negative curvature, drawn as <a href=https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model target=_blank rel=noopener>Poincaré disks</a>. A gravity theory within the disks is dual to a gravity-free theory on the bounding circle. The boundary of space encodes the bulk.</p><p><figure id=figure-ads-is-hyperbolic-space-with-a-time-direction-wikimediahttpscommonswikimediaorgwikifileads3svg><div class="d-flex justify-content-center"><div class=w-100><img alt=AdS3 srcset="/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_61970cad7d4d717edc3a67b3ac88af73.webp 400w,
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_352cb1eb5025a0154dc7b8a7e0e7b971.webp 760w,
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_1200x1200_fit_q75_h2_lanczos_3.webp 1200w" src=/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_61970cad7d4d717edc3a67b3ac88af73.webp width=472 height=480 loading=lazy data-zoomable></div></div><figcaption>AdS is hyperbolic space with a time direction. <a href=https://commons.wikimedia.org/wiki/File:AdS3.svg target=_blank rel=noopener>Wikimedia</a></figcaption></figure></p><p>The negative curvature of AdS is a feature and a bug. It allows the realization of the holographic principle due to its hyperbolic slices, but it also makes AdS an unphysical model for our universe. At cosmological scales, the universe has positive curvature and resembles de Sitter space. At astrophysical and smaller scales, isolated systems are modeled by asymptotically flat spacetimes. Either way, anti-de Sitter spacetime, with all its <a href=https://arxiv.org/abs/1611.01118 target=_blank rel=noopener>bizarre</a> features, is not a good model for physical reality.</p><p>Can we establish the holographic principle for isolated systems?</p><h3 id=hyperbolic-hyperboloidal>Hyperbolic Hyperboloidal</h3><p>Consider the AdS$_3$ metric in static coordinates with curvature scale $L$
 $$ ds^2_{\rm{AdS}} = - \left(L^2+r^2\right) d\tau^2 + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2},$$
 Slices of constant time are hyperbolic spaces with negative curvature. Hyperbolic geometry has much more space near its conformal boundary than Euclidean space. It seems that flat spacetime with its Euclidean time slices and vanishing curvature would not allow such a description
-$$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\theta^2 . $$</p>
-<p>But now consider the time-shifted spacetime hyperboloid with curvature radius $L$
+$$ ds^2_{\rm{Mink}} = -dt^2 + dr^2 + r^2 d\theta^2 . $$</p><p>But now consider the time-shifted spacetime hyperboloid with curvature radius $L$
 $$ (\tau-t)^2 - r^2 = L^2 $$
 This hypersurface is spacelike everywhere and extends to null infinity. Such surfaces are called hyperboloidal. Solving for $\tau$, we choose the negative square root, so the surfaces extend to future null infinity.
 $$ \tau = t - \sqrt{L^2+r^2}.$$
 In this hyperboloidal time, Minkowski metric has hyperbolic spatial slices
 $$ ds^2_{\rm{Mink}} = -d\tau^2 - \frac{2 r}{\sqrt{L^2+r^2}} d\tau dr + \textcolor{RedViolet}{\frac{L^2}{L^2+r^2} dr^2 + r^2 d\theta^2}. $$
-Just like AdS, flat spacetime takes the form of hyperbolic space with a time direction. You can draw the spacetime geometry as a cylinder, which is what Penrose did in his first publication on conformal infinity in 1963.</p>
-<p>
-<figure id=figure-the-cylinders-in-penroses-drawing-are-hyperbolic-spaces-with-a-time-direction-penrose-prl-1963httpsjournalsapsorgprlabstract101103physrevlett1066>
-<div class="d-flex justify-content-center">
-<div class=w-100><img alt="Penrose cylinder" srcset="/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_e271eda2582e44a791c10e855ddca0af.png 400w,
-/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_0644506f30853b64f349a9c991cf2b26.png 760w,
-/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_1200x1200_fit_lanczos_3.png 1200w" src=/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_e271eda2582e44a791c10e855ddca0af.png width=377 height=365 loading=lazy data-zoomable></div>
-</div><figcaption>
-The cylinders in Penrose&rsquo;s drawing are hyperbolic spaces with a time direction. <a href=https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.10.66>Penrose, PRL (1963)</a>
-</figcaption></figure>
-</p>
-<p>The agreement of the geometry of hyperboloidal and AdS slices is suggestive. Calculations in the AdS/CFT literature performed on time slices may carry over to flat spacetime in hyperboloidal coordinates. One such example is the Ryu-Takayanagi conjecture.</p>
-<h3 id=rt-if-you-agree>RT if you agree</h3>
-<p>Ryu and Takayanagi (RT) have <a href=https://arxiv.org/abs/hep-th/0603001 target=_blank rel=noopener>proposed</a> a relation between geometry in AdS and entropy in CFT.</p>
-<p>One can interpret the Bekenstein-Hawking entropy as a measure of information lost to external observers. The black-hole horizon acts as a screen dividing space into two subsystems inside and outside the horizon. <a href=https://en.wikipedia.org/wiki/Entropy_of_entanglement target=_blank rel=noopener>Entanglement entropy</a> is proportional to the area of this screen. The RT conjecture relates the entanglement entropy on CFT to the surface area of a screen in AdS that divides the AdS boundary into subdomains.</p>
-<p>Words don&rsquo;t do it justice, so let&rsquo;s look at a picture. Below is a diagram from the <a href=https://arxiv.org/abs/hep-th/0603001 target=_blank rel=noopener>RT paper</a> for AdS$_3$ /CFT$_2$.</p>
-<p>
-<figure id=figure-diagram-demonstrating-rt-proposal-on-ads_3cft_2-ryu-and-takayanagi-arxiv-2006httpsarxivorgabshep-th0603001>
-<div class="d-flex justify-content-center">
-<div class=w-100><img alt="RT conjecture" srcset="/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_9ae7d9edec8d811b2becaa438f00c586.png 400w,
-/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3dc5efc8eae60c426c98d0f43a020e6d.png 760w,
-/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_1200x1200_fit_lanczos_3.png 1200w" src=/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_9ae7d9edec8d811b2becaa438f00c586.png width=760 height=487 loading=lazy data-zoomable></div>
-</div><figcaption>
-Diagram demonstrating RT proposal on AdS$_3$/CFT$_2$. <a href=https://arxiv.org/abs/hep-th/0603001>Ryu and Takayanagi, arXiv (2006)</a>
-</figcaption></figure>
-</p>
-<p>The two subsystems $A$ and $B$ of CFT$_2$ live on the boundary of AdS$_3$. They are separated by a screen $\gamma_A$ required to be an extremal surface in the bulk AdS$_3$. An extremal &ldquo;surface&rdquo; on a slice of AdS$_3$ is a geodesic line connecting the meeting points of the domains $A$ and $B$ on the bounding circle. The RT proposal states that the entanglement entropy of subsystem $A$ is proportional to the area of the screen $\gamma_A$:
+Just like AdS, flat spacetime takes the form of hyperbolic space with a time direction. You can draw the spacetime geometry as a cylinder, which is what Penrose did in his first publication on conformal infinity in 1963.</p><p><figure id=figure-the-cylinders-in-penroses-drawing-are-hyperbolic-spaces-with-a-time-direction-penrose-prl-1963httpsjournalsapsorgprlabstract101103physrevlett1066><div class="d-flex justify-content-center"><div class=w-100><img alt="Penrose cylinder" srcset="/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_5c28c60ce0a2024da2163000044e7e0a.webp 400w,
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_dd8192eb1d14d6f9877e737a76389855.webp 760w,
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_1200x1200_fit_q75_h2_lanczos_3.webp 1200w" src=/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_5c28c60ce0a2024da2163000044e7e0a.webp width=377 height=365 loading=lazy data-zoomable></div></div><figcaption>The cylinders in Penrose&rsquo;s drawing are hyperbolic spaces with a time direction. <a href=https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.10.66 target=_blank rel=noopener>Penrose, PRL (1963)</a></figcaption></figure></p><p>The agreement of the geometry of hyperboloidal and AdS slices is suggestive. Calculations in the AdS/CFT literature performed on time slices may carry over to flat spacetime in hyperboloidal coordinates. One such example is the Ryu-Takayanagi conjecture.</p><h3 id=rt-if-you-agree>RT if you agree</h3><p>Ryu and Takayanagi (RT) have <a href=https://arxiv.org/abs/hep-th/0603001 target=_blank rel=noopener>proposed</a> a relation between geometry in AdS and entropy in CFT.</p><p>One can interpret the Bekenstein-Hawking entropy as a measure of information lost to external observers. The black-hole horizon acts as a screen dividing space into two subsystems inside and outside the horizon. <a href=https://en.wikipedia.org/wiki/Entropy_of_entanglement target=_blank rel=noopener>Entanglement entropy</a> is proportional to the area of this screen. The RT conjecture relates the entanglement entropy on CFT to the surface area of a screen in AdS that divides the AdS boundary into subdomains.</p><p>Words don&rsquo;t do it justice, so let&rsquo;s look at a picture. Below is a diagram from the <a href=https://arxiv.org/abs/hep-th/0603001 target=_blank rel=noopener>RT paper</a> for AdS$_3$ /CFT$_2$.</p><p><figure id=figure-diagram-demonstrating-rt-proposal-on-ads_3cft_2-ryu-and-takayanagi-arxiv-2006httpsarxivorgabshep-th0603001><div class="d-flex justify-content-center"><div class=w-100><img alt="RT conjecture" srcset="/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3d67cdaa312f19f9d0c16a749eafda23.webp 400w,
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_d2c76ec2eb6abc02b8c34de0f7348e36.webp 760w,
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_1200x1200_fit_q75_h2_lanczos_3.webp 1200w" src=/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3d67cdaa312f19f9d0c16a749eafda23.webp width=760 height=487 loading=lazy data-zoomable></div></div><figcaption>Diagram demonstrating RT proposal on AdS$_3$/CFT$_2$. <a href=https://arxiv.org/abs/hep-th/0603001 target=_blank rel=noopener>Ryu and Takayanagi, arXiv (2006)</a></figcaption></figure></p><p>The two subsystems $A$ and $B$ of CFT$_2$ live on the boundary of AdS$_3$. They are separated by a screen $\gamma_A$ required to be an extremal surface in the bulk AdS$_3$. An extremal &ldquo;surface&rdquo; on a slice of AdS$_3$ is a geodesic line connecting the meeting points of the domains $A$ and $B$ on the bounding circle. The RT proposal states that the entanglement entropy of subsystem $A$ is proportional to the area of the screen $\gamma_A$:
 $$ S_A \sim \rm{Area\ of\ }\gamma_A $$
 In this case, we are talking about the length of a geodesic on a time slice. You can easily see that the calculation does not change whether you are in AdS or hyperboloidal Minkowski. In the <a href=https://en.wikipedia.org/wiki/Ryu%E2%80%93Takayanagi_conjecture#Example target=_blank rel=noopener>example on Wikipedia</a>, the AdS$_3$ metric is written in the spatial coordinate $\rho$ defined through $r=\sinh \rho$, so
 $$ ds^2_{\rm{AdS}} = -\cosh^2\rho\ d\tau^2 + \textcolor{Blue}{d\rho^2 + \sinh^2\rho\ d\theta^2}. $$
 The same spatial geometry is obtained in hyperboloidal coordinates in Minkowski<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>
 $$ ds^2_{\rm{Mink}} = -d\tau^2 - \sinh\rho\ d\tau d\rho + \textcolor{Blue}{d\rho^2 + \sinh^2\rho\ d\theta^2}. $$
-This flat metric describes a stack of hyperbolic disks, just like the AdS metric. The length of the geodesic and its relation to entanglement entropy are the same in hyperboloidal coordinates. The original RT proposal applies directly to flat spacetime!</p>
-<p>The RT proposal reveals an interesting interpretation for the area dependence of entropy. It is easier to understand that entanglement entropy should be proportional to the area of a screen and not to the volume behind it. But maybe we should ask first: What is volume?</p>
-<h3 id=thinking-outside-the-ball>Thinking outside the ball</h3>
-<p>When we think of volume, we typically envision a box or a ball and consider the space inside. Relativity modifies our intuition about space and time, so it is reasonable that our notion of volume is modified as well. The volume of a region $B$ is the integral of the volume form
+This flat metric describes a stack of hyperbolic disks, just like the AdS metric. The length of the geodesic and its relation to entanglement entropy are the same in hyperboloidal coordinates. The original RT proposal applies directly to flat spacetime!</p><p>The RT proposal reveals an interesting interpretation for the area dependence of entropy. It is easier to understand that entanglement entropy should be proportional to the area of a screen and not to the volume behind it. But maybe we should ask first: What is volume?</p><h3 id=thinking-outside-the-ball>Thinking outside the ball</h3><p>When we think of volume, we typically envision a box or a ball and consider the space inside. Relativity modifies our intuition about space and time, so it is reasonable that our notion of volume is modified as well. The volume of a region $B$ is the integral of the volume form
 $$ V_B = \int_{B} \sqrt{\det h} \ d\Sigma, $$
 and depends on the spatial metric $h$. In flat space we have $\sqrt{\det h} =$ $r^2 \sin\theta$. The volume of a ball of radius $R$ gives us the usual formula that we memorize at school
 $$ V_{B(R)} = \int_{0}^{R} \int_0^{\pi} \int_0^{2 \pi} r^2 \sin\theta \ dr d\theta d\varphi= 4\pi \int_{0}^{R} r^2 dr = \frac{4\pi}{3}R^3. $$
@@ -204,162 +46,35 @@ We can get a sense for it using Taylor expansions. For small spheres with $R \ll
 $$ V_{B(R)}=\frac{4\pi}{3}R^3+O(R^5).$$
 For large spheres, however, the series expansion for $R\gg 1$ gives
 $$ V_{B(R)}=2\pi R^2 + O(\ln R).$$
-Remarkably, volume and area scale the same way near the asymptotic boundary in hyperboloidal coordinates.</p>
-<p>These are suggestive observations about the potential usefulness of hyperboloidal surfaces in holography. And indeed, there is a current effort using hyperboloidal surfaces for holography.</p>
-<h3 id=celestial-holography>Celestial Holography</h3>
-<p>In the context of quantum gravity, the holographic principle suggests duality between a gravity theory in the bulk and a quantum theory on the boundary. <a href=https://arxiv.org/abs/2107.02075 target=_blank rel=noopener>Celestial holography</a> suggests that asymptotically flat spacetimes are dual to a theory living on the &ldquo;celestial sphere&rdquo; at infinity.</p>
-<p>The theory uses Bondi coordinates along null infinity to discuss asymptotic symmetries, and switches to a hyperboloidal slicing to discuss massive particles. The slices they use have been first proposed as a cosmological model by <a href=https://en.wikipedia.org/wiki/Milne_model target=_blank rel=noopener>Milne</a> in 1935. Milne slices are level sets of
+Remarkably, volume and area scale the same way near the asymptotic boundary in hyperboloidal coordinates.</p><p>These are suggestive observations about the potential usefulness of hyperboloidal surfaces in holography. And indeed, there is a current effort using hyperboloidal surfaces for holography.</p><h3 id=celestial-holography>Celestial Holography</h3><p>In the context of quantum gravity, the holographic principle suggests duality between a gravity theory in the bulk and a quantum theory on the boundary. <a href=https://arxiv.org/abs/2107.02075 target=_blank rel=noopener>Celestial holography</a> suggests that asymptotically flat spacetimes are dual to a theory living on the &ldquo;celestial sphere&rdquo; at infinity.</p><p>The theory uses Bondi coordinates along null infinity to discuss asymptotic symmetries, and switches to a hyperboloidal slicing to discuss massive particles. The slices they use have been first proposed as a cosmological model by <a href=https://en.wikipedia.org/wiki/Milne_model target=_blank rel=noopener>Milne</a> in 1935. Milne slices are level sets of
 $$ \tau^2 = t^2 - r^2.$$
 Introducing the spatial coordinate
 $$ \rho = \frac{r}{\sqrt{t^2-r^2}}, $$
 the Minkowski metric takes the form
 $$ ds^2_{\rm{Mink}} = -d\tau^2 + \tau^2 \left( \textcolor{RedViolet}{\frac{1}{1+\rho^2} d\rho^2 + \rho^2 d\sigma^2}\right). $$
-Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\tau$.</p>
-<p>I suspect that the hyperboloidal foliation we discussed <a href=#hyperbolic-hyperboloidal>above</a> is better than Milne slicing for holography. Consider the Penrose diagram of Milne slices.
-<figure id=figure-penrose-diagram-of-milne-slicing-strominger-arxiv-2017httpsarxivorgabshep-th0603001>
-<div class="d-flex justify-content-center">
-<div class=w-100><img alt="Hyperbolic slices" srcset="/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_4e342d9bb588d17373943d2add173f38.png 400w,
-/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_aa2d5f63f361230941e0a34e94b90ef1.png 760w,
-/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_1200x1200_fit_lanczos_3.png 1200w" src=/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_4e342d9bb588d17373943d2add173f38.png width=444 height=453 loading=lazy data-zoomable></div>
-</div><figcaption>
-Penrose diagram of Milne slicing. <a href=https://arxiv.org/abs/hep-th/0603001>Strominger, arXiv (2017)</a>
-</figcaption></figure>
-The Penrose diagram and the metric reveal some undesirable features of Milne slices compared to the hyperboloidal foliation:</p>
-<ul>
-<li>The slices intersect at null infinity.</li>
-<li>The coordinates are time-dependent.</li>
-<li>There is no analog of the AdS curvature scale.</li>
-</ul>
-<p>In contrast, the hyperboloidal foliation has constant mean curvature, $K=3/L$, playing the same role as the curvature scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature, which acts as a dial between characteristic and Cauchy surfaces.</p>
-<p>
-<figure id=figure-penrose-diagrams-of-hyperboloidal-foliations-with-different-mean-extrinsic-curvatures-k632-zenginoğlu-arxiv-2008httpsarxivorgabs07124333>
-<div class="d-flex justify-content-center">
-<div class=w-100><img alt="Hyperboloidal foliation" srcset="/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_081c7a635a61c1982bca91057f738b4e.png 400w,
-/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_c0fb6fa0b9d76903c2ec7789b395cd13.png 760w,
-/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_1200x1200_fit_lanczos_3.png 1200w" src=/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_081c7a635a61c1982bca91057f738b4e.png width=760 height=338 loading=lazy data-zoomable></div>
-</div><figcaption>
-Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K={6,3,2}$. <a href=https://arxiv.org/abs/0712.4333>Zenginoğlu, arXiv (2008)</a>
-</figcaption></figure>
-</p>
-<p>Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on <a href=https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392 target=_blank rel=noopener>Forms of Relativistic Dynamics</a> and it appears repeatedly in celestial holography. I&rsquo;m not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.</p>
-<p>Celestial holography is relatively new and developing rapidly. We don&rsquo;t know how the final version will look like. That&rsquo;s the excitement of research.</p>
-<h3 id=wrap-up>Wrap up</h3>
-<p>A few curious observations suggest that hyperboloidal coordinates are interesting for holography.</p>
-<ul>
-<li>Flat spacetime becomes a stack of hyperbolic disks, with a <a href=#hyperbolic-hyperboloidal>cylinder</a> representing the global picture.</li>
-<li>The original <a href=#rt-if-you-agree>Ryu-Takayanagi calculations</a> apply to Minkowski spacetime.</li>
-<li><a href=#thinking-outside-the-ball>Volume scales as area</a> near the conformal boundary.</li>
-<li>Spacetime hyperboloids are essential in <a href=#celestial-holography>celestial holography</a>.</li>
-</ul>
-<p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.</p>
-<p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated <a href=https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group target=_blank rel=noopener>symmetries</a> as celestial holography is attempting to do.</p>
-<p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. <a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target=_blank rel=noopener>Watch this space!</a></p>
-<section class=footnotes role=doc-endnotes>
-<hr>
-<ol>
-<li id=fn:1 role=doc-endnote>
-<p>There are various subtleties here that I&rsquo;m glossing over. You can go down the rabbit hole following the <a href=http://www.scholarpedia.org/article/Bekenstein_bound target=_blank rel=noopener>Bekenstein bound</a>.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-<li id=fn:2 role=doc-endnote>
-<p>Setting the curvature radius to unity for simplicity, $L=1$.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
-</div>
-<div class=article-tags>
-<a class="badge badge-light" href=/tag/hyperboloidal/>hyperboloidal</a>
+Again, we recognize the representation of Minkowski spacetime as a stack of hyperbolic disks. But in this case, the metric coefficients depend on time $\tau$. And the mean extrinsic curvature of Milne slices vanishes asymptotically in time as $K=3/\tau$.</p><p>I suspect that the hyperboloidal foliation we discussed <a href=#hyperbolic-hyperboloidal>above</a> is better than Milne slicing for holography. Consider the Penrose diagram of Milne slices.<figure id=figure-penrose-diagram-of-milne-slicing-strominger-arxiv-2017httpsarxivorgabshep-th0603001><div class="d-flex justify-content-center"><div class=w-100><img alt="Hyperbolic slices" srcset="/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_db8958ccf0594bed0168ca2fed9d8f85.webp 400w,
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_67332c32c03e6a61abc8f80af55f0e95.webp 760w,
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_1200x1200_fit_q75_h2_lanczos_3.webp 1200w" src=/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_db8958ccf0594bed0168ca2fed9d8f85.webp width=444 height=453 loading=lazy data-zoomable></div></div><figcaption>Penrose diagram of Milne slicing. <a href=https://arxiv.org/abs/hep-th/0603001 target=_blank rel=noopener>Strominger, arXiv (2017)</a></figcaption></figure>The Penrose diagram and the metric reveal some undesirable features of Milne slices compared to the hyperboloidal foliation:</p><ul><li>The slices intersect at null infinity.</li><li>The coordinates are time-dependent.</li><li>There is no analog of the AdS curvature scale.</li></ul><p>In contrast, the hyperboloidal foliation has constant mean curvature, $K=3/L$, playing the same role as the curvature scale in AdS geometry. The coordinates are independent of time and provide a smooth foliation of null infinity. Below are Penrose diagrams for such hyperboloidal, constant-mean-curvature foliations with different values of the mean extrinsic curvature, which acts as a dial between characteristic and Cauchy surfaces.</p><p><figure id=figure-penrose-diagrams-of-hyperboloidal-foliations-with-different-mean-extrinsic-curvatures-k632-zenginoğlu-arxiv-2008httpsarxivorgabs07124333><div class="d-flex justify-content-center"><div class=w-100><img alt="Hyperboloidal foliation" srcset="/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_3b2e6e1d322650da3e63826c855b461a.webp 400w,
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_f6ff2e6e1abd3e3ba1c347060783a487.webp 760w,
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_1200x1200_fit_q75_h2_lanczos_3.webp 1200w" src=/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_3b2e6e1d322650da3e63826c855b461a.webp width=760 height=338 loading=lazy data-zoomable></div></div><figcaption>Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K={6,3,2}$. <a href=https://arxiv.org/abs/0712.4333 target=_blank rel=noopener>Zenginoğlu, arXiv (2008)</a></figcaption></figure></p><p>Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on <a href=https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392 target=_blank rel=noopener>Forms of Relativistic Dynamics</a> and it appears repeatedly in celestial holography. I&rsquo;m not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.</p><p>Celestial holography is relatively new and developing rapidly. We don&rsquo;t know how the final version will look like. That&rsquo;s the excitement of research.</p><h3 id=wrap-up>Wrap up</h3><p>A few curious observations suggest that hyperboloidal coordinates are interesting for holography.</p><ul><li>Flat spacetime becomes a stack of hyperbolic disks, with a <a href=#hyperbolic-hyperboloidal>cylinder</a> representing the global picture.</li><li>The original <a href=#rt-if-you-agree>Ryu-Takayanagi calculations</a> apply to Minkowski spacetime.</li><li><a href=#thinking-outside-the-ball>Volume scales as area</a> near the conformal boundary.</li><li>Spacetime hyperboloids are essential in <a href=#celestial-holography>celestial holography</a>.</li></ul><p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.</p><p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated <a href=https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group target=_blank rel=noopener>symmetries</a> as celestial holography is attempting to do.</p><p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. <a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target=_blank rel=noopener>Watch this space!</a></p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>There are various subtleties here that I&rsquo;m glossing over. You can go down the rabbit hole following the <a href=http://www.scholarpedia.org/article/Bekenstein_bound target=_blank rel=noopener>Bekenstein bound</a>.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>Setting the curvature radius to unity for simplicity, $L=1$.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><div class=article-tags><a class="badge badge-light" href=/tag/hyperboloidal/>hyperboloidal</a>
 <a class="badge badge-light" href=/tag/holography/>holography</a>
-<a class="badge badge-light" href=/tag/infinity/>infinity</a>
-</div>
-<div class="media author-card content-widget-hr">
-<a href=https://anilzen.github.io><img class="avatar mr-3 avatar-circle" src=/authors/anil/avatar_hubdbe8f760004904350d82355aac46df7_167987_270x270_fill_q75_lanczos_center.jpg alt="Anıl Zenginoğlu"></a>
-<div class=media-body>
-<h5 class=card-title><a href=https://anilzen.github.io>Anıl Zenginoğlu</a></h5>
-<h6 class=card-subtitle>Assistant Research Scientist</h6>
-<p class=card-text>Researcher, administrator, and technologist; exploring spacetime infinity and working towards operational efficiency in academia.</p>
-<ul class=network-icon aria-hidden=true>
-<li>
-<a href=mailto:anil@umd.edu>
-<i class="fas fa-envelope"></i>
-</a>
-</li>
-<li>
-<a href=https://www.linkedin.com/in/anilzen/ target=_blank rel=noopener>
-<i class="fab fa-linkedin"></i>
-</a>
-</li>
-<li>
-<a href="https://scholar.google.com/citations?user=M8NnUIQAAAAJ&hl=en" target=_blank rel=noopener>
-<i class="ai ai-google-scholar"></i>
-</a>
-</li>
-<li>
-<a href=https://github.com/anilzen target=_blank rel=noopener>
-<i class="fab fa-github"></i>
-</a>
-</li>
-<li>
-<a href=https://orcid.org/0000-0001-7896-6268 target=_blank rel=noopener>
-<i class="fab fa-orcid"></i>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/AnilZenginoglu target=_blank rel=noopener>
-<i class="fab fa-twitter"></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="article-widget content-widget-hr">
-<h3>Related</h3>
-<ul>
-<li><a href=/post/2022/jealous-of-fish/>Jealous of hyperbolic fish</a></li>
-<li><a href=/post/hyperbolic-relativity/>Special relativity as hyperbolic geometry</a></li>
-<li><a href=/post/empirical-infinity/>How far is infinity?</a></li>
-<li><a href=/publication/burko-2015-testing/>Testing numerically the null Cauchy horizon singularity inside Kerr black holes</a></li>
-<li><a href=/publication/bizon-2010-saddle/>Saddle-point dynamics of a Yang—Mills field on the exterior Schwarzschild spacetime</a></li>
-</ul>
-</div>
-</div>
-</article>
-</div>
-<div class=page-footer>
-<div class=container>
-<footer class=site-footer>
-<p class=powered-by>
-Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.
-</p>
-</footer>
-</div>
-</div>
-<div id=modal class="modal fade" role=dialog>
-<div class=modal-dialog>
-<div class=modal-content>
-<div class=modal-header>
-<h5 class=modal-title>Cite</h5>
-<button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span>
-</button>
-</div>
-<div class=modal-body>
-<pre><code class="tex hljs"></code></pre>
-</div>
-<div class=modal-footer>
-<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
-<i class="fas fa-copy"></i> Copy
-</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
-<i class="fas fa-download"></i> Download
-</a>
-<div id=modal-error></div>
-</div>
-</div>
-</div>
-</div>
-<script src=/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
-<script src=/en/js/wowchemy.min.4273a72ba000ef1d25a1e7f8c1e94110.js></script>
-</body>
-</html>
+<a class="badge badge-light" href=/tag/infinity/>infinity</a></div><div class=share-box><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https://anilzen.github.io/post/hyperboloidal-holography/&text=Hyperboloidal%20Holography" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https://anilzen.github.io/post/hyperboloidal-holography/&t=Hyperboloidal%20Holography" target=_blank rel=noopener class=share-btn-facebook aria-label=facebook><i class="fab fa-facebook"></i></a></li><li><a href="mailto:?subject=Hyperboloidal%20Holography&body=https://anilzen.github.io/post/hyperboloidal-holography/" target=_blank rel=noopener class=share-btn-email aria-label=envelope><i class="fas fa-envelope"></i></a></li><li><a href="https://www.linkedin.com/shareArticle?url=https://anilzen.github.io/post/hyperboloidal-holography/&title=Hyperboloidal%20Holography" target=_blank rel=noopener class=share-btn-linkedin aria-label=linkedin-in><i class="fab fa-linkedin-in"></i></a></li><li><a href="whatsapp://send?text=Hyperboloidal%20Holography%20https://anilzen.github.io/post/hyperboloidal-holography/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp><i class="fab fa-whatsapp"></i></a></li><li><a href="https://service.weibo.com/share/share.php?url=https://anilzen.github.io/post/hyperboloidal-holography/&title=Hyperboloidal%20Holography" target=_blank rel=noopener class=share-btn-weibo aria-label=weibo><i class="fab fa-weibo"></i></a></li></ul></div><div class="media author-card content-widget-hr"><a href=https://anilzen.github.io><img class="avatar mr-3 avatar-circle" src=/authors/anil/avatar_hubdbe8f760004904350d82355aac46df7_167987_270x270_fill_q75_lanczos_center.jpg alt="Anıl Zenginoğlu"></a><div class=media-body><h5 class=card-title><a href=https://anilzen.github.io>Anıl Zenginoğlu</a></h5><h6 class=card-subtitle>Assistant Research Scientist</h6><p class=card-text>Researcher, administrator, and technologist; exploring spacetime infinity and working towards operational efficiency in academia.</p><ul class=network-icon aria-hidden=true><li><a href=mailto:anil@umd.edu><i class="fas fa-envelope"></i></a></li><li><a href=https://www.linkedin.com/in/anilzen/ target=_blank rel=noopener><i class="fab fa-linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=M8NnUIQAAAAJ&hl=en" target=_blank rel=noopener><i class="ai ai-google-scholar"></i></a></li><li><a href=https://github.com/anilzen target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li><a href=https://orcid.org/0000-0001-7896-6268 target=_blank rel=noopener><i class="fab fa-orcid"></i></a></li><li><a href=https://twitter.com/AnilZenginoglu target=_blank rel=noopener><i class="fab fa-twitter"></i></a></li></ul></div></div></div></article></div><div class=page-footer><div class=container><footer class=site-footer><p class="powered-by copyright-license-text">© 2022 Me. This work is licensed under <a href=https://creativecommons.org/licenses/by-nc-nd/4.0 rel="noopener noreferrer" target=_blank>CC BY NC ND 4.0</a></p><p class="powered-by footer-license-icons"><a href=https://creativecommons.org/licenses/by-nc-nd/4.0 rel="noopener noreferrer" target=_blank aria-label="Creative Commons"><i class="fab fa-creative-commons fa-2x" aria-hidden=true></i>
+<i class="fab fa-creative-commons-by fa-2x" aria-hidden=true></i>
+<i class="fab fa-creative-commons-nc fa-2x" aria-hidden=true></i>
+<i class="fab fa-creative-commons-nd fa-2x" aria-hidden=true></i></a></p><p class=powered-by>Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>open source</a> website builder that empowers creators.</p></footer></div></div><script src=/js/vendor-bundle.min.46271ef31da3f018e9cd1b59300aa265.js></script>
+<script id=search-hit-fuse-template type=text/x-template>
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script><script src=https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin=anonymous></script>
+<script id=page-data type=application/json>{"use_headroom":true}</script><script src=/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js type=module></script>
+<script src=/en/js/wowchemy.min.a6238d5886fa4a2f7cf92df25709326f.js></script><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>Cite</h5><button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> Copy</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> Download</a><div id=modal-error></div></div></div></div></div><script src=/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js type=module></script></body></html>

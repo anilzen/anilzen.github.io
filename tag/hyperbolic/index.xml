@@ -3,7 +3,7 @@
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;/p>
 &lt;h3 id="kusturica-against-wallace">Kusturica against Wallace&lt;/h3>
-&lt;p>The featured image on the tweet above shows &lt;a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank" rel="noopener">Escher&lt;/a> &amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Circle_Limit_III" target="_blank" rel="noopener">Circle Limit III&lt;/a> depicting the Poincaré model of hyperbolic geometry. Escher was interested in constructing an infinitely repeating pattern in a finite figure. When the brilliant geometer &lt;a href="https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter" target="_blank" rel="noopener">Coxeter&lt;/a> shared with him a reprint of one of his lectures on hyperbolic geometry, Escher figured out how to create such &lt;a href="https://en.wikipedia.org/wiki/Tessellation" target="_blank" rel="noopener">tessalations&lt;/a>. The &lt;a href="http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit" target="_blank" rel="noopener">story&lt;/a> of how Escher managed to create these &lt;a href="%28https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration%29">four woodcuts&lt;/a> is fascinating.&lt;/p>
+&lt;p>The featured image on the tweet above shows &lt;a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank" rel="noopener">Escher&lt;/a>&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Circle_Limit_III" target="_blank" rel="noopener">Circle Limit III&lt;/a> depicting the Poincaré model of hyperbolic geometry. Escher was interested in constructing an infinitely repeating pattern in a finite figure. When the brilliant geometer &lt;a href="https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter" target="_blank" rel="noopener">Coxeter&lt;/a> shared with him a reprint of one of his lectures on hyperbolic geometry, Escher figured out how to create such &lt;a href="https://en.wikipedia.org/wiki/Tessellation" target="_blank" rel="noopener">tessalations&lt;/a>. The &lt;a href="http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit" target="_blank" rel="noopener">story&lt;/a> of how Escher managed to create these &lt;a href="%28https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration%29">four woodcuts&lt;/a> is fascinating.&lt;/p>
 &lt;p>The original &lt;a href="https://www.quantamagazine.org/cosmologists-close-in-on-logical-laws-for-the-big-bang-20211110/" target="_blank" rel="noopener">Quanta article&lt;/a> in the tweet above reports the difficulties in constructing something like the &lt;a href="https://en.wikipedia.org/wiki/AdS/CFT_correspondence" target="_blank" rel="noopener">AdS/CFT correspondence&lt;/a> for physical spacetimes. While we have a realization of holographic duality based on anti-de Sitter spacetimes, a similar construction on flat or de Sitter spacetimes has been elusive, supposedly because these spacetimes do not possess hyperbolic geometry. A week after the tweet above, there was another &lt;a href="https://www.quantamagazine.org/symmetries-reveal-clues-about-the-holographic-universe-20220112/" target="_blank" rel="noopener">Quanta article&lt;/a> with hyperbolic geometry as its featured image. Clearly, there is some hype around hyperbolic geometry.&lt;/p>
 &lt;p>The main argument is that spatial slices of AdS are hyperbolic, which seems to be essential for AdS/CFT, so living in hyperbolic geometry makes it easier for the fish in Escher&amp;rsquo;s drawing to know quantum gravity.&lt;/p>
 &lt;blockquote>
@@ -76,17 +76,17 @@ This metric is not quite the hyperbolic metric, but has other nice properties fo
 &lt;p>The point of this post is that you can find suitable coordinates that make space hyperbolic. There is nothing to be jealous about Escher&amp;rsquo;s fish. It may well be that physically motivated time slices of flat spacetime are naturally hyperbolic but we don&amp;rsquo;t experience it because the speed of light is so large.&lt;/p>
 &lt;p>Are these time transformations physically motivated? What do they mean? Doesn&amp;rsquo;t a preferred time slice contradict the principle of covariance? I&amp;rsquo;ll leave those questions for another post.&lt;/p>
 &lt;p>Enjoy the swim.&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>To get the disk model, just replace $d\sigma^2$ with $d\theta^2$.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>The fish could, in principle, find out that they do live in hyperbolic space by making local measurements of &lt;em>intrinsic&lt;/em> curvature.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Special relativity as hyperbolic geometry</title><link>https://anilzen.github.io/post/hyperbolic-relativity/</link><pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/hyperbolic-relativity/</guid><description>&lt;p>Space and time bend and stretch with every move.&lt;/p>
+&lt;/div></description></item><item><title>Special relativity as hyperbolic geometry</title><link>https://anilzen.github.io/post/hyperbolic-relativity/</link><pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/hyperbolic-relativity/</guid><description>&lt;p>Space and time bend and stretch with every move.&lt;/p>
 &lt;p>I was blown away by this as a young high schooler interested in physics and philosophy. To me, the recognition that natural laws dynamically govern space and time was a triumph of physics over philosophy, of Einstein over Kant, of empirical determination over &lt;a href="https://en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction#Kant%27s_version_and_the_a_priori_/_a_posteriori_distinction" target="_blank" rel="noopener">synthetic a priori&lt;/a>.&lt;/p>
 &lt;p>As fascinated as I was by special relativity, the formalism seemed relatively obscure. I recognized patterns in the &lt;a href="https://en.wikipedia.org/wiki/Lorentz_transformation" target="_blank" rel="noopener">Lorentz transformations&lt;/a> but missed a deeper insight into the origins of this structure. At college, I considered various standard derivations of relativistic effects, such as the &lt;a href="https://en.wikipedia.org/wiki/Relativistic_aberration" target="_blank" rel="noopener">relativistic aberration&lt;/a> or the &lt;a href="https://en.wikipedia.org/wiki/Thomas_precession" target="_blank" rel="noopener">Thomas precession&lt;/a>, tedious and boring.&lt;/p>
 &lt;p>A simple example is Einstein&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Velocity-addition_formula" target="_blank" rel="noopener">velocity-addition formula&lt;/a>. In Galilean relativity, which corresponds to our everyday experience, we can just add velocities. In special relativity, the speed of light is constant, so the addition of velocities must be such that no composition of velocities exceeds the speed of light. In the simplest case of collinear motion (velocities pointing in the same direction), velocity addition becomes speed addition and looks like this
@@ -111,15 +111,15 @@ Minkowski&amp;rsquo;s drawing below shows this hyperbola for $t&amp;gt;0$. In hi
 &lt;figure id="figure-minkowskis-drawing-depicts-hyperbola-as-the-invariant-space-under-lorentz-transformations-from-minkowskis-modern-worldhttpshalshsarchives-ouvertesfrhalshs-01234434-by-scott-walter">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Minkowski Drawing" srcset="
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_0f246f633dbdb040052462e2acef41f0.png 400w,
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_37ba5976eb04f8f86d258c2d45cd62c6.png 760w,
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_0f246f633dbdb040052462e2acef41f0.png"
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_b89ce1e1b459df492f891c8a09eaf42e.webp 400w,
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_4324b0371c578b6a70ed333dddf1eab4.webp 760w,
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_b89ce1e1b459df492f891c8a09eaf42e.webp"
 width="473"
 height="500"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lorentz transformations. &lt;br>From &lt;a href="https://halshs.archives-ouvertes.fr/halshs-01234434/">Minkowski&amp;rsquo;s modern world&lt;/a> by Scott Walter.
+Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lorentz transformations. &lt;br>From &lt;a href="https://halshs.archives-ouvertes.fr/halshs-01234434/" target="_blank" rel="noopener">Minkowski&amp;rsquo;s modern world&lt;/a> by Scott Walter.
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>In his lecture, Minkowski demonstrated that Lorentz transformations are hyperbolic rotations that leave the hyperbola (\ref{2}) invariant. He died in January 1909 before he could develop this idea further, but it was embraced by a few other scientists, particularly by &lt;a href="https://en.wikipedia.org/wiki/Arnold_Sommerfeld" target="_blank" rel="noopener">Sommerfeld&lt;/a>, &lt;a href="https://en.wikipedia.org/wiki/Vladimir_Vari%C4%87ak" target="_blank" rel="noopener">Varičak&lt;/a>, &lt;a href="https://en.wikipedia.org/wiki/Alfred_Robb" target="_blank" rel="noopener">Robb&lt;/a>, and &lt;a href="https://en.wikipedia.org/wiki/%C3%89mile_Borel" target="_blank" rel="noopener">Borel&lt;/a>.&lt;/p>
@@ -135,7 +135,7 @@ Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lor
 src="https://anilzen.github.io/post/hyperbolic-relativity/MinkBoost.gif"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Lorentz boosts are &lt;a href="https://en.wikipedia.org/wiki/Squeeze_mapping">squeeze mappings&lt;/a>. &lt;br>From &lt;a href="https://commons.wikimedia.org/wiki/File:MinkBoost2.gif">Wikimedia&lt;/a>.
+Lorentz boosts are &lt;a href="https://en.wikipedia.org/wiki/Squeeze_mapping" target="_blank" rel="noopener">squeeze mappings&lt;/a>. &lt;br>From &lt;a href="https://commons.wikimedia.org/wiki/File:MinkBoost2.gif" target="_blank" rel="noopener">Wikimedia&lt;/a>.
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>Consider the Lorentz boost with relative speed $v$ between frames
@@ -180,14 +180,14 @@ This construction generalizes to &lt;a href="../../publication/zenginoglu-2008-h
 &lt;p>There is another, much more relevant reason to prefer the hyperbolic viewpoint. As scientists, we want powerful descriptions. The same thinking style should apply to a broad class of phenomena. In other words, we want to avoid overfitting our formalism to the phenomena at hand. Hyperbolic calculations translate into machine learning, spacetime curvature, and maybe other areas to be discovered. The non-Euclidean approach with hyperbolic angles seems more powerful than the usual approach with velocities.&lt;/p>
 &lt;!-- [^3]: Scott Walter wrote a wonderful historical account of these developments in ["The Non-Euclidean Style of Minkowskian Relativity"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.535.6918&amp;rep=rep1&amp;type=pdf).
 [^4]: Walter, Scott. ["Minkowski’s modern world."](https://halshs.archives-ouvertes.fr/halshs-01234434/) Minkowski Spacetime: A Hundred Years Later. Springer, Dordrecht, 2010. 43-61. -->
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>The lecture was given on September 21, 1908 in Köln during a meeting of researchers of nature (the lovely German compound word for such a meeting is Naturforscherversammlung). The &lt;a href="https://www.math.nyu.edu/~tschinke/papers/yuri/14minkowski/raum-und-zeit.pdf" target="_blank" rel="noopener">German version&lt;/a> sounds stronger in its proclamation: &lt;em>&amp;ldquo;Von Stund' an sollen Raum für sich und Zeit für sich völlig zu Schatten herabsinken und nur noch eine Art Union der beiden soll Selbständigkeit bewahren.&amp;quot;&lt;/em>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:1">
+&lt;p>The lecture was given on September 21, 1908 in Köln during a meeting of researchers of nature (the lovely German compound word for such a meeting is Naturforscherversammlung). The &lt;a href="https://www.math.nyu.edu/~tschinke/papers/yuri/14minkowski/raum-und-zeit.pdf" target="_blank" rel="noopener">German version&lt;/a> sounds stronger in its proclamation: &lt;em>&amp;ldquo;Von Stund&amp;rsquo; an sollen Raum für sich und Zeit für sich völlig zu Schatten herabsinken und nur noch eine Art Union der beiden soll Selbständigkeit bewahren.&amp;rdquo;&lt;/em>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>Walter, Scott. &amp;ldquo;&lt;a href="https://halshs.archives-ouvertes.fr/halshs-00319209/" target="_blank" rel="noopener">Hermann Minkowski and the scandal of spacetime.&lt;/a>&amp;rdquo; ESI News 3.1 (2008): 6-8.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>

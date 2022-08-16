@@ -23,15 +23,15 @@ Minkowski&amp;rsquo;s drawing below shows this hyperbola for $t&amp;gt;0$. In hi
 &lt;figure id="figure-minkowskis-drawing-depicts-hyperbola-as-the-invariant-space-under-lorentz-transformations-from-minkowskis-modern-worldhttpshalshsarchives-ouvertesfrhalshs-01234434-by-scott-walter">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Minkowski Drawing" srcset="
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_0f246f633dbdb040052462e2acef41f0.png 400w,
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_37ba5976eb04f8f86d258c2d45cd62c6.png 760w,
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_0f246f633dbdb040052462e2acef41f0.png"
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_b89ce1e1b459df492f891c8a09eaf42e.webp 400w,
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_4324b0371c578b6a70ed333dddf1eab4.webp 760w,
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_b89ce1e1b459df492f891c8a09eaf42e.webp"
 width="473"
 height="500"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lorentz transformations. &lt;br>From &lt;a href="https://halshs.archives-ouvertes.fr/halshs-01234434/">Minkowski&amp;rsquo;s modern world&lt;/a> by Scott Walter.
+Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lorentz transformations. &lt;br>From &lt;a href="https://halshs.archives-ouvertes.fr/halshs-01234434/" target="_blank" rel="noopener">Minkowski&amp;rsquo;s modern world&lt;/a> by Scott Walter.
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>In his lecture, Minkowski demonstrated that Lorentz transformations are hyperbolic rotations that leave the hyperbola (\ref{2}) invariant. He died in January 1909 before he could develop this idea further, but it was embraced by a few other scientists, particularly by &lt;a href="https://en.wikipedia.org/wiki/Arnold_Sommerfeld" target="_blank" rel="noopener">Sommerfeld&lt;/a>, &lt;a href="https://en.wikipedia.org/wiki/Vladimir_Vari%C4%87ak" target="_blank" rel="noopener">Varičak&lt;/a>, &lt;a href="https://en.wikipedia.org/wiki/Alfred_Robb" target="_blank" rel="noopener">Robb&lt;/a>, and &lt;a href="https://en.wikipedia.org/wiki/%C3%89mile_Borel" target="_blank" rel="noopener">Borel&lt;/a>.&lt;/p>
@@ -47,7 +47,7 @@ Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lor
 src="https://anilzen.github.io/post/hyperbolic-relativity/MinkBoost.gif"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Lorentz boosts are &lt;a href="https://en.wikipedia.org/wiki/Squeeze_mapping">squeeze mappings&lt;/a>. &lt;br>From &lt;a href="https://commons.wikimedia.org/wiki/File:MinkBoost2.gif">Wikimedia&lt;/a>.
+Lorentz boosts are &lt;a href="https://en.wikipedia.org/wiki/Squeeze_mapping" target="_blank" rel="noopener">squeeze mappings&lt;/a>. &lt;br>From &lt;a href="https://commons.wikimedia.org/wiki/File:MinkBoost2.gif" target="_blank" rel="noopener">Wikimedia&lt;/a>.
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>Consider the Lorentz boost with relative speed $v$ between frames
@@ -92,14 +92,14 @@ This construction generalizes to &lt;a href="../../publication/zenginoglu-2008-h
 &lt;p>There is another, much more relevant reason to prefer the hyperbolic viewpoint. As scientists, we want powerful descriptions. The same thinking style should apply to a broad class of phenomena. In other words, we want to avoid overfitting our formalism to the phenomena at hand. Hyperbolic calculations translate into machine learning, spacetime curvature, and maybe other areas to be discovered. The non-Euclidean approach with hyperbolic angles seems more powerful than the usual approach with velocities.&lt;/p>
 &lt;!-- [^3]: Scott Walter wrote a wonderful historical account of these developments in ["The Non-Euclidean Style of Minkowskian Relativity"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.535.6918&amp;rep=rep1&amp;type=pdf).
 [^4]: Walter, Scott. ["Minkowski’s modern world."](https://halshs.archives-ouvertes.fr/halshs-01234434/) Minkowski Spacetime: A Hundred Years Later. Springer, Dordrecht, 2010. 43-61. -->
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>The lecture was given on September 21, 1908 in Köln during a meeting of researchers of nature (the lovely German compound word for such a meeting is Naturforscherversammlung). The &lt;a href="https://www.math.nyu.edu/~tschinke/papers/yuri/14minkowski/raum-und-zeit.pdf" target="_blank" rel="noopener">German version&lt;/a> sounds stronger in its proclamation: &lt;em>&amp;ldquo;Von Stund' an sollen Raum für sich und Zeit für sich völlig zu Schatten herabsinken und nur noch eine Art Union der beiden soll Selbständigkeit bewahren.&amp;quot;&lt;/em>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:1">
+&lt;p>The lecture was given on September 21, 1908 in Köln during a meeting of researchers of nature (the lovely German compound word for such a meeting is Naturforscherversammlung). The &lt;a href="https://www.math.nyu.edu/~tschinke/papers/yuri/14minkowski/raum-und-zeit.pdf" target="_blank" rel="noopener">German version&lt;/a> sounds stronger in its proclamation: &lt;em>&amp;ldquo;Von Stund&amp;rsquo; an sollen Raum für sich und Zeit für sich völlig zu Schatten herabsinken und nur noch eine Art Union der beiden soll Selbständigkeit bewahren.&amp;rdquo;&lt;/em>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>Walter, Scott. &amp;ldquo;&lt;a href="https://halshs.archives-ouvertes.fr/halshs-00319209/" target="_blank" rel="noopener">Hermann Minkowski and the scandal of spacetime.&lt;/a>&amp;rdquo; ESI News 3.1 (2008): 6-8.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>

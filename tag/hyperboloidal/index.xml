@@ -3,7 +3,7 @@
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;/p>
 &lt;h3 id="kusturica-against-wallace">Kusturica against Wallace&lt;/h3>
-&lt;p>The featured image on the tweet above shows &lt;a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank" rel="noopener">Escher&lt;/a> &amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Circle_Limit_III" target="_blank" rel="noopener">Circle Limit III&lt;/a> depicting the Poincaré model of hyperbolic geometry. Escher was interested in constructing an infinitely repeating pattern in a finite figure. When the brilliant geometer &lt;a href="https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter" target="_blank" rel="noopener">Coxeter&lt;/a> shared with him a reprint of one of his lectures on hyperbolic geometry, Escher figured out how to create such &lt;a href="https://en.wikipedia.org/wiki/Tessellation" target="_blank" rel="noopener">tessalations&lt;/a>. The &lt;a href="http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit" target="_blank" rel="noopener">story&lt;/a> of how Escher managed to create these &lt;a href="%28https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration%29">four woodcuts&lt;/a> is fascinating.&lt;/p>
+&lt;p>The featured image on the tweet above shows &lt;a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank" rel="noopener">Escher&lt;/a>&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Circle_Limit_III" target="_blank" rel="noopener">Circle Limit III&lt;/a> depicting the Poincaré model of hyperbolic geometry. Escher was interested in constructing an infinitely repeating pattern in a finite figure. When the brilliant geometer &lt;a href="https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter" target="_blank" rel="noopener">Coxeter&lt;/a> shared with him a reprint of one of his lectures on hyperbolic geometry, Escher figured out how to create such &lt;a href="https://en.wikipedia.org/wiki/Tessellation" target="_blank" rel="noopener">tessalations&lt;/a>. The &lt;a href="http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit" target="_blank" rel="noopener">story&lt;/a> of how Escher managed to create these &lt;a href="%28https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration%29">four woodcuts&lt;/a> is fascinating.&lt;/p>
 &lt;p>The original &lt;a href="https://www.quantamagazine.org/cosmologists-close-in-on-logical-laws-for-the-big-bang-20211110/" target="_blank" rel="noopener">Quanta article&lt;/a> in the tweet above reports the difficulties in constructing something like the &lt;a href="https://en.wikipedia.org/wiki/AdS/CFT_correspondence" target="_blank" rel="noopener">AdS/CFT correspondence&lt;/a> for physical spacetimes. While we have a realization of holographic duality based on anti-de Sitter spacetimes, a similar construction on flat or de Sitter spacetimes has been elusive, supposedly because these spacetimes do not possess hyperbolic geometry. A week after the tweet above, there was another &lt;a href="https://www.quantamagazine.org/symmetries-reveal-clues-about-the-holographic-universe-20220112/" target="_blank" rel="noopener">Quanta article&lt;/a> with hyperbolic geometry as its featured image. Clearly, there is some hype around hyperbolic geometry.&lt;/p>
 &lt;p>The main argument is that spatial slices of AdS are hyperbolic, which seems to be essential for AdS/CFT, so living in hyperbolic geometry makes it easier for the fish in Escher&amp;rsquo;s drawing to know quantum gravity.&lt;/p>
 &lt;blockquote>
@@ -76,17 +76,17 @@ This metric is not quite the hyperbolic metric, but has other nice properties fo
 &lt;p>The point of this post is that you can find suitable coordinates that make space hyperbolic. There is nothing to be jealous about Escher&amp;rsquo;s fish. It may well be that physically motivated time slices of flat spacetime are naturally hyperbolic but we don&amp;rsquo;t experience it because the speed of light is so large.&lt;/p>
 &lt;p>Are these time transformations physically motivated? What do they mean? Doesn&amp;rsquo;t a preferred time slice contradict the principle of covariance? I&amp;rsquo;ll leave those questions for another post.&lt;/p>
 &lt;p>Enjoy the swim.&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>To get the disk model, just replace $d\sigma^2$ with $d\theta^2$.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>The fish could, in principle, find out that they do live in hyperbolic space by making local measurements of &lt;em>intrinsic&lt;/em> curvature.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Special relativity as hyperbolic geometry</title><link>https://anilzen.github.io/post/hyperbolic-relativity/</link><pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/hyperbolic-relativity/</guid><description>&lt;p>Space and time bend and stretch with every move.&lt;/p>
+&lt;/div></description></item><item><title>Special relativity as hyperbolic geometry</title><link>https://anilzen.github.io/post/hyperbolic-relativity/</link><pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/hyperbolic-relativity/</guid><description>&lt;p>Space and time bend and stretch with every move.&lt;/p>
 &lt;p>I was blown away by this as a young high schooler interested in physics and philosophy. To me, the recognition that natural laws dynamically govern space and time was a triumph of physics over philosophy, of Einstein over Kant, of empirical determination over &lt;a href="https://en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction#Kant%27s_version_and_the_a_priori_/_a_posteriori_distinction" target="_blank" rel="noopener">synthetic a priori&lt;/a>.&lt;/p>
 &lt;p>As fascinated as I was by special relativity, the formalism seemed relatively obscure. I recognized patterns in the &lt;a href="https://en.wikipedia.org/wiki/Lorentz_transformation" target="_blank" rel="noopener">Lorentz transformations&lt;/a> but missed a deeper insight into the origins of this structure. At college, I considered various standard derivations of relativistic effects, such as the &lt;a href="https://en.wikipedia.org/wiki/Relativistic_aberration" target="_blank" rel="noopener">relativistic aberration&lt;/a> or the &lt;a href="https://en.wikipedia.org/wiki/Thomas_precession" target="_blank" rel="noopener">Thomas precession&lt;/a>, tedious and boring.&lt;/p>
 &lt;p>A simple example is Einstein&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Velocity-addition_formula" target="_blank" rel="noopener">velocity-addition formula&lt;/a>. In Galilean relativity, which corresponds to our everyday experience, we can just add velocities. In special relativity, the speed of light is constant, so the addition of velocities must be such that no composition of velocities exceeds the speed of light. In the simplest case of collinear motion (velocities pointing in the same direction), velocity addition becomes speed addition and looks like this
@@ -111,15 +111,15 @@ Minkowski&amp;rsquo;s drawing below shows this hyperbola for $t&amp;gt;0$. In hi
 &lt;figure id="figure-minkowskis-drawing-depicts-hyperbola-as-the-invariant-space-under-lorentz-transformations-from-minkowskis-modern-worldhttpshalshsarchives-ouvertesfrhalshs-01234434-by-scott-walter">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Minkowski Drawing" srcset="
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_0f246f633dbdb040052462e2acef41f0.png 400w,
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_37ba5976eb04f8f86d258c2d45cd62c6.png 760w,
-/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_0f246f633dbdb040052462e2acef41f0.png"
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_b89ce1e1b459df492f891c8a09eaf42e.webp 400w,
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_4324b0371c578b6a70ed333dddf1eab4.webp 760w,
+/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperbolic-relativity/MinkDrawing_hu140b8f32c633551bdc76727a7862e265_291670_b89ce1e1b459df492f891c8a09eaf42e.webp"
 width="473"
 height="500"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lorentz transformations. &lt;br>From &lt;a href="https://halshs.archives-ouvertes.fr/halshs-01234434/">Minkowski&amp;rsquo;s modern world&lt;/a> by Scott Walter.
+Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lorentz transformations. &lt;br>From &lt;a href="https://halshs.archives-ouvertes.fr/halshs-01234434/" target="_blank" rel="noopener">Minkowski&amp;rsquo;s modern world&lt;/a> by Scott Walter.
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>In his lecture, Minkowski demonstrated that Lorentz transformations are hyperbolic rotations that leave the hyperbola (\ref{2}) invariant. He died in January 1909 before he could develop this idea further, but it was embraced by a few other scientists, particularly by &lt;a href="https://en.wikipedia.org/wiki/Arnold_Sommerfeld" target="_blank" rel="noopener">Sommerfeld&lt;/a>, &lt;a href="https://en.wikipedia.org/wiki/Vladimir_Vari%C4%87ak" target="_blank" rel="noopener">Varičak&lt;/a>, &lt;a href="https://en.wikipedia.org/wiki/Alfred_Robb" target="_blank" rel="noopener">Robb&lt;/a>, and &lt;a href="https://en.wikipedia.org/wiki/%C3%89mile_Borel" target="_blank" rel="noopener">Borel&lt;/a>.&lt;/p>
@@ -135,7 +135,7 @@ Minkowski&amp;rsquo;s drawing depicts hyperbola as the invariant space under Lor
 src="https://anilzen.github.io/post/hyperbolic-relativity/MinkBoost.gif"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Lorentz boosts are &lt;a href="https://en.wikipedia.org/wiki/Squeeze_mapping">squeeze mappings&lt;/a>. &lt;br>From &lt;a href="https://commons.wikimedia.org/wiki/File:MinkBoost2.gif">Wikimedia&lt;/a>.
+Lorentz boosts are &lt;a href="https://en.wikipedia.org/wiki/Squeeze_mapping" target="_blank" rel="noopener">squeeze mappings&lt;/a>. &lt;br>From &lt;a href="https://commons.wikimedia.org/wiki/File:MinkBoost2.gif" target="_blank" rel="noopener">Wikimedia&lt;/a>.
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>Consider the Lorentz boost with relative speed $v$ between frames
@@ -180,17 +180,17 @@ This construction generalizes to &lt;a href="../../publication/zenginoglu-2008-h
 &lt;p>There is another, much more relevant reason to prefer the hyperbolic viewpoint. As scientists, we want powerful descriptions. The same thinking style should apply to a broad class of phenomena. In other words, we want to avoid overfitting our formalism to the phenomena at hand. Hyperbolic calculations translate into machine learning, spacetime curvature, and maybe other areas to be discovered. The non-Euclidean approach with hyperbolic angles seems more powerful than the usual approach with velocities.&lt;/p>
 &lt;!-- [^3]: Scott Walter wrote a wonderful historical account of these developments in ["The Non-Euclidean Style of Minkowskian Relativity"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.535.6918&amp;rep=rep1&amp;type=pdf).
 [^4]: Walter, Scott. ["Minkowski’s modern world."](https://halshs.archives-ouvertes.fr/halshs-01234434/) Minkowski Spacetime: A Hundred Years Later. Springer, Dordrecht, 2010. 43-61. -->
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>The lecture was given on September 21, 1908 in Köln during a meeting of researchers of nature (the lovely German compound word for such a meeting is Naturforscherversammlung). The &lt;a href="https://www.math.nyu.edu/~tschinke/papers/yuri/14minkowski/raum-und-zeit.pdf" target="_blank" rel="noopener">German version&lt;/a> sounds stronger in its proclamation: &lt;em>&amp;ldquo;Von Stund' an sollen Raum für sich und Zeit für sich völlig zu Schatten herabsinken und nur noch eine Art Union der beiden soll Selbständigkeit bewahren.&amp;quot;&lt;/em>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:1">
+&lt;p>The lecture was given on September 21, 1908 in Köln during a meeting of researchers of nature (the lovely German compound word for such a meeting is Naturforscherversammlung). The &lt;a href="https://www.math.nyu.edu/~tschinke/papers/yuri/14minkowski/raum-und-zeit.pdf" target="_blank" rel="noopener">German version&lt;/a> sounds stronger in its proclamation: &lt;em>&amp;ldquo;Von Stund&amp;rsquo; an sollen Raum für sich und Zeit für sich völlig zu Schatten herabsinken und nur noch eine Art Union der beiden soll Selbständigkeit bewahren.&amp;rdquo;&lt;/em>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>Walter, Scott. &amp;ldquo;&lt;a href="https://halshs.archives-ouvertes.fr/halshs-00319209/" target="_blank" rel="noopener">Hermann Minkowski and the scandal of spacetime.&lt;/a>&amp;rdquo; ESI News 3.1 (2008): 6-8.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Hyperboloidal Holography</title><link>https://anilzen.github.io/post/hyperboloidal-holography/</link><pubDate>Thu, 07 Oct 2021 00:00:16 -0400</pubDate><guid>https://anilzen.github.io/post/hyperboloidal-holography/</guid><description>&lt;h3 id="brief-history-of-bekenstein-hawking-black-hole-entropy">Brief History of Bekenstein-Hawking Black-Hole Entropy&lt;/h3>
+&lt;/div></description></item><item><title>Hyperboloidal Holography</title><link>https://anilzen.github.io/post/hyperboloidal-holography/</link><pubDate>Thu, 07 Oct 2021 00:00:16 -0400</pubDate><guid>https://anilzen.github.io/post/hyperboloidal-holography/</guid><description>&lt;h3 id="brief-history-of-bekenstein-hawking-black-hole-entropy">Brief History of Bekenstein-Hawking Black-Hole Entropy&lt;/h3>
 &lt;p>When physicists want to understand something, they consider idealizations and extremes. To understand spacetime then, consider black holes.&lt;/p>
 &lt;blockquote>
 &lt;p>The black holes of nature are the most perfect macroscopic objects there are in the universe:
@@ -206,20 +206,20 @@ where $A$ is the horizon area, $L_P$ is the &lt;a href="https://en.wikipedia.org
 &lt;p>We started with black holes and arrived at the&lt;/p>
 &lt;h3 id="holographic-principle">Holographic Principle&lt;/h3>
 &lt;p>Counterintuitively, the maximal entropy of a region scales with the area of its boundary, not its volume. The &lt;a href="https://en.wikipedia.org/wiki/Holographic_principle" target="_blank" rel="noopener">holographic principle&lt;/a> pushes this area-dependence further, suggesting that the dynamics in a volume of space is encoded on the boundary of that space. In other words, the information content of a spacetime region is encoded on the surface of that region.&lt;/p>
-&lt;p>Take a break and think about this for a moment. How can our three-dimensional world be encoded on a two-dimensional surface? What does it mean? Is the universe a &lt;a href="https://en.wikipedia.org/wiki/Simulation_hypothesis" target="_blank" rel="noopener">game&lt;/a> running on the screen of an alien child? Are we trapped in &lt;a href="https://en.wikipedia.org/wiki/The_Matrix" target="_blank" rel="noopener">The Matrix&lt;/a>? Are we &lt;a href="https://www.youtube.com/watch?v=7nqcL0mjMjw" target="_blank" rel="noopener">Livin' on the Edge&lt;/a>?&lt;/p>
+&lt;p>Take a break and think about this for a moment. How can our three-dimensional world be encoded on a two-dimensional surface? What does it mean? Is the universe a &lt;a href="https://en.wikipedia.org/wiki/Simulation_hypothesis" target="_blank" rel="noopener">game&lt;/a> running on the screen of an alien child? Are we trapped in &lt;a href="https://en.wikipedia.org/wiki/The_Matrix" target="_blank" rel="noopener">The Matrix&lt;/a>? Are we &lt;a href="https://www.youtube.com/watch?v=7nqcL0mjMjw" target="_blank" rel="noopener">Livin&amp;rsquo; on the Edge&lt;/a>?&lt;/p>
 &lt;p>
 &lt;figure id="figure-aerosmith-livin-on-the-edge-video-1993">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Living on the Edge" srcset="
-/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_09bcc9471a5c8b21ac497a42026d293a.jpg 400w,
-/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_2463810934eaa6069c90274256f62d79.jpg 760w,
-/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_1200x1200_fit_q75_lanczos.jpg 1200w"
-src="https://anilzen.github.io/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_09bcc9471a5c8b21ac497a42026d293a.jpg"
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_c7a240253d106fdf4dedfdaa3a7ac972.webp 400w,
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_207a77ccf2abf58e87d6f804fcaac0b9.webp 760w,
+/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/living_on_the_edge_hu173cdc4707bba8c72fbdcae6744ed276_37858_c7a240253d106fdf4dedfdaa3a7ac972.webp"
 width="722"
 height="531"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Aerosmith: Livin' on the Edge (Video 1993)
+Aerosmith: Livin&amp;rsquo; on the Edge (Video 1993)
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;h3 id="adscft-correspondence">AdS/CFT correspondence&lt;/h3>
@@ -229,15 +229,15 @@ Aerosmith: Livin' on the Edge (Video 1993)
 &lt;figure id="figure-ads-is-hyperbolic-space-with-a-time-direction-wikimediahttpscommonswikimediaorgwikifileads3svg">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="AdS3" srcset="
-/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_23af80de35e5b1c5d4d32844b35a4cdb.png 400w,
-/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_62ce83adaaf6f5e369aa79a83ae609c8.png 760w,
-/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_23af80de35e5b1c5d4d32844b35a4cdb.png"
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_61970cad7d4d717edc3a67b3ac88af73.webp 400w,
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_352cb1eb5025a0154dc7b8a7e0e7b971.webp 760w,
+/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/AdS3_hu87bd1888389a6c14d9cc1117d0109a96_71192_61970cad7d4d717edc3a67b3ac88af73.webp"
 width="472"
 height="480"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-AdS is hyperbolic space with a time direction. &lt;a href="https://commons.wikimedia.org/wiki/File:AdS3.svg">Wikimedia&lt;/a>
+AdS is hyperbolic space with a time direction. &lt;a href="https://commons.wikimedia.org/wiki/File:AdS3.svg" target="_blank" rel="noopener">Wikimedia&lt;/a>
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>The negative curvature of AdS is a feature and a bug. It allows the realization of the holographic principle due to its hyperbolic slices, but it also makes AdS an unphysical model for our universe. At cosmological scales, the universe has positive curvature and resembles de Sitter space. At astrophysical and smaller scales, isolated systems are modeled by asymptotically flat spacetimes. Either way, anti-de Sitter spacetime, with all its &lt;a href="https://arxiv.org/abs/1611.01118" target="_blank" rel="noopener">bizarre&lt;/a> features, is not a good model for physical reality.&lt;/p>
@@ -258,15 +258,15 @@ Just like AdS, flat spacetime takes the form of hyperbolic space with a time dir
 &lt;figure id="figure-the-cylinders-in-penroses-drawing-are-hyperbolic-spaces-with-a-time-direction-penrose-prl-1963httpsjournalsapsorgprlabstract101103physrevlett1066">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Penrose cylinder" srcset="
-/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_e271eda2582e44a791c10e855ddca0af.png 400w,
-/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_0644506f30853b64f349a9c991cf2b26.png 760w,
-/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_e271eda2582e44a791c10e855ddca0af.png"
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_5c28c60ce0a2024da2163000044e7e0a.webp 400w,
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_dd8192eb1d14d6f9877e737a76389855.webp 760w,
+/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/featured_hu7eb71e76e4f9e823419f039672d26a8d_30573_5c28c60ce0a2024da2163000044e7e0a.webp"
 width="377"
 height="365"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-The cylinders in Penrose&amp;rsquo;s drawing are hyperbolic spaces with a time direction. &lt;a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.10.66">Penrose, PRL (1963)&lt;/a>
+The cylinders in Penrose&amp;rsquo;s drawing are hyperbolic spaces with a time direction. &lt;a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.10.66" target="_blank" rel="noopener">Penrose, PRL (1963)&lt;/a>
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>The agreement of the geometry of hyperboloidal and AdS slices is suggestive. Calculations in the AdS/CFT literature performed on time slices may carry over to flat spacetime in hyperboloidal coordinates. One such example is the Ryu-Takayanagi conjecture.&lt;/p>
@@ -278,15 +278,15 @@ The cylinders in Penrose&amp;rsquo;s drawing are hyperbolic spaces with a time d
 &lt;figure id="figure-diagram-demonstrating-rt-proposal-on-ads_3cft_2-ryu-and-takayanagi-arxiv-2006httpsarxivorgabshep-th0603001">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="RT conjecture" srcset="
-/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_9ae7d9edec8d811b2becaa438f00c586.png 400w,
-/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3dc5efc8eae60c426c98d0f43a020e6d.png 760w,
-/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_9ae7d9edec8d811b2becaa438f00c586.png"
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3d67cdaa312f19f9d0c16a749eafda23.webp 400w,
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_d2c76ec2eb6abc02b8c34de0f7348e36.webp 760w,
+/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/RT_diagram_huc187e2868a67d5cdf87ff9d98ee019fe_90520_3d67cdaa312f19f9d0c16a749eafda23.webp"
 width="760"
 height="487"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Diagram demonstrating RT proposal on AdS$_3$/CFT$_2$. &lt;a href="https://arxiv.org/abs/hep-th/0603001">Ryu and Takayanagi, arXiv (2006)&lt;/a>
+Diagram demonstrating RT proposal on AdS$_3$/CFT$_2$. &lt;a href="https://arxiv.org/abs/hep-th/0603001" target="_blank" rel="noopener">Ryu and Takayanagi, arXiv (2006)&lt;/a>
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>The two subsystems $A$ and $B$ of CFT$_2$ live on the boundary of AdS$_3$. They are separated by a screen $\gamma_A$ required to be an extremal surface in the bulk AdS$_3$. An extremal &amp;ldquo;surface&amp;rdquo; on a slice of AdS$_3$ is a geodesic line connecting the meeting points of the domains $A$ and $B$ on the bounding circle. The RT proposal states that the entanglement entropy of subsystem $A$ is proportional to the area of the screen $\gamma_A$:
@@ -325,15 +325,15 @@ Again, we recognize the representation of Minkowski spacetime as a stack of hype
 &lt;figure id="figure-penrose-diagram-of-milne-slicing-strominger-arxiv-2017httpsarxivorgabshep-th0603001">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Hyperbolic slices" srcset="
-/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_4e342d9bb588d17373943d2add173f38.png 400w,
-/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_aa2d5f63f361230941e0a34e94b90ef1.png 760w,
-/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_4e342d9bb588d17373943d2add173f38.png"
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_db8958ccf0594bed0168ca2fed9d8f85.webp 400w,
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_67332c32c03e6a61abc8f80af55f0e95.webp 760w,
+/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/hyperbolic_hu07438a4e6e3cb093e518d73c9c90a40d_74988_db8958ccf0594bed0168ca2fed9d8f85.webp"
 width="444"
 height="453"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Penrose diagram of Milne slicing. &lt;a href="https://arxiv.org/abs/hep-th/0603001">Strominger, arXiv (2017)&lt;/a>
+Penrose diagram of Milne slicing. &lt;a href="https://arxiv.org/abs/hep-th/0603001" target="_blank" rel="noopener">Strominger, arXiv (2017)&lt;/a>
 &lt;/figcaption>&lt;/figure>
 The Penrose diagram and the metric reveal some undesirable features of Milne slices compared to the hyperboloidal foliation:&lt;/p>
 &lt;ul>
@@ -346,15 +346,15 @@ The Penrose diagram and the metric reveal some undesirable features of Milne sli
 &lt;figure id="figure-penrose-diagrams-of-hyperboloidal-foliations-with-different-mean-extrinsic-curvatures-k632-zenginoğlu-arxiv-2008httpsarxivorgabs07124333">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Hyperboloidal foliation" srcset="
-/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_081c7a635a61c1982bca91057f738b4e.png 400w,
-/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_c0fb6fa0b9d76903c2ec7789b395cd13.png 760w,
-/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_1200x1200_fit_lanczos_3.png 1200w"
-src="https://anilzen.github.io/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_081c7a635a61c1982bca91057f738b4e.png"
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_3b2e6e1d322650da3e63826c855b461a.webp 400w,
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_f6ff2e6e1abd3e3ba1c347060783a487.webp 760w,
+/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/hyperboloidal-holography/hyperboloidal_huddf2caadb7366214d7f4d1665843ed97_102448_3b2e6e1d322650da3e63826c855b461a.webp"
 width="760"
 height="338"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K={6,3,2}$. &lt;a href="https://arxiv.org/abs/0712.4333">Zenginoğlu, arXiv (2008)&lt;/a>
+Penrose diagrams of hyperboloidal foliations with different mean extrinsic curvatures $K={6,3,2}$. &lt;a href="https://arxiv.org/abs/0712.4333" target="_blank" rel="noopener">Zenginoğlu, arXiv (2008)&lt;/a>
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>Milne coordinates have one advantage that a hyperboloidal foliation of null infinity cannot provide. A massive particle in constant motion will asymptote to a point on the Milne slices. Dirac used this property in his 1949 paper on &lt;a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.21.392" target="_blank" rel="noopener">Forms of Relativistic Dynamics&lt;/a> and it appears repeatedly in celestial holography. I&amp;rsquo;m not sure how important this is. But Milne coordinates are also hyperboloidal. So in that sense, celestial holography is already using hyperboloidal holography.&lt;/p>
@@ -370,14 +370,14 @@ Penrose diagrams of hyperboloidal foliations with different mean extrinsic curva
 &lt;p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&amp;rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.&lt;/p>
 &lt;p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated &lt;a href="https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group" target="_blank" rel="noopener">symmetries&lt;/a> as celestial holography is attempting to do.&lt;/p>
 &lt;p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. &lt;a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target="_blank" rel="noopener">Watch this space!&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>There are various subtleties here that I&amp;rsquo;m glossing over. You can go down the rabbit hole following the &lt;a href="http://www.scholarpedia.org/article/Bekenstein_bound" target="_blank" rel="noopener">Bekenstein bound&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>Setting the curvature radius to unity for simplicity, $L=1$.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Cauchy-horizon singularity inside perturbed Kerr black holes</title><link>https://anilzen.github.io/publication/burko-2016-cauchy/</link><pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/burko-2016-cauchy/</guid><description/></item><item><title>Testing numerically the null Cauchy horizon singularity inside Kerr black holes</title><link>https://anilzen.github.io/publication/burko-2015-testing/</link><pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/burko-2015-testing/</guid><description/></item><item><title>Horizon-absorption effects in coalescing black-hole binaries: An effective-one-body study of the nonspinning case</title><link>https://anilzen.github.io/publication/bernuzzi-2012-horizon/</link><pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2012-horizon/</guid><description/></item><item><title>A geometric framework for black hole perturbations</title><link>https://anilzen.github.io/publication/zenginoglu-2011-geometric/</link><pubDate>Fri, 17 Jun 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/zenginoglu-2011-geometric/</guid><description/></item><item><title>Binary black hole coalescence in the extreme-mass-ratio limit: testing and improving the effective-one-body multipolar waveform</title><link>https://anilzen.github.io/publication/bernuzzi-2011-binary/</link><pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2011-binary/</guid><description/></item><item><title>Binary black hole coalescence in the large-mass-ratio limit: the hyperboloidal layer method and waveforms at null infinity</title><link>https://anilzen.github.io/publication/bernuzzi-2011-layer/</link><pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2011-layer/</guid><description/></item><item><title>Saddle-point dynamics of a Yang—Mills field on the exterior Schwarzschild spacetime</title><link>https://anilzen.github.io/publication/bizon-2010-saddle/</link><pubDate>Fri, 16 Jul 2010 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bizon-2010-saddle/</guid><description/></item><item><title>Universality of global dynamics for the cubic wave equation</title><link>https://anilzen.github.io/publication/bizon-2009-universality/</link><pubDate>Thu, 10 Sep 2009 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bizon-2009-universality/</guid><description/></item><item><title>Hyperboloidal foliations and scri-fixing</title><link>https://anilzen.github.io/publication/zenginoglu-2008-hyperboloidal/</link><pubDate>Thu, 19 Jun 2008 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/zenginoglu-2008-hyperboloidal/</guid><description/></item></channel></rss>
+&lt;/div></description></item><item><title>Cauchy-horizon singularity inside perturbed Kerr black holes</title><link>https://anilzen.github.io/publication/burko-2016-cauchy/</link><pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/burko-2016-cauchy/</guid><description/></item><item><title>Testing numerically the null Cauchy horizon singularity inside Kerr black holes</title><link>https://anilzen.github.io/publication/burko-2015-testing/</link><pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/burko-2015-testing/</guid><description/></item><item><title>Horizon-absorption effects in coalescing black-hole binaries: An effective-one-body study of the nonspinning case</title><link>https://anilzen.github.io/publication/bernuzzi-2012-horizon/</link><pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2012-horizon/</guid><description/></item><item><title>A geometric framework for black hole perturbations</title><link>https://anilzen.github.io/publication/zenginoglu-2011-geometric/</link><pubDate>Fri, 17 Jun 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/zenginoglu-2011-geometric/</guid><description/></item><item><title>Binary black hole coalescence in the extreme-mass-ratio limit: testing and improving the effective-one-body multipolar waveform</title><link>https://anilzen.github.io/publication/bernuzzi-2011-binary/</link><pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2011-binary/</guid><description/></item><item><title>Binary black hole coalescence in the large-mass-ratio limit: the hyperboloidal layer method and waveforms at null infinity</title><link>https://anilzen.github.io/publication/bernuzzi-2011-layer/</link><pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bernuzzi-2011-layer/</guid><description/></item><item><title>Saddle-point dynamics of a Yang—Mills field on the exterior Schwarzschild spacetime</title><link>https://anilzen.github.io/publication/bizon-2010-saddle/</link><pubDate>Fri, 16 Jul 2010 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bizon-2010-saddle/</guid><description/></item><item><title>Universality of global dynamics for the cubic wave equation</title><link>https://anilzen.github.io/publication/bizon-2009-universality/</link><pubDate>Thu, 10 Sep 2009 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/bizon-2009-universality/</guid><description/></item><item><title>Hyperboloidal foliations and scri-fixing</title><link>https://anilzen.github.io/publication/zenginoglu-2008-hyperboloidal/</link><pubDate>Thu, 19 Jun 2008 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/publication/zenginoglu-2008-hyperboloidal/</guid><description/></item></channel></rss>
