@@ -61,12 +61,16 @@ locale:
 
 features:
   syntax_highlighter:
+    theme_light: dracula
+    # theme_dark: 
     enable: true
     extra_languages:
       - python
       - html
       - latex
-    highlight_style: "solarized-dark"
+    # theme: "dracula"
+    # highlight_style: "solarized-dark"
+
   math:
     enable: true
   privacy_pack:

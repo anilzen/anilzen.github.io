@@ -23,19 +23,9 @@
     \node[above right] at (axis cs: 0.5,0.5) {$\scri^+$};
     \node[below right] at (axis cs: 0.5,-0.5) {$\scri^-$};
     
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data0.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data1.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data2.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data3.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data4.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data5.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data6.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data7.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data8.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data9.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data10.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data11.csv};
-\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {arctan_data12.csv};
+    \foreach \file in {{arctan_data0.csv},{arctan_data1.csv},{arctan_data2.csv},{arctan_data3.csv},
+    			    {arctan_data4.csv},{arctan_data5.csv},{arctan_data6.csv}}
+	{\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {\file};}
 
 \end{axis}
 
