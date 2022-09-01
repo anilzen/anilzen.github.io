@@ -259,7 +259,14 @@ Note that the height function is singular at the horizon. This singularity is ne
 &lt;td style="text-align:center">
 &lt;figure id="figure-schwarzschild-droste-time-slices">
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="figures/ss_standard.png" alt="Schwarzschild-Droste time slices" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Schwarzschild-Droste time slices" srcset="
+/post/2022/drawing-penrose-diagrams/figures/ss_standard_hu727494f74e41712379bdfed7d71bfe07_305624_e40ae1b1bcf9878a0ebd29d8891af4da.webp 400w,
+/post/2022/drawing-penrose-diagrams/figures/ss_standard_hu727494f74e41712379bdfed7d71bfe07_305624_ac19cab7f13834bfd457c9df7e2072af.webp 760w,
+/post/2022/drawing-penrose-diagrams/figures/ss_standard_hu727494f74e41712379bdfed7d71bfe07_305624_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2022/drawing-penrose-diagrams/figures/ss_standard_hu727494f74e41712379bdfed7d71bfe07_305624_e40ae1b1bcf9878a0ebd29d8891af4da.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
 Schwarzschild-Droste time slices
 &lt;/figcaption>&lt;/figure>
@@ -267,7 +274,14 @@ Schwarzschild-Droste time slices
 &lt;td style="text-align:center">
 &lt;figure id="figure-gullstrandpainlevé-time-slices">
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="figures/ss_gp.png" alt="Gullstrand–Painlevé time slices" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Gullstrand–Painlevé time slices" srcset="
+/post/2022/drawing-penrose-diagrams/figures/ss_gp_huc45694372c238d974acb5d587f3bbeb8_320514_627235e3a36de0231d5f308663c9288a.webp 400w,
+/post/2022/drawing-penrose-diagrams/figures/ss_gp_huc45694372c238d974acb5d587f3bbeb8_320514_e6bc86a8e8efe39e055b87f72c278f9b.webp 760w,
+/post/2022/drawing-penrose-diagrams/figures/ss_gp_huc45694372c238d974acb5d587f3bbeb8_320514_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2022/drawing-penrose-diagrams/figures/ss_gp_huc45694372c238d974acb5d587f3bbeb8_320514_627235e3a36de0231d5f308663c9288a.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
 Gullstrand–Painlevé time slices
 &lt;/figcaption>&lt;/figure>
@@ -291,7 +305,14 @@ $$ h_{\rm MG} (r) = r + 2 \ln r - \ln(r - 1). $$&lt;/p>
 &lt;td style="text-align:center">
 &lt;figure id="figure-hyperbolic-time-slices">
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="figures/ss_hyperbolic.png" alt="Hyperbolic time slices" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Hyperbolic time slices" srcset="
+/post/2022/drawing-penrose-diagrams/figures/ss_hyperbolic_hu727494f74e41712379bdfed7d71bfe07_267505_619c70a07d8ef7fd1fa8eac3ec505535.webp 400w,
+/post/2022/drawing-penrose-diagrams/figures/ss_hyperbolic_hu727494f74e41712379bdfed7d71bfe07_267505_cf6b5d0752b76d74c305fe585553582f.webp 760w,
+/post/2022/drawing-penrose-diagrams/figures/ss_hyperbolic_hu727494f74e41712379bdfed7d71bfe07_267505_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2022/drawing-penrose-diagrams/figures/ss_hyperbolic_hu727494f74e41712379bdfed7d71bfe07_267505_619c70a07d8ef7fd1fa8eac3ec505535.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
 Hyperbolic time slices
 &lt;/figcaption>&lt;/figure>
@@ -299,7 +320,14 @@ Hyperbolic time slices
 &lt;td style="text-align:center">
 &lt;figure id="figure-minimal-gauge">
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="figures/ss_minimal.png" alt="Minimal gauge" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Minimal gauge" srcset="
+/post/2022/drawing-penrose-diagrams/figures/ss_minimal_hu727494f74e41712379bdfed7d71bfe07_260868_edd5824f8e851782d2c357d381a0ccf6.webp 400w,
+/post/2022/drawing-penrose-diagrams/figures/ss_minimal_hu727494f74e41712379bdfed7d71bfe07_260868_c34845ff30f7a4ae6610769aa013eeb2.webp 760w,
+/post/2022/drawing-penrose-diagrams/figures/ss_minimal_hu727494f74e41712379bdfed7d71bfe07_260868_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2022/drawing-penrose-diagrams/figures/ss_minimal_hu727494f74e41712379bdfed7d71bfe07_260868_edd5824f8e851782d2c357d381a0ccf6.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
 Minimal gauge
 &lt;/figcaption>&lt;/figure>
