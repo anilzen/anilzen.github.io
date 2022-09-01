@@ -1,3 +1,8 @@
+# LaTeX
+*.log
+*.aux
+*.gz
+
 .DS_Store
 exampleSite/
 
@@ -6,3 +11,4 @@ exampleSite/
 public/
 jsconfig.json
 node_modules/
+.hugo_build.lock

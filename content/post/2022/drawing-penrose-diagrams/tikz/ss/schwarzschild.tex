@@ -16,10 +16,15 @@
     \coordinate (N)  at (axis cs: 1, 1); % north I: t=+infty, i+
     \coordinate (E)  at (axis cs: 2, 0); % east I:  r=-infty, i0
     \coordinate (W)  at (axis cs: 0, 0); % west: bifurcation
-    \coordinate (NW) at (axis cs:0,1); %middle
+    \coordinate (NW) at (axis cs:0,1); 
+    \coordinate (SW) at (axis cs:0,-1);
     \draw[line width=0.6,decorate, 
         decoration={zigzag,amplitude=1.5,segment length=5}] 
         (NW) -- node[above left=1] {\small{$r=0$}} (N);
+    \draw[line width=0.6,decorate, 
+        decoration={zigzag,amplitude=1.5,segment length=5}] 
+        (SW) -- (S);
+
     \draw[thick] (N) -- (E) -- (S) -- (W) -- cycle;
     
     % LABELS
@@ -33,6 +38,17 @@
     \node[below left] at (axis cs:0.5,-0.5) {$\mathcal{H}^-$};
     \node[left] at (W) {$\mathcal{B}$};
     
+    \foreach \file in {
+{data/ss0.csv},
+{data/ss1.csv},
+{data/ss2.csv},
+{data/ss3.csv},
+{data/ss4.csv},
+{data/ss5.csv},
+{data/ss6.csv}
+}
+    	{\addplot[domain={-1,1}] table [x=R, y=T, col sep=comma] {\file};}
+
 
 \end{axis}
 \end{tikzpicture}
