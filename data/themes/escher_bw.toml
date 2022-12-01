@@ -1,0 +1,30 @@
+# Theme metadata
+name = "escher_bw"
+
+[light]
+  # Primary
+  primary = "#1565c0" # For buttons (Meet the team)
+
+  # Menu
+  menu_primary = "#969696" # the logo background color for menu bar
+  menu_text = "#CECECE" # The text in the menu bar
+  menu_text_active = "#464646" # for active section of menu
+  menu_title = "#CECECE" # don't know what this is doing
+
+  # Links
+  link = "#464646"
+#  link_hover = "#1F1F1F"
+  link_decoration = "underline"
+
+  # Home sections
+  home_section_odd = "#EBEBEB"
+  home_section_even = "#CECECE"
+
+
+
+
+  # Menu
+#  menu_primary = "#fff"
+#  menu_text = "#34495e"
+#  menu_text_active = "#2962ff"
+#  menu_title = "#2b2b2b"
