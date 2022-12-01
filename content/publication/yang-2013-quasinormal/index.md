@@ -48,7 +48,7 @@ abstract: We provide an in-depth investigation of quasinormal-mode oscillations 
   distinct branches when both types of modes are present. We discuss the physical
   reason for the mode branching by developing and using a bound-state formulation
   for the perturbations of …
-publication: '*Physical review D*'
+publication: '*Physical Review D*'
 url_pdf: https://arxiv.org/pdf/1307.8086
 links:
   - name: Journal
