@@ -43,7 +43,7 @@ First, some terminology. Think of each input dimension as a neuron in a neural n
 
 Let's write this down. I mentioned that the neural network is just a function with parameters. Its output is usually a probability, so we'll call it $p$. The network should look something like $p=f(x; W,b)$, where $x$ is the input array, $p$ is the network's output array, $W$ are the weights, and $b$ are the biases. A simple neural network could then be written like this
 $$  p = W \cdot x + b. $$
-But wait, you say; this is just a linear transformation! Layering linear transformations on top of each other only create a linear network. You can't learn complex patterns and make accurate predictions with just linear transformations. To introduce nonlinearity into the model, we throw this into a nonlinear activation function $\sigma$, so the output looks like
+But wait, you say; this is just a linear transformation! Layering linear transformations on top of each other can only create a linear network. You can't learn complex patterns and make accurate predictions with just linear transformations. To introduce nonlinearity into the model, we throw this into a nonlinear activation function $\sigma$, so the output looks like
 $$  p = \sigma(W \cdot x + b). \label{1} \tag{1} $$ 
 There are a few commonly used activation functions that one frequently encounters: the sigmoid function, the hyperbolic tangent (tanh) function, the rectified linear unit (ReLU) function, and so on. We'll use a generalization of the sigmoid (or logistic) function for our experiments. 
 $$ \sigma(x) = \frac{1}{1 + e^{-x}} $$
