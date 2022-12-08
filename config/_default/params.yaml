@@ -8,7 +8,7 @@ appearance:
   theme_day: escher_bw
   theme_night: minimal
   font: native
-  font_size: L
+  font_size: M
 
 # SEO
 

@@ -16,7 +16,7 @@ organizations:
   url: https://umd.edu
 
 # Short bio (displayed in user profile at end of posts)
-bio: Researcher, administrator, and technologist; exploring spacetime infinity and working towards operational efficiency in academia.
+bio: Research scientist and administrator exploring spacetime infinity.
 
 # Interests to show in About widget
 interests:
@@ -82,4 +82,6 @@ I'm a researcher and administrator at the [Institute for Physical Science & Tech
 
 My [research](publication/) is about numerical computations in infinite domains. Much of my work concerns gravitational waves, but I also like to apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography. 
 
-I regard science administration as the highest form of public service and enjoy bringing researchers together in thematically focused but geographically distributed networks. My administrative work started in 2014 with an NSF-funded research network on kinetic theory called [Ki-Net](https://www.ki-net.umd.edu/). I took on various roles such as Coordinator, Community Manager, IT Manager, and Acting Business Director. Currently, I serve the UMD [University Senate](https://www.senate.umd.edu/), the APS [Data Science Education Community of Practice](https://dsecop.org), the [Burgers Program in Fluid Dynamics](https://ipst.umd.edu/research/burgers), the research program for undergraduates [TREND](https://ireap.umd.edu/trend), and the [Maryland Quantum-Thermodynamics Hub](https://qtd-hub.umd.edu).
+I regard science administration as the highest form of public service and enjoy bringing researchers together in thematically focused but geographically distributed networks. My administrative work started in 2014 with an NSF-funded research network on kinetic theory called [Ki-Net](https://www.ki-net.umd.edu/). I took on various roles such as Coordinator, Community Manager, IT Manager, and Acting Business Director. Currently, I serve the UMD [University Senate](https://www.senate.umd.edu/), the APS [Data Science Education Community of Practice](https://dsecop.org), the [Burgers Program in Fluid Dynamics](https://ipst.umd.edu/research/burgers), and the [Maryland Quantum-Thermodynamics Hub](https://qtd-hub.umd.edu).
+
+<!-- the research program for undergraduates [TREND](https://ireap.umd.edu/trend) -->
