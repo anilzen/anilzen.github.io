@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>holography | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/holography/</link><atom:link href="https://anilzen.github.io/tag/holography/index.xml" rel="self" type="application/rss+xml"/><description>holography</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 07 Oct 2021 00:00:16 -0400</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>holography</title><link>https://anilzen.github.io/tag/holography/</link></image><item><title>Hyperboloidal Holography</title><link>https://anilzen.github.io/post/hyperboloidal-holography/</link><pubDate>Thu, 07 Oct 2021 00:00:16 -0400</pubDate><guid>https://anilzen.github.io/post/hyperboloidal-holography/</guid><description>&lt;h3 id="brief-history-of-bekenstein-hawking-black-hole-entropy">Brief History of Bekenstein-Hawking Black-Hole Entropy&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>holography | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/holography/</link><atom:link href="https://anilzen.github.io/tag/holography/index.xml" rel="self" type="application/rss+xml"/><description>holography</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Thu, 07 Oct 2021 00:00:16 -0400</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>holography</title><link>https://anilzen.github.io/tag/holography/</link></image><item><title>Hyperboloidal Holography</title><link>https://anilzen.github.io/post/hyperboloidal-holography/</link><pubDate>Thu, 07 Oct 2021 00:00:16 -0400</pubDate><guid>https://anilzen.github.io/post/hyperboloidal-holography/</guid><description>&lt;h3 id="brief-history-of-bekenstein-hawking-black-hole-entropy">Brief History of Bekenstein-Hawking Black-Hole Entropy&lt;/h3>
 &lt;p>When physicists want to understand something, they consider idealizations and extremes. To understand spacetime then, consider black holes.&lt;/p>
 &lt;blockquote>
 &lt;p>The black holes of nature are the most perfect macroscopic objects there are in the universe:
@@ -178,6 +178,23 @@ Penrose diagrams of hyperboloidal foliations with different mean extrinsic curva
 &lt;p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&amp;rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.&lt;/p>
 &lt;p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated &lt;a href="https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group" target="_blank" rel="noopener">symmetries&lt;/a> as celestial holography is attempting to do.&lt;/p>
 &lt;p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. &lt;a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target="_blank" rel="noopener">Watch this space!&lt;/a>&lt;/p>
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>

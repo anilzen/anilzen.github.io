@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research | Anıl Zenginoğlu</title><link>https://anilzen.github.io/category/research/</link><atom:link href="https://anilzen.github.io/category/research/index.xml" rel="self" type="application/rss+xml"/><description>Research</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>Research</title><link>https://anilzen.github.io/category/research/</link></image><item><title>Jealous of hyperbolic fish</title><link>https://anilzen.github.io/post/2022/jealous-of-fish/</link><pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/2022/jealous-of-fish/</guid><description>&lt;p>Inspired by the following tweet from the great &lt;a href="https://www.quantamagazine.org/" target="_blank" rel="noopener">Quanta Magazine&lt;/a>.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research | Anıl Zenginoğlu</title><link>https://anilzen.github.io/category/research/</link><atom:link href="https://anilzen.github.io/category/research/index.xml" rel="self" type="application/rss+xml"/><description>Research</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>Research</title><link>https://anilzen.github.io/category/research/</link></image><item><title>Jealous of hyperbolic fish</title><link>https://anilzen.github.io/post/2022/jealous-of-fish/</link><pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/2022/jealous-of-fish/</guid><description>&lt;p>Inspired by the following tweet from the great &lt;a href="https://www.quantamagazine.org/" target="_blank" rel="noopener">Quanta Magazine&lt;/a>.
 &lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Physicists are jealous of these fish drawn by M.C. Escher. If we lived in a world with a geometry like theirs, we may have a much simpler time formulating theories about the quantum nature of gravity. &lt;a href="https://t.co/RuZFkM4pCO">https://t.co/RuZFkM4pCO&lt;/a> &lt;a href="https://t.co/2LAHKuGW8C">pic.twitter.com/2LAHKuGW8C&lt;/a>&lt;/p>&amp;mdash; Quanta Magazine (@QuantaMagazine) &lt;a href="https://twitter.com/QuantaMagazine/status/1478861128553971718?ref_src=twsrc%5Etfw">January 5, 2022&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;/p>
@@ -76,6 +76,23 @@ This metric is not quite the hyperbolic metric, but has other nice properties fo
 &lt;p>The point of this post is that you can find suitable coordinates that make space hyperbolic. There is nothing to be jealous about Escher&amp;rsquo;s fish. It may well be that physically motivated time slices of flat spacetime are naturally hyperbolic but we don&amp;rsquo;t experience it because the speed of light is so large.&lt;/p>
 &lt;p>Are these time transformations physically motivated? What do they mean? Doesn&amp;rsquo;t a preferred time slice contradict the principle of covariance? I&amp;rsquo;ll leave those questions for another post.&lt;/p>
 &lt;p>Enjoy the swim.&lt;/p>
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
@@ -180,6 +197,23 @@ This construction generalizes to &lt;a href="../../publication/zenginoglu-2008-h
 &lt;p>There is another, much more relevant reason to prefer the hyperbolic viewpoint. As scientists, we want powerful descriptions. The same thinking style should apply to a broad class of phenomena. In other words, we want to avoid overfitting our formalism to the phenomena at hand. Hyperbolic calculations translate into machine learning, spacetime curvature, and maybe other areas to be discovered. The non-Euclidean approach with hyperbolic angles seems more powerful than the usual approach with velocities.&lt;/p>
 &lt;!-- [^3]: Scott Walter wrote a wonderful historical account of these developments in ["The Non-Euclidean Style of Minkowskian Relativity"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.535.6918&amp;rep=rep1&amp;type=pdf).
 [^4]: Walter, Scott. ["Minkowski’s modern world."](https://halshs.archives-ouvertes.fr/halshs-01234434/) Minkowski Spacetime: A Hundred Years Later. Springer, Dordrecht, 2010. 43-61. -->
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
@@ -370,6 +404,23 @@ Penrose diagrams of hyperboloidal foliations with different mean extrinsic curva
 &lt;p>Are these observations indicative of a profound duality, an underlying realization of the holographic principle for isolated systems in hyperboloidal coordinates? I don&amp;rsquo;t know. The similarity between Minkowski in hyperboloidal coordinates and AdS is interesting, but it can also be misleading.&lt;/p>
 &lt;p>The observations here are, by their very nature, coordinate-dependent. Suitable coordinates may ease calculations and suggest research directions, but the results should not depend on them. A significant, coordinate-independent difference to the AdS case is the null conformal boundary of asymptotically flat spacetimes. Any realization of the holographic principle will need to incorporate the null boundary and the associated &lt;a href="https://en.wikipedia.org/wiki/Bondi%E2%80%93Metzner%E2%80%93Sachs_group" target="_blank" rel="noopener">symmetries&lt;/a> as celestial holography is attempting to do.&lt;/p>
 &lt;p>It can be misleading to take similarities in specific coordinates too far, but it can also be a missed opportunity to ignore them. I think hyperbolic geometry and hyperboloidal surfaces will keep playing an essential role in holography. &lt;a href="https://www.urbandictionary.com/define.php?term=Watch%20this%20Space" target="_blank" rel="noopener">Watch this space!&lt;/a>&lt;/p>
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
@@ -418,6 +469,23 @@ Decay rates in time at various distances from the source.
 &lt;h3 id="wrap-up">Wrap-up&lt;/h3>
 &lt;p>If we ever get to measure the power-law decay from black-hole perturbations, we will measure the infinity value and not the finite distance value, even though we are a finite distance away from the sources. Given that the distances are literally astronomical, it&amp;rsquo;s more practical to use infinity both in our calculations and in our discussions where it&amp;rsquo;s needed, instead of artificially avoiding it.&lt;/p>
 &lt;p>I think most people agree that actual infinity doesn&amp;rsquo;t exist in the real world. But the number 3 also doesn&amp;rsquo;t exist in the real world. Numbers are useful concepts abstracted from observations and represented in mathematical models. The decay rate experiment demonstrates that infinity is a useful concept in describing astrophysical observations. We should embrace empirical infinity and its appearance in our formalisms as long as it improves our calculations.&lt;/p>
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>

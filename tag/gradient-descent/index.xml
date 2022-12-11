@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gradient descent | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/gradient-descent/</link><atom:link href="https://anilzen.github.io/tag/gradient-descent/index.xml" rel="self" type="application/rss+xml"/><description>gradient descent</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Dec 2022 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>gradient descent</title><link>https://anilzen.github.io/tag/gradient-descent/</link></image><item><title>Learning Machine Learning</title><link>https://anilzen.github.io/post/2022/learning-machine-learning/</link><pubDate>Thu, 08 Dec 2022 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2022/learning-machine-learning/</guid><description>&lt;a target="_blank" href="https://colab.research.google.com/drive/1A80Z_o55cJI-PkHjsg-j2sUiwsx3A9EY?usp=sharing">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gradient descent | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/gradient-descent/</link><atom:link href="https://anilzen.github.io/tag/gradient-descent/index.xml" rel="self" type="application/rss+xml"/><description>gradient descent</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Thu, 08 Dec 2022 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>gradient descent</title><link>https://anilzen.github.io/tag/gradient-descent/</link></image><item><title>Learning Machine Learning</title><link>https://anilzen.github.io/post/2022/learning-machine-learning/</link><pubDate>Thu, 08 Dec 2022 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2022/learning-machine-learning/</guid><description>&lt;a target="_blank" href="https://colab.research.google.com/drive/1A80Z_o55cJI-PkHjsg-j2sUiwsx3A9EY?usp=sharing">
 &lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 &lt;/a>
 &lt;h2 id="neural-network-what-is-machine-learning">Neural Network: What is machine learning?&lt;/h2>
@@ -129,6 +129,23 @@ Final accuracy and loss after training for 200 steps.
 &lt;li>Batch-process your samples. Batch processing was not necessary for his example, but with higher dimensions and larger training sets, it becomes necessary. There are also indications that batch-processed (stochastic) gradient descent generalizes better.&lt;/li>
 &lt;li>Use a better optimization procedure. The step size, $\lambda$, or &lt;code>lr&lt;/code>, is the most important parameter in gradient descent. I chose the rather large value of &lt;code>lr=6&lt;/code>. You can see in the plots that the loss doesn&amp;rsquo;t decrease monotonously. A simple fix for this is to multiply the learning rate with a scalar slightly less than 1, so it gets smaller at every epoch. But more importantly, you should use a better optimizer such as Adams. In fact, my interest in optimization is the reason I wrote this post. With Jingcheng Lu and Eitan Tadmor from the University of Maryland, we constructed a &lt;a href="https://anilzen.github.io/publication/2022-swarm-based-gradient-descent/">swarm-based gradient descent&lt;/a> that avoids getting trapped at local minima. The method beats existing optimizers in certain types of non-convex optimization problems. I&amp;rsquo;m experimenting to see whether it&amp;rsquo;s useful in machine learning applications.&lt;/li>
 &lt;/ul>
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>

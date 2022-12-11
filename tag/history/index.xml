@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>history | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/history/</link><atom:link href="https://anilzen.github.io/tag/history/index.xml" rel="self" type="application/rss+xml"/><description>history</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>history</title><link>https://anilzen.github.io/tag/history/</link></image><item><title>Special relativity as hyperbolic geometry</title><link>https://anilzen.github.io/post/hyperbolic-relativity/</link><pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/hyperbolic-relativity/</guid><description>&lt;p>Space and time bend and stretch with every move.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>history | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/history/</link><atom:link href="https://anilzen.github.io/tag/history/index.xml" rel="self" type="application/rss+xml"/><description>history</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>history</title><link>https://anilzen.github.io/tag/history/</link></image><item><title>Special relativity as hyperbolic geometry</title><link>https://anilzen.github.io/post/hyperbolic-relativity/</link><pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate><guid>https://anilzen.github.io/post/hyperbolic-relativity/</guid><description>&lt;p>Space and time bend and stretch with every move.&lt;/p>
 &lt;p>I was blown away by this as a young high schooler interested in physics and philosophy. To me, the recognition that natural laws dynamically govern space and time was a triumph of physics over philosophy, of Einstein over Kant, of empirical determination over &lt;a href="https://en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction#Kant%27s_version_and_the_a_priori_/_a_posteriori_distinction" target="_blank" rel="noopener">synthetic a priori&lt;/a>.&lt;/p>
 &lt;p>As fascinated as I was by special relativity, the formalism seemed relatively obscure. I recognized patterns in the &lt;a href="https://en.wikipedia.org/wiki/Lorentz_transformation" target="_blank" rel="noopener">Lorentz transformations&lt;/a> but missed a deeper insight into the origins of this structure. At college, I considered various standard derivations of relativistic effects, such as the &lt;a href="https://en.wikipedia.org/wiki/Relativistic_aberration" target="_blank" rel="noopener">relativistic aberration&lt;/a> or the &lt;a href="https://en.wikipedia.org/wiki/Thomas_precession" target="_blank" rel="noopener">Thomas precession&lt;/a>, tedious and boring.&lt;/p>
 &lt;p>A simple example is Einstein&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Velocity-addition_formula" target="_blank" rel="noopener">velocity-addition formula&lt;/a>. In Galilean relativity, which corresponds to our everyday experience, we can just add velocities. In special relativity, the speed of light is constant, so the addition of velocities must be such that no composition of velocities exceeds the speed of light. In the simplest case of collinear motion (velocities pointing in the same direction), velocity addition becomes speed addition and looks like this
@@ -92,6 +92,23 @@ This construction generalizes to &lt;a href="../../publication/zenginoglu-2008-h
 &lt;p>There is another, much more relevant reason to prefer the hyperbolic viewpoint. As scientists, we want powerful descriptions. The same thinking style should apply to a broad class of phenomena. In other words, we want to avoid overfitting our formalism to the phenomena at hand. Hyperbolic calculations translate into machine learning, spacetime curvature, and maybe other areas to be discovered. The non-Euclidean approach with hyperbolic angles seems more powerful than the usual approach with velocities.&lt;/p>
 &lt;!-- [^3]: Scott Walter wrote a wonderful historical account of these developments in ["The Non-Euclidean Style of Minkowskian Relativity"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.535.6918&amp;rep=rep1&amp;type=pdf).
 [^4]: Walter, Scott. ["Minkowski’s modern world."](https://halshs.archives-ouvertes.fr/halshs-01234434/) Minkowski Spacetime: A Hundred Years Later. Springer, Dordrecht, 2010. 43-61. -->
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;blockquote>
+&lt;/blockquote>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
