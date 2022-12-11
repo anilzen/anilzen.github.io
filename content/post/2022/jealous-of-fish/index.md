@@ -135,3 +135,21 @@ Enjoy the swim.
 
 [^1]: To get the disk model, just replace $d\sigma^2$ with $d\theta^2$.
 [^2]: The fish could, in principle, find out that they do live in hyperbolic space by making local measurements of *intrinsic* curvature.
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="anilzen/anilzen.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+        data-category="General"
+        data-category-id="DIC_kwDOFh8YOc4CTAsV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

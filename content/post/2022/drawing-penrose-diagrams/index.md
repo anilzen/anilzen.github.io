@@ -232,3 +232,21 @@ Ignoring the angular part, the spacetime metric is just a conformal Minkowski me
 
 [^1]: For a rigorous, mathematical definition of Penrose diagrams, see the Appendix C.2 in a [paper](https://arxiv.org/abs/gr-qc/0309115) by Dafermos and Rodnianski.
 [^2]: The curious capitalization of TikZ derives from the capitalization of the German expression "TikZ is kein Zeichenprogramm."
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="anilzen/anilzen.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+        data-category="General"
+        data-category-id="DIC_kwDOFh8YOc4CTAsV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

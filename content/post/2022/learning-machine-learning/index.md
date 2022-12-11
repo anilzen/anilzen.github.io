@@ -177,3 +177,20 @@ You now have a few simple tools as a starting point for further inquiry. Here ar
 [^5]: You might think that the double transpose in `np.dot(dL.T,x).T` is unnecessary. Why not write it as `np.dot(x.T, dL)`? It turns out that the former dot product is faster because of the way the data is stored in memory. 
 
 [^6]: These are actually iterations. The term epochs alludes to a bright future where you might want to process your training data in batches. Batch processing is among the many directions you might want to expand the code.
+
+<script src="https://giscus.app/client.js"
+        data-repo="anilzen/anilzen.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+        data-category="General"
+        data-category-id="DIC_kwDOFh8YOc4CTAsV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

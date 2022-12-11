@@ -75,3 +75,21 @@ I think most people agree that actual infinity doesn't exist in the real world. 
 [^4]: For those of you who are wondering about the mathematical form of such a function, here is an example:
 $$ \phi(t,r) \sim \frac{C_1}{(C_2+t+r)(C_3+t-r)^2} $$
 The constants $C_i$ are arbitrary values determined by the initial perturbation. For fixed $r$ we have $\phi\sim 1/t^3$. Along null directions with constant $t+r$, the function decays as $\phi\sim 1/(t-r)^2$. Therefore, an observer measures the decay rate $3$ or $2$ depending on location. 
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="anilzen/anilzen.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+        data-category="General"
+        data-category-id="DIC_kwDOFh8YOc4CTAsV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

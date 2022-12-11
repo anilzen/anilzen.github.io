@@ -133,3 +133,21 @@ There is another, much more relevant reason to prefer the hyperbolic viewpoint. 
 [^2]: Walter, Scott. "[Hermann Minkowski and the scandal of spacetime.](https://halshs.archives-ouvertes.fr/halshs-00319209/)" ESI News 3.1 (2008): 6-8.
 <!-- [^3]: Scott Walter wrote a wonderful historical account of these developments in ["The Non-Euclidean Style of Minkowskian Relativity"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.535.6918&rep=rep1&type=pdf).
 [^4]: Walter, Scott. ["Minkowski’s modern world."](https://halshs.archives-ouvertes.fr/halshs-01234434/) Minkowski Spacetime: A Hundred Years Later. Springer, Dordrecht, 2010. 43-61. -->
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="anilzen/anilzen.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+        data-category="General"
+        data-category-id="DIC_kwDOFh8YOc4CTAsV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

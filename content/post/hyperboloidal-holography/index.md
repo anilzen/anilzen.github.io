@@ -165,3 +165,21 @@ It can be misleading to take similarities in specific coordinates too far, but i
 
 [^1]: There are various subtleties here that I'm glossing over. You can go down the rabbit hole following the [Bekenstein bound](http://www.scholarpedia.org/article/Bekenstein_bound).
 [^2]: Setting the curvature radius to unity for simplicity, $L=1$.
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="anilzen/anilzen.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+        data-category="General"
+        data-category-id="DIC_kwDOFh8YOc4CTAsV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

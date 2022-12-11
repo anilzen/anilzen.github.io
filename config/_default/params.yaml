@@ -43,7 +43,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Anıl Zenginoğlu. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -83,12 +83,16 @@ features:
     gravatar: false
     shape: circle
   comment:
+    # Choose a provider: giscus, disqus, commento, or '' to disable commenting
     provider: ''
-    disqus:
-      shortname: ''
-      show_count: true
-    commento:
-      url: ''
+    # giscus:
+    #   repo: 'anilzen/anilzen.github.io'
+    #   repo_id: ''
+    #   category: ''
+    #   category_id: ''
+    #   theme: preferred_color_scheme
+    #   language_code: en
+    #   mapping: pathname
   search:
     provider: wowchemy
     algolia:

@@ -5,7 +5,7 @@
 
 title: Anıl Zenginoğlu # Website name
 baseurl: 'https://anilzen.github.io' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+copyright: 'Anıl Zenginoğlu' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE
