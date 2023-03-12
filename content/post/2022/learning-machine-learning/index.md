@@ -35,7 +35,7 @@ categories:
 </a>
 
 ## Neural Network: What is machine learning?
-The core of a machine learning algorithm is the neural network that maps inputs to desired outputs. The term "neural network" calls to mind structures in the human brain with layers of interconnected neurons working together to solve problems. But in machine learning, we are simply talking about a function with parameters. "Learning" is adjusting these parameters until the difference between the desired output and the actual output of the function is sufficiently small. That's it.
+The core of a machine learning algorithm is the neural network that maps inputs to desired outputs. When you read "neural network," you might think of the human brain with layers of interconnected neurons working together to solve problems. But in machine learning, we are simply talking about a function with parameters. Lots and lots of parameters. "Learning" is adjusting these parameters until the difference between the desired output and the actual output of the function is sufficiently small. That's it. In a way, machine learning is the rediscovery of the old adage that you can fit any [elephant](https://en.wikipedia.org/wiki/Von_Neumann%27s_elephant) with sufficient parameters.
 
 This was a very short summary of what people mean by machine learning. You can imagine that the function, the parameters, and the adjustment process are all rather sophisticated and can get very complicated. I'll expand on this basic idea below with an example of a machine-learning algorithm. 
 

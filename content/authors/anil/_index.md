@@ -63,6 +63,9 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/AnilZenginoglu
+- icon: mastodon
+  icon_pack: fab
+  link: https://mathstodon.xyz/@anilzen
 
 
 # Link to a PDF of your resume/CV.
@@ -80,8 +83,8 @@ highlight_name: true
 ---
 I'm a researcher and administrator at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu). Here, you'll find information about my [research](publication/) and [thoughts](post/). 
 
-My [research](publication/) is about numerical computations in infinite domains. Much of my work concerns gravitational waves, but I also like to apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography. 
+My [research](publication/) is about numerical computations of waves in infinite domains. Much of my work concerns gravitational waves, but I also apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography. 
 
-I regard science administration as the highest form of public service and enjoy bringing researchers together in thematically focused but geographically distributed networks. My administrative work started in 2014 with an NSF-funded research network on kinetic theory called [Ki-Net](https://www.ki-net.umd.edu/). I took on various roles such as Coordinator, Community Manager, IT Manager, and Acting Business Director. Currently, I serve the UMD [University Senate](https://www.senate.umd.edu/), the APS [Data Science Education Community of Practice](https://dsecop.org), the [Burgers Program in Fluid Dynamics](https://ipst.umd.edu/research/burgers), and the [Maryland Quantum-Thermodynamics Hub](https://qtd-hub.umd.edu).
+I regard science administration as the highest form of public service. <!-- and enjoy bringing researchers together in thematically focused but geographically distributed networks --> My administrative work started in 2014 with an NSF-funded research network on kinetic theory called [Ki-Net](https://www.ki-net.umd.edu/). Throughout my administrative journey, I took on various roles such as Coordinator, Community Manager, IT Manager, and Acting Business Director. Currently, I serve the [Maryland Quantum-Thermodynamics Hub](https://qtd-hub.umd.edu), the [Biophysics](https://ipst.umd.edu/graduate-programs/biophysics) and [Chemical Physics](https://ipst.umd.edu/graduate-programs/chemical-physics) Graduate Programs, the [Data Science Education Community of Practice](https://dsecop.org), the [Burgers Program in Fluid Dynamics](https://ipst.umd.edu/research/burgers), and the [University Senate](https://www.senate.umd.edu/).
 
 <!-- the research program for undergraduates [TREND](https://ireap.umd.edu/trend) -->

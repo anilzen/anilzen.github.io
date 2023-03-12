@@ -5,9 +5,9 @@ from scipy.special import lambertw      # For the tortoise coordinate
 def kruskal_coords(r, t):
     # https://en.wikipedia.org/wiki/Kruskal%E2%80%93Szekeres_coordinates#Definition
     # With G=1, M=1/2 (dimensionless coordinates)
-    height = -2*np.sqrt(r) + np.log( (np.sqrt(r)+1)/(np.sqrt(r)-1) ) # Gullstrand-Painleve
+    # height = -2*np.sqrt(r) + np.log( (np.sqrt(r)+1)/(np.sqrt(r)-1) ) # Gullstrand-Painleve
     # r_tort = r + np.log(r-1); height = np.sqrt(1+r_tort**2) # hyperbolic in tortoise
-    # height = r + 2*np.log(r) - np.log(r - 1) - 2 # minimal gauge
+    height = r + 2*np.log(r) - np.log(r - 1) - 2 # minimal gauge
     # height = 0.
     rho = np.sqrt(r-1)*np.exp(r/2)*np.cosh((t+height)/2)
     tau = np.sqrt(r-1)*np.exp(r/2)*np.sinh((t+height)/2)
