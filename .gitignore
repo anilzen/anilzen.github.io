@@ -3,6 +3,8 @@
 *.aux
 *.gz
 
+.vscode
+
 .DS_Store
 exampleSite/
 
