@@ -1,11 +1,11 @@
 ---
 title: Cross-entropy
-subtitle: Across machine learning and physics
-summary: Cross-entropy is primarily regarded as a measure of the difference between two probability distributions. The concept also plays a fundamental role in the information-theoretic formulation of the Second Law of Thermodynamics.
+subtitle: Crossing the bridge between physics and machine learning.
+summary: Cross-entropy is a measure of the difference between two probability distributions. It also plays a role in the information-theoretic formulation of the Second Law of Thermodynamics, thereby providing a bridge between physics and machine learning.
 
 projects: []
-date: "2023-03-30T00:01:00Z"
-lastmod: "2023-03-30T00:01:00Z"
+date: "2023-04-02T00:01:00Z"
+lastmod: "2023-04-02T00:01:00Z"
 draft: false
 featured: true
 
@@ -32,7 +32,7 @@ We're all gonna die.
 
 Blame the Second Law of Thermodynamics. Entropy increases, we get older, and we die.
 ![I blame entropy - New Yorker Cartoon](./entropy_new_yorker_cartoon.jpg "Mark Thompson, New Yorker Magazine")
-This perception of entropy, prevalent in popular culture, presents it as the driving force for decay and disorder. But this cannot be the whole story. The incredible abundance of life on our planet would not have been possible without the self-organization of complex systems. The story of entropy and life is [much more complicated](https://www.quantamagazine.org/a-new-thermodynamics-theory-of-the-origin-of-life-20140122) than the boy in the above cartoon implies. To understand these larger questions about Life, the Universe, and Everything, we need to first clarify what entropy is.
+This perception of entropy, prevalent in popular culture, presents it as the driving force for decay and disorder. But this cannot be the whole story. The incredible abundance of life on our planet would not have been possible without the self-organization of complex systems. The story of [entropy and life](https://en.wikipedia.org/wiki/Entropy_and_life) is more complicated than the boy in the above cartoon implies. To understand these larger questions about Life, the Universe, and Everything, we need to first clarify what entropy is.
 
 This post is about a variant of entropy---called cross-entropy---that I wrote in my previous post on [machine learning](../../2022/learning-machine-learning/). In that post, I presented cross-entropy as a measure of [the difference between two probability distributions](http://localhost:1313/post/2022/learning-machine-learning/#fn:3). Most explanations of the concept, including its [Wikipedia entry](https://en.wikipedia.org/wiki/Cross_entropy), mainly focus on its relevance in information theory, not physics. 
 
@@ -50,9 +50,9 @@ Thermodynamics is the study of heat, energy, and work. It was born in the 19th c
 
 [Sadi Carnot](https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot) showed that the efficiency of a heat engine depends only on the temperature difference between the hot and cold reservoirs and not on the specific working substance or the details of the engine design.[^0] While this observation had huge practical implications, his main contribution for our purposes is the distinction between reversible and irreversible processes, which led to the notion of entropy.
 
-The [term entropy](https://en.wikipedia.org/wiki/Entropy#Etymology) was coined by the German physicist [Rudolf Clausius](https://en.wikipedia.org/wiki/Rudolf_Clausius) in 1865. The 19th-century German intellectual environment was dominated by [neoclassical hellenism](https://en.wikipedia.org/wiki/Hellenism_(neoclassicism)), which resulted in lots of Greek words in scientific literature. _Entropia_ means "transformation to" in Greek. So the German word "Entropie" is the germanized Greek translation of the German word "Verwandlungsinhalt," which Clausius used to describe the transformational content of energy. 
+The [term entropy](https://en.wikipedia.org/wiki/Entropy#Etymology) was coined by the German physicist [Rudolf Clausius](https://en.wikipedia.org/wiki/Rudolf_Clausius) in 1865 as a counterpart to the term energy. The 19th-century German intellectuals were enamored with [neoclassical hellenism](https://en.wikipedia.org/wiki/Hellenism_(neoclassicism)), which resulted in lots of Greek words in scientific literature. _Entropia_ means "transformation to" in Greek. So the German word "Entropie" is the germanized Greek translation of the German word "Verwandlungsinhalt," which Clausius used to describe the transformational content of energy. 
 
-When you burn natural gas to generate heat, you spend the transformational content of the natural gas. The heat that results in this process cannot be transformed back; entropy increases. Clausius formulated the observation that heat flows naturally from a hot body to a cooler one through the inequality[^1]
+When you burn natural gas to generate heat, you spend the transformational content of the natural gas. The heat that results in this process cannot be transformed back; entropy increases. Clausius formulated the observation that heat flows naturally from a hot body to a cooler one through the inequality
 $$ dS ≥ \frac{\delta Q}{T}. $$
 Clausius used $S$ for entropy in honor of Sadi Carnot, so $dS$ denotes a small change in entropy, $\delta Q$ is the heat the system absorbs from its surroundings, and $T$ is the temperature at which the heat is absorbed. In an adiabatic process without heat exchange, we have $\delta Q=0$, and entropy can never decrease in accordance with the Second Law.
 
@@ -64,7 +64,7 @@ Clausius' inequality doesn't give an origin story or an explanation for entropy.
 
 The famous equality that describes entropy is engraved in Boltzmann's [tombstone](https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula#/media/File:Boltzmann_equation.JPG)[^8]
 $$ S = k \log W. \tag{1} \label{1} $$
-In this expression, $k$ is the Boltzmann constant, $W$ is the number of microstates corresponding to a particular macrostate of the system. To understand what $W$ represents, think of a system composed of many parts, say, tiny atoms. Our description of the system uses a few variables, such as heat and pressure. This macroscopic description is clearly underdetermined: there are gazillions of atomic configurations that result in a given value for heat and pressure. A macrostate consists of a collection of $W$ individual microstates that are macroscopically indistinguishable. It's the number of equivalent ways the subsystems (atoms) can be arranged without changing the macroscopic state.
+In this expression, $k$ is the Boltzmann constant, $W$ is the number of microstates corresponding to a particular macrostate of the system. To understand what $W$ represents, think of a system composed of many parts, say, tiny atoms. Our description of the system uses a few variables, such as heat and pressure. This macroscopic description is clearly underdetermined: there are gazillions of atomic configurations that result in a given value for heat and pressure. A macrostate is a collection of $W$ individual microstates that are macroscopically indistinguishable. It's the number of equivalent ways the subsystems (atoms) can be arranged without changing the macroscopic state.
 
 
 
@@ -78,7 +78,8 @@ A rather outrageous extrapolation of this idea is the [Boltzmann brain](https://
 
 ### Surpriiise!
 
-[John Wheeler](https://en.wikipedia.org/wiki/John_Archibald_Wheeler) divided his physics career into [three phases](https://plus.maths.org/content/it-bit): "Everything is Particles," "Everything is Fields," and "Everything is Information." With the rise of calculators, computers, and communication devices in the 20th century, we recognized the central role that information plays in our description of physical phenomena. Information is also at the center of [Shannon's](https://en.wikipedia.org/wiki/Claude_Shannon) reformulation of entropy in a paper titled [The Mathematical Theory of Communication](https://ieeexplore.ieee.org/abstract/document/6773024). In his paper, Shannon relates information to surprise.
+With the rise of calculators, computers, and communication devices in the 20th century, information started to play a fundamental role in our description of physical phenomena.[^wh]
+[Shannon's](https://en.wikipedia.org/wiki/Claude_Shannon) reformulation of entropy in [The Mathematical Theory of Communication](https://ieeexplore.ieee.org/abstract/document/6773024) relates information to surprise.
 
 
 What is surprise? To be surprised, you must have a prior expectation, some sense that things happen in a certain way. The more you expect something, the less surprised you are to see it, and vice versa. Therefore, surprise $s$ should be a decreasing function of probability $p\in [0,1]$. Specifically, we're looking for an expression $s(p)$ that satisfies the following reasonable conditions:
@@ -94,37 +95,34 @@ Entropy is then the probability-weighted sum of surprise. In other words, entrop
 
 $$ S = \sum p_i\ s(p_i) = - \sum p_i \log p_i.  \label{2} \tag{2}$$
 
-Boltzmann used a similar formula [already in 1866](https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula#Generalization), yet the expression is named after Gibbs and Shannon. It reduces to Boltzmann's first formula \eqref{1} when the probabilities of all microstates are equal, which can be then used to derive Clausius' inequality.[^4]
+Boltzmann used a similar formula [already in 1866](https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula#Generalization), yet the expression is named after Gibbs and Shannon. It reduces to Boltzmann's first formula \eqref{1} when the probabilities of all microstates are equal, which can then be used to derive Clausius' inequality.[^4]
 
-An increase in entropy means that the expected surprise increases. This might sound a bit counterintuitive. We learned that entropy is a measure of disorder. How are these notions of disorder and surprise related?
+An increase in entropy means that the expected surprise increases. This might sound a bit counterintuitive. We learned that entropy is a measure of disorder. How are disorder and surprise related?
 
-It may be simpler to understand that patterns reduce _total_ expected surprise. Let's say every time I order a taxi, I get a yellow cab. Over time, the total expected surprise about the color of the taxi cab will be low even though I might get a blue taxi cab once in a blue moon. If, however, the color of the taxi cab is different every single time, those little surprises add up and maximize the total expected surprise. Disorder increases total expected surprise over a collection of events. It's highest when the events are random.
+It may be simpler to understand that patterns reduce _total_ expected surprise. Let's say every time I order a taxi, I get a yellow cab. Over time, the total expected surprise about the color of the taxi cab will be low even though I might get a blue cab once in a blue moon. If, however, the color of the taxi cab is different every single time, those little surprises add up and maximize the total expected surprise. Disorder increases total expected surprise over a collection of events. It's highest when the events are random.
 
 ## The Cross of Entropy
-The generalization of Boltzmann's entropy \eqref{1} to the Gibbs-Shannon entropy \eqref{2} allows different probabilities for the microstates. The next generalization includes a distinction between the expected and observed probabilities and is commonly used to define loss functions in supervised learning.
+Boltzmann's entropy \eqref{1} generalizes to Gibbs-Shannon entropy \eqref{2}, allowing different probabilities for the microstates. The next generalization[^renyi] includes a distinction between the expected and observed probabilities and is commonly used to define loss functions in supervised machine learning.
 
 ### Learning to Expect the Unexpected
-In Gibbs-Shannon entropy \eqref{2}, the weights of the sum, $p_i$, are from the same probability distribution that quantifies surprise, $s(p_i)$. But those two distributions are not necessarily the same. Our surprise arises from our assumed expectations, let's call it $q_i$, which may need to be corrected or updated. A good example is climate change, when 100-year storms start happening every decade. We may formally use the true distribution, $p_i$, for the weights, which are unknown a priori but must be inferred from observations. The cross-entropy, $H$, measures the difference between true and assumed expectations.
+In Gibbs-Shannon entropy \eqref{2}, the weights of the sum, $p_i$, are from the same probability distribution that quantifies surprise, $s(p_i)$. But those two distributions are not necessarily the same. Our surprise arises from our assumed expectations, let's call it $q_i$, which may need to be corrected or updated. A good example is climate change, when 100-year storms start happening every decade. The probability distribution for heavy storms has shifted, so we need to adjust our expectations. 
 
+We may formally use the true distribution, $p_i$, for the weights, which are unknown a priori and must be learned from observations. The cross-entropy, $H$, accounts for the difference between true and assumed expectations.
 $$ H(p,q) = - \sum p_i \log q_i. $$
-In other words, the cross entropy $H$ is the expected value, with respect to the true distribution $p$, of our surprise, with respect to the assumed distribution $q$. It measures how likely we are to be surprised (and therefore learn something) if we were told the actual probability distribution of the system.[^6] It obtains a minimum when the two distributions are equal. 
+The cross-entropy $H$ is the true expected value of our assumed surprise. In other words, it's the expected value, with respect to the true distribution $p$, of our surprise, with respect to the assumed distribution $q$. It measures how likely we are to be surprised (and therefore learn something) if we were told the actual probability distribution of the system.[^6] It obtains a minimum when the two distributions are equal. 
 
-This property is why it's so useful in machine learning where cross-entropy is used to construct the [loss function](../../2022/learning-machine-learning/#layer-and-loss-build-the-model) in multiclass classification tasks. The true labels of the training samples serve as the true distribution; the output labels of the neural network serve as the assumed distribution. The cross-entropy loss function is iteratively reduced by a numerical optimization procedure. Eventually, the true distribution of the labels matches the predicted distribution from the neural network sufficiently well. At that point, we say the machine learned the training set.
+This property is why it's so useful in machine learning where cross-entropy is used to construct the [loss function](../../2022/learning-machine-learning/#layer-and-loss-build-the-model) in multiclass classification tasks. The true labels of the training samples serve as the true distribution; the output labels of the neural network serve as the assumed distribution. The cross-entropy loss function is iteratively reduced by numerical optimization. Eventually, the true distribution of the labels matches the predicted distribution from the neural network sufficiently well. At that point, we say the machine learned the training set.
 
-### Second Coming of the Second Law
-
-Bartolotta, Carroll, Leichenauer, and Pollack reformulated the Second Law in [The Bayesian Second Law of Thermodynamics](https://arxiv.org/abs/1508.02421) using an information-theoretic approach. Sean Carroll has a great [blog post](https://www.preposterousuniverse.com/blog/2015/08/11/the-bayesian-second-law-of-thermodynamics/) about this paper, and you should read it. Here's a short description in our context. 
+### The Second Coming of the Second Law
+The Second Law of Thermodynamics has been reformulated using cross-entropy by Bartolotta, Carroll, Leichenauer, and Pollack to "incorporate the effects of a measurement of a system at some point in its evolution." [The Bayesian Second Law of Thermodynamics](https://arxiv.org/abs/1508.02421) uses an information-theoretic approach. Sean Carroll has a great [blog post](https://www.preposterousuniverse.com/blog/2015/08/11/the-bayesian-second-law-of-thermodynamics/) about this paper; you should read it. Here's a short description in our context. 
 
 According to the Bayesian Second Law, the cross-entropy of the updated ("true") distribution with respect to the original ("assumed") distribution, plus the generalized heat flow, is larger when evaluated at the end of the experiment than at the beginning. For zero heat transfer, the expected amount of information an observer would learn by being told the true microstate of the system is larger at the final time than at the initial one. Therefore, cross-entropy can change over time according to how well our initial assumptions about a system match its true underlying distribution and how much new information we gain through measurements and updates to our assumptions.
 
-Let's see it:
-$$ \Delta H(p, q) + \langle Q \rangle \geq 0. $$
-Here, $\langle Q \rangle$ is the expectation value of a generalized heat flow out of the system, similar to the term $\delta Q$ in Clausius' inequality (with a different sign).
+This updated Second Law describes the increase in cross-entropy as
+$$ \Delta H(p, q) + \langle Q \rangle \geq 0, $$
+where $\langle Q \rangle$ is the expectation value of a generalized heat flow out of the system, similar to the term $\delta Q$ in Clausius' inequality (with a different sign).
 
-By updating an experimenter's knowledge through Bayesian updates, the tension between fluctuations of entropy and the degradation of knowledge in a stochastically-evolving system is resolved.
-Cross entropy can increase when the assumed distribution becomes further from the correct distribution. This is because as the two distributions become more different, their difference (as measured by cross entropy) increases. In other words, cross-entropy measures how much information is lost when using the assumed distribution to approximate the correct distribution. When the assumed distribution is very different from the correct distribution, it can lead to large amounts of information loss and, therefore, a large increase in cross-entropy.
-
-In a stochastically evolving system, cross-entropy can decrease over time if the updated distribution becomes closer to the true distribution. However, this is not always the case. The Bayesian Second Law states that the cross-entropy of the updated distribution with respect to the original distribution never decreases, but it can increase for open systems. This means that while cross-entropy can decrease in some cases, it will not decrease in all cases, and its behavior depends on the specific system being analyzed.
+When the assumed distribution differs significantly from the correct distribution during time evolution, it can lead to information loss and, therefore, a large increase in cross-entropy. Cross-entropy increases with time even with zero heat transfer. In this interpretation, what happens during optimization in a machine learning model (decreasing cross-entropy) is the opposite of what happens in stochastic evolution (increasing cross-entropy): The act of learning is a revolt against disorder and decay!
 
 ## The Death of Heat
 
@@ -132,9 +130,9 @@ At the beginning of the post, I mentioned that the relationship between life and
 
 As the Universe continues to expand and matter becomes more dispersed, it will become increasingly difficult for matter to interact with other matter, and energy will become more evenly distributed. Eventually, all stars will have exhausted their fuel, and the Universe will be a cold, dark, lifeless place where nothing happens.
 
-One of my favorite science-fiction short stories is Asimov's [The Last Question](http://users.ece.cmu.edu/~gamvrosi/thelastq.html). It's a story about the heat death of the Universe with the perfect punch line. The story begins with two technicians attending to a giant, self-adjusting, and self-correcting computer, called Multivac, that found a way to fulfill the Earth's energy needs by drawing energy from the Sun. The technicians argue that the Sun and all the stars in the Universe will eventually run out. They ask Multivac whether entropy can be reversed, to which Multivac replies, "INSUFFICIENT DATA FOR MEANINGFUL ANSWER." The story follows the history of humanity across many eons, through interstellar travel and immortality, but the question remains and is asked repeatedly.
+One of my favorite science-fiction short stories is Asimov's [The Last Question](http://users.ece.cmu.edu/~gamvrosi/thelastq.html). It's a story about the heat death of the Universe with the perfect punch line. The story begins with two technicians attending to a giant, self-adjusting, and self-correcting computer, called Multivac that found a way to fulfill the Earth's energy needs by drawing energy from the Sun. The technicians argue that the Sun and all the stars in the Universe will eventually run out. They ask Multivac whether entropy can be reversed, to which Multivac replies, "INSUFFICIENT DATA FOR MEANINGFUL ANSWER." The story follows the history of humanity across many eons, through interstellar travel and immortality. The last question remains and is asked repeatedly.
 
-I won't give away the punchline, but I did pose the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about this question.
+I won't give away the punchline but it does fit into our observation that learning is an act against entropy. I posed the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.
 
 ![Asking Multivac](./multivac.png)
 
@@ -162,6 +160,10 @@ Cross-entropy builds a connection between machine learning and fundamental physi
 [^6]: This interpretation is better understood with the [Kullback–Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) defined by
 $$ D(p||q) = \sum p_i \log \frac{p_i}{q_i} = S(p) + H(p,q). $$ 
 This expression vanishes when $p=q$ in accordance with the interpretation that there is nothing left to learn when the true distribution equals our assumed expectation.
+
+[^wh]: As an example on how fundamental information became in physics, consider that one of the most influential physicists of the 20th century, [John Wheeler](https://en.wikipedia.org/wiki/John_Archibald_Wheeler), divided his physics career into [three phases](https://plus.maths.org/content/it-bit): "Everything is Particles," "Everything is Fields," and "Everything is Information." These stages may sum up the development of physics in the last four centuries. As we are now fully in the informational stage, it will be fascinating to see how machine learning will impact fundamental developments in physics, not only as a tool, but as a conceptual framework for our quest to understand Nature.
+
+[^renyi]: There are other generalizations, such as [Rényi entropy](https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy), that are interesting but today's focus is on cross-entropy.
 
 <!-- When you think of a thing, you have what physicists refer to as an isolated system in your mind. In that sense, we are not things. We constantly breath, drink, eat. We are absolutely and critically dependent on a nurturing Universe that keeps us alive.
 
