@@ -113,7 +113,7 @@ It is true that everything eventually dies because of entropy, but this is a sta
 &lt;/li>
 &lt;li id="fn:9">
 &lt;p>This interpretation is better understood with the &lt;a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence" target="_blank" rel="noopener">Kullback–Leibler divergence&lt;/a> defined by
-$$ D(p||q) = \sum p_i \log \frac{p_i}{q_i} = S(p) + H(p,q). $$
+$$ D(p||q) = \sum p_i \log \frac{p_i}{q_i} = H(p,q) - S(p). $$
 This expression vanishes when $p=q$ in accordance with the interpretation that there is nothing left to learn when the true distribution equals our assumed expectation.&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
