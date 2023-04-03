@@ -158,7 +158,7 @@ Cross-entropy builds a connection between machine learning and fundamental physi
 [^4]: There are some subtleties here related to the dimensions and underlying probability distributions. The equivalence of the various formulations of entropy must be demonstrated using certain assumptions. If you notice such subtleties, you probably didn't need to read this post, but I hope you enjoyed it.
 
 [^6]: This interpretation is better understood with the [Kullback–Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) defined by
-$$ D(p||q) = \sum p_i \log \frac{p_i}{q_i} = S(p) + H(p,q). $$ 
+$$ D(p||q) = \sum p_i \log \frac{p_i}{q_i} = H(p,q) - S(p). $$ 
 This expression vanishes when $p=q$ in accordance with the interpretation that there is nothing left to learn when the true distribution equals our assumed expectation.
 
 [^wh]: As an example on how fundamental information became in physics, consider that one of the most influential physicists of the 20th century, [John Wheeler](https://en.wikipedia.org/wiki/John_Archibald_Wheeler), divided his physics career into [three phases](https://plus.maths.org/content/it-bit): "Everything is Particles," "Everything is Fields," and "Everything is Information." These stages may sum up the development of physics in the last four centuries. As we are now fully in the informational stage, it will be fascinating to see how machine learning will impact fundamental developments in physics, not only as a tool, but as a conceptual framework for our quest to understand Nature.
