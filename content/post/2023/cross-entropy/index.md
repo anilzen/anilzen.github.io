@@ -132,7 +132,7 @@ As the Universe continues to expand and matter becomes more dispersed, it will b
 
 One of my favorite science-fiction short stories is Asimov's [The Last Question](http://users.ece.cmu.edu/~gamvrosi/thelastq.html). It's a story about the heat death of the Universe with the perfect punch line. The story begins with two technicians attending to a giant, self-adjusting, and self-correcting computer, called Multivac that found a way to fulfill the Earth's energy needs by drawing energy from the Sun. The technicians argue that the Sun and all the stars in the Universe will eventually run out. They ask Multivac whether entropy can be reversed, to which Multivac replies, "INSUFFICIENT DATA FOR MEANINGFUL ANSWER." The story follows the history of humanity across many eons, through interstellar travel and immortality. The last question remains and is asked repeatedly.
 
-I won't give away the punchline but it does fit into our observation that _learning acts against entropy_. I posed the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.
+I won't give away the punchline but it does fit into our observation that _learning acts against entropy_. I posed last the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.
 
 ![Asking Multivac](./multivac.png)
 
