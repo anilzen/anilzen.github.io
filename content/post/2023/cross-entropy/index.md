@@ -34,7 +34,7 @@ Blame the Second Law of Thermodynamics. Entropy increases, we get older, and we 
 ![I blame entropy - New Yorker Cartoon](./entropy_new_yorker_cartoon.jpg "Mark Thompson, New Yorker Magazine")
 This perception of entropy, prevalent in popular culture, presents it as the driving force for decay and disorder. But this cannot be the whole story. The incredible abundance of life on our planet would not have been possible without the self-organization of complex systems. The story of [entropy and life](https://en.wikipedia.org/wiki/Entropy_and_life) is more complicated than the boy in the above cartoon implies. To understand these larger questions about Life, the Universe, and Everything, we need to first clarify what entropy is.
 
-This post is about a variant of entropy---called cross-entropy---that I wrote in my previous post on [machine learning](../../2022/learning-machine-learning/). In that post, I presented cross-entropy as a measure of [the difference between two probability distributions](http://localhost:1313/post/2022/learning-machine-learning/#fn:3). Most explanations of the concept, including its [Wikipedia entry](https://en.wikipedia.org/wiki/Cross_entropy), mainly focus on its relevance in information theory, not physics. 
+This post is about a variant of entropy---called cross-entropy---that I wrote about in a post on [machine learning](../../2022/learning-machine-learning/). There, I presented cross-entropy as a measure of [the difference between two probability distributions](http://localhost:1313/post/2022/learning-machine-learning/#fn:3). Most explanations of the concept, including its [Wikipedia entry](https://en.wikipedia.org/wiki/Cross_entropy), mainly focus on its relevance in information theory, not physics. 
 
 I recently learned in a [talk](https://www.youtube.com/watch?v=x9COqqqsFtc) by [Sean Carroll](https://www.preposterousuniverse.com/) that cross-entropy plays a central role in the informational reformulation of the Second Law. This way of thinking about entropy and the Second Law builds a fascinating bridge between machine learning and physics. Before we cross that bridge, let's talk about plain old entropy.
 
@@ -56,7 +56,7 @@ When you burn natural gas to generate heat, you spend the transformational conte
 $$ dS ≥ \frac{\delta Q}{T}. $$
 Clausius used $S$ for entropy in honor of Sadi Carnot, so $dS$ denotes a small change in entropy, $\delta Q$ is the heat the system absorbs from its surroundings, and $T$ is the temperature at which the heat is absorbed. In an adiabatic process without heat exchange, we have $\delta Q=0$, and entropy can never decrease in accordance with the Second Law.
 
-Entropy encapsulates the irreversible processes that we typically associate with energy usage. Therefore, concepts like [energy crisis](https://en.wikipedia.org/wiki/Energy_crisis) actually refer to entropy crisis: we need a continuous supply of low entropy to keep the world running.
+Entropy encapsulates the irreversible processes that we typically associate with energy usage. Concepts like [energy crisis](https://en.wikipedia.org/wiki/Energy_crisis) actually refer to entropy crisis: we need a continuous supply of low entropy to keep the world running.
 
 Clausius' inequality doesn't give an origin story or an explanation for entropy. For that, we need statistical physics.
 
@@ -132,7 +132,7 @@ As the Universe continues to expand and matter becomes more dispersed, it will b
 
 One of my favorite science-fiction short stories is Asimov's [The Last Question](http://users.ece.cmu.edu/~gamvrosi/thelastq.html). It's a story about the heat death of the Universe with the perfect punch line. The story begins with two technicians attending to a giant, self-adjusting, and self-correcting computer, called Multivac that found a way to fulfill the Earth's energy needs by drawing energy from the Sun. The technicians argue that the Sun and all the stars in the Universe will eventually run out. They ask Multivac whether entropy can be reversed, to which Multivac replies, "INSUFFICIENT DATA FOR MEANINGFUL ANSWER." The story follows the history of humanity across many eons, through interstellar travel and immortality. The last question remains and is asked repeatedly.
 
-I won't give away the punchline but it does fit into our observation that learning is an act against entropy. I posed the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.
+I won't give away the punchline but it does fit into our observation that _learning is an act against entropy_. I posed the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.
 
 ![Asking Multivac](./multivac.png)
 
