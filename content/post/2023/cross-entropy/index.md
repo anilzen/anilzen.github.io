@@ -36,7 +36,7 @@ This perception of entropy, prevalent in popular culture, presents it as the dri
 
 This post is about a variant of entropy---called cross-entropy---that I wrote about in a post on [machine learning](../../2022/learning-machine-learning/). There, I presented cross-entropy as a measure of [the difference between two probability distributions](http://localhost:1313/post/2022/learning-machine-learning/#fn:3). Most explanations of the concept, including its [Wikipedia entry](https://en.wikipedia.org/wiki/Cross_entropy), mainly focus on its relevance in information theory, not physics. 
 
-I recently learned in a [talk](https://www.youtube.com/watch?v=x9COqqqsFtc) by [Sean Carroll](https://www.preposterousuniverse.com/) that cross-entropy plays a central role in the informational reformulation of the Second Law. This way of thinking about entropy and the Second Law builds a fascinating bridge between machine learning and physics. Before we cross that bridge, let's talk about plain old entropy.
+I learned in a [talk](https://www.youtube.com/watch?v=x9COqqqsFtc) by [Sean Carroll](https://www.preposterousuniverse.com/) during the [Maryland Quantum-Thermodynamics Symposium](https://qtd-hub.umd.edu/event/symposium-2023/) that cross-entropy plays a central role in the informational reformulation of the Second Law. This way of thinking about entropy and the Second Law builds a fascinating bridge between machine learning and physics. Before we cross that bridge, let's talk about plain old entropy.
 
 ## Entropy Without a Cross
 
