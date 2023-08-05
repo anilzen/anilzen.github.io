@@ -16,6 +16,9 @@ main:
   - name: Publications
     url: '#publications'
     weight: 50
+  - name: NSF Award
+    url: 'nsf-award-2309084'
+    weight: 55
   - name: Contact
     url: '#contact'
     weight: 60
