@@ -1,5 +1,5 @@
 ---
-title: "Relativistic Perturbation Theory"
+title: "Relativistic Perturbations"
 summary: "Applications of hyperboloidal foliations to relativistic perturbations of stars and black holes."
 tags: []
 categories: []

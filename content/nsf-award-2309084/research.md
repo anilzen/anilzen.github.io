@@ -10,7 +10,7 @@ comments: false  # Show comments?
 ---
 
 The research projects for this NSF award are as follows.
-- [Relativistic Perturbation Theory](/research/perturbation-theory/) 
+- [Relativistic Perturbations](/research/relativistic-perturbations/) 
 - [Numerical Analysis](/research/numerical-analysis/)
 - [Scattering Problems for Engineering](/research/scattering-problems/)
 - [Nonlinear Einstein Equations](/research/nonlinear-einstein/)
