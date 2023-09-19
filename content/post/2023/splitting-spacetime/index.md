@@ -120,7 +120,7 @@ You may wonder what determines the value of the constant mean curvature. It's th
 
 |    |    |
 | :----: | :----: |
-| ![](tikz_figs/K_volume_t.png "Reference surface at $t=0$.") | ![](tikz_figs/K_volume_u.png "Reference surface at $u=0$.")|
+| ![](tikz_figs/K_volume_t.webp "Reference surface at $t=0$.") | ![](tikz_figs/K_volume_u.webp "Reference surface at $u=0$.")|
 
 This behavior is the same for a soap bubble, so it may be considered intuitively clear. The larger the volume of air that the bubble needs to enclose, the larger the bubble, and therefore the smaller the curvature of the bubble.
 
