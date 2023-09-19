@@ -95,7 +95,14 @@ We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discu
 &lt;td style="text-align:center">
 &lt;figure id="figure-reference-surface-at-t0">
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="tikz_figs/K_volume_t.png" alt="Reference surface at $t=0$." loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Reference surface at $t=0$." srcset="
+/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_066c01a6e4c0c0d36752942334f12604.webp 400w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_44a80100365055fe2b5545797767a8ab.webp 760w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_066c01a6e4c0c0d36752942334f12604.webp"
+width="403"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
 Reference surface at $t=0$.
 &lt;/figcaption>&lt;/figure>
@@ -103,7 +110,14 @@ Reference surface at $t=0$.
 &lt;td style="text-align:center">
 &lt;figure id="figure-reference-surface-at-u0">
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="tikz_figs/K_volume_u.png" alt="Reference surface at $u=0$." loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Reference surface at $u=0$." srcset="
+/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_49ccd228712fb3ed6972caa2905ac861.webp 400w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_0d9fc3d3df472b92575bfba974944ad4.webp 760w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_49ccd228712fb3ed6972caa2905ac861.webp"
+width="403"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
 Reference surface at $u=0$.
 &lt;/figcaption>&lt;/figure>
