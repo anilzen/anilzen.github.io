@@ -1,6 +1,6 @@
 ---
 title: Splitting spacetime
-subtitle: How space and time may arise from bubble clusters
+subtitle: How space and time may arise from hyperboloidal surfaces as the relativistic analogs of bubble clusters forming a quantum foam.
 summary: Hyperboloidal hypersurfaces provide a *natural* way to split spacetime into space and time. Their mathematical definition connects to a physical principle that may be useful in understanding the quantum foam.
 
 projects: []
