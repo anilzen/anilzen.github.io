@@ -83,9 +83,9 @@ $t^2 - r^2 = 1,$
 and give initial data on the surface defined by
 $t(r) = \sqrt{1+r^2}.$
 This construction seems weird and arbitrary when you first encounter it. Why would you do something like this? Is the surface even spacelike everywhere? Why not pick another transformation?&lt;/p>
-&lt;p>Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the elegance and simplicity of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere or the physical notion of a surface minimizer to relativity, thereby providing a natural splitting of spacetime into space and time. At the end of the post, we&amp;rsquo;ll travel to the quantum realm to foam it up a little.&lt;/p>
+&lt;p>Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the elegance and simplicity of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere or the physical notion of an extremizer to relativity, thereby providing a natural splitting of spacetime into space and time. At the end of the post, we&amp;rsquo;ll speculate on the quantum realm to foam up a little.&lt;/p>
 &lt;h3 id="mathematical-notion">Mathematical notion&lt;/h3>
-&lt;p>&lt;em>Hyperboloids extend spheres to spacetime.&lt;/em>&lt;/p>
+&lt;p>&lt;em>Hyperboloids as analogs of spheres in spacetime.&lt;/em>&lt;/p>
 &lt;p>
 &lt;figure id="figure-a-spacetime-hyperboloid-times-up">
 &lt;div class="d-flex justify-content-center">
@@ -106,7 +106,7 @@ $$ t(r) = \sqrt{T^2+r^2}.$$
 This spacelike surface consists of points at proper time $T$ from the origin. Like the circle above, this surface also has constant curvature, $K=1/T.$ The higher dimensional version of a hyperbola is the hyperboloid.&lt;/p>
 &lt;p>We see that hyperboloids are the relativistic analogs of spheres. Hyperboloids are as natural in Lorentzian manifolds as spheres are in Riemannian manifolds.&lt;/p>
 &lt;h3 id="physical-principle">Physical principle&lt;/h3>
-&lt;p>&lt;em>Hyperboloids extend surface minimizers to spacetime.&lt;/em>&lt;/p>
+&lt;p>&lt;em>Hyperboloids as analogs of soap bubbles in spacetime.&lt;/em>&lt;/p>
 &lt;p>
 &lt;figure id="figure-a-soap-bubble-cluster-as-a-mental-image-for-quantum-foam-by-kym-coxhttpswwwkymcoxcomwork-statement-exhibitions">
 &lt;div class="d-flex justify-content-center">
@@ -138,20 +138,20 @@ $$ S = \int \sqrt{h}\ d^3x - \lambda \int \sqrt{-g}\ d^4x. $$
 The extremization of this action leads to the requirement of constant mean curvature: $K = \lambda$, where $K$ is the trace of the extrinsic curvature&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>.&lt;/p>
 &lt;p>Let&amp;rsquo;s do this for the 1+1 Minkowski metric to find an expression for the maximizer. We are looking for an embedding, $t=t(r)$, that extremizes (maximizes in this case) the action for the relativistic bubble. The induced metric is given by
 $$ ds^2 = -dt^2 + dr^2 = \left(-t&amp;rsquo;^2 + 1\right) dr^2, $$
-where $t&amp;rsquo;\equiv dt(r)/dr$. We have
-$$ V = \int \sqrt{h} \ dr = \int_0^R \sqrt{1-t&amp;rsquo;^2}\ dr. $$
-To calculate the spacetime volume, we need a reference surface. It turns out that it doesn&amp;rsquo;t matter what that surface is for our purposes, so let&amp;rsquo;s just take the surface $t=0$. The spacetime volume is then given by
-$$ W = \int \sqrt{-g}\ d^2x = \int_0^R dr \int_0^{t(r)} dt = \int_0^R t(r) dr. $$
+where $t&amp;rsquo;\equiv dt(r)/dr$. The volume from the origin to some $R$ is given by
+$$ V = \int_0^R \sqrt{h} \ dr = \int_0^R \sqrt{1-t&amp;rsquo;^2}\ dr. $$
+To calculate the spacetime volume, we need a reference surface. It turns out that it doesn&amp;rsquo;t matter what that surface is for our purposes, so let&amp;rsquo;s just take the surface $t=0$. The spacetime volume is given by
+$$ W = \int_0^R \int_0^{t(r)} \sqrt{-g} \ dt dr = \int_0^R t(r) dr. $$
 Bringing these expressions together in the action \eqref{3}, we can read off the Lagrangian density
 $$ \mathscr{L} = \sqrt{1-t&amp;rsquo;^2} - \lambda t. $$
 The Euler-Lagrange equation for varying $t(r)$ with respect to the parameter $r$ reads
 $$ \frac{d}{dr} \frac{\partial\mathscr{L}}{\partial t&amp;rsquo;} = \frac{\partial \mathscr{L}}{\partial t} \ \iff &lt;br>
 \frac{d}{dr} \frac{t&amp;rsquo;}{\sqrt{1-t&amp;rsquo;^2}} = \lambda. $$
-We integrate by $r$ and solve for $t&amp;rsquo;$ with boundary condition $t&amp;rsquo;(0)=0$
+We integrate by $r$ and solve for $t&amp;rsquo;$ with the boundary condition $t&amp;rsquo;(0)=0$
 $$ t&amp;rsquo;(r) = \pm \frac{\lambda r}{\sqrt{1+ \lambda^2 r^2}}. $$
 By choosing the positive sign and integrating again, we get the equation for the spacetime hyperboloid
 $$ t(r) = \sqrt{\frac{1}{\lambda^2} + r^2}. $$
-We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discussion on the relativistic analog of a circle. Now, we see that the hyperboloid is the relativistic analog of a soap bubble.&lt;/p>
+We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discussion on the relativistic analog of a circle. We see that the hyperboloid is the relativistic analog of a soap bubble satisfying a similar extremization.&lt;/p>
 &lt;p>You may wonder what determines the value of the constant mean curvature. It&amp;rsquo;s the spacetime volume that we prescribe in the constraint. The larger the spacetime volume to be enclosed, the smaller the constant mean curvature. You can see this behavior in the Penrose diagrams below. As I mentioned before, it doesn&amp;rsquo;t matter which reference surface we pick, so I&amp;rsquo;m demonstrating the dependence for two reference surfaces, $t=0$ and $u=t-r=0$. The spacetime volume enclosed by the hyperboloid with $K=0.5$ is larger than the spacetime volume enclosed by the hyperboloid with $K=2$. The difference is shaded yellow in the diagrams below.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -166,10 +166,10 @@ We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discu
 &lt;figure id="figure-reference-surface-at-t0">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Reference surface at $t=0$." srcset="
-/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_066c01a6e4c0c0d36752942334f12604.webp 400w,
-/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_44a80100365055fe2b5545797767a8ab.webp 760w,
-/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
-src="https://anilzen.github.io/post/2023/splitting-spacetime/tikz_figs/K_volume_t_huf8caa9a7750ce5377c7ef24150349adb_46576_066c01a6e4c0c0d36752942334f12604.webp"
+/post/2023/splitting-spacetime/tikz_figs/K_volume_t_hu427530d0ef5c2b3b0c61e529c2c4d155_47218_7a7509119a9e20a01e2069fba5bd56be.webp 400w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_t_hu427530d0ef5c2b3b0c61e529c2c4d155_47218_babde5745bc7e58ebe5fe8a1d46dced9.webp 760w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_t_hu427530d0ef5c2b3b0c61e529c2c4d155_47218_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/splitting-spacetime/tikz_figs/K_volume_t_hu427530d0ef5c2b3b0c61e529c2c4d155_47218_7a7509119a9e20a01e2069fba5bd56be.webp"
 width="403"
 height="760"
 loading="lazy" data-zoomable />&lt;/div>
@@ -181,10 +181,10 @@ Reference surface at $t=0$.
 &lt;figure id="figure-reference-surface-at-u0">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Reference surface at $u=0$." srcset="
-/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_49ccd228712fb3ed6972caa2905ac861.webp 400w,
-/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_0d9fc3d3df472b92575bfba974944ad4.webp 760w,
-/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
-src="https://anilzen.github.io/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu88c5adbc1413f39b839784e71fbb92ba_51574_49ccd228712fb3ed6972caa2905ac861.webp"
+/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu0be4816edf76b97fc0200969fecf9d8e_52064_c1822e5e894c89d82f0fa883cce7be1b.webp 400w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu0be4816edf76b97fc0200969fecf9d8e_52064_6c30402ddf683fe8042c0fd27c9d9bc9.webp 760w,
+/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu0be4816edf76b97fc0200969fecf9d8e_52064_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/splitting-spacetime/tikz_figs/K_volume_u_hu0be4816edf76b97fc0200969fecf9d8e_52064_c1822e5e894c89d82f0fa883cce7be1b.webp"
 width="403"
 height="760"
 loading="lazy" data-zoomable />&lt;/div>
@@ -201,7 +201,7 @@ Reference surface at $u=0$.
 &lt;p>It has been long predicted that spacetime shouldn&amp;rsquo;t be smooth at the Planck scale due to quantum fluctuations. It should be &amp;ldquo;foamy,&amp;rdquo; or &amp;ldquo;bubbly,&amp;rdquo; or &amp;ldquo;grainy,&amp;rdquo; or whatever you want to call it. Wheeler, the naming authority of theoretical physics, called this the &lt;a href="https://en.wikipedia.org/wiki/Quantum_foam" target="_blank" rel="noopener">quantum foam&lt;/a>. A foam is defined as a dispersion of bubbles, and we have just seen that the relativistic generalization of a bubble is a hyperboloid.&lt;/p>
 &lt;p>We don&amp;rsquo;t know how to test the quantum foam idea experimentally. But we can imagine that spacetime bubbles form through quantum fluctuations and may split into space and time through constant mean curvature hypersurfaces. All these fluctuations together then form the quantum foam. As usual, this mental image gives rise to further questions. What is the mechanism for the formation of such hyperboloids? How can they be related to quantum fields?&lt;/p>
 &lt;p>One idea is that the hypersurface arises through entanglement. I&amp;rsquo;ve written about &lt;a href="../../hyperboloidal-holography/">hyperboloidal holography&lt;/a> before, where I argued that holographic entanglement entropy naturally extends to flat spacetime if we use spacetime hyperboloids as the time slices. The extremum principle for the hypersurface indicates that these surfaces could also be useful in the context of &lt;a href="https://www.quantamagazine.org/in-new-paradox-black-holes-appear-to-evade-heat-death-20230606/" target="_blank" rel="noopener">quantum complexity&lt;/a>.&lt;/p>
-&lt;p>These speculations pose more questions than answers, but remarkably, bubble clusters may be the key to understanding spacetime.&lt;/p>
+&lt;p>These speculations open more questions than answers. Nevertheless, we now have a better sense that bubble clusters may indeed provide one of the keys to understanding spacetime.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
