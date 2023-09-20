@@ -1,6 +1,6 @@
 ---
 title: Splitting spacetime
-subtitle: How space and time may arise from hyperboloidal surfaces as the relativistic analogs of bubble clusters forming a quantum foam.
+subtitle: using hyperboloids as relativistic analogs of soap bubbles.
 summary: Hyperboloidal hypersurfaces provide a *natural* way to split spacetime into space and time. Their mathematical definition connects to a physical principle that may be useful in understanding the quantum foam.
 
 projects: []
@@ -49,10 +49,10 @@ and give initial data on the surface defined by
 $t(r) = \sqrt{1+r^2}.$ 
 This construction seems weird and arbitrary when you first encounter it. Why would you do something like this? Is the surface even spacelike everywhere? Why not pick another transformation?
 
-Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the elegance and simplicity of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere or the physical notion of a surface minimizer to relativity, thereby providing a natural splitting of spacetime into space and time. At the end of the post, we'll travel to the quantum realm to foam it up a little.
+Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the elegance and simplicity of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere or the physical notion of an extremizer to relativity, thereby providing a natural splitting of spacetime into space and time. At the end of the post, we'll speculate on the quantum realm to foam up a little.
 
 ### Mathematical notion
-_Hyperboloids extend spheres to spacetime._
+_Hyperboloids as analogs of spheres in spacetime._
 
 ![Hyperboloid](./hyperboloid.png "A spacetime hyperboloid. Time's up.")
 
@@ -71,7 +71,7 @@ This spacelike surface consists of points at proper time $T$ from the origin. Li
 We see that hyperboloids are the relativistic analogs of spheres. Hyperboloids are as natural in Lorentzian manifolds as spheres are in Riemannian manifolds.
 
 ### Physical principle
-_Hyperboloids extend surface minimizers to spacetime._
+_Hyperboloids as analogs of soap bubbles in spacetime._
 
 ![Soap bubble cluster](./featured.jpg "A soap bubble cluster as a mental image for quantum foam. By [Kym Cox](https://www.kymcox.com/work-statement-exhibitions).")
 
@@ -101,20 +101,20 @@ The extremization of this action leads to the requirement of constant mean curva
 
 Let's do this for the 1+1 Minkowski metric to find an expression for the maximizer. We are looking for an embedding, $t=t(r)$, that extremizes (maximizes in this case) the action for the relativistic bubble. The induced metric is given by
 $$ ds^2 = -dt^2 + dr^2 = \left(-t'^2 + 1\right) dr^2, $$
-where $t'\equiv dt(r)/dr$. We have
-$$ V = \int \sqrt{h} \ dr = \int_0^R \sqrt{1-t'^2}\ dr. $$
-To calculate the spacetime volume, we need a reference surface. It turns out that it doesn't matter what that surface is for our purposes, so let's just take the surface $t=0$. The spacetime volume is then given by 
-$$ W = \int \sqrt{-g}\ d^2x = \int_0^R dr \int_0^{t(r)} dt = \int_0^R t(r) dr. $$
+where $t'\equiv dt(r)/dr$. The volume from the origin to some $R$ is given by
+$$ V = \int_0^R \sqrt{h} \ dr = \int_0^R \sqrt{1-t'^2}\ dr. $$
+To calculate the spacetime volume, we need a reference surface. It turns out that it doesn't matter what that surface is for our purposes, so let's just take the surface $t=0$. The spacetime volume is given by 
+$$ W = \int_0^R \int_0^{t(r)} \sqrt{-g} \ dt dr = \int_0^R t(r) dr. $$
 Bringing these expressions together in the action \eqref{3}, we can read off the Lagrangian density
 $$ \mathscr{L} = \sqrt{1-t'^2} - \lambda t. $$
 The Euler-Lagrange equation for varying $t(r)$ with respect to the parameter $r$ reads
 $$ \frac{d}{dr} \frac{\partial\mathscr{L}}{\partial t'} = \frac{\partial \mathscr{L}}{\partial t} \ \iff \
  \frac{d}{dr} \frac{t'}{\sqrt{1-t'^2}} = \lambda. $$
-We integrate by $r$ and solve for $t'$ with boundary condition $t'(0)=0$
+We integrate by $r$ and solve for $t'$ with the boundary condition $t'(0)=0$
 $$ t'(r) = \pm \frac{\lambda r}{\sqrt{1+ \lambda^2 r^2}}. $$
 By choosing the positive sign and integrating again, we get the equation for the spacetime hyperboloid 
 $$ t(r) = \sqrt{\frac{1}{\lambda^2} + r^2}. $$
-We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discussion on the relativistic analog of a circle. Now, we see that the hyperboloid is the relativistic analog of a soap bubble.
+We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discussion on the relativistic analog of a circle. We see that the hyperboloid is the relativistic analog of a soap bubble satisfying a similar extremization.
 
 You may wonder what determines the value of the constant mean curvature. It's the spacetime volume that we prescribe in the constraint. The larger the spacetime volume to be enclosed, the smaller the constant mean curvature. You can see this behavior in the Penrose diagrams below. As I mentioned before, it doesn't matter which reference surface we pick, so I'm demonstrating the dependence for two reference surfaces, $t=0$ and $u=t-r=0$. The spacetime volume enclosed by the hyperboloid with $K=0.5$ is larger than the spacetime volume enclosed by the hyperboloid with $K=2$. The difference is shaded yellow in the diagrams below.
 
@@ -134,7 +134,7 @@ We don't know how to test the quantum foam idea experimentally. But we can imagi
 
 One idea is that the hypersurface arises through entanglement. I've written about [hyperboloidal holography](../../hyperboloidal-holography/) before, where I argued that holographic entanglement entropy naturally extends to flat spacetime if we use spacetime hyperboloids as the time slices. The extremum principle for the hypersurface indicates that these surfaces could also be useful in the context of [quantum complexity](https://www.quantamagazine.org/in-new-paradox-black-holes-appear-to-evade-heat-death-20230606/). 
 
-These speculations pose more questions than answers, but remarkably, bubble clusters may be the key to understanding spacetime.
+These speculations open more questions than answers. Nevertheless, we now have a better sense that bubble clusters may indeed provide one of the keys to understanding spacetime.
 
 ![](./foam.jpg)
 
