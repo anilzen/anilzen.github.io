@@ -75,9 +75,9 @@ _Hyperboloids as analogs of soap bubbles in spacetime._
 
 ![Soap bubble cluster](./featured.jpg "A soap bubble cluster as a mental image for quantum foam. By [Kym Cox](https://www.kymcox.com/work-statement-exhibitions).")
 
-The circle has another attractive property: among all figures with a given area, the circle has the smallest perimeter. We've known this for over 2,000 years[^zenod]. The corresponding statement for the sphere was only proven in the 19th century by [Schwarz](https://en.wikipedia.org/wiki/Hermann_Schwarz). This kind of optimization problem appears in many areas, from economics to biophysics. One that is familiar to most people, starting with early childhood, is the soap bubble.
+The circle has another attractive property: among all figures with a given area, the circle has the smallest perimeter. We've known this for over 2,000 years[^zenod]. The corresponding statement for the sphere was only proven in the 19th century by [Schwarz](https://en.wikipedia.org/wiki/Hermann_Schwarz). This kind of optimization problem appears in many areas. One that is familiar to most people from early childhood is the soap bubble.
 
-In mathematical terms, soap bubbles are minimal surfaces enclosing a fixed air volume. This variational problem has the following action
+In mathematical terms, soap bubbles are minimal surfaces enclosing a fixed volume of air. The variational problem has the following action
 $$ S = Area - \lambda \cdot Volume. \tag{2} \label{2} $$
 The task is to minimize the area with the constraint that the volume is fixed. The mathematics of soap bubbles is a fascinating topic with many [recent developments](https://www.quantamagazine.org/monumental-math-proof-solves-triple-bubble-problem-and-more-20221006/). Frank Morgan, who proved the [double bubble theorem](https://en.wikipedia.org/wiki/Double_bubble_theorem), has a wonderful lecture on the topic.
 
