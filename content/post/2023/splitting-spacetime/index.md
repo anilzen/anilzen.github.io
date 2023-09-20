@@ -1,7 +1,7 @@
 ---
 title: Splitting spacetime
 subtitle: With hyperboloids as relativistic analogs of soap bubbles.
-summary: Hyperboloidal hypersurfaces provide a *natural* way to split spacetime into space and time. Their mathematical definition connects to a physical principle that may be useful in understanding the quantum foam.
+summary: Hyperboloidal hypersurfaces provide a natural way to split spacetime into space and time. Their mathematical definition connects to a physical principle that may be useful as a mental image for the quantum foam.
 
 projects: []
 date: "2023-09-20T00:01:00Z"
