@@ -1,12 +1,16 @@
 import numpy as np
 
 def penrose_coords(r, t, K=1):
-#    height = 0
+    # height = 0
     # height = np.sqrt(1./K**2+r**2)-1./K
     height = np.sqrt(1./K**2+r**2)
     tau = t+height
-    R = 1./np.pi*(np.arctan(tau+r)-np.arctan(tau-r))
-    T = 1./np.pi*(np.arctan(tau+r)+np.arctan(tau-r))
+    v = tau+r
+    u = tau-r
+    V = np.arctan(v)
+    U = np.arctan(u)
+    R = 1./np.pi*(V-U)
+    T = 1./np.pi*(V+U)
     return R, T
 
 def save_to_file(penrose_c, fn):
