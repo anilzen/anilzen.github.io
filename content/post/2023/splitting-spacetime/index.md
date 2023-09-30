@@ -118,7 +118,7 @@ By choosing the positive sign and integrating again, we get the equation for the
 $$ t(r) = \sqrt{\frac{1}{\lambda^2} + r^2}. $$
 We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discussion on the relativistic analog of a circle. We now see that the hyperboloid is the relativistic analog of a soap bubble.
 
-You may wonder what determines the value of the constant mean curvature. It's the spacetime volume that we prescribe in the constraint. The larger the spacetime volume to be enclosed, the smaller the constant mean curvature. You can see this behavior in the Penrose diagram below. As I mentioned above, the reference surface doesn't matter for the qualitative discussion. To make this clear, I'm demonstrating the dependence for two reference surfaces, $t=0$ and $u=t-r=0$. The spacetime volume enclosed by the hyperboloid with $K=0.5$ is larger than the spacetime volume enclosed by the one with $K=2$ in both cases. The difference is shaded yellow.
+You may wonder what determines the value of the constant mean curvature. It's the spacetime volume that we prescribe in the constraint. The larger the spacetime volume to be enclosed, the smaller the constant mean curvature. You can see this behavior in the Penrose diagram below. As I mentioned above, the reference surface doesn't matter for the qualitative discussion. You can pick $t=0$ or $u=t-r=0$. The spacetime volume enclosed by the hyperboloid with $K=0.5$ is larger than the spacetime volume enclosed by the one with $K=2$ in both cases. The difference is shaded yellow.
 
 ![](./tikz_figs/K_volume_t.webp "Smaller curvature $K$ corresponds to larger spacetime volume irrespective of the reference surface.")
 
