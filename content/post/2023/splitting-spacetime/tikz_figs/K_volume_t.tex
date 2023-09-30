@@ -10,31 +10,33 @@
 \pgfplotsset{compat=1.18}
 
 \begin{document}
-\begin{tikzpicture}[scale=1.5]
- \begin{axis}[axis lines=none, xmin=-.1,xmax=1.1,ymin=-1.2,ymax=1.1,width=0.37\textwidth,height=0.6\textwidth]
+\begin{tikzpicture}
+ \begin{axis}[axis lines=none, xmin=-.1,xmax=1.1,ymin=-.1,ymax=1.1]
 
     % BOUNDING DIAGRAM
     \coordinate (O) at (axis cs: 0, 0); % center: origin (r,t) = (0,0)
-    \coordinate (S) at (axis cs: 0,-1); % south: t=-infty, i-
+%    \coordinate (S) at (axis cs: 0,-1); % south: t=-infty, i-
     \coordinate (N) at (axis cs: 0, 1); % north: t=+infty, i+
     \coordinate (E) at (axis cs: 1, 0); % east:  r=+infty, i0
     \draw[name path = Z, blue, thick] (N) -- (E); 
-    \draw[blue, thick] (E) -- (S);
-    \draw[red, thick] (N) -- (S);
+    \draw[blue, thick] (E) -- (O);
+    \draw[red, thick] (N) -- (O);
+    \draw[name path=ref, blue, dashed] (O) -- (axis cs: 0.5,0.5);
+    \node[below, rotate=44] at (axis cs: 0.4,0.4) {\scriptsize{$u=0$}};
 
     % LABELS
     \newcommand{\scri}{\mathscr{I}} % null infinity
     \node[right] at (E) {$i^0$};
     \node[above] at (N) {$i^+$};
-    \node[below] at (S) {$i^-$};
-    \node[above, rotate=90] at (O) {\small{$r=0$}};
+%    \node[below] at (S) {$i^-$};
+    \node[above, rotate=90] at (axis cs: 0, 0.5) {\small{$r=0$}};
     \node[above right] at (axis cs:0.5,0.5) {$\scri^+$};
-    \node[below right] at (axis cs:0.5,-0.5) {$\scri^-$};
+%    \node[below right] at (axis cs:0.5,-0.5) {$\scri^-$};
 
     \draw[name path = ref, green, thick] (O) -- (E);
     \node[below] at ($(O)!0.5!(E)$) {\scriptsize{$t=0$}};
-    \node[rotate=-20] at (axis cs: 0.15, 0.62) {\scriptsize{$K = 0.5$}};
-    \node[rotate=20] at (axis cs: 0.15, 0.28) {\scriptsize{$K = 2$}};
+    \node[rotate=-20] at (axis cs: 0.2, 0.6) {\scriptsize{$K = 0.5$}};
+    \node[rotate=20] at (axis cs: 0.2, 0.3) {\scriptsize{$K = 2$}};
     % \node[rotate=-25] at (axis cs: 0.25, 0.58) {\scriptsize{$K = 0.5$}};
     % \node[rotate=30] at (axis cs: 0.3, 0.33) {\scriptsize{$K = 2$}};
 
