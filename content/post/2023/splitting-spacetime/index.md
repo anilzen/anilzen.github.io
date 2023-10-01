@@ -49,7 +49,7 @@ and give initial data on the surface defined by
 $t(r) = \sqrt{1+r^2}.$ 
 This construction seems weird and arbitrary when you first encounter it. Why would you do something like this? How is this surface a _snapshot_? Why not pick another transformation?
 
-Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the simplicity and elegance of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere to relativity and satisfy a physical principle, which, hopefully, is more intuitive for splitting spacetime into space and time. The concepts that we'll encounter will lead us to speculations in the quantum realm.
+Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the simplicity and elegance of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere to relativity and satisfy a physical principle. The concepts that we'll encounter will lead us to speculations in the quantum realm.
 
 ### Mathematical notion
 _Hyperboloids as analogs of spheres in spacetime._
