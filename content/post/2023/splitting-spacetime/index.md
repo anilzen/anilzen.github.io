@@ -33,7 +33,7 @@ Predicting the future for a physicist is, of course, a much more accurate undert
 
 We call this process "solving an initial value problem." We solve an equation of motion, typically a partial differential equation (PDE), with prescribed initial data. The PDE is the mathematical idealization of our model of the physical system under consideration. That's where all the whys and hows go. The PDE describes how the chosen variables of the system vary in relation to each other. The initial data is the snapshot of these variables at a given time. The solution to this initial value problem is our prediction of the future.
 
-The language of a snapshot in time distinguishes time and space. But didn't special relativity teach us that time by itself and space by itself are mere shadows? Well, it did, and it didn't. Special relativity taught us that the notion of time and simultaneity is observer-dependent. But time is still a special dimension in a relativistic spacetime, distinct from its spatial friends. For example, the metric has the signature $(-+++)$, and the one that doesn't belong is time. Time is special.
+The language of a snapshot in time distinguishes time and space. But didn't special relativity teach us that time by itself and space by itself are mere shadows? Well, it did, and it didn't. Special relativity taught us that the notion of time and simultaneity is observer-dependent. But time is still a special dimension in a relativistic spacetime, distinct from its spatial friends. You can already see at the level of the metric signature, $(-+++)$, that time is special.
 
 To formulate an initial value problem, we need to split spacetime into space and time. In relativity, there are three approaches to splitting spacetime to formulate an initial value problem: Cauchy, characteristic, and hyperboloidal. Let's take the flat, 1+1 dimensional spacetime to demonstrate these approaches. In standard coordinates $(t,r)$, the flat metric reads
 $$ ds^2 = -dt^2 + dr^2 \tag{1} \label{1} $$ 
@@ -49,7 +49,7 @@ and give initial data on the surface defined by
 $t(r) = \sqrt{1+r^2}.$ 
 This construction seems weird and arbitrary when you first encounter it. Why would you do something like this? How is this surface a _snapshot_? Why not pick another transformation?
 
-Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the simplicity and elegance of the Cauchy or characteristic approaches. The usual argument goes like this: spacelike surfaces constructed by far-away observers are necessarily hyperboloidal. But this is an asymptotic argument that requires familiarity with Penrose diagrams as mathematical idealizations. It's not intuitive. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere to relativity and satisfy a physical principle, which, hopefully, is more intuitive for splitting spacetime into space and time. The concepts that we'll encounter will lead us to speculations in the quantum realm.
+Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the simplicity and elegance of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere to relativity and satisfy a physical principle, which, hopefully, is more intuitive for splitting spacetime into space and time. The concepts that we'll encounter will lead us to speculations in the quantum realm.
 
 ### Mathematical notion
 _Hyperboloids as analogs of spheres in spacetime._
