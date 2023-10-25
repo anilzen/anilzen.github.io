@@ -1,6 +1,6 @@
 ---
 title: Splitting Spacetime
-subtitle: With hyperboloids as relativistic analogs of spheres and soap bubbles.
+subtitle: Hyperboloids as relativistic analogs of spheres and soap bubbles.
 summary: Hyperboloidal hypersurfaces split spacetime into space and time. Their mathematical definition connects to a physical principle that may be useful as a mental image for the quantum foam.
 
 projects: []
