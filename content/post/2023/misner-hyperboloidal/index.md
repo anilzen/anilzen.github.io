@@ -36,33 +36,46 @@ The first two submissions are his thoughts while the last one is a refereed pape
 
 ## The coordinates
 The main ideas are clearly laid out in his [first paper](https://arxiv.org/abs/gr-qc/0409073) published for Stanley Deser's fest. The rest is commentary, demonstration, and further development.
-## The ideas
+## Kerr-Schild coordinates are hyperboloidal
+
 Future null infinity, affectionately called scri+ by relativists [^2], is an incoming null hypersurface. 
 
 The de Sitter metric in 1+1 dimensions on the static patch reads
-$$ ds^2 = - f dt^2 + \frac{1}{f} dr^2, \quad f = 1-\frac{r^2}{L^2}. $$
+$$ ds^2 = - f dt^2 + \frac{1}{f} dR^2, \quad f = 1-\frac{R^2}{L^2}. $$
 I'm neglecting the spherical section; it's irrelevant for our discussion. 
 
+We construct a tortoise coordinate
+$$ R_* = \int \frac{dR}{f} = L \ {\rm arctanh}\frac{R}{L}.  $$
+The tortoise coordinate gives the structure of in- and outgoing null rays through $u=t-R_* $ and $v=t+R_* $. 
+
 I will present the discussion in the framework of [hyperboloidal scri-fixing](publication/zenginoglu-2008-hyperboloidal/). We introduce a new time coordinate
-$$ \tau = t + h(r).$$ 
+$$ T = t + h(r).$$ 
 The de Sitter metric becomes
 $$ ds^2 = - f d\tau^2 + 2 f H d\tau dr + \frac{1-f^2 H^2}{f} dr^2. $$
 The resulting metric is regular at the points where $f$ vanishes if at those points $fH \sim 1$. 
 
-The particular choice below
-$$ f H = - \frac{r^2}{L^2}$$ 
-takes us to the de Sitter metric in Kerr-Schild form
-$$ ds^2 = - f d\tau^2 - \frac{2 r^2}{L^2} d\tau dr + \left(1+\frac{r^2}{L^2}\right) dr^2. $$
-To see that this metric has Kerr-Schild form, we write it as
-$$ ds^2 = - d\tau^2 + dr^2 + \frac{r^2}{L^2} \left(d\tau - dr\right)^2. $$
-The cosmological horizon, $r=L$ is an ingoing null surface, similar to $\mathscr I$. Below is a conformal diagram of the time slices. The metric is manifestly regular at the cosmological horizon. In principle, no further transformations are needed to evolve the spacetime beyond the cosmological horizon. This transformation is already "hyperboloidal."
+We define the new time coordinate $\tau$ through 
+$$ T - R = t - R_\ast . $$
+This construction is the same as in hyperboloidal compactification. The radial coordinate $r$ can be considered as a compactification of the tortoise coordinate $r_*$. Therefore, it is clear that the coordinate $\tau$ is hyperboloidal. 
 
-Misner does another transformation
-$$ T = \tau - \sqrt{1+r^2}. $$
-This is a hyperboloidal transformation in Minkowski space but it's awkward to apply it in the geometry of de Sitter space because the asymptotic behavior of the transformation doesn't match the causal structure. Even though it's  not helpful, let's write down the metric
+The definition of $\tau$ implies
+$$ f H = - \frac{r^2}{L^2},$$ 
+which takes us to the de Sitter metric in Kerr-Schild form
+$$ ds^2 = - f dT^2 - \frac{2 r^2}{L^2} dT dr + \left(1+\frac{r^2}{L^2}\right) dr^2, $$
+or
+$$ ds^2 = - dT^2 + dr^2 + \frac{r^2}{L^2} \left(dT - dr\right)^2. $$
+The cosmological horizon, $r=L$ is an ingoing null surface, similar to $\mathscr I$. Below is a conformal diagram of the time slices. The metric is manifestly regular at the cosmological horizon. In principle, no further transformations are needed to evolve the spacetime beyond the cosmological horizon because $T$ is already hyperboloidal.
+
+Misner does another transformation to a time coordinate he calls $u$. I assume the terminology is because Misner's $u$ is asymptotically similar to Bondi's $u$, but I think this is confusing because Misner's $u$ is a time coordinate with spatial slices. Therefore, I'll call Misner's time $\tau$. The coordinate is defined, up to some irrelevant constants, by
+$$ \tau = T - \sqrt{1+R^2}. $$
+You can see that this is the unit hyperboloid in Minkowski space by writing it as $(\tau - T)^2-R^2 = 1$. Misner writes the transformation with respect to the compactifying coordinate $r$ defined via $R=r/(1-r^2/4)$ but I'm not doing that because I want to discuss the causal structure before getting into the compactification.
+
+It's awkward to apply this transformation in the geometry of de Sitter space because the asymptotic behavior of the transformation doesn't match the causal structure. The transformation does nothing to the asymptotic behavior of the time slices. Even though it's not helpful, let's write down the metric
 $$ ds^2 = -f d\tau^2 - 2 \left( \frac{r}{L^2} + \frac{f}{\sqrt{1+r^2}} \right) d\tau dr $$ 
 $$ + \frac{L^2 + r^2 + 2 r^4 - 2r^3\sqrt{1+r^2}}{L^2 (1+r^2)} dr^2. $$
 Here is the conformal diagram.
+
+
 
 I think this transformation does nothing interesting or useful. The Kerr-Schild form of the de Sitter metric is already hyperboloidal, in the sense that the time slices cross the cosmological horizon regularly as spacelike surfaces. We could leave it there.
 
