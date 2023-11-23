@@ -4,7 +4,7 @@ subtitle: Misner's proposal for hyperboloidal compactification
 summary: The last three papers by Charles W. Misner were about the hyperboloidal approach. This post is a short review of these papers motivated by the Misner Memorial Symposium on November 11, 2023.
 
 projects: []
-date: "2023-11-22T00:01:00Z"
+date: "2023-11-23T00:01:00Z"
 draft: false
 featured: true
 
@@ -130,7 +130,7 @@ In the cosmological scenario, one would read off the radiation at the cosmologic
 It is well-known that de Sitter spacetimes are "more stable" than asymptotically flat spacetimes. Friedrich demonstrated the stability of asymptotically de Sitter spacetimes in 1986, years before the stability of Minkowski spacetimes was proven. We also know from [Bizoń and Rostworowski](https://arxiv.org/abs/1104.3702) that AdS with no-flux boundary conditions is globally unstable. The flat case is, in some imprecise sense, at the edge of stability with respect to the cosmological constant. A positive constant moves us towards better stability.
 
 ## Beyond the horizon there be monsters
-Hyperboloidal evolution of astrophysically relevant phenomena (binary black holes, neutron stars) is an open problem in numerical relativity. Today, the effort is driven mostly by David Hilditch and Alex Vaño-Viñuales. Since I gave up on this hard problem in 2013, this is the most exciting idea that I haven't tried yet. Exciting because I can't think of a reason why this shouldn't work. It's certainly worth trying out for a few months.
+Hyperboloidal evolution of astrophysically relevant phenomena (binary black holes, neutron stars) is an open problem in numerical relativity. Today, the effort is driven mostly by David Hilditch and Alex Vañó-Viñuales. Since I gave up on this hard problem in 2013, this is the most exciting idea that I haven't tried yet. Exciting because I can't think of a reason why this shouldn't work. It's certainly worth trying out for a few months.
 
 It would be remarkable if Misner's suggestion would lead to a resolution of this important open problem. Can't wait to see the outcome.
 
