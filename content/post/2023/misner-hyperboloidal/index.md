@@ -1,11 +1,11 @@
 ---
-title: Misner's work on hyperboloidal surfaces
-subtitle: Artificial cosmology over the rainbow
-summary: The last three papers by Charles W. Misner were about the hyperboloidal approach. This post is a short review of these papers.
+title: Excising the universe over the rainbow
+subtitle: Misner's proposal for hyperboloidal compactification
+summary: The last three papers by Charles W. Misner were about the hyperboloidal approach. This post is a short review of these papers motivated by the Misner Memorial Symposium on November 11, 2023.
 
 projects: []
-date: "2023-10-03T00:01:00Z"
-draft: true
+date: "2023-11-22T00:01:00Z"
+draft: false
 featured: true
 
 # Featured image
@@ -24,81 +24,121 @@ tags:
   
 categories:
 ---
+[Charles W. Misner](https://en.wikipedia.org/wiki/Charles_W._Misner) passed on July 24, 2023, and there was a [memorial symposium](https://umdphysics.umd.edu/events/misnersymposium.html) at the University of Maryland on November 11, 2023, to celebrate his life. Misner was a prolific scientist who had a major influence on the early developments of general relativity during its first [golden age](https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age). 
 
-I attended the [memorial symposium](https://science.umd.edu/events/misner-memorial.html) for Charles W. Misner at the University of Maryland on November 11, 2023. There were many talks on his contributions to physics. Nobody mentioned his work on the hyperboloidal approach, so I thought I would write a short post on this for those few people who might be interested.
+The symposium gave an excellent overview of Misner's work and provided some insight into his character. In the community, Misner is most widely known as the "M" in [MTW](https://en.wikipedia.org/wiki/Gravitation_(book)) and [ADM](https://en.wikipedia.org/wiki/ADM_formalism)[^gravitation]. One cannot possibly discuss every topic that Misner influenced in a single day, so it's inevitable that some of his work wasn't mentioned. One of those topics was hyperboloidal compactification. Misner's last three submissions on the arXiv are on hyperboloidal compactification, which is a rather niche topic in relativity, so I'm writing a post about it.
 
-Most relativists know of [Charles W. Misner](https://en.wikipedia.org/wiki/Charles_W._Misner) because of his book MTW[^1].  I consider myself more the Wald type than the MTW so my exposure to Misner's work was first through his papers on the hyperboloidal evolution problem. The last three papers that Misner submitted to the arXiv were on the hyperboloidal approach. 
-- [Hyperboloidal Slices and Artificial Cosmology for Numerical Relativity](https://arxiv.org/abs/gr-qc/0409073) (2004) published as part of Deserfest [here](https://www.worldscientific.com/worldscibooks/10.1142/5688)
-- [Over the Rainbow: Numerical Relativity beyond Scri+](https://arxiv.org/abs/gr-qc/0512167) (2005)
-- [Excising das All: Evolving Maxwell waves beyond scri](https://arxiv.org/abs/gr-qc/0603034) with James R. van Meter and David R. Fiske (2006).
+Below are Misner's last three submissions on the arXiv.
+- [Hyperboloidal Slices and Artificial Cosmology for Numerical Relativity](https://arxiv.org/abs/gr-qc/0409073) (2004) published as part of [Deserfest](https://www.worldscientific.com/worldscibooks/10.1142/5688),
+- [Over the Rainbow: Numerical Relativity beyond Scri+](https://arxiv.org/abs/gr-qc/0512167) (2005),
+- [Excising das All: Evolving Maxwell waves beyond scri](https://arxiv.org/abs/gr-qc/0603034) with James R. van Meter and David R. Fiske (2006) published in [PRD](https://doi.org/10.1103/PhysRevD.74.064003).
 
-The first two submissions are his thoughts while the last one is a refereed paper published in PRD. The basic ideas are shared in all three papers.
+Misner's main idea is to add an artificial cosmological constant to the Einstein equations to help with hyperboloidal compactification. Below, I will discuss his idea in two sections. 
+
+First, the [coordinates](#the-coordinates). Misner proposes a hyperboloidal compactification in the toy model of de Sitter spacetime to demonstrate his idea. The coordinates he proposes are, in my opinion, not particularly useful. We now have a good understanding of hyperboloidal compactification that wasn't available then. I will discuss his coordinates based on our current understanding.
+
+Second, the [artificial cosmological constant](#artificial-cosmological-constant). Misner proposes to modify the Einstein equations with a small cosmological constant to stabilize hyperboloidal evolution. This is a very interesting and promising idea that, to my knowledge, has never been tried before.
 
 ## The coordinates
-The main ideas are clearly laid out in his [first paper](https://arxiv.org/abs/gr-qc/0409073) published for Stanley Deser's fest. The rest is commentary, demonstration, and further development.
-## The ideas
-Future null infinity, affectionately called scri+ by relativists [^2], is an incoming null hypersurface. 
+The main construction is clearly laid out in Misner's [first paper](https://arxiv.org/abs/gr-qc/0409073) prepared for the celebration of his long-time collaborator [Stanley Deser](https://en.wikipedia.org/wiki/Stanley_Deser). The other papers are commentary, demonstration, and further development.
 
-The de Sitter metric in 1+1 dimensions on the static patch reads
-$$ ds^2 = - f dt^2 + \frac{1}{f} dr^2, \quad f = 1-\frac{r^2}{L^2}. $$
-I'm neglecting the spherical section; it's irrelevant for our discussion. 
+Before discussing the coordinates, we'll review our current understanding of hyperboloidal regularization of coordinate singularities at null horizons to put Misner's construction in context.
 
-I will present the discussion in the framework of [hyperboloidal scri-fixing](publication/zenginoglu-2008-hyperboloidal/). We introduce a new time coordinate
+### Hyperboloidal regularization
+Take a spherically symmetric, stationary spacetime. For brevity, we'll ignore the spherical part of the spacetime and discuss only the $\\{t,r\\}$ plane. We write the metric as
+$$ ds^2 = - f(r) dt^2 + \frac{1}{f(r)} dr^2. $$
+We get Minkowski with $f=1$, Schwarzschild with $f=1-\frac{2M}{r}$, or de Sitter with $ f = 1-\frac{r^2}{L^2}$. There's a (coordinate) singularity where $f$ vanishes: the event horizon of Schwarzschild at $r=2M$ or the cosmological horizon of de Sitter at $r=L$. From the conformal point of view, spatial infinity is also a coordinate singularity, but it's not visible on the metric without compactification.
+
+After decades of confusion following Schwarzschild's first publication of the Schwarzschild metric, we now know that a suitable re-slicing of spacetime (a different definition of time) resolves such coordinate singularities. There are many different ways to do this, but, especially for numerics, we'd like to maintain the time symmetry of the background when introducing a new time function. Otherwise, the coefficients of the transformed metric depend on time. The time symmetry is respected by transformations of the form
 $$ \tau = t + h(r).$$ 
-The de Sitter metric becomes
-$$ ds^2 = - f d\tau^2 + 2 f H d\tau dr + \frac{1-f^2 H^2}{f} dr^2. $$
-The resulting metric is regular at the points where $f$ vanishes if at those points $fH \sim 1$. 
+The function $h(r)$ is called the height function because it describes the height of the new coordinate $\tau$ with respect to $t$ when plotted on the $\\{t,r\\}$ plane. This transformation leaves the time derivatives invariant as intended: $\partial_t = \partial_\tau$. The metric becomes
+$$ ds^2 = - f d\tau^2 + 2 f H \ d\tau dr + \frac{1-f^2 H^2}{f} dr^2, $$
+where we have defined $H:=dh/dr$. Hyperboloidal regularization refers to choosing a suitable $H$ such that the $rr$-component of the above metric is regular at the zeros of $f$. This requirement implies $fH \sim \pm 1$ at those zeros. To ensure that the new coordinate $\tau$ is a time coordinate with spacelike level sets, we require $|fH|<1$ away from the zeros of $f$. The sign of $H$ determines the orientation with respect to the null cone: whether we resolve the white hole or the black hole, past null infinity or future null infinity. If you compare the time transformation above with the null coordinates, $u=t-r$ and $v=t+r$, you can see that the slicing resembles outgoing null rays, $u$, for $H<0$ and ingoing null rays, $v$, for $H>0$.
 
-The particular choice below
-$$ f H = - \frac{r^2}{L^2}$$ 
-takes us to the de Sitter metric in Kerr-Schild form
+This, in a nutshell, is our modern understanding of hyperboloidal regularization. The name "hyperboloidal" comes from the asymptotic similarity of this construction to the behavior of the standard hyperboloid in suitable coordinates:
+$$\tau = t - \sqrt{1+r^2}. \tag{1} \label{1} $$
+To see that this is a hyperboloid, think of it as $(\tau-t)^2 - r^2 = 1$. For large $r$, the hyperboloidal coordinate $\tau$ approaches the null coordinate $u$ but has spacelike level sets everywhere. The defining property of hyperboloidal coordinates is the spacelike regularization of coordinate singularities at null horizons. I wrote more about this in the context of [hyperbolic geometry for special relativity](/post/hyperbolic-relativity/) or [splitting spacetime into space and time](/post/2023/splitting-spacetime/).
+
+In asymptotically flat spacetimes, hyperboloidal regularization allows us to fix future null infinity at a constant spatial coordinate ([scri-fixing](../../../publication/zenginoglu-2008-hyperboloidal/)). In black hole spacetimes, it leads to horizon-penetrating coordinates crucial for the excision of black hole interiors. In cosmological spacetimes, it allows us to perform numerical simulations, including the cosmological horizon. The cosmological case is what Misner discusses in his papers.
+
+### de Sitter spacetime
+We get de Sitter spacetime with[^patch]
+$$ f = 1 - \frac{r^2}{L^2}. $$
+As mentioned above, there is a coordinate singularity at the cosmological horizon, $r=L$, where $f$ vanishes. The hallmark of the coordinate singularity is intersecting time slices in the conformal diagram[^diagrams]. 
+![Standard de Sitter](standard.webp "Conformal diagram of de Sitter spacetime with $t$-slices depicted on the domain of influence. The slices intersect at a single point on the cosmological horizon.")
+
+We want to construct a hyperboloidal regularization of the future cosmological horizon. The null cone structure is given by $u=t-r_\ast$ and $v=t+r_\ast$ with $r_\ast = \int \frac{dr}{f} = L \ \mathrm{archtanh }\ \frac{r}{L}$. We are primarily interested in the domain up to the cosmological horizon, $r\leq L$. Here's a suitable choice that satisfies our two requirements ($fH \to - 1$ as $r\to L$ and $|fH|<1$ for $r<L$):
+$$ f H = - \frac{r^2}{L^2}.$$ 
+By integration, we get the new time coordinate
+$$\tau = t + r - L \ \mathrm{archtanh }\ \frac{r}{L}.$$
+The metric becomes
 $$ ds^2 = - f d\tau^2 - \frac{2 r^2}{L^2} d\tau dr + \left(1+\frac{r^2}{L^2}\right) dr^2. $$
-To see that this metric has Kerr-Schild form, we write it as
+This metric is particularly nice because it can be written as the sum of the Minkowski metric and a scaled null form
 $$ ds^2 = - d\tau^2 + dr^2 + \frac{r^2}{L^2} \left(d\tau - dr\right)^2. $$
-The cosmological horizon, $r=L$ is an ingoing null surface, similar to $\mathscr I$. Below is a conformal diagram of the time slices. The metric is manifestly regular at the cosmological horizon. In principle, no further transformations are needed to evolve the spacetime beyond the cosmological horizon. This transformation is already "hyperboloidal."
+The singularity at the cosmological horizon $r=L$ is resolved. This construction is hyperboloidal and allows us to perform numerical calculations including the cosmological horizon. The time slices resolve the coordinate singularity in the previous conformal diagram. Instead, we obtain a smooth foliation of the cosmological horizon, as seen below. The diagram also demonstrates that Kerr-Schild coordinates beyond the horizon resemble trumpet slices in black hole spacetimes. 
 
-Misner does another transformation
+![Kerr-Schild de Sitter](featured.webp "Kerr-Schild slicing provides a hyperboloidal foliation of the cosmological horizon. The slices approach timelike infinity beyond the horizon resembling trumpet slices in black-hole spacetimes.")
+
+Misner takes the Kerr-Schild form of the de Sitter metric as a starting point and adds another time transformation
 $$ T = \tau - \sqrt{1+r^2}. $$
-This is a hyperboloidal transformation in Minkowski space but it's awkward to apply it in the geometry of de Sitter space because the asymptotic behavior of the transformation doesn't match the causal structure. Even though it's  not helpful, let's write down the metric
+This is what he calls hyperboloidal. The transformation is formally that of the standard hyperboloid as in Eq. \eqref{1}, but applying this in the geometry of de Sitter spacetime is awkward. By our discussion above, this transformation is not hyperboloidal. The point of the standard hyperboloid is that asymptotically in Minkowski spacetime (for large $r$), the transformed time coordinate approaches the outgoing null cone: $T\sim t - r$. However, the outgoing null cone in de Sitter spacetime does not have this form; therefore, the transformation is not hyperboloidal with respect to the actual background. As the time transformation doesn't respect the underlying causal structure of de Sitter spacetime, it does nothing to regularize an already regular coordinate system. Nevertheless, let's write down the metric
 $$ ds^2 = -f d\tau^2 - 2 \left( \frac{r}{L^2} + \frac{f}{\sqrt{1+r^2}} \right) d\tau dr $$ 
 $$ + \frac{L^2 + r^2 + 2 r^4 - 2r^3\sqrt{1+r^2}}{L^2 (1+r^2)} dr^2. $$
-Here is the conformal diagram.
 
-I think this transformation does nothing interesting or useful. The Kerr-Schild form of the de Sitter metric is already hyperboloidal, in the sense that the time slices cross the cosmological horizon regularly as spacelike surfaces. We could leave it there.
+The only impact of this transformation on the asymptotic behavior of the time slices is when $L=1$ or when the coefficient of $r$ in the hyperboloid matches the cosmological radius. In this case, the time slices end at future spacelike infinity, $\mathscr I^+$, instead of future timelike infinity, $i^+$. 
+![Misner de Sitter](misner.webp "Misner slicing also provides a hyperboloidal foliation of the cosmological horizon. The main difference to the Kerr-Schild slicing is that, beyond the horizon, the slices hit $\mathscr I^+$ when $L=1$.")
 
-Misner introduces the compactification
-$$ r = \frac{\rho}{1-\rho^2/4}, $$
-which maps $\mathscr I^+$ to $\rho=2$. I won't write down the resulting metric. It's also not clear to me why you would want to compactify. We are interested in the cosmological horizon, and slightly beyond. Bringing the spacelike infinity closer may or may not be a good idea.
+Next, Misner introduces the spatial compactification
+$$ r = \frac{\rho}{1-\left(\frac{\rho}{2}\right)^2}. $$
+Remember that future infinity, $\mathscr I^+$, is spacelike in cosmological spacetimes. The compactification maps $\mathscr I^+$ to $\rho=2$. But no compactification is needed if we're interested in the cosmological horizon, which is at a finite distance. One can consider $r$ already as a compactification of the tortoise coordinate $r_*$. In the case of de Sitter, the cosmological horizon at $r=L$ acts as the ingoing null surface representing a far-away observer. We don't need to access spacelike infinity, so the compactification seems unnecessary. Compactification might be useful for very large $L$, but even then, what we need is not necessarily a compactification but a mapping of the cosmological horizon to a coordinate sphere whose location is independent of the cosmological constant.
 
-## Einstein equations
-I've been fairly critical of the transformations employed for the de Sitter metric. It's clear that, if you want to evolve fields accurately in asymptotically de Sitter spacetimes, these are not good choices. But Misner's goal is not to evolve fields on the background of asymptotically de Sitter spacetimes. His goal is to evolve Einstein equations.
+That's all I have to say about the coordinates. There are better choices if you want to evolve fields accurately in asymptotically de Sitter spacetimes. But Misner's goal is not to evolve fields on the background of asymptotically de Sitter spacetimes. He aims to evolve the Einstein equations to construct astrophysically relevant asymptotically flat spacetimes using an *artificial* cosmological constant. And that's a very promising idea.
 
-In that case, I think adding a small cosmological constant is a very promising idea. Let me first describe how I understand this idea.
+## Artificial cosmological constant
+Let's say we are interested in solving the Einstein equations all the way up to and including future null infinity. To include infinity, we solve the equations for a conformally rescaled metric $g= \Omega^2 \tilde{g}$. The conformal Einstein equations read
+$$ R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = T_{\mu\nu}[\Omega], $$
+with conformal source terms
+$$ T[\Omega] = -\frac{2}{ {\color{darkred}\Omega}} \left(\nabla_\mu \nabla_\nu \Omega - \Box \Omega g_{\mu\nu}\right) - \frac{3}{ {\color{darkred}\Omega^2} } \nabla_\lambda \Omega \nabla^\lambda \Omega g_{\mu\nu}. $$
+The conformal factor vanishes at infinity: $\Omega=0$. If we want to include the conformal boundary in our numerical computations, we must somehow deal with the formal singularity of these terms at $\Omega=0$. I write "formal singularity" because one can show that the terms are regular under reasonable assumptions. However, it's hard to impose that regularity on spacelike surfaces while keeping the evolution numerically stable.
 
-#### Small cosmological constant for hyperboloidal evolutions in asymptotically flat spacetimes
-We solve the conformal Einstein equations with a small cosmological constant
-$$ R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} + \frac{3}{L^2} g_{\mu\nu} = S(\Omega,\nabla), $$
-where the conformal source terms are
-$$ S(\Omega,\nabla) =  $$
-The essential problem in the asymptotically flat case is that the conformal source terms are formally singular at infinity where $\Omega=0$. But with the cosmological constant, we are not interested in the boundary at infinity. Instead, we aim to extract the gravitational waves at the cosmoloigical horizon. At the limit of large $L$, the resulting radiation field should match the radiation field in the asymptotically flat case.
+Misner's idea is to add a small cosmological term to the equations
+$$ R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R {\color{darkgreen} - \frac{3}{L^2} g_{\mu\nu}} = T_{\mu\nu}[\Omega]. $$
+For large $L$, this term can be as small as we want. However, the causal structure of spacetime is dramatically different. Infinity is not a null surface anymore; it's a spacelike surface! Even the definition of gravitational radiation becomes difficult and is an [ongoing research topic](https://arxiv.org/abs/1409.3816).
 
-Numerically, the outer boundary is at a spacelike surface where the conformal factor is small but non-vanishing. **The conformal fact doesn’t vanish anywhere on the numerical grid**, so the conformal source functions are regular. As the surface is spacelike, you don’t need boundary conditions. You can then find the ingoing null surface near the outer boundary that corresponds to the cosmological horizon. 
+Misner's insight is that we don't have to evolve the fields until the conformal boundary. It's sufficient to go slightly beyond the cosmological horizon and stop at a spacelike surface. This method mimics the excision method inside a black-hole (apparent) horizon. For large $L$, the resulting radiation field should match the radiation field in the asymptotically flat case. We consider the cosmological constant an artificial term, a numerical trick, allowing us to apply excision beyond the cosmological horizon. This is the core idea of Misner's approach: excise the unobservable universe beyond the cosmological horizon.
 
-If this works, there will be some questions. 
-- Where is the cosmological horizon? Just take the outermost infoing null surface on your grid. 
-- How do you define the radiation field? Apply the same construction reading off the analog of a news function at the cosmological horizon.
-- Is this procedure is well-defined? Depends on what you mean by well-defined. Mathematically, no. Numerically, yes. If it works, we would just compare the results with the asymptotically flat case and see how close they are for small $L$. 
-- Einstein equations don’t have viscosity, but we still add it to simulations. We could show convergence for smaller Lambdas just like we show convergence for small viscosity terms. We could also argue that Lambda doesn’t vanish in the real Universe, even though its impact is insignificant. 
+### Potential advantages
 
-Ok, there's enough to complain about it but we won't know unless we try. Is it worth trying though?
+Theoretically, this approach provides all the benefits of hyperboloidal compactification: improved efficiency, no artificial boundary conditions, and no radiation extrapolation problem. In addition, one can expect improved stability due to the artificial cosmological constant. There are some caveats that I'll mention; I think they're sufficiently mild for practical numerical work.
 
-#### Why add a cosmological constant?
-- It is well-known that de Sitter spacetimes are “more stable” than asymptotically flat spacetimes. Friedrich demonstrated the stability of asymptotically de Sitter spacetimes in 1986, long before the stability of Minkowski spacetimes was proven. We also know from Bizon and Rostworowski that AdS is globally unstable. The flat case is, in a very imprecise sense, at the edge of stability with respect to the cosmological constant. A positive constant moves us towards better stability.
-- This setup emulates excision at the black hole horizon. What happens at spatial infinity with the hyperboloidal approach is causally similar to what happens at the bifurcation sphere with Schwarzschild coordinates. People realized 70 years ago that you could resolve the coordinate singularity at the bifurcation sphere using coordinates known since the golden 20s (Eddington, Gullstrand, and Painleve). The singularity at spatial infinity, however, wasn’t seen. We resolve it using coordinates known since Minkowski himself (hyperboloids). But then we stop. We don’t do what excision does. In numerical relativity, excision came in the late 80’s. They use horizon penetrating coordinates and put their inner boundary somewhere inside the black hole. They don’t try to find the event horizon during the simulation and put the boundary there. This might even be unstable for all I know. Why don’t we do the same? For one, the spacetime beyond infinity is not well-defined. But if we add a cosmological constant, however small, the conformal diagram looks exactly the same as the conformal diagram of a black hole, with the spacelike singularity replaced by a spacelike scri. The cosmological horizon now plays the role of flat scri as an ingoing null hypersurface. If the cosmological constant is sufficiently small, the solution will be sufficiently close to the asymptotically flat case. 
+#### Efficiency
+In the asymptotically flat scenario, the numerical efficiency comes from the time transformation that stretches the spatial wavelength of outgoing waves. This wave-stretching, or redshift, is then combined with compactification to resolve oscillatory solutions on infinite domains.
 
+In the cosmological scenario, the waves are also stretched, but the interpretation of wave-stretching is now due to the expansion of space and is called cosmological redshift. The **caveat** is that the cosmological redshift is a physical effect. The cosmological constant changes the waveform physically. I expect that the impact of a sufficiently small cosmological constant will be negligible on the waveform but significant on numerical efficiency. 
 
+#### No boundary conditions
+In the asymptotically flat scenario, no boundary conditions are needed because one places the outer boundary at future null infinity, which is an ingoing null surface. No signals can propagate faster than the speed of light, so no characteristics can enter the numerical domain.
 
+In the cosmological scenario, the outer boundary is spacelike. This is even better than an ingoing null boundary. A spacelike boundary will pull away any perturbations and further stabilize the code. This setup emulates excision at the black hole horizon. Consider the conformal diagrams above and think of spacelike infinity as the spacelike black-hole singularity and the cosmological horizon as the event horizon. 
 
+#### No radiation extrapolation
+In the asymptotically flat scenario, gravitational waves are defined unambiguously at future null infinity. With the numerical outer boundary placed at future null infinity, one can directly read off the asymptotic fields and perform the relatively simple transformations to extract the gravitational radiation without any error-prone extrapolation procedures.
 
-[^1]: The title of the book is [Gravitation](https://en.wikipedia.org/wiki/Gravitation_(book)) but it is known as MTW because of the authors Misner, Thorne, and Wheeler.
-[^scri]: In relativity, you get five different types of infinity. Future timelike, future null, spatial, past null, and past timelike. We designate them with various forms of the letter "i" in the diagrams and figures. The "script i" is commonly used for the null infinities. Scri is shortspeak for script i. The future and past scris are distinguished by the plus and minus signs. $\scri$.
+In the cosmological scenario, one would read off the radiation at the cosmological horizon. For large $L$, this radiation should match the radiation at future null infinity. Again, no extrapolation would be needed because the cosmological horizon is part of the simulation domain. The **caveat** is that there is no unambiguous (coordinate-independent) definition of gravitational radiation at the cosmological horizon. In fact, the horizon itself depends on the coordinate system, even in pure de Sitter spacetime. We'll need to understand this problem better once we have stable simulations. Note that the cosmological constant in our Universe is non-vanishing, so this problem is physically interesting.
+
+#### Improved stability
+It is well-known that de Sitter spacetimes are "more stable" than asymptotically flat spacetimes. Friedrich demonstrated the stability of asymptotically de Sitter spacetimes in 1986, years before the stability of Minkowski spacetimes was proven. We also know from [Bizoń and Rostworowski](https://arxiv.org/abs/1104.3702) that AdS with no-flux boundary conditions is globally unstable. The flat case is, in some imprecise sense, at the edge of stability with respect to the cosmological constant. A positive constant moves us towards better stability.
+
+## Beyond the horizon there be monsters
+Hyperboloidal evolution of astrophysically relevant phenomena (binary black holes, neutron stars) is an open problem in numerical relativity. Today, the effort is driven mostly by David Hilditch and Alex Vaño-Viñuales. Since I gave up on this hard problem in 2013, this is the most exciting idea that I haven't tried yet. Exciting because I can't think of a reason why this shouldn't work. It's certainly worth trying out for a few months.
+
+It would be remarkable if Misner's suggestion would lead to a resolution of this important open problem. Can't wait to see the outcome.
+
+<!-- The biggest frustration with this problem for me is that it's a hard binary: it works or it doesn't. And when it doesn't work, you can't do anything incremental to improve it. This idea is different. We know that evolution with a cosmological constant will work. Once we have a stable code, we can improve it bit by bit using smaller cosmological constants, better coordinates, improved extraction schemes, etc. -->
+
+[^gravitation]: MTW is named after Misner, Thorne, and Wheeler, who are the authors of the book [Gravitation](https://en.wikipedia.org/wiki/Gravitation_(book)). ADM stands for Arnowitt, Deser, and Misner. We learned in the memorial symposium that Deser and Misner were both invited by Niels Bohr to the institute known as Niels Bohr Institute today. They worked in a school building on an island near Copenhagen during the summer of their visit, kneeling on the low blackboard designed for school children to make their calculations.
+[^patch]: The coordinates we use here cover only part of the de Sitter spacetime called the static patch. There are many other coordinate systems that don't exhibit a singularity at the cosmological horizon. For example, [global coordinates](https://en.wikipedia.org/wiki/De_Sitter_space#Closed_slicing) are regular everywhere and can be used to construct conformal diagrams. However, the static patch is helpful for numerical calculations because the time symmetry is explicit in the coordinates.  
+[^diagrams]: If you're interested in how to draw such conformal diagrams, see my [blog post](/post/2022/drawing-penrose-diagrams).
+[^cosmological]: The cosmological constant $\Lambda$ in the Einstein equations is related to the cosmological length scale by $\Lambda = \frac{3}{L^2}$.
+
+<!-- One of the most influential events on my career was the funeral of [Jürgen Ehlers](https://en.wikipedia.org/wiki/J%C3%BCrgen_Ehlers), another giant of general relativity who was the founding director of the Max-Planck Institute for Gravitation where I did my Ph.D. thesis.  -->
