@@ -73,7 +73,7 @@ By integration, we get the new time coordinate
 $$\tau = t + r - L \ \mathrm{archtanh }\ \frac{r}{L}.$$
 The metric becomes
 $$ ds^2 = - f d\tau^2 - \frac{2 r^2}{L^2} d\tau dr + \left(1+\frac{r^2}{L^2}\right) dr^2. $$
-This metric is particularly nice because it can be written as the sum of the Minkowski metric and a scaled null form
+This metric is particularly nice because it can be written in Kerr-Schild form[^kerrschild] as the sum of the Minkowski metric and a scaled null field
 $$ ds^2 = - d\tau^2 + dr^2 + \frac{r^2}{L^2} \left(d\tau - dr\right)^2. $$
 The singularity at the cosmological horizon $r=L$ is resolved. This construction is hyperboloidal and allows us to perform numerical calculations including the cosmological horizon. The time slices resolve the coordinate singularity in the previous conformal diagram. Instead, we obtain a smooth foliation of the cosmological horizon, as seen below. The diagram also demonstrates that Kerr-Schild coordinates beyond the horizon resemble trumpet slices in black hole spacetimes. 
 
@@ -137,6 +137,10 @@ It would be remarkable if Misner's suggestion would lead to a resolution of this
 <!-- The biggest frustration with this problem for me is that it's a hard binary: it works or it doesn't. And when it doesn't work, you can't do anything incremental to improve it. This idea is different. We know that evolution with a cosmological constant will work. Once we have a stable code, we can improve it bit by bit using smaller cosmological constants, better coordinates, improved extraction schemes, etc. -->
 
 [^gravitation]: MTW is named after Misner, Thorne, and Wheeler, who are the authors of the book [Gravitation](https://en.wikipedia.org/wiki/Gravitation_(book)). ADM stands for Arnowitt, Deser, and Misner. We learned in the memorial symposium that Deser and Misner were both invited by Niels Bohr to the institute known as Niels Bohr Institute today. They worked in a school building on an island near Copenhagen during the summer of their visit, kneeling on the low blackboard designed for school children to make their calculations.
+[^patch]: The coordinates we use here cover only part of the de Sitter spacetime called the static patch. There are many other coordinate systems that don't exhibit a singularity at the cosmological horizon. For example, [global coordinates](https://en.wikipedia.org/wiki/De_Sitter_space#Closed_slicing) are regular everywhere and can be used to construct conformal diagrams. However, the static patch is helpful for numerical calculations because the time symmetry is explicit in the coordinates.  
+[^diagrams]: If you're interested in how to draw such conformal diagrams, see my [blog post](/post/2022/drawing-penrose-diagrams).
+[^cosmological]: The cosmological constant $\Lambda$ in the Einstein equations is related to the cosmological length scale by $\Lambda = \frac{3}{L^2}$.
+[^kerrschild]: The Kerr-Schild form of a metric is $g_{\mu\nu} = \eta_{\mu\nu} + F\ k_\mu k_\nu$, where $\eta_{\mu\nu}$ is the Minkowski metric and $k_\mu$ is a null vector. 
 [^patch]: The coordinates we use here cover only part of the de Sitter spacetime called the static patch. There are many other coordinate systems that don't exhibit a singularity at the cosmological horizon. For example, [global coordinates](https://en.wikipedia.org/wiki/De_Sitter_space#Closed_slicing) are regular everywhere and can be used to construct conformal diagrams. However, the static patch is helpful for numerical calculations because the time symmetry is explicit in the coordinates.  
 [^diagrams]: If you're interested in how to draw such conformal diagrams, see my [blog post](/post/2022/drawing-penrose-diagrams).
 [^cosmological]: The cosmological constant $\Lambda$ in the Einstein equations is related to the cosmological length scale by $\Lambda = \frac{3}{L^2}$.
