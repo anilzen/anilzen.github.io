@@ -49,7 +49,7 @@ By integration, we get the new time coordinate
 $$\tau = t + r - L \ \mathrm{archtanh }\ \frac{r}{L}.$$
 The metric becomes
 $$ ds^2 = - f d\tau^2 - \frac{2 r^2}{L^2} d\tau dr + \left(1+\frac{r^2}{L^2}\right) dr^2. $$
-This metric is particularly nice because it can be written as the sum of the Minkowski metric and a scaled null form
+This metric is particularly nice because it can be written in Kerr-Schild form&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> as the sum of the Minkowski metric and a scaled null field
 $$ ds^2 = - d\tau^2 + dr^2 + \frac{r^2}{L^2} \left(d\tau - dr\right)^2. $$
 The singularity at the cosmological horizon $r=L$ is resolved. This construction is hyperboloidal and allows us to perform numerical calculations including the cosmological horizon. The time slices resolve the coordinate singularity in the previous conformal diagram. Instead, we obtain a smooth foliation of the cosmological horizon, as seen below. The diagram also demonstrates that Kerr-Schild coordinates beyond the horizon resemble trumpet slices in black hole spacetimes.&lt;/p>
 &lt;p>
@@ -130,6 +130,9 @@ For large $L$, this term can be as small as we want. However, the causal structu
 &lt;/li>
 &lt;li id="fn:3">
 &lt;p>If you&amp;rsquo;re interested in how to draw such conformal diagrams, see my &lt;a href="https://anilzen.github.io/post/2022/drawing-penrose-diagrams">blog post&lt;/a>.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>The Kerr-Schild form of a metric is $g_{\mu\nu} = \eta_{\mu\nu} + F\ k_\mu k_\nu$, where $\eta_{\mu\nu}$ is the Minkowski metric and $k_\mu$ is a null vector.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/div></description></item><item><title>Splitting Spacetime</title><link>https://anilzen.github.io/post/2023/splitting-spacetime/</link><pubDate>Wed, 20 Sep 2023 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2023/splitting-spacetime/</guid><description>&lt;h2 id="predicting-the-future">Predicting the future&lt;/h2>
