@@ -9,7 +9,7 @@ authors:
 - Piotr Bizoń
 - Andrzej Rostworowski
 - Anıl Zenginoğlu
-tags: [Hyperboloidal]
+tags: []
 categories: []
 date: '2010-07-16'
 lastmod: 2021-05-25T22:33:16-04:00

@@ -32,4 +32,4 @@ The problem of outer boundary conditions for partial differential equations on u
 
 Local methods are convenient but approximate; exact methods are accurate but cumbersome.
 
-Geometric intuition and computational experience suggest that **hyperboloical compactification** is unique among the existing treatments of the outer boundary problem in the numerical literature: it is **local _and_ exact**. In addition, the method leads to stable and efficient numerical implementations. This project will demonstrate these properties rigorously and provide guidelines for the optimal choice of free parameters in spacetime transformations.
+Geometric intuition and computational experience suggest that **hyperboloidal compactification** is unique among the existing treatments of the outer boundary problem in the numerical literature: it is **local _and_ exact**. In addition, the method leads to stable and efficient numerical implementations. This project will demonstrate these properties rigorously and provide guidelines for the optimal choice of free parameters in spacetime transformations.

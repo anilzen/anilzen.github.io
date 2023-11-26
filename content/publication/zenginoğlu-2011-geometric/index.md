@@ -6,7 +6,7 @@ subtitle: ''
 summary: ''
 authors:
 - Anıl Zenginoğlu
-tags: [hyperboloidal, horizon-penetrating]
+tags: []
 categories: []
 date: '2011-06-17'
 lastmod: 2021-05-25T22:33:14-04:00

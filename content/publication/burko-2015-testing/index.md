@@ -8,7 +8,7 @@ authors:
 - Lior Burko
 - Gaurav Khanna
 - Anıl Zenginoĝlu
-tags: [Hyperboloidal]
+tags: []
 categories: []
 date: '2015-04-01'
 lastmod: 2021-05-25T22:33:17-04:00

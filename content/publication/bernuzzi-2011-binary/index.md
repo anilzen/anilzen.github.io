@@ -9,7 +9,7 @@ authors:
 - Sebastiano Bernuzzi
 - Alessandro Nagar
 - Anıl Zenginoğlu
-tags: [Hyperboloidal]
+tags: []
 categories: []
 date: '2011-01-01'
 lastmod: 2021-05-25T22:33:12-04:00
