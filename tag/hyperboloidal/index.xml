@@ -10,7 +10,7 @@
 &lt;p>Second, the &lt;a href="#artificial-cosmological-constant">artificial cosmological constant&lt;/a>. Misner proposes to modify the Einstein equations with a small cosmological constant to stabilize hyperboloidal evolution. This is a very interesting and promising idea that, to my knowledge, has never been tried before.&lt;/p>
 &lt;h2 id="the-coordinates">The coordinates&lt;/h2>
 &lt;p>The main construction is clearly laid out in Misner&amp;rsquo;s &lt;a href="https://arxiv.org/abs/gr-qc/0409073" target="_blank" rel="noopener">first paper&lt;/a> prepared for the celebration of his long-time collaborator &lt;a href="https://en.wikipedia.org/wiki/Stanley_Deser" target="_blank" rel="noopener">Stanley Deser&lt;/a>. The other papers are commentary, demonstration, and further development.&lt;/p>
-&lt;p>Before discussing the coordinates, we&amp;rsquo;ll review our current understanding of hyperboloidal regularization of coordinate singularities at null horizons to put Misner&amp;rsquo;s construction in context.&lt;/p>
+&lt;p>Before discussing the coordinates, we&amp;rsquo;ll review our current understanding of hyperboloidal regularization of coordinate singularities to put Misner&amp;rsquo;s construction in context.&lt;/p>
 &lt;h3 id="spacelike-regularizationof-coordinate-singularities">Spacelike regularization of coordinate singularities&lt;/h3>
 &lt;p>Take a spherically symmetric, stationary spacetime. For brevity, we&amp;rsquo;ll ignore the spherical part of the spacetime and discuss only the $\{t,r\}$ plane. We write the metric as
 $$ ds^2 = - f(r) dt^2 + \frac{1}{f(r)} dr^2. $$
