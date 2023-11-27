@@ -40,7 +40,7 @@ Second, the [artificial cosmological constant](#artificial-cosmological-constant
 ## The coordinates
 The main construction is clearly laid out in Misner's [first paper](https://arxiv.org/abs/gr-qc/0409073) prepared for the celebration of his long-time collaborator [Stanley Deser](https://en.wikipedia.org/wiki/Stanley_Deser). The other papers are commentary, demonstration, and further development.
 
-Before discussing the coordinates, we'll review our current understanding of hyperboloidal regularization of coordinate singularities at null horizons to put Misner's construction in context.
+Before discussing the coordinates, we'll review our current understanding of hyperboloidal regularization of coordinate singularities to put Misner's construction in context.
 
 ### Spacelike regularization of coordinate singularities
 Take a spherically symmetric, stationary spacetime. For brevity, we'll ignore the spherical part of the spacetime and discuss only the $\\{t,r\\}$ plane. We write the metric as
