@@ -163,7 +163,7 @@ def rk4(cur):
     nex += (k1 + 2.0 * (k2 + k3) + k4) / 6.0
     return nex
 ```
-Here's the right-hand side calculation. I combine the variables $(u, \psi, \pi)$ into a single array `u`. The function `rhs` takes the array `u` and returns the right-hand side of the system for the symmetric hyperbolic formulation of the hyperboloidal wave equation \eqref{3}.
+Below is the right-hand side calculation. I combine the variables $(u, \psi, \pi)$ into a single array `u`. The function `rhs` takes the array `u` and returns the right-hand side of the system for the symmetric hyperbolic formulation of the hyperboloidal wave equation \eqref{3}.
 ```python
 def rhs(u):
     rhs = np.zeros_like(u)
