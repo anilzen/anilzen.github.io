@@ -13,7 +13,7 @@ $$ \left(-\partial_t^2 + \partial_x^2\right) u(x,t) = 0. \tag{1} \label{1}$$
 The acceleration (or curvature in time), $\partial_t^2$, is balanced by the curvature in space, $\partial_x^2$. This delicate balance leads to solutions that propagate while maintaining their form. In one dimension, there are only two directions a wave can propagate, and we get the general solution
 $$ u(x,t) = f_+(x-t) + f_-(x+t). $$
 The functions $f_\pm$ travel unchanged along the curves $x\pm t$. We call these curves &lt;em>characteristics&lt;/em>. The characteristics extend infinitely in both directions.&lt;/p>
-&lt;p>We solved the \eqref{1} explicitly, but more interesting wave equations cannot be solved like this. They include higher dimensions, varying coefficients, potential terms, source functions, nonlinearities, etc. For those cases, we use numerical methods.&lt;/p>
+&lt;p>We solved \eqref{1} explicitly, but more interesting wave equations cannot be solved like this. They include higher dimensions, varying coefficients, potential terms, source functions, nonlinearities, etc. For those cases, we use numerical methods.&lt;/p>
 &lt;p>But there&amp;rsquo;s a problem. The wave equation is posed on a spatially unbounded domain, $x\in(-\infty, \infty)$&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Before we can solve the equation numerically, we need to decide what to do with the unbounded domain.&lt;/p>
 &lt;h2 id="why-boundaries">Why boundaries?&lt;/h2>
 &lt;p>An argument that one finds in some textbooks and papers is that computational resources are finite, so we must truncate the solution domain artificially to some $x\in(-L, L)$ with $L$ suitably large. We then apply boundary conditions to the solution.&lt;/p>
@@ -89,7 +89,7 @@ Solution of the wave equation with hyperboloidal compactification. It looks just
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>The waves leave the spacetime smoothly through the outer boundaries, which correspond to the two infinities at either side. The solution at these boundaries is the radiative field. No extrapolation is necessary! Combining the spatial compactification with a suitable time transformation solved both the boundary and the radiation problems.&lt;/p>
-&lt;p>The time transformation that we derived from the characteristic-preservation property is not unique. There are many other options. These time functions are called &lt;em>hyperboloidal&lt;/em>. Below is the generalization.&lt;/p>
+&lt;p>The time transformation that we used is not unique. There are many other options. These time functions are called &lt;em>hyperboloidal&lt;/em>. Below is the generalization.&lt;/p>
 &lt;h2 id="hyperboloidal-compactification">Hyperboloidal compactification&lt;/h2>
 &lt;p>Hyperboloidal compactification consists of a spatial compactification
 $$ \rho = g(x), $$
