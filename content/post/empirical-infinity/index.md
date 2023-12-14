@@ -7,8 +7,7 @@ projects: []
 date: "2021-09-08T00:00:00Z"
 lastmod: "2021-09-08T00:00:00Z"
 draft: false
-
-featured: true
+featured: false
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.

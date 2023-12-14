@@ -6,8 +6,8 @@ summary: "Minkowski spacetime in hyperboloidal coordinates takes the form of a s
 projects: []
 date: 2021-10-07T00:00:16-04:00
 lastmod: 2021-10-07T00:00:16-04:00
-featured: true
 draft: false
+featured: false
 
 
 # Featured image

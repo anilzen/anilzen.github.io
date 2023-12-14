@@ -6,7 +6,7 @@ summary: The last three papers by Charles W. Misner were about the hyperboloidal
 projects: []
 date: "2023-11-27T00:01:00Z"
 draft: false
-featured: true
+featured: false
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
