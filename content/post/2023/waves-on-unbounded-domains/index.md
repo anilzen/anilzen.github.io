@@ -47,7 +47,7 @@ The acceleration (or curvature in time), $\partial_t^2$, is balanced by the curv
 $$ u(x,t) = f_+(x-t) + f_-(x+t). $$
 The functions $f_\pm$ travel unchanged along the curves $x\pm t$. We call these curves *characteristics*. The characteristics extend infinitely in both directions. 
 
-We solved the \eqref{1} explicitly, but more interesting wave equations cannot be solved like this. They include higher dimensions, varying coefficients, potential terms, source functions, nonlinearities, etc. For those cases, we use numerical methods. 
+We solved \eqref{1} explicitly, but more interesting wave equations cannot be solved like this. They include higher dimensions, varying coefficients, potential terms, source functions, nonlinearities, etc. For those cases, we use numerical methods. 
 
 But there's a problem. The wave equation is posed on a spatially unbounded domain, $x\in(-\infty, \infty)$[^infinity]. Before we can solve the equation numerically, we need to decide what to do with the unbounded domain.
 
@@ -106,7 +106,7 @@ It looks a bit more complicated than \eqref{1}, but now you can solve the equati
 
 The waves leave the spacetime smoothly through the outer boundaries, which correspond to the two infinities at either side. The solution at these boundaries is the radiative field. No extrapolation is necessary! Combining the spatial compactification with a suitable time transformation solved both the boundary and the radiation problems. 
 
-The time transformation that we derived from the characteristic-preservation property is not unique. There are many other options. These time functions are called *hyperboloidal*. Below is the generalization.
+The time transformation that we used is not unique. There are many other options. These time functions are called *hyperboloidal*. Below is the generalization.
 
 ## Hyperboloidal compactification
 Hyperboloidal compactification consists of a spatial compactification 
