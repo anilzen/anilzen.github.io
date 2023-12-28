@@ -74,7 +74,7 @@ Outgoing characteristics leave the simulation domain through the boundaries when
 &lt;/figcaption>&lt;/figure>
 &lt;/p>
 &lt;p>For the wave equation, consider the transformation of the differential operators
-$$ \partial_t = \partial_\tau, \qquad \partial_x = - \rho \ \partial_\rho + (1-\rho^2) \ \partial_\rho. $$
+$$ \partial_t = \partial_\tau, \qquad \partial_x = - \rho \ \partial_\tau\ + (1-\rho^2) \ \partial_\rho. $$
 The wave equation becomes&lt;/p>
 &lt;!-- $$ \left(-\partial_\tau^2 - 2\sin\rho\ \partial_\tau \partial_\rho + \cos^2\rho\ \partial_\rho^2 + \cos\rho\ \partial_\tau - 2 \cos\rho \sin\rho \ \partial_\rho \right) u(\rho,\tau) = 0. $$ -->
 &lt;p>$$ \left(-\partial_\tau^2 - 2 \rho\ \partial_\tau \partial_\rho + (1-\rho^2) \partial_\rho^2 - \partial_\tau - 2 \rho \ \partial_\rho \right) u(\rho,\tau) = 0. \tag{2}\label{2} $$
@@ -157,7 +157,8 @@ $$\partial_\tau u = (-\rho\ \psi + \pi).$$&lt;/p>
 &lt;/a>
 &lt;h2 id="epilogue">Epilogue&lt;/h2>
 &lt;p>We discussed the simplest example of a wave equation. You may wonder about the wider applicability of this method. It has been applied in higher dimensions with varying coefficients, potential terms, source functions, and nonlinearities. I might write about black-hole perturbations in a future post.&lt;/p>
-&lt;p>While this technique is relatively well-known in relativity, it&amp;rsquo;s not used at all in other fields where wave propagation is relevant. It would be fascinating to see this relativistic method applied to a non-relativistic problem, such as the propagation of acoustic waves or the computation of radar cross-sections. If you have any interest along these directions, &lt;a href="https://anilzen.github.io/#contact" target="_blank" rel="noopener">let me know&lt;/a>.&lt;/p>
+&lt;p>While this technique is relatively well-known in relativity, it&amp;rsquo;s not used at all in other fields where wave propagation is relevant. It would be fascinating to see this relativistic method applied to a non-relativistic problem, such as the propagation of acoustic waves or the computation of radar cross-sections.&lt;/p>
+&lt;!-- If you have any interest along these directions, [let me know](https://anilzen.github.io/#contact). -->
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
