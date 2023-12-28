@@ -97,7 +97,7 @@ This behavior is the one we need: only outgoing, no incoming characteristics at 
 ![](featured.webp "Outgoing characteristics leave the simulation domain through the boundaries when one combines spatial compactification with a suitable time transformation. Radiative fields can be read off at infinity.")
 
 For the wave equation, consider the transformation of the differential operators
-$$ \partial_t = \partial_\tau, \qquad \partial_x = - \rho \ \partial_\rho + (1-\rho^2) \ \partial_\rho. $$
+$$ \partial_t = \partial_\tau, \qquad \partial_x = - \rho \ \partial_\tau\ + (1-\rho^2) \ \partial_\rho. $$
 The wave equation becomes
 <!-- $$ \left(-\partial_\tau^2 - 2\sin\rho\ \partial_\tau \partial_\rho + \cos^2\rho\  \partial_\rho^2 + \cos\rho\ \partial_\tau - 2 \cos\rho \sin\rho \ \partial_\rho \right) u(\rho,\tau) = 0. $$ -->
 $$ \left(-\partial_\tau^2 - 2 \rho\ \partial_\tau \partial_\rho + (1-\rho^2)  \partial_\rho^2 - \partial_\tau - 2 \rho \ \partial_\rho \right) u(\rho,\tau) = 0. \tag{2}\label{2} $$
@@ -192,7 +192,8 @@ That's it. The rest is just setting up initial data and parameters. To play arou
 ## Epilogue
 We discussed the simplest example of a wave equation. You may wonder about the wider applicability of this method. It has been applied in higher dimensions with varying coefficients, potential terms, source functions, and nonlinearities. I might write about black-hole perturbations in a future post. 
 
-While this technique is relatively well-known in relativity, it's not used at all in other fields where wave propagation is relevant. It would be fascinating to see this relativistic method applied to a non-relativistic problem, such as the propagation of acoustic waves or the computation of radar cross-sections. If you have any interest along these directions, [let me know](https://anilzen.github.io/#contact).
+While this technique is relatively well-known in relativity, it's not used at all in other fields where wave propagation is relevant. It would be fascinating to see this relativistic method applied to a non-relativistic problem, such as the propagation of acoustic waves or the computation of radar cross-sections. 
+<!-- If you have any interest along these directions, [let me know](https://anilzen.github.io/#contact). -->
 
 
 
