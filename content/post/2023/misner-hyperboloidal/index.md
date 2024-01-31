@@ -21,7 +21,8 @@ authors:
 
 tags:
 - hyperboloidal
-  
+- nsf-2309084
+
 categories:
 ---
 [Charles W. Misner](https://en.wikipedia.org/wiki/Charles_W._Misner) passed on July 24, 2023, and there was a lovely [memorial symposium](https://umdphysics.umd.edu/events/misnersymposium.html) at the University of Maryland on November 11, 2023, to celebrate his life. Misner was a prolific scientist who significantly influenced the early developments of general relativity during its first [golden age](https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age). His last three submissions on the arXiv are on hyperboloidal compactification, a rather niche topic in relativity that happens to be my research area, so I wrote this post about it.
