@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nsf-2309084 | Anıl Zenginoğlu</title><link>https://anilzen.github.io/tag/nsf-2309084/</link><atom:link href="https://anilzen.github.io/tag/nsf-2309084/index.xml" rel="self" type="application/rss+xml"/><description>nsf-2309084</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Thu, 14 Dec 2023 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>nsf-2309084</title><link>https://anilzen.github.io/tag/nsf-2309084/</link></image><item><title>How to solve wave equations on unbounded domains</title><link>https://anilzen.github.io/post/2023/waves-on-unbounded-domains/</link><pubDate>Thu, 14 Dec 2023 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2023/waves-on-unbounded-domains/</guid><description>&lt;p>This post is a practical guide to numerically solving wave equations on unbounded domains. Using standard numerical methods, I demonstrate a technique called &lt;em>hyperboloidal compactification&lt;/em> to solve unbounded-domain wave equations directly (no truncation, no artificial boundaries) by mapping the unbounded domain to a finite domain.&lt;/p>
+&lt;p>Code for the demonstrations uses public libraries and is available as a Google Colab notebook so that you can run everything from a browser.&lt;/p>
+&lt;a target="_blank" href="https://colab.research.google.com/drive/1w-cmd1UEWqQ6Bu1rHnfASp1ue7eCPLl4?usp=sharing">
+&lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+&lt;/a>
+&lt;h2 id="why-waves">Why waves?&lt;/h2>
+&lt;p>Our most important senses, sight and sound, rely on waves. Electromagnetic and acoustic waves carry information from an external reality far from the immediate neighborhood of our body to our audiovisual system. Our current understanding of the fundamental building blocks of the Universe is based on waves. Quantum field theory models all elementary particles as wave-like excitations of quantum fields. Most remarkably, we have recently gained the ability to detect gravitational waves, or spacetime waves, from the most energetic phenomena in the Universe happening billions of light years away.&lt;/p>
+&lt;p>The ability to understand waves by solving the equations that describe them is essential also for practical applications, such as modeling of earthquakes (seismology), ocean waves and tsunamis (oceanography), sonar systems (acoustics), radar scattering off airplanes and antenna design (electromagnetism), among others.&lt;/p>
+&lt;p>But you probably didn&amp;rsquo;t need that motivation if you&amp;rsquo;re reading this.&lt;/p>
+&lt;h2 id="the-mathematical-model">The mathematical model&lt;/h2>
+&lt;p>The simplest equation that describes a wave is aptly named the wave equation. We&amp;rsquo;ll consider the case with one space dimension
+$$ \left(-\partial_t^2 + \partial_x^2\right) u(x,t) = 0. \tag{1} \label{1}$$
+The acceleration (or curvature in time), $\partial_t^2$, is balanced by the curvature in space, $\partial_x^2$. This delicate balance leads to solutions that propagate while maintaining their form. In one dimension, there are only two directions a wave can propagate, and we get the general solution
+$$ u(x,t) = f_+(x-t) + f_-(x+t). $$
+The functions $f_\pm$ travel unchanged along the curves $x\pm t$. We call these curves &lt;em>characteristics&lt;/em>. The characteristics extend infinitely in both directions.&lt;/p>
+&lt;p>We solved \eqref{1} explicitly, but more interesting wave equations cannot be solved like this. They include higher dimensions, varying coefficients, potential terms, source functions, nonlinearities, etc. For those cases, we use numerical methods.&lt;/p>
+&lt;p>But there&amp;rsquo;s a problem. The wave equation is posed on a spatially unbounded domain, $x\in(-\infty, \infty)$&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Before we can solve the equation numerically, we need to decide what to do with the unbounded domain.&lt;/p>
+&lt;h2 id="why-boundaries">Why boundaries?&lt;/h2>
+&lt;p>An argument that one finds in some textbooks and papers is that computational resources are finite, so we must truncate the solution domain artificially to some $x\in(-L, L)$ with $L$ suitably large. We then apply boundary conditions to the solution.&lt;/p>
+&lt;p>This artificial truncation creates two problems:&lt;/p>
+&lt;ul>
+&lt;li>boundary treatment, and&lt;/li>
+&lt;li>radiation extraction.&lt;/li>
+&lt;/ul>
+&lt;p>The construction of boundary conditions for wave equations has been its own research direction since the 1970s, with thousands of papers written on the problem. The corresponding conditions have names such as absorbing, transparent, non-reflecting, or radiative&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>. Due to the difficulty of the problem, people also constructed damping layers, which are not boundary conditions but layers of artificial dissipation that absorb the wave, such as the &lt;a href="https://en.wikipedia.org/wiki/Perfectly_matched_layer" target="_blank" rel="noopener">perfectly matched layer&lt;/a>.&lt;/p>
+&lt;p>Even when you have a somewhat satisfactory treatment of the boundary, you still don&amp;rsquo;t have access to the full solution. The full solution, however, is relevant when you&amp;rsquo;re interested in the radiative fields that are defined at infinity. Whether you want to calculate radar cross-sections of airplanes or gravitational waves from black holes, you need to know the solution at infinity.&lt;/p>
+&lt;p>Then why don&amp;rsquo;t we solve the full problem on the full domain? The argument of finite computational resources is clearly wrong. We can map the unbounded domain to a bounded domain. Let&amp;rsquo;s see how that doesn&amp;rsquo;t work.&lt;/p>
+&lt;h2 id="spatial-compactification">Spatial compactification&lt;/h2>
+&lt;p>There are many options to map the infinite domain $x\in(-\infty,\infty)$ to a finite domain in some other coordinate, $\rho$. A well-known option is the tangens function: $x = \tan \rho$ with $\rho\in[-\pi/2,\pi/2]$&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>. You can also perform an algebraic compactification, $x=\rho/(1-\rho^2)$, or use the hyperbolic tangent, $x=\mathrm{arctanh}\ \rho$ with $\rho\in[-1,1]$. The basic idea is to map the infinite domain $x$ to a compact domain in $\rho$ and then solve the wave equation numerically on this finite, compact domain.&lt;/p>
+&lt;p>It sounds obvious and, indeed, has been tried in the 1970s&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>. The problem is that solutions oscillate out to infinity. The spatial mapping converts an unbounded domain problem to an unbounded oscillation problem, and we gain nothing.&lt;/p>
+&lt;p>Consider a sine-wave solution to the wave equation, $u(x,t) = \sin(x-t)$. If you compactify using the hyperbolic tangent, you get $u(\rho,t) = \sin(\mathrm{arctanh}\ \rho-t)$ which has infinite frequency at the boundaries. We can&amp;rsquo;t even plot the function, let alone solve for it numerically.&lt;/p>
+&lt;p>On the level of the wave equation, the propagating wave slows down as it approaches the boundary of the compactified domain, where its propagation speed vanishes. With $\partial_x = (1-\rho^2) \partial_\rho$, we get for Eq. \eqref{1}
+$$ \left[-\partial_t^2 + (1-\rho^2)^2 \partial_\rho^2 + 2 \rho (1-\rho^2) \partial_\rho \right] u(\rho,t) = 0. $$
+The speed of the wave is now $c_\pm = \pm (1-\rho^2)$. Both speeds vanish at both boundaries, which implies that the outgoing characteristics get stuck. The characteristics are $x\pm t = \mathrm{arctanh} \ \rho \pm t$ plotted below.
+&lt;figure id="figure-outgoing-characteristics-pile-up-near-the-boundaries-when-one-performs-only-a-spatial-compactification-radiative-fields-cannot-be-resolved-numerically-near-the-domain-boundaries">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Outgoing characteristics pile up near the boundaries when one performs only a spatial compactification. Radiative fields cannot be resolved numerically near the domain boundaries." srcset="
+/post/2023/waves-on-unbounded-domains/spatial_hu3d17ac19fcda3139b318d77dd8f202c3_130448_c612598f0e6c0da9c45bb03ec2ec3f37.webp 400w,
+/post/2023/waves-on-unbounded-domains/spatial_hu3d17ac19fcda3139b318d77dd8f202c3_130448_35d820a183b65b846c33fde53b0880f6.webp 760w,
+/post/2023/waves-on-unbounded-domains/spatial_hu3d17ac19fcda3139b318d77dd8f202c3_130448_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/waves-on-unbounded-domains/spatial_hu3d17ac19fcda3139b318d77dd8f202c3_130448_c612598f0e6c0da9c45bb03ec2ec3f37.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Outgoing characteristics pile up near the boundaries when one performs only a spatial compactification. Radiative fields cannot be resolved numerically near the domain boundaries.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>You can see that the outgoing characteristics pile up near the boundary (blue on the left; green on the right). This slowing down of waves near the boundary makes intuitive sense. The original wave has a constant speed and cannot reach infinity at a finite time. Therefore, the wave gets slower on the mapped domain while its wavelength becomes shorter until we cannot resolve it anymore.&lt;/p>
+&lt;p>In summary, waves cannot propagate to infinity when we compactify an infinite mathematical domain to a finite numerical domain. They get stuck and blueshifted. We then conclude that spatial compactification is not useful.&lt;/p>
+&lt;p>Unless, maybe, we&amp;rsquo;re missing something.&lt;/p>
+&lt;h2 id="time-transformation">Time transformation&lt;/h2>
+&lt;p>The one-dimensional wave equation \eqref{1} was first written by d&amp;rsquo;Alembert in 1747, looong before we had any inkling that &amp;ldquo;space by itself, and time by itself, are doomed to fade away into mere shadows&amp;rdquo;&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>. Remarkably, the wave equation enforcing balance between curvature in time and curvature in space seems to know about spacetime.&lt;/p>
+&lt;p>What we miss when we only consider spatial compactification is that the wave equation is a &lt;em>spacetime&lt;/em> equation. We must transform time as well.&lt;/p>
+&lt;p>Consider the outgoing sine wave again. The reason for the infinite frequency problem was that the characteristics blew up near the boundaries.
+Using $\mathrm{arctanh}\ \rho = \frac{1}{2} (\ln (1+\rho) - \ln(1-\rho))$, we can catch the problematic logarithms near $\rho=\pm 1$ by defining a new time coordinate $\tau$ such that&lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>
+$$ \tau = t + \frac{1}{2} \ln (1-\rho^2).$$
+Now, the characteristics are given by
+$$ x\pm t = \mp \ln(1\mp \rho) \pm \tau. $$
+This behavior is the one we need: only outgoing, no incoming characteristics at both boundaries.&lt;/p>
+&lt;p>
+&lt;figure id="figure-outgoing-characteristics-leave-the-simulation-domain-through-the-boundaries-when-one-combines-spatial-compactification-with-a-suitable-time-transformation-radiative-fields-can-be-read-off-at-infinity">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Outgoing characteristics leave the simulation domain through the boundaries when one combines spatial compactification with a suitable time transformation. Radiative fields can be read off at infinity." srcset="
+/post/2023/waves-on-unbounded-domains/featured_hubaa8765cb9933a4cd14303c128939dec_95458_2c422ff0a3e10921951763163f5fb92c.webp 400w,
+/post/2023/waves-on-unbounded-domains/featured_hubaa8765cb9933a4cd14303c128939dec_95458_ea9f4ebb868bd7a421fba5f4a36e0fe4.webp 760w,
+/post/2023/waves-on-unbounded-domains/featured_hubaa8765cb9933a4cd14303c128939dec_95458_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/waves-on-unbounded-domains/featured_hubaa8765cb9933a4cd14303c128939dec_95458_2c422ff0a3e10921951763163f5fb92c.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Outgoing characteristics leave the simulation domain through the boundaries when one combines spatial compactification with a suitable time transformation. Radiative fields can be read off at infinity.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>For the wave equation, consider the transformation of the differential operators
+$$ \partial_t = \partial_\tau, \qquad \partial_x = - \rho \ \partial_\tau\ + (1-\rho^2) \ \partial_\rho. $$
+The wave equation becomes&lt;/p>
+&lt;!-- $$ \left(-\partial_\tau^2 - 2\sin\rho\ \partial_\tau \partial_\rho + \cos^2\rho\ \partial_\rho^2 + \cos\rho\ \partial_\tau - 2 \cos\rho \sin\rho \ \partial_\rho \right) u(\rho,\tau) = 0. $$ -->
+&lt;p>$$ \left(-\partial_\tau^2 - 2 \rho\ \partial_\tau \partial_\rho + (1-\rho^2) \partial_\rho^2 - \partial_\tau - 2 \rho \ \partial_\rho \right) u(\rho,\tau) = 0. \tag{2}\label{2} $$
+It looks a bit more complicated than \eqref{1}, but now you can solve the equation numerically on the &lt;em>entire&lt;/em> domain! Below is the dynamical solution for Gaussian initial data.
+&lt;figure id="figure-solution-of-the-wave-equation-with-hyperboloidal-compactification-it-looks-just-like-the-solution-to-the-wave-equation-in-standard-coordinates-but-the-boundaries-correspond-to-infinity">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Solution of the wave equation with hyperboloidal compactification. It looks just like the solution to the wave equation in standard coordinates, but the boundaries correspond to infinity. "
+src="https://anilzen.github.io/post/2023/waves-on-unbounded-domains/tangens.gif"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Solution of the wave equation with hyperboloidal compactification. It looks just like the solution to the wave equation in standard coordinates, but the boundaries correspond to infinity.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>The waves leave the spacetime smoothly through the outer boundaries, which correspond to the two infinities at either side. The solution at these boundaries is the radiative field. No extrapolation is necessary! Combining the spatial compactification with a suitable time transformation solved both the boundary and the radiation problems.&lt;/p>
+&lt;p>The time transformation that we used is not unique. There are many other options. These time functions are called &lt;em>hyperboloidal&lt;/em>. Below is the generalization.&lt;/p>
+&lt;h2 id="hyperboloidal-compactification">Hyperboloidal compactification&lt;/h2>
+&lt;p>Hyperboloidal compactification consists of a spatial compactification
+$$ \rho = g(x), $$
+together with a suitable time transformation
+$$ \tau = t + h(x), $$
+To see what &lt;em>suitable&lt;/em> means here, let&amp;rsquo;s define
+$$ H:= \frac{dh}{dx}, \qquad G:= \frac{dg}{dx}. $$
+As a compactification, $G$ vanishes at the boundaries. The wave equation becomes after a division by $G$
+$$ \left(-\frac{1-H^2}{G} \partial_\tau^2 + 2 H \partial_\tau \partial_\rho + G \partial_\rho^2 + H&amp;rsquo; \partial_\tau + G&amp;rsquo;\partial_\rho \right) u(\rho,\tau) = 0. $$
+For this equation to be regular, we require $1-H^2 \sim G$ at the boundaries, which means $|H|\sim 1$ at the leading order. We also want $|H|&amp;lt;1$ away from the boundaries to keep the principal part intact&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>. This is the hyperboloidal compactification.&lt;/p>
+&lt;p>To solve the hyperboloidal wave equation \eqref{2}, it&amp;rsquo;s best to write it in symmetric hyperbolic form. We define the auxiliary variables
+$$ \psi := \partial_\rho u, \qquad \pi := \frac{1-H^2}{G} \partial_\tau u - H \partial_\rho u. $$
+The full system reads
+$$\partial_\tau \pi = \partial_\rho \left[\frac{G}{1-H^2} ( \psi + H \pi ) \right], $$
+$$\partial_\tau \psi = \partial_\rho \left[\frac{G}{1-H^2} (H\psi + \pi )\right],$$
+$$ \partial_\tau u = \frac{G}{1-H^2} (H \psi + \pi).$$&lt;/p>
+&lt;p>The system is symmetric. Hyperbolicity follows from the properties of $H$ and $G$. For the case that we discussed above, we have
+$$ \rho = \tanh x, \qquad \tau = t - \ln(\cosh x) = t + \frac{1}{2} \ln (1-\rho^2). $$
+The functions $G$ and $H$ are
+$$ G = 1-\rho^2, \quad H = -\rho \quad \Rightarrow \quad \frac{G}{1-H^2} = 1. $$
+The equation becomes very simple
+$$\partial_\tau \pi = \partial_\rho \left( \psi - \rho \ \pi \right),$$
+$$\partial_\tau \psi = \partial_\rho \left(- \rho\ \psi + \pi \right), \tag{3}\label{3}$$
+$$\partial_\tau u = (-\rho\ \psi + \pi).$$&lt;/p>
+&lt;p>Next, we solve this equation numerically.&lt;/p>
+&lt;h2 id="numerical-implementation">Numerical implementation&lt;/h2>
+&lt;p>I picked a simple method that&amp;rsquo;s relatively accurate: 4th-order finite differences in space and 4th-order Runge-Kutta integration in time. The finite difference operators are one-sided at the boundaries.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">diff&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">h&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">kernel&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">du&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">convolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">kernel&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">mode&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;same&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># One-sided stencils at the boundaries&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">du&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">25.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">48.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">36.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">16.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">3.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">du&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mf">3.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">10.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">18.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">6.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">du&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">25.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">48.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">36.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">16.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">3.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">du&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">3.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">10.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">18.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">6.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">du&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mf">12.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">h&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The Runge-Kutta integrator is standard&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">rk4&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cur&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">nex&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">copy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cur&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">k1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dt&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">rhs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nex&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">k2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dt&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">rhs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nex&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.5&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">k1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">k3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dt&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">rhs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nex&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.5&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">k2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">k4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dt&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">rhs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nex&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">k3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">nex&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">k1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">2.0&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">k2&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">k3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">k4&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mf">6.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">nex&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Below is the right-hand side calculation. I combine the variables $(u, \psi, \pi)$ into a single array &lt;code>u&lt;/code>. The function &lt;code>rhs&lt;/code> takes the array &lt;code>u&lt;/code> and returns the right-hand side of the system for the symmetric hyperbolic formulation of the hyperboloidal wave equation \eqref{3}.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">rhs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rhs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zeros_like&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">hg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rhs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rhs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">diff&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rhs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:],&lt;/span> &lt;span class="n">hg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rhs&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">diff&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:],&lt;/span> &lt;span class="n">hg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">rhs&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then we integrate the equation iteratively in time.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">solve_wave_eq&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">initial&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zeros&lt;/span>&lt;span class="p">(((&lt;/span>&lt;span class="n">nsteps&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">initial&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">shape&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">initial&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">nsteps&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:,&lt;/span> &lt;span class="p">:]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rk4&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">:,&lt;/span> &lt;span class="p">:])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Finished evolution at t = &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dt&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">nsteps&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">data&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That&amp;rsquo;s it. The rest is just setting up initial data and parameters. To play around and try different methods, use the Colab notebook as a starting point.&lt;/p>
+&lt;a target="_blank" href="https://colab.research.google.com/drive/1w-cmd1UEWqQ6Bu1rHnfASp1ue7eCPLl4?usp=sharing">
+&lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+&lt;/a>
+&lt;h2 id="epilogue">Epilogue&lt;/h2>
+&lt;p>We discussed the simplest example of a wave equation. You may wonder about the wider applicability of this method. It has been applied in higher dimensions with varying coefficients, potential terms, source functions, and nonlinearities. I might write about black-hole perturbations in a future post.&lt;/p>
+&lt;p>While this technique is relatively well-known in relativity, it&amp;rsquo;s not used at all in other fields where wave propagation is relevant. It would be fascinating to see this relativistic method applied to a non-relativistic problem, such as the propagation of acoustic waves or the computation of radar cross-sections.&lt;/p>
+&lt;!-- If you have any interest along these directions, [let me know](https://anilzen.github.io/#contact). -->
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Even when the physical domain is not unbounded, infinity may be a better model than a large distance because the relevant wavelengths are small compared to the domain size. I argued this point in another blog post: &lt;a href="../empirical-infinity">How far is infinity?&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>There is a reason for these different names. The main goal of the boundary condition is that the solution doesn&amp;rsquo;t see the boundary. In higher dimensions, boundary conditions typically lead to artificial reflections for waves that hit the boundary at an incidence angle. Therefore, the data should be absorbing or non-reflective. But that&amp;rsquo;s not sufficient for equations with a potential term or nonlinearities because there is scattering all the way to infinity and simply absorbing the wave is not faithful to the actual solution. Note that we also distinguish between boundary &lt;em>conditions&lt;/em> that should lead to a well-posed initial-boundary problem and boundary &lt;em>data&lt;/em> that should lead to the transparency of the artificial boundary. After decades of research and thousands of papers, there is no &lt;em>local and exact&lt;/em> solution to the unbounded domain problem other than compactification.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>Strictly speaking, the mapping is only valid for $\rho\in(-\pi/2,\pi/2)$, which is an open interval and therefore not compact. Compactification extends space by adding the limit points to the domain. This is a subtle process that assumes a certain behavior of mathematical objects in space, but for this post, think of it as adding the points at infinity $\{-1\}$ and
+$\{1\}$ to the open interval $(-1,1)$ to make it compact. The reason we can do this has to do with the asymptotic properties of wave equations.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>Grosch and Orszag studied such mappings in 1977 in their paper &lt;a href="https://www.sciencedirect.com/science/article/abs/pii/0021999177901024" target="_blank" rel="noopener">&amp;ldquo;Numerical solution of problems in unbounded regions: Coordinate transforms&amp;rdquo;&lt;/a>. They concluded that &amp;ldquo;solutions that oscillate out to infinity are not so amenable to these techniques.&amp;rdquo;&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>This is one of my favorite scientific quotes, and it goes like this: &amp;ldquo;Henceforth, space by itself, and time by itself, are doomed to fade away into mere shadows, and only a kind of union of the two will preserve an independent reality.&amp;rdquo; &lt;a href="https://en.wikipedia.org/wiki/Hermann_Minkowski" target="_blank" rel="noopener">Hermann Minkowski&lt;/a> made this statement while showing that special relativity could be understood geometrically as a theory of four-dimensional spacetime in an address to German Natural Scientists and Physicians in 1908, a few months before his death at the age of 44.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>The time function can also be written in terms of $x$ as $\tau = t - \ln (\cosh x)$.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>Setting $H=\pm 1$ everywhere corresponds to &lt;a href="https://link.springer.com/article/10.12942/lrr-2012-2" target="_blank" rel="noopener">characteristic evolution&lt;/a>. This method is used in solving Einstein equations. I won&amp;rsquo;t go into further detail here because the characteristic transformation changes the nature of the principal part requiring specially designed numerical methods.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Excising the universe over the rainbow</title><link>https://anilzen.github.io/post/2023/misner-hyperboloidal/</link><pubDate>Mon, 27 Nov 2023 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2023/misner-hyperboloidal/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Charles_W._Misner" target="_blank" rel="noopener">Charles W. Misner&lt;/a> passed on July 24, 2023, and there was a lovely &lt;a href="https://umdphysics.umd.edu/events/misnersymposium.html" target="_blank" rel="noopener">memorial symposium&lt;/a> at the University of Maryland on November 11, 2023, to celebrate his life. Misner was a prolific scientist who significantly influenced the early developments of general relativity during its first &lt;a href="https://en.wikipedia.org/wiki/History_of_general_relativity#Golden_age" target="_blank" rel="noopener">golden age&lt;/a>. His last three submissions on the arXiv are on hyperboloidal compactification, a rather niche topic in relativity that happens to be my research area, so I wrote this post about it.&lt;/p>
+&lt;p>The symposium gave an excellent overview of Misner&amp;rsquo;s work and provided some insight into his character. Misner is most widely known as the &amp;ldquo;M&amp;rdquo; in &lt;a href="https://en.wikipedia.org/wiki/Gravitation_%28book%29" target="_blank" rel="noopener">MTW&lt;/a> and &lt;a href="https://en.wikipedia.org/wiki/ADM_formalism" target="_blank" rel="noopener">ADM&lt;/a>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. One cannot possibly discuss every topic that Misner influenced in a single day, so, inevitably, some of his research areas were left out; among them was his work on hyperboloidal methods. Below are Misner&amp;rsquo;s last three submissions on the arXiv.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://arxiv.org/abs/gr-qc/0409073" target="_blank" rel="noopener">Hyperboloidal Slices and Artificial Cosmology for Numerical Relativity&lt;/a> (2004) published as part of &lt;a href="https://www.worldscientific.com/worldscibooks/10.1142/5688" target="_blank" rel="noopener">Deserfest&lt;/a>,&lt;/li>
+&lt;li>&lt;a href="https://arxiv.org/abs/gr-qc/0512167" target="_blank" rel="noopener">Over the Rainbow: Numerical Relativity beyond Scri+&lt;/a> (2005),&lt;/li>
+&lt;li>&lt;a href="https://arxiv.org/abs/gr-qc/0603034" target="_blank" rel="noopener">Excising das All: Evolving Maxwell waves beyond scri&lt;/a> with James R. van Meter and David R. Fiske (2006) published in &lt;a href="https://doi.org/10.1103/PhysRevD.74.064003" target="_blank" rel="noopener">PRD&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>Misner&amp;rsquo;s main idea is to add an artificial cosmological constant to the Einstein equations to help with hyperboloidal compactification. Below, I will discuss his idea in two sections.&lt;/p>
+&lt;p>First, the &lt;a href="#the-coordinates">coordinates&lt;/a>. Misner proposes a hyperboloidal compactification in the toy model of de Sitter spacetime to demonstrate his idea. The coordinates he proposes are, in my opinion, not particularly useful. We now have a good understanding of hyperboloidal compactification that wasn&amp;rsquo;t available then. I will discuss his coordinates based on our current understanding.&lt;/p>
+&lt;p>Second, the &lt;a href="#artificial-cosmological-constant">artificial cosmological constant&lt;/a>. Misner proposes to modify the Einstein equations with a small cosmological constant to stabilize hyperboloidal evolution. This is a very interesting and promising idea that, to my knowledge, has never been tried before.&lt;/p>
+&lt;h2 id="the-coordinates">The coordinates&lt;/h2>
+&lt;p>The main construction is clearly laid out in Misner&amp;rsquo;s &lt;a href="https://arxiv.org/abs/gr-qc/0409073" target="_blank" rel="noopener">first paper&lt;/a> prepared for the celebration of his long-time collaborator &lt;a href="https://en.wikipedia.org/wiki/Stanley_Deser" target="_blank" rel="noopener">Stanley Deser&lt;/a>. The other papers are commentary, demonstration, and further development.&lt;/p>
+&lt;p>Before discussing the coordinates, we&amp;rsquo;ll review our current understanding of hyperboloidal regularization of coordinate singularities to put Misner&amp;rsquo;s construction in context.&lt;/p>
+&lt;h3 id="spacelike-regularizationof-coordinate-singularities">Spacelike regularization of coordinate singularities&lt;/h3>
+&lt;p>Take a spherically symmetric, stationary spacetime. For brevity, we&amp;rsquo;ll ignore the spherical part of the spacetime and discuss only the $\{t,r\}$ plane. We write the metric as
+$$ ds^2 = - f(r) dt^2 + \frac{1}{f(r)} dr^2. $$
+We get Minkowski with $f=1$, Schwarzschild with $f=1-\frac{2M}{r}$, or de Sitter with $ f = 1-\frac{r^2}{L^2}$. There&amp;rsquo;s a (coordinate) singularity where $f$ vanishes: the event horizon of Schwarzschild at $r=2M$ or the cosmological horizon of de Sitter at $r=L$. From the conformal point of view, spatial infinity is also a coordinate singularity, but it&amp;rsquo;s not visible on the metric without compactification.&lt;/p>
+&lt;p>After decades of confusion following Schwarzschild&amp;rsquo;s first publication of the Schwarzschild metric, we now know that a suitable re-slicing of spacetime (a different definition of time) resolves such coordinate singularities. There are many different ways to do this, but, especially for numerics, we&amp;rsquo;d like to maintain the time symmetry of the background when introducing a new time function. Otherwise, the coefficients of the transformed metric depend on time. The time symmetry is respected by transformations of the form
+$$ \tau = t + h(r).$$
+The function $h(r)$ is called the height function because it describes the height of the new coordinate $\tau$ with respect to $t$ when plotted on the $\{t,r\}$ plane. This transformation leaves the time derivatives invariant as intended: $\partial_t = \partial_\tau$. The metric becomes
+$$ ds^2 = - f d\tau^2 + 2 f H \ d\tau dr + \frac{1-f^2 H^2}{f} dr^2, $$
+where we have defined $H:=dh/dr$. Regularization refers to choosing a suitable $H$ such that the $rr$-component of the above metric is regular at the zeros of $f$. This requirement implies $fH \sim \pm 1$ at those zeros. Spacelike regularization ensures that $\tau$ is a time coordinate with spacelike level sets, which implies $|fH|&amp;lt;1$ away from the zeros of $f$. The sign of $H$ determines the orientation with respect to the null cone: whether we resolve the white hole or the black hole, past null infinity or future null infinity. If you compare the time transformation above with the null coordinates, $u=t-r$ and $v=t+r$, you can see that the slicing resembles outgoing null rays, $u$, for $H&amp;lt;0$ and ingoing null rays, $v$, for $H&amp;gt;0$.&lt;/p>
+&lt;p>Hyperboloidal coordinates provide a spacelike regularization of the coordinate singularity for the conformal metric at spatial infinity. The name &amp;ldquo;hyperboloidal&amp;rdquo; comes from the asymptotic similarity of this construction to the behavior of standard hyperboloids in suitable coordinates:
+$$\tau = t - \sqrt{1+r^2}. \tag{1} \label{1} $$
+To see that this is a hyperboloid, think of it as $(\tau-t)^2 - r^2 = 1$. For large $r$, the hyperboloidal coordinate $\tau$ approaches the null coordinate $u$ but has spacelike level sets everywhere. The defining property of hyperboloidal coordinates is the spacelike regularization of coordinate singularities at null horizons. I wrote more about this in the context of &lt;a href="https://anilzen.github.io/post/hyperbolic-relativity/">hyperbolic geometry for special relativity&lt;/a> or &lt;a href="https://anilzen.github.io/post/2023/splitting-spacetime/">splitting spacetime into space and time&lt;/a>.&lt;/p>
+&lt;p>In asymptotically flat spacetimes, hyperboloidal regularization allows us to fix future null infinity&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> at a constant spatial coordinate (&lt;a href="../../../publication/zenginoglu-2008-hyperboloidal/">scri-fixing&lt;/a>). In black hole spacetimes, spacelike regularization leads to horizon-penetrating coordinates crucial for the excision of black hole interiors. In cosmological spacetimes, it allows us to perform numerical simulations, including the cosmological horizon. The cosmological case is what Misner discusses in his papers.&lt;/p>
+&lt;h3 id="de-sitter-spacetime">de Sitter spacetime&lt;/h3>
+&lt;p>We get de Sitter spacetime with&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>
+$$ f = 1 - \frac{r^2}{L^2}. $$
+As mentioned above, there is a coordinate singularity at the cosmological horizon, $r=L$, where $f$ vanishes. The hallmark of the coordinate singularity is intersecting time slices in the conformal diagram&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>.
+&lt;figure id="figure-conformal-diagram-of-de-sitter-spacetime-with-t-slices-depicted-on-the-domain-of-influence-the-slices-intersect-at-a-single-point-on-the-cosmological-horizon">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Standard de Sitter" srcset="
+/post/2023/misner-hyperboloidal/standard_hu06d267e0cb33895da239e2c52bc66331_90656_6dae36c8dbb990f1d3af45c6aa4617d9.webp 400w,
+/post/2023/misner-hyperboloidal/standard_hu06d267e0cb33895da239e2c52bc66331_90656_30f7e5a25899d46e272b57b48e8765a4.webp 760w,
+/post/2023/misner-hyperboloidal/standard_hu06d267e0cb33895da239e2c52bc66331_90656_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/misner-hyperboloidal/standard_hu06d267e0cb33895da239e2c52bc66331_90656_6dae36c8dbb990f1d3af45c6aa4617d9.webp"
+width="733"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Conformal diagram of de Sitter spacetime with $t$-slices depicted on the domain of influence. The slices intersect at a single point on the cosmological horizon.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>We want to construct a regularization of the future cosmological horizon. The null cone structure is given by $u=t-r_\ast$ and $v=t+r_\ast$ with $r_\ast = \int \frac{dr}{f} = L \ \mathrm{archtanh }\ \frac{r}{L}$. We are primarily interested in the domain up to the cosmological horizon, $r\leq L$. Here&amp;rsquo;s a suitable choice that satisfies our two requirements ($fH \to - 1$ as $r\to L$ and $|fH|&amp;lt;1$ for $r&amp;lt;L$):
+$$ f H = - \frac{r^2}{L^2}.$$
+By integration, we get the new time coordinate
+$$\tau = t + r - L \ \mathrm{archtanh }\ \frac{r}{L}.$$
+The metric becomes
+$$ ds^2 = - f d\tau^2 - \frac{2 r^2}{L^2} d\tau dr + \left(1+\frac{r^2}{L^2}\right) dr^2. $$
+This metric is particularly nice because it can be written in Kerr-Schild form&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup> as the sum of the Minkowski metric and a scaled null field
+$$ ds^2 = - d\tau^2 + dr^2 + \frac{r^2}{L^2} \left(d\tau - dr\right)^2. $$
+The singularity at the cosmological horizon $r=L$ is resolved. This construction allows us to perform numerical calculations including the cosmological horizon. The time slices resolve the coordinate singularity in the previous conformal diagram. Instead, we obtain a smooth foliation of the cosmological horizon, as seen below. The diagram also demonstrates that Kerr-Schild coordinates beyond the horizon resemble trumpet slices in black hole spacetimes.&lt;/p>
+&lt;p>
+&lt;figure id="figure-kerr-schild-slicing-provides-a-hyperboloidal-foliation-of-the-cosmological-horizon-the-slices-approach-timelike-infinity-beyond-the-horizon-resembling-trumpet-slices-in-black-hole-spacetimes">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Kerr-Schild de Sitter" srcset="
+/post/2023/misner-hyperboloidal/featured_hu61f272e7fd7b50e750389b4fdc66f51f_102036_4144df01cc22e81d197a4dd6cdaa6943.webp 400w,
+/post/2023/misner-hyperboloidal/featured_hu61f272e7fd7b50e750389b4fdc66f51f_102036_478889429f38d755583f15423b06120b.webp 760w,
+/post/2023/misner-hyperboloidal/featured_hu61f272e7fd7b50e750389b4fdc66f51f_102036_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/misner-hyperboloidal/featured_hu61f272e7fd7b50e750389b4fdc66f51f_102036_4144df01cc22e81d197a4dd6cdaa6943.webp"
+width="733"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Kerr-Schild slicing provides a hyperboloidal foliation of the cosmological horizon. The slices approach timelike infinity beyond the horizon resembling trumpet slices in black-hole spacetimes.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>Misner takes the Kerr-Schild form of the de Sitter metric as a starting point and adds another time transformation
+$$ T = \tau - \sqrt{1+r^2}. $$
+This is what he calls hyperboloidal. The transformation is formally that of the standard hyperboloid as in Eq. \eqref{1}, but applying this in the geometry of de Sitter spacetime is awkward. The point of the standard hyperboloid is that asymptotically in Minkowski spacetime (for large $r$), the transformed time coordinate approaches the outgoing null cone: $T\sim t - r$. However, the outgoing null cone in de Sitter spacetime does not have this form; therefore, the transformation is not hyperboloidal with respect to the actual background. As the time transformation doesn&amp;rsquo;t respect the underlying causal structure of de Sitter spacetime, it does nothing to regularize an already regular coordinate system. Nevertheless, let&amp;rsquo;s write down the metric
+$$ ds^2 = -f dT^2 - 2 \left( \frac{r}{L^2} + \frac{f}{\sqrt{1+r^2}} \right) dT dr $$
+$$ + \frac{L^2 + r^2 + 2 r^4 - 2r^3\sqrt{1+r^2}}{L^2 (1+r^2)} dr^2. $$&lt;/p>
+&lt;p>The only impact of this transformation on the asymptotic behavior of the time slices is when $L=1$ or when the coefficient of $r$ in the hyperboloid matches the cosmological radius. In this case, the time slices end at future spacelike null infinity, $\mathscr I^+$, instead of future timelike infinity, $i^+$.
+&lt;figure id="figure-misner-slicing-also-provides-a-hyperboloidal-foliation-of-the-cosmological-horizon-the-main-difference-to-the-kerr-schild-slicing-is-that-beyond-the-horizon-the-slices-hit-mathscr-i-when-l1">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Misner de Sitter" srcset="
+/post/2023/misner-hyperboloidal/misner_hue932acea94ee83a0328abf4843b27fa3_80876_cd49ed438ef414a6bf4e02c99f73f896.webp 400w,
+/post/2023/misner-hyperboloidal/misner_hue932acea94ee83a0328abf4843b27fa3_80876_1f21af67d63242fe6ea9826f43192960.webp 760w,
+/post/2023/misner-hyperboloidal/misner_hue932acea94ee83a0328abf4843b27fa3_80876_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2023/misner-hyperboloidal/misner_hue932acea94ee83a0328abf4843b27fa3_80876_cd49ed438ef414a6bf4e02c99f73f896.webp"
+width="733"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Misner slicing also provides a hyperboloidal foliation of the cosmological horizon. The main difference to the Kerr-Schild slicing is that, beyond the horizon, the slices hit $\mathscr I^+$ when $L=1$.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>Next, Misner introduces the spatial compactification
+$$ r = \frac{\rho}{1-\left(\frac{\rho}{2}\right)^2}. $$
+Remember that future null infinity, $\mathscr I^+$, is spacelike in cosmological spacetimes. The compactification maps $\mathscr I^+$ to $\rho=2$. But no compactification is needed if we&amp;rsquo;re interested in the cosmological horizon, which is at a finite distance. One can consider $r$ already as a compactification of the tortoise coordinate $r_*$. In the case of de Sitter, the cosmological horizon at $r=L$ acts as the ingoing null surface representing a far-away observer. We don&amp;rsquo;t need to access spacelike null infinity, so the compactification seems unnecessary. Compactification might be useful for very large $L$, but even then, what we need is not necessarily a compactification but a mapping of the cosmological horizon to a coordinate sphere whose location is independent of the cosmological constant.&lt;/p>
+&lt;p>That&amp;rsquo;s all I have to say about the coordinates. There are better choices if you want to evolve fields accurately in asymptotically de Sitter spacetimes. But Misner&amp;rsquo;s goal is not to evolve fields on the background of asymptotically de Sitter spacetimes. He aims to evolve the Einstein equations to construct astrophysically relevant asymptotically flat spacetimes using an &lt;em>artificial&lt;/em> cosmological constant. And that&amp;rsquo;s a very promising idea.&lt;/p>
+&lt;h2 id="artificial-cosmological-constant">Artificial cosmological constant&lt;/h2>
+&lt;p>Let&amp;rsquo;s say we are interested in solving the Einstein equations for gravitational waves propagating large distances along outgoing null geodesics, all the way up to and including future null scri. To include scri, we solve the equations for a conformally rescaled metric $g= \Omega^2 \tilde{g}$ following &lt;a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.10.66" target="_blank" rel="noopener">Penrose&lt;/a>. The conformal Einstein equations read
+$$ R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = T_{\mu\nu}[\Omega], $$
+with conformal source terms
+$$ T[\Omega] = -\frac{2}{ {\color{darkred}\Omega}} \left(\nabla_\mu \nabla_\nu \Omega - \Box \Omega g_{\mu\nu}\right) - \frac{3}{ {\color{darkred}\Omega^2} } \nabla_\lambda \Omega \nabla^\lambda \Omega g_{\mu\nu}. $$
+The conformal factor vanishes at future null infinity which is a subset of the conformal boundary of spacetime where $\Omega=0$. If we want to include the conformal boundary in our numerical computations, we must somehow deal with the formal singularity of these terms at $\Omega=0$. I write &amp;ldquo;formal singularity&amp;rdquo; because one can show that the terms are regular under reasonable assumptions. However, it&amp;rsquo;s hard to impose that regularity on hyperboloidal surfaces while keeping the evolution numerically stable.&lt;/p>
+&lt;p>Misner&amp;rsquo;s idea is to add a small cosmological term to the equations
+$$ R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R {\color{darkgreen} - \frac{3}{L^2 \Omega^2} g_{\mu\nu}} = T_{\mu\nu}[\Omega]. $$
+For large $L$, this term can be as small as we want as long as $\Omega&amp;gt;0$. However, the global causal structure of spacetime is dramatically different at $\Omega=0$. Null infinity is not a null surface anymore; it&amp;rsquo;s a spacelike surface! Even the definition of gravitational radiation becomes difficult and is an &lt;a href="https://arxiv.org/abs/1409.3816" target="_blank" rel="noopener">ongoing research topic&lt;/a>.&lt;/p>
+&lt;p>Misner&amp;rsquo;s insight is that we don&amp;rsquo;t have to evolve the fields until the conformal boundary. It&amp;rsquo;s sufficient to go slightly beyond the cosmological horizon and stop at a spacelike surface. In Misner&amp;rsquo;s approach, &lt;strong>the conformal factor does not vanish anywhere on the grid&lt;/strong>! This method mimics the excision method inside a black-hole (apparent) horizon. For large $L$, the resulting radiation field should match the radiation field in the asymptotically flat case. We consider the cosmological constant an artificial term, a numerical trick, allowing us to apply excision beyond the cosmological horizon. This is the core idea of Misner&amp;rsquo;s approach: excise the unobservable universe beyond the cosmological horizon.&lt;/p>
+&lt;h3 id="potential-advantages">Potential advantages&lt;/h3>
+&lt;p>Theoretically, this approach provides all the benefits of hyperboloidal compactification: improved efficiency, no artificial boundary conditions, and no radiation extrapolation problem. In addition, one can expect improved stability due to the artificial cosmological constant. There are some caveats that I&amp;rsquo;ll mention; I think they are manageable in practical numerical work.&lt;/p>
+&lt;h4 id="efficiency">Efficiency&lt;/h4>
+&lt;p>In the asymptotically flat scenario, the numerical efficiency comes from the time transformation that stretches the spatial wavelength of outgoing waves. This wave-stretching, or redshift, is then combined with compactification to resolve oscillatory solutions on infinite domains.&lt;/p>
+&lt;p>In the cosmological scenario, the waves are also stretched, but the interpretation of wave-stretching is now due to the expansion of space and is called cosmological redshift. The &lt;strong>caveat&lt;/strong> is that the cosmological redshift is a physical effect. The cosmological constant changes the waveform physically. I expect that the impact of a sufficiently small cosmological constant will be negligible on the waveform but significant on numerical efficiency because of the different roles of time and space in the construction for large $L$.&lt;/p>
+&lt;h4 id="boundary-conditions">Boundary conditions&lt;/h4>
+&lt;p>In the asymptotically flat scenario, no numerical boundary conditions are needed because one places the outer boundary at future null infinity, which is an ingoing null surface. No signals can propagate faster than the speed of light, so no characteristics can enter the numerical domain.&lt;/p>
+&lt;p>In the cosmological scenario, the outer boundary is spacelike. This is even better than an ingoing null boundary. A spacelike boundary will pull away any perturbations and further stabilize the code. This setup emulates excision at the black hole horizon. Consider the conformal diagrams above and think of spacelike null infinity, $\mathscr I^+$, as the spacelike black-hole singularity and the cosmological horizon as the event horizon.&lt;/p>
+&lt;h4 id="radiation-extrapolation">Radiation extrapolation&lt;/h4>
+&lt;p>In the asymptotically flat scenario, gravitational waves are defined unambiguously at future null infinity. With the numerical outer boundary placed at future null infinity, one can directly read off the asymptotic fields and perform the relatively simple transformations to extract the gravitational radiation without any error-prone extrapolation procedures.&lt;/p>
+&lt;p>In the cosmological scenario, one would read off the radiation at the cosmological horizon. For large $L$, this radiation should match the radiation at future null infinity. Again, no extrapolation would be needed because the cosmological horizon is part of the simulation domain. The &lt;strong>caveat&lt;/strong> is that there is no unambiguous (coordinate-independent) definition of gravitational radiation at the cosmological horizon. In fact, the horizon itself depends on the coordinate system, even in pure de Sitter spacetime. We&amp;rsquo;ll need to understand this problem better once we have stable simulations. Note that the cosmological constant in our Universe is non-vanishing, so this problem is physically interesting and has been an ongoing research topic by &lt;a href="https://arxiv.org/abs/1409.3816" target="_blank" rel="noopener">Ashtekar&lt;/a>, &lt;a href="https://arxiv.org/abs/2306.08029" target="_blank" rel="noopener">Bonga&lt;/a> and collaborators.&lt;/p>
+&lt;h4 id="stability">Stability&lt;/h4>
+&lt;p>It is well-known that de Sitter spacetimes are &amp;ldquo;more stable&amp;rdquo; than asymptotically flat spacetimes. &lt;a href="https://link.springer.com/article/10.1007/BF01205488" target="_blank" rel="noopener">Friedrich&lt;/a> demonstrated the stability of asymptotically de Sitter spacetimes in 1986, years before the stability of Minkowski spacetimes was proven. We also know from &lt;a href="https://arxiv.org/abs/1104.3702" target="_blank" rel="noopener">Bizoń and Rostworowski&lt;/a> that AdS with no-flux boundary conditions is globally unstable. The flat case is, in some imprecise sense, at the edge of stability with respect to the cosmological constant. A positive constant moves us towards better stability.&lt;/p>
+&lt;h2 id="beyond-the-horizon-there-be-monsters">Beyond the horizon there be monsters&lt;/h2>
+&lt;p>Hyperboloidal evolution of astrophysically relevant phenomena (binary black holes, neutron stars) is an open problem in numerical relativity. Today, the effort is driven mostly by David Hilditch and Alex Vañó-Viñuales. Since I gave up on this hard problem in 2013, this is the most exciting idea that I haven&amp;rsquo;t tried yet. Exciting because I can&amp;rsquo;t think of a reason why this shouldn&amp;rsquo;t work. There may be monsters behind the horizon that I&amp;rsquo;m not yet aware of but it&amp;rsquo;s certainly worth tinkering for a few months.&lt;/p>
+&lt;p>It would be remarkable if Misner&amp;rsquo;s suggestion would lead to a resolution of this important open problem. Can&amp;rsquo;t wait to see the outcome.&lt;/p>
+&lt;!-- The biggest frustration with this problem for me is that it's a hard binary: it works or it doesn't. And when it doesn't work, you can't do anything incremental to improve it. This idea is different. We know that evolution with a cosmological constant will work. Once we have a stable code, we can improve it bit by bit using smaller cosmological constants, better coordinates, improved extraction schemes, etc. -->
+&lt;!-- If scri as a hypersurface is null, we say null scri. For example, asymptotically de Sitter spacetimes have a spacelike scri; asymptotically Anti-de Sitter spacetimes have a timelike scri. This usage avoids the confusing terminology around "null infinity" where it's unclear whether "null" refers to null geodesics or null generators. This is not standard usage but it's helpful to make the distinction when considering cases with non-vanishing cosmological constant. For more detail about the conformal boundary, see Frauendiener's review [Conformal Infinity](https://link.springer.com/article/10.12942/lrr-2004-1) or Valiente Kroon's book [Conformal Methods in General Relativity](https://www.cambridge.org/core/books/conformal-methods-in-general-relativity/72AC946BEF2C74BD5D0AB790B31FAEB7). -->
+&lt;!-- [^terminology]: There are two ways to add a qualifier to infinity, scri, or $\mathscr I$. You may call infinity, or $\mathscr I$, null, because it consists of endpoints of null geodesics or because its generators are null vector fields (in asymptotically flat spacetimes). There is usage for both in the literature. I'm following here Hawking \&amp; Ellis so $\mathscr I$ in de Sitter is spacelike infinity. A better usage would define scri as the endpoints of null geodesics and talk about -->
+&lt;!-- One of the most influential events on my career was the funeral of [Jürgen Ehlers](https://en.wikipedia.org/wiki/J%C3%BCrgen_Ehlers), another giant of general relativity who was the founding director of the Max-Planck Institute for Gravitation where I did my Ph.D. thesis. -->
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>MTW is named after Misner, Thorne, and Wheeler, who are the authors of the book &lt;a href="https://en.wikipedia.org/wiki/Gravitation_%28book%29" target="_blank" rel="noopener">Gravitation&lt;/a>. ADM stands for Arnowitt, Deser, and Misner. We learned in the memorial symposium that Deser and Misner were both invited by Niels Bohr to the institute known as Niels Bohr Institute today. They worked in a school building on an island near Copenhagen during the summer of their visit, kneeling on the low blackboard designed for school children to make their calculations.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Null infinity (or scri for &amp;ldquo;script I&amp;rdquo; $\mathscr I$) consists of the set of endpoints of null geodesics. In asymptotically flat spacetimes, null infinity is an ingoing null surface. In asymptotically de Sitter spacetimes, null infinity is a spacelike surface so we write &amp;ldquo;spacelike null infinity.&amp;rdquo; For more detail about the properties of the conformal boundary, see Frauendiener&amp;rsquo;s review &lt;a href="https://link.springer.com/article/10.12942/lrr-2004-1" target="_blank" rel="noopener">Conformal Infinity&lt;/a> or Valiente Kroon&amp;rsquo;s book &lt;a href="https://www.cambridge.org/core/books/conformal-methods-in-general-relativity/72AC946BEF2C74BD5D0AB790B31FAEB7" target="_blank" rel="noopener">Conformal Methods in General Relativity&lt;/a>.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>The coordinates we use here cover only part of the de Sitter spacetime called the static patch. There are many other coordinate systems that don&amp;rsquo;t exhibit a singularity at the cosmological horizon. For example, &lt;a href="https://en.wikipedia.org/wiki/De_Sitter_space#Closed_slicing" target="_blank" rel="noopener">global coordinates&lt;/a> are regular everywhere and can be used to construct conformal diagrams. However, the static patch is helpful for numerical calculations because the time symmetry is explicit in the coordinates.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>If you&amp;rsquo;re interested in how to draw such conformal diagrams, see my &lt;a href="https://anilzen.github.io/post/2022/drawing-penrose-diagrams">blog post&lt;/a>.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>The Kerr-Schild form of a metric is $g_{\mu\nu} = \eta_{\mu\nu} + F\ k_\mu k_\nu$, where $\eta_{\mu\nu}$ is the Minkowski metric and $k_\mu$ is a null vector.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Splitting Spacetime</title><link>https://anilzen.github.io/post/2023/splitting-spacetime/</link><pubDate>Wed, 20 Sep 2023 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2023/splitting-spacetime/</guid><description>&lt;h2 id="predicting-the-future">Predicting the future&lt;/h2>
+&lt;p>Contrary to common belief, physicists are in the business of making predictions more than fortune tellers or astrologers. The hows and whys, the fundamentals and principles, &amp;ldquo;whether or not the world has three dimensions,&amp;rdquo; all boil down to one question: Can you predict the future?&lt;/p>
+&lt;p>Predicting the future for a physicist is, of course, a much more accurate undertaking than for fortune tellers, astrologers, or &lt;a href="https://www.yahoo.com/news/finance/news/wall-street-economists-consistently-wrong-171740454.html" target="_blank" rel="noopener">economists&lt;/a>. We want to know what happens to well-defined variables describing the mathematical idealization of a natural system given a snapshot in time&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>We call this process &amp;ldquo;solving an initial value problem.&amp;rdquo; We solve an equation of motion, typically a partial differential equation (PDE), with prescribed initial data. The PDE is the mathematical idealization of our model of the physical system under consideration. That&amp;rsquo;s where all the whys and hows go. The PDE describes how the chosen variables of the system vary in relation to each other. The initial data is the snapshot of these variables at a given time. The solution to this initial value problem is our prediction of the future.&lt;/p>
+&lt;p>The language of a snapshot in time distinguishes time and space. But didn&amp;rsquo;t special relativity teach us that time by itself and space by itself are mere shadows? Well, it did, and it didn&amp;rsquo;t. Special relativity taught us that the notion of time and simultaneity is observer-dependent. But time is still a special dimension in a relativistic spacetime, distinct from its spatial friends. You can already see at the level of the metric signature, $(-+++)$, that time is special.&lt;/p>
+&lt;p>To formulate an initial value problem, we need to split spacetime into space and time. In relativity, there are three approaches to splitting spacetime to formulate an initial value problem: Cauchy, characteristic, and hyperboloidal. Let&amp;rsquo;s take the flat, 1+1 dimensional spacetime to demonstrate these approaches. In standard coordinates $(t,r)$, the flat metric reads
+$$ ds^2 = -dt^2 + dr^2 \tag{1} \label{1} $$
+The most intuitive approach is to take the snapshot at $t=0$. The corresponding surface&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is called a &lt;a href="https://en.wikipedia.org/wiki/Cauchy_surface" target="_blank" rel="noopener">Cauchy surface&lt;/a> and has specific desirable properties that generalize to more interesting cases. The associated &lt;a href="https://ems.press/books/esi/66" target="_blank" rel="noopener">Cauchy problem&lt;/a> plays a central role in mathematical and numerical relativity.&lt;/p>
+&lt;p>We also have null surfaces in relativity, named as such because they provide the &lt;a href="https://en.wikipedia.org/wiki/Kernel_%28linear_algebra%29" target="_blank" rel="noopener">nullspace&lt;/a> of the metric \eqref{1} through $t\pm r$. This null cone is fundamental in many aspects. First, it determines the &lt;a href="https://plato.stanford.edu/entries/spacetime-singularities/lightcone.html" target="_blank" rel="noopener">causal structure of spacetime&lt;/a>. Second, it describes the propagation of disturbances. In particular, massless fields propagate along the null cone. Even before the advent of relativity, it was known that disturbances to solutions of wave equations propagate along these special surfaces called &lt;a href="https://en.wikipedia.org/wiki/Method_of_characteristics" target="_blank" rel="noopener">characteristics&lt;/a>. One can provide data on such characteristic surfaces and solve a &lt;a href="https://link.springer.com/article/10.12942/lrr-2012-2" target="_blank" rel="noopener">characteristic evolution problem&lt;/a>. This approach is particularly valuable in the modern era of gravitational-wave astronomy because gravitational waves are only defined at infinity along outgoing null directions.&lt;/p>
+&lt;h2 id="hyperboloidal-surfaces">Hyperboloidal surfaces&lt;/h2>
+&lt;p>The hyperboloidal approach is the odd one. You take a spacetime hyperboloid, say
+$t^2 - r^2 = 1,$
+and give initial data on the surface defined by
+$t(r) = \sqrt{1+r^2}.$
+This construction seems weird and arbitrary when you first encounter it. Why would you do something like this? How is this surface a &lt;em>snapshot&lt;/em>? Why not pick another transformation?&lt;/p>
+&lt;p>Many relativists feel that hyperboloidal surfaces are somewhat unnatural, lacking the simplicity and elegance of the Cauchy or characteristic approaches. Below, I demonstrate how hyperboloidal surfaces extend the mathematical notion of a sphere to relativity and satisfy a physical principle. The concepts that we&amp;rsquo;ll encounter will lead us to speculations in the quantum realm.&lt;/p>
+&lt;h3 id="mathematical-notion">Mathematical notion&lt;/h3>
+&lt;p>&lt;em>Hyperboloids as analogs of spheres in spacetime.&lt;/em>&lt;/p>
+&lt;p>
+&lt;figure id="figure-a-spacetime-hyperboloid-times-up">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./hyperboloid.png" alt="Hyperboloid" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+A spacetime hyperboloid. Time&amp;rsquo;s up.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>A circle is a set of points equidistant from a given point. This definition is among the purest in mathematics&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>. To derive the equation for a circle, consider the Euclidean metric in two dimensions
+$$ ds^2 = dx^2 + dy^2. $$
+The set of points $\{x,y\}$ at distance $R$ from the origin satisfies
+$$ x^2 + y^2 = R^2. $$
+The circle (or sphere in three dimensions) is the simplest nontrivial example of a constant curvature surface, with its curvature being the reciprocal of its radius, $K=1/R$. Now, let&amp;rsquo;s consider the corresponding object in relativity.&lt;/p>
+&lt;p>&lt;strong>What is the set of events equidistant from a given event?&lt;/strong>&lt;/p>
+&lt;p>In the relativistic setting, spacetime distance is proper time. Using the metric \eqref{1}, the set of events $\{t, r\}$ at proper time $T$ from the origin satisfies
+$$ - t^2 + r^2 = \pm T^2. $$
+This equation describes a spacetime hyperbola. The sign in the equation determines whether the hyperbola is spacelike or timelike&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>. We&amp;rsquo;ll pick the negative sign for the spacelike hyperbola because we aim to construct a snapshot. I mentioned before that time is special, so let&amp;rsquo;s solve the above equation for time to obtain the future sheet of the spacelike hyperbola
+$$ t(r) = \sqrt{T^2+r^2}.$$
+This spacelike surface consists of points at proper time $T$ from the origin. Like the circle above, this surface has constant curvature, $K=1/T.$ The higher dimensional version of a hyperbola is called the hyperboloid.&lt;/p>
+&lt;p>We see that hyperboloids are the relativistic analogs of spheres. Hyperboloids are as natural in Lorentzian manifolds as spheres are in Riemannian manifolds.&lt;/p>
+&lt;h3 id="physical-principle">Physical principle&lt;/h3>
+&lt;p>&lt;em>Hyperboloids as analogs of soap bubbles in spacetime.&lt;/em>&lt;/p>
+&lt;p>
+&lt;figure id="figure-a-soap-bubble-cluster-by-kym-coxhttpswwwkymcoxcomwork-statement-exhibitions">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./featured.jpg" alt="Soap bubble cluster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+A soap bubble cluster. By &lt;a href="https://www.kymcox.com/work-statement-exhibitions" target="_blank" rel="noopener">Kym Cox&lt;/a>.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>The circle has another attractive property: among all figures with a given area, the circle has the smallest perimeter. We&amp;rsquo;ve known this for over 2,000 years&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>. The corresponding statement for the sphere was only proven in the 19th century by &lt;a href="https://en.wikipedia.org/wiki/Hermann_Schwarz" target="_blank" rel="noopener">Schwarz&lt;/a>. Such optimization problems appear in many areas. One that is familiar to most people from early childhood is the soap bubble.&lt;/p>
+&lt;p>In mathematical terms, soap bubbles are minimal surfaces enclosing a fixed volume of air. The variational problem has the following action
+$$ S = A - \lambda \cdot V. \tag{2} \label{2} $$
+Minimize the area $A$ with the constraint that the volume $V$ is fixed. The mathematics of soap bubbles includes fascinating open problems with many &lt;a href="https://www.quantamagazine.org/monumental-math-proof-solves-triple-bubble-problem-and-more-20221006/" target="_blank" rel="noopener">recent developments&lt;/a>. Frank Morgan, who proved the &lt;a href="https://en.wikipedia.org/wiki/Double_bubble_theorem" target="_blank" rel="noopener">double bubble theorem&lt;/a>, has a wonderful lecture on the topic.&lt;/p>
+&lt;p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/CbpfpxOdUzU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;br>
+Here&amp;rsquo;s a particularly relevant quote from the lecture&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;If you want to understand the universe, start out by understanding the soap bubble.&amp;rdquo;&lt;/p>
+&lt;p>Frank Morgan&lt;/p>
+&lt;/blockquote>
+&lt;p>Let&amp;rsquo;s try to understand the universe by understanding the soap bubble. We must first answer the following question as we did with the circle:&lt;/p>
+&lt;p>&lt;strong>What is the relativistic analog of a soap bubble?&lt;/strong>&lt;/p>
+&lt;p>Formally, we can use the action for the soap bubble \eqref{2} and go one dimension higher.
+$$ S = V - \lambda \cdot W. \tag{3}\label{3} $$
+Now, the task is to &lt;em>maximize the volume&lt;/em> $V$ with the constraint that the &lt;em>spacetime volume&lt;/em> $W$ is fixed. In contrast to the soap bubble problem, we&amp;rsquo;re not looking for a minimal hypersurface in the relativistic setup but a maximal one. The minimal hypersurface would be null with vanishing volume.&lt;/p>
+&lt;p>Let&amp;rsquo;s see the solution of this problem in a simple case. We compute the relativistic volume by integrating the square root of the determinant of the metric&lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>. Denoting the determinant of the induced metric on the hypersurface by $h$ and the determinant of the spacetime metric by $g$, we have
+$$ S = \int \sqrt{h}\ d^3x - \lambda \int \sqrt{-g}\ d^4x. $$
+The extremization of this action leads to the requirement of constant mean curvature: $K = \lambda$, where $K$ is the trace of the extrinsic curvature&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>. We&amp;rsquo;ll do this for the 1+1 Minkowski metric to find an explicit expression for the maximizer. We&amp;rsquo;re looking for an embedding, $t=t(r)$, that maximizes the action for the relativistic bubble. The induced metric is
+$$ ds^2 = -dt^2 + dr^2 = \left(-t&amp;rsquo;^2 + 1\right) dr^2, $$
+where $t&amp;rsquo;\equiv dt(r)/dr$. The volume from the origin to some radius $R$ is
+$$ V = \int_0^R \sqrt{h} \ dr = \int_0^R \sqrt{1-t&amp;rsquo;^2}\ dr. $$
+To calculate the spacetime volume, we need a reference surface. It turns out that it doesn&amp;rsquo;t matter which surface, so let&amp;rsquo;s just take the surface $t=0$. The spacetime volume is given by
+$$ W = \int_0^R \int_0^{t(r)} \sqrt{-g} \ dt dr = \int_0^R t(r) dr. $$
+Bringing these expressions together in the action \eqref{3}, we can read off the Lagrangian density
+$$ \mathscr{L} = \sqrt{1-t&amp;rsquo;^2} - \lambda t. $$
+The Euler-Lagrange equation for varying $t(r)$ with respect to the parameter $r$ reads
+$$ \frac{d}{dr} \frac{\partial\mathscr{L}}{\partial t&amp;rsquo;} = \frac{\partial \mathscr{L}}{\partial t} \ \iff &lt;br>
+\frac{d}{dr} \frac{t&amp;rsquo;}{\sqrt{1-t&amp;rsquo;^2}} = \lambda. $$
+We integrate by $r$ and solve for $t&amp;rsquo;$ with the boundary condition $t&amp;rsquo;(0)=0$
+$$ t&amp;rsquo;(r) = \pm \frac{\lambda r}{\sqrt{1+ \lambda^2 r^2}}. $$
+By choosing the positive sign and integrating again, we get the equation for the spacetime hyperboloid
+$$ t(r) = \sqrt{\frac{1}{\lambda^2} + r^2}. $$
+We recognize the mean extrinsic curvature as $K=\lambda$ from our previous discussion on the relativistic analog of a circle. We now see that the hyperboloid is the relativistic analog of a soap bubble.&lt;/p>
+&lt;p>You may wonder what determines the value of the constant mean curvature. It&amp;rsquo;s the spacetime volume that we prescribe in the constraint. The larger the spacetime volume to be enclosed, the smaller the constant mean curvature. You can see this behavior in the Penrose diagram below. As I mentioned above, the reference surface doesn&amp;rsquo;t matter for the qualitative discussion. You can pick $t=0$ or $u=t-r=0$. The spacetime volume enclosed by the hyperboloid with $K=0.5$ is larger than the spacetime volume enclosed by the one with $K=2$ in both cases. The difference is shaded yellow.&lt;/p>
+&lt;p>
+&lt;figure id="figure-smaller-curvature-k-corresponds-to-larger-spacetime-volume-irrespective-of-the-reference-surface">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./tikz_figs/K_volume_t.webp" alt="Smaller curvature $K$ corresponds to larger spacetime volume irrespective of the reference surface." loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Smaller curvature $K$ corresponds to larger spacetime volume irrespective of the reference surface.
+&lt;/figcaption>&lt;/figure>
+&lt;/p>
+&lt;p>This behavior is actually very intuitive, as it&amp;rsquo;s the same for a soap bubble. The larger the volume of air that the bubble needs to enclose, the larger the bubble, and therefore the smaller the curvature of the bubble.&lt;/p>
+&lt;p>In summary, there&amp;rsquo;s a clear analogy between soap bubbles and hyperboloids. Soap bubbles are minimal surfaces enclosing a fixed volume of air. Hyperboloids are maximal surfaces enclosing a fixed volume of spacetime.&lt;/p>
+&lt;h2 id="quantum-foam">Quantum foam&lt;/h2>
+&lt;p>What would the extremization of the action \eqref{3} mean physically? Does space arise from the extremization of spacetime bubbles?&lt;/p>
+&lt;p>It has been long predicted that spacetime shouldn&amp;rsquo;t be smooth at the Planck scale due to quantum fluctuations. It should be &amp;ldquo;foamy,&amp;rdquo; or &amp;ldquo;bubbly,&amp;rdquo; or &amp;ldquo;grainy,&amp;rdquo; or whatever you want to call it. Wheeler, the naming authority of theoretical physics&lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>, called this the &lt;a href="https://en.wikipedia.org/wiki/Quantum_foam" target="_blank" rel="noopener">quantum foam&lt;/a>. A foam is defined as a dispersion of bubbles, and we have just seen that the relativistic generalization of a bubble is a hyperboloid.&lt;/p>
+&lt;p>We arrived at the realm of speculation. We don&amp;rsquo;t know how to test the quantum foam idea experimentally. But we can imagine that quantum foam arises from quantum fluctuations of spacetime bubbles. The hypersurfaces that enclose those bubbles are hyperboloids. As usual, this mental image gives rise to further questions. What is the mechanism for the formation of such hyperboloids? How are they related to quantum fields?&lt;/p>
+&lt;p>One idea is that the hypersurfaces arise through entanglement. I&amp;rsquo;ve written about &lt;a href="../../hyperboloidal-holography/">hyperboloidal holography&lt;/a> before, where I argued that holographic entanglement entropy naturally extends to flat spacetime if we use hyperboloids as time slices. The variational principle suggests that these surfaces could also be useful in the context of &lt;a href="https://www.quantamagazine.org/in-new-paradox-black-holes-appear-to-evade-heat-death-20230606/" target="_blank" rel="noopener">quantum complexity&lt;/a>.&lt;/p>
+&lt;p>These speculations open more questions than answers. Nevertheless, we now have a better sense that soap bubbles and their clusters may indeed provide a key to understanding spacetime.&lt;/p>
+&lt;hr>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./foam.jpg" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>To be fair, not all physical theories focus on snapshots in time. There are theories formulated in terms of statistical ensembles, boundary value problems, or, as discussed in this post, variational principles. But there is a sense in which all these also arise from initial value problems under certain conditions.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>I&amp;rsquo;ll sometimes refer to lines as (hyper)surfaces and circles as spheres. I&amp;rsquo;m demonstrating the mathematics in the simplest case with one spatial dimension, but the concepts generalize trivially to three-dimensional space.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>A fascinating &lt;a href="https://www.newyorker.com/magazine/2022/05/16/the-mysterious-disappearance-of-a-revolutionary-mathematician" target="_blank" rel="noopener">story on Grothendieck&amp;rsquo;s life&lt;/a> mentions his first encounter with this definition as a twelve year old boy at an internment camp in France.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>Timelike hyperbolas describe observers with uniform acceleration, called &lt;a href="https://en.wikipedia.org/wiki/Rindler_coordinates" target="_blank" rel="noopener">Rindler observers&lt;/a>, and play an important role in quantum field theory in curved spacetimes, among others.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>This statement in a slightly different form was first asserted by &lt;a href="https://en.wikipedia.org/wiki/Zenodorus_%28mathematician%29" target="_blank" rel="noopener">Zenodorus&lt;/a>, who stated that a circle has a greater area than any polygon with the same perimeter. You can find a lovely account of the evolution of the isoperimetric problem &lt;a href="https://maa.org/sites/default/files/pdf/upload_library/22/Ford/blasjo526.pdf" target="_blank" rel="noopener">here&lt;/a>.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>To understand how we compute volumes in relativity, read a bit about &lt;a href="https://en.wikipedia.org/wiki/Volume_form" target="_blank" rel="noopener">volume forms&lt;/a>.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>I&amp;rsquo;m not going through the general calculation here to avoid introducing lots of definitions, but the calculation itself is very short and can be found, for example, in the paper by &lt;a href="https://pubs.aip.org/aip/jmp/article-abstract/21/12/2789/444574/K-surfaces-in-the-Schwarzschild-space-time-and-the" target="_blank" rel="noopener">Brill, Cavallo, and Isenberg&lt;/a> from 1980.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:8">
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/John_Archibald_Wheeler" target="_blank" rel="noopener">John Wheeler&lt;/a> was a physicist who coined many terms that are now part of the standard vocabulary of theoretical physics. The most famous one is &amp;ldquo;black hole.&amp;rdquo; Other expressions initiated by Wheeler include wormhole, quantum foam, geon, it from bit, neutron moderator, and participatory anthropic principle.&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
