@@ -13,7 +13,7 @@ header:
   caption: "" #"Digital Infinity"
   image: "Banner_Infinity.jpg"
 ---
-Most of my publications are concerned with the hyperboloidal method, which is a technique to *follow light to infinity* using suitable coordinates for numerical computations. Originally motivated by gravitational waves, explorations of this technique led me to many other topics such as black hole perturbation theory, numerical methods, and PDE analysis.
+Most of my publications are concerned with the hyperboloidal method, which is a technique to *follow light to infinity* while maintaining a distinction of space and time. Originally motivated by gravitational waves, explorations of this technique led me to many other topics such as black hole perturbation theory, numerical methods, and PDE analysis.
 
 #### Highlights
 - Devised a practical method that solves the *outer boundary problem* and the *radiation extraction problem* in numerical calculations of wave equations [[1]](/publication/zenginoglu-2011-hyperboloidal/).
