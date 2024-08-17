@@ -30,7 +30,7 @@ categories:
 ---
 
 Inspired by the following tweet from the great [Quanta Magazine](https://www.quantamagazine.org/).
-{{< tweet QuantaMagazine 1478861128553971718 >}}
+{{< tweet user="QuantaMagazine" id="1478861128553971718" >}}
 
 ### Kusturica against Wallace
 The featured image on the tweet above shows [Escher](https://en.wikipedia.org/wiki/M._C._Escher)'s [Circle Limit III](https://en.wikipedia.org/wiki/Circle_Limit_III) depicting the Poincaré model of hyperbolic geometry. Escher was interested in constructing an infinitely repeating pattern in a finite figure. When the brilliant geometer [Coxeter](https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter) shared with him a reprint of one of his lectures on hyperbolic geometry, Escher figured out how to create such [tessalations](https://en.wikipedia.org/wiki/Tessellation). The [story](http://www.ams.org/publicoutreach/feature-column/fcarc-circle-limit) of how Escher managed to create these [four woodcuts](https://mathstat.slu.edu/escher/index.php/Circle_Limit_Exploration) is fascinating.

@@ -1,3 +1,5 @@
+github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.7 h1:QPek2BL723n+uM4DjyV97qNIoPsmt/vnKAQyaGJbgvQ=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.7/go.mod h1:xZiTEEurbEwj/NhZohozvlyLCGVCT2wARHDAJeqKG/c=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.8-0.20240513194541-c2e9a799f797 h1:4a7ZjpIpfy5m+gK+s7cfWjTI5zJMTO90+Sel5XbWuMw=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.8-0.20240513194541-c2e9a799f797/go.mod h1:xZiTEEurbEwj/NhZohozvlyLCGVCT2wARHDAJeqKG/c=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-core v0.3.1/go.mod h1:So8+V2U+TNxlXmcpZfdDX0muLh3PdJ7z92h30sv3bZg=
