@@ -3,7 +3,7 @@ title: "Defining quantum mechanics"
 subtitle: It's not about scale.
 summary: "Many sources define quantum mechanics as the physics of the very small. But this is wrong. Quantum mechanics directly applies to macroscopic systems including superconductors and superfluids. The boundary between classical and quantum behavior is not scale but external coupling. I propose a new definition that better captures the essence of the classical-quantum boundary."
 projects: []
-date: "2024-08-19T00:01:00Z"
+date: "2024-08-21T00:01:00Z"
 draft: false
 featured: true
 
@@ -27,7 +27,7 @@ We cannot define QM as the physics of the very small because there are macroscop
 
 There is no theoretical limit to the scale where quantum behavior applies. If there were, we wouldn't have a multi-billion dollar industry and a global quantum race trying to build the largest quantum computer.
 
-It is well-known that macroscopic quantum systems exist. There is even a Wikipedia page on [macroscopic quantum phenomena](https://en.wikipedia.org/wiki/Macroscopic_quantum_phenomena). The best-known examples are [superconductors](https://en.wikipedia.org/wiki/Superconductivity) and [superfluids](https://en.wikipedia.org/wiki/Superfluidity). 
+It's well-known that macroscopic quantum systems exist. There is even a Wikipedia page on [macroscopic quantum phenomena](https://en.wikipedia.org/wiki/Macroscopic_quantum_phenomena). The best-known examples are [superconductors](https://en.wikipedia.org/wiki/Superconductivity) and [superfluids](https://en.wikipedia.org/wiki/Superfluidity). 
 
 In a superconductor, pairs of electrons ([Cooper pairs](https://en.wikipedia.org/wiki/Cooper_pair)) occupy the same quantum state described by a single, coherent quantum wavefunction extending over macroscopic distances. Superconducting magnets in MRI machines or in particle accelerators are big (meters to kilometers) and heavy (tons). 
 
@@ -50,12 +50,12 @@ A definition that's not blatantly wrong is given in the "[Introduction to quantu
 
 Indeed, we can *roughly* think of QM as the study of physics on very small scales with the caveats given. But the caveats are confusing. We're invited to think of QM as the physics of the very small but learn that it also applies to macroscopic systems. Some quantities are discrete, hence the name quantum, but others are continuous. What is it then?
 
-It is more descriptive to define quantum mechanics through the behavior of quantum objects, such as superposition, entanglement, decoherence, and wave-particle duality[^wittgenstein]. Unfortunately, this definition smells of a tautology: quantum is what acts quantum. One would like to know when these quantum behaviors arise in contrast to the classical world we're used to. How should we relate our understanding of the classical world to the magical realm of quantumania?
+It's more descriptive to define quantum mechanics through the behavior of quantum objects, such as superposition, entanglement, decoherence, and wave-particle duality[^wittgenstein]. Unfortunately, this definition smells of a tautology: quantum is what acts quantum. One would like to know when these quantum behaviors arise in contrast to the classical world we're used to. How should we relate our understanding of the classical world to the magical realm of quantumania?
 
 ## A better definition
 
 
-A good definition should outline a rough boundary between classical and quantum behavior. Historically, we discovered quantum mechanics by studying the mechanics of small objects like atoms and light. We now know, however, that the relevant boundary is not scale. It's environmental coupling. 
+A good definition should outline a rough boundary between classical and quantum behavior. Historically, we discovered quantum mechanics by studying the mechanics of small things like atoms and photons. We now know, however, that the relevant boundary is not scale. It's environmental coupling. 
 
 *Quantum mechanics is the study of systems whose environmental coupling is relatively weak.*
 
