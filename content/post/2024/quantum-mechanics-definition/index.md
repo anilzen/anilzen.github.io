@@ -25,7 +25,7 @@ The problem with this definition is simple: it's wrong.
 
 We cannot define QM as the physics of the very small because there are macroscopic systems that show quantum behavior. When I was studying theoretical physics in Vienna, one of the hottest topics of discussion was Zeilinger's experiment demonstrating the [wave–particle duality of C$_{60}$ molecules](https://www.nature.com/articles/44348). Zeilinger, who received the 2022 Nobel Prize in Physics for his research on quantum entanglement, was pushing the limits of quantum behavior. A molecule of 60 carbon atoms is enormous compared to inhabitants of the subatomic scale, such as electrons and photons typically used to demonstrate interferometry. The lead author of the C$_{60}$-paper, Markus Arndt, pushed the limit further, demonstrating quantum interference for large organic molecules. In one [experiment](https://www.nature.com/articles/s41567-019-0663-9), they put molecules consisting of 2,000 atoms into quantum superposition. 
 
-There is no theoretical limit to the scale where quantum behavior applies. If there were, we wouldn't have a multi-billion dollar industry and a global quantum race trying to build the largest quantum computer.
+There is no theoretical limit to the scale where quantum behavior occurs. If there were, we wouldn't have a multi-billion dollar industry and a global quantum race trying to build the largest quantum computer.
 
 It's well-known that macroscopic quantum systems exist. There is even a Wikipedia page on [macroscopic quantum phenomena](https://en.wikipedia.org/wiki/Macroscopic_quantum_phenomena). The best-known examples are [superconductors](https://en.wikipedia.org/wiki/Superconductivity) and [superfluids](https://en.wikipedia.org/wiki/Superfluidity). 
 
