@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Anıl Zenginoğlu</title><link>https://anilzen.github.io/post/</link><atom:link href="https://anilzen.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Thu, 14 Dec 2023 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>Posts</title><link>https://anilzen.github.io/post/</link></image><item><title>How to solve wave equations on unbounded domains</title><link>https://anilzen.github.io/post/2023/waves-on-unbounded-domains/</link><pubDate>Thu, 14 Dec 2023 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2023/waves-on-unbounded-domains/</guid><description>&lt;p>This post is a practical guide to numerically solving wave equations on unbounded domains. Using standard numerical methods, I demonstrate a technique called &lt;em>hyperboloidal compactification&lt;/em> to solve unbounded-domain wave equations directly (no truncation, no artificial boundaries) by mapping the unbounded domain to a finite domain.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Anıl Zenginoğlu</title><link>https://anilzen.github.io/post/</link><atom:link href="https://anilzen.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Mon, 19 Aug 2024 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>Posts</title><link>https://anilzen.github.io/post/</link></image><item><title>Defining quantum mechanics</title><link>https://anilzen.github.io/post/2024/quantum-mechanics-definition/</link><pubDate>Mon, 19 Aug 2024 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2024/quantum-mechanics-definition/</guid><description>&lt;h2 id="the-problem-with-the-standard-definition">The problem with the standard definition&lt;/h2>
+&lt;p>Wikipedia &lt;a href="https://en.wikipedia.org/wiki/Quantum_mechanics" target="_blank" rel="noopener">defines&lt;/a> quantum mechanics (QM) as &amp;ldquo;a fundamental theory that describes the behavior of nature at and below the scale of atoms.&amp;rdquo; Britannica &lt;a href="https://www.britannica.com/science/quantum-mechanics-physics" target="_blank" rel="noopener">defines&lt;/a> it as the &amp;ldquo;science dealing with the behavior of matter and light on the atomic and subatomic scale.&amp;rdquo; Many other sources and textbooks define QM as the physics of the very small.&lt;/p>
+&lt;p>The problem with this definition is simple: it&amp;rsquo;s wrong.&lt;/p>
+&lt;h4 id="macroscopic-quantum-systems">Macroscopic quantum systems&lt;/h4>
+&lt;p>We cannot define QM as the physics of the very small because there are macroscopic systems that show quantum behavior. When I was studying theoretical physics in Vienna, one of the hottest topics of discussion was Zeilinger&amp;rsquo;s experiment demonstrating the &lt;a href="https://www.nature.com/articles/44348" target="_blank" rel="noopener">wave–particle duality of C$_{60}$ molecules&lt;/a>. Zeilinger, who received the 2022 Nobel Prize in Physics for his research on quantum entanglement, was pushing the limits of quantum behavior. A molecule of 60 carbon atoms is enormous compared to inhabitants of the subatomic scale, such as electrons and protons typically used to demonstrate interferometry. The lead author of the C$_{60}$-paper, Markus Arndt, pushed the limit further, demonstrating quantum interference for large organic molecules. In one &lt;a href="https://www.nature.com/articles/s41567-019-0663-9" target="_blank" rel="noopener">experiment&lt;/a>, they put molecules consisting of 2,000 atoms into quantum superposition.&lt;/p>
+&lt;p>There is no theoretical limit to the scale where quantum behavior applies. If there were, we wouldn&amp;rsquo;t have a multi-billion dollar industry and a global quantum race trying to build the largest quantum computer.&lt;/p>
+&lt;p>It is well-known that macroscopic quantum systems exist. There is even a Wikipedia page on &lt;a href="https://en.wikipedia.org/wiki/Macroscopic_quantum_phenomena" target="_blank" rel="noopener">macroscopic quantum phenomena&lt;/a>. The best-known examples are &lt;a href="https://en.wikipedia.org/wiki/Superconductivity" target="_blank" rel="noopener">superconductors&lt;/a> and &lt;a href="https://en.wikipedia.org/wiki/Superfluidity" target="_blank" rel="noopener">superfluids&lt;/a>.&lt;/p>
+&lt;p>In a superconductor, pairs of electrons (&lt;a href="https://en.wikipedia.org/wiki/Cooper_pair" target="_blank" rel="noopener">Cooper pairs&lt;/a>) occupy the same quantum state described by a single, coherent quantum wavefunction extending over macroscopic distances. Superconducting magnets in MRI machines or in particle accelerators are big (meters to kilometers) and heavy (tons).&lt;/p>
+&lt;p>In a superfluid, the particles share a single quantum wave function. Laboratory superfluids are relatively small but there are applications where several hundreds of superfluid helium are used.&lt;/p>
+&lt;p>The most obviously macroscopic quantum objects are astrophysical. Neutron stars weigh more than the Sun. The nucleons in a neutron star form Cooper pairs leading to superfluidity and superconductivity.&lt;/p>
+&lt;p>Most impressively, black holes exhibit quantum behavior. The Bekenstein-Hawking entropy, $S_{BH}$, of a black hole is given in units of Planck length, $l_P^2$,
+$$ S_{BH} = \frac{k_B A}{4 l_P^2}, $$
+where $k_B$ is the Boltzmann constant and $A$ is the surface area of the event horizon. Entropy is a measure of information in quantum information science. In this context, the black hole acts as a quantum storage device storing the information about the matter and energy that fell into it. Black holes saturate the theoretical storage limit of quantum information for a region of space.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Quantum information on a black hole" srcset="
+/post/2024/quantum-mechanics-definition/BH_hua6b5bf8898ed67a48f5d45ae56a2807f_46788_b0acad40e16b2bd8a04603a723b98f0a.webp 400w,
+/post/2024/quantum-mechanics-definition/BH_hua6b5bf8898ed67a48f5d45ae56a2807f_46788_d062de530418560352d48c2cf3b24b0f.webp 760w,
+/post/2024/quantum-mechanics-definition/BH_hua6b5bf8898ed67a48f5d45ae56a2807f_46788_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2024/quantum-mechanics-definition/BH_hua6b5bf8898ed67a48f5d45ae56a2807f_46788_b0acad40e16b2bd8a04603a723b98f0a.webp"
+width="760"
+height="503"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Black holes can be as large as our entire solar system with billions of solar masses. Clearly, the definition of quantum mechanics as the physics of the very small does not apply here.&lt;/p>
+&lt;h2 id="other-attempts-at-a-better-definition">Other attempts at a better definition&lt;/h2>
+&lt;p>A definition that&amp;rsquo;s not blatantly wrong is given in the &amp;ldquo;&lt;a href="https://scholar.harvard.edu/files/david-morin/files/waves_quantum.pdf" target="_blank" rel="noopener">Introduction to quantum mechanics&lt;/a>&amp;rdquo; by David Morin&lt;/p>
+&lt;blockquote>
+&lt;p>Quantum mechanics can be thought of roughly as the study of physics on very small length scales, although there are also certain macroscopic systems it directly applies to. The descriptor &amp;ldquo;quantum&amp;rdquo; arises because in contrast with classical mechanics, certain quantities take on only discrete values. However, some quantities still take on continuous values.&lt;/p>
+&lt;/blockquote>
+&lt;p>Indeed, we can &lt;em>roughly&lt;/em> think of QM as the study of physics on very small scales with the caveats given. But the caveats are confusing. We&amp;rsquo;re invited to think of QM as the physics of the very small but learn that it also applies to macroscopic systems. Some quantities are discrete, hence the name quantum, but others are continuous. What is it then?&lt;/p>
+&lt;p>It is more descriptive to define quantum mechanics through the behavior of quantum objects, such as superposition, entanglement, decoherence, and wave-particle duality&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Unfortunately, this definition smells of a tautology: quantum is what acts quantum. One would like to know when these quantum behaviors arise in contrast to the classical world we&amp;rsquo;re used to. How should we relate our understanding of the classical world to the magical realm of quantumania?&lt;/p>
+&lt;h2 id="a-better-definition">A better definition&lt;/h2>
+&lt;p>A good definition should outline a rough boundary between classical and quantum behavior. Historically, we discovered quantum mechanics by studying the mechanics of small objects like atoms and light. We now know, however, that the relevant boundary is not scale. It&amp;rsquo;s environmental coupling.&lt;/p>
+&lt;p>&lt;em>Quantum mechanics is the study of systems whose environmental coupling is relatively weak.&lt;/em>&lt;/p>
+&lt;p>This definition shifts the focus from scale to the system&amp;rsquo;s interaction with its environment. It&amp;rsquo;s a powerful conceptual shift that aligns with modern developments in quantum mechanics. By emphasizing environmental coupling, the definition addresses why certain systems show quantum behavior, regardless of size. One can make the definition more descriptive by including the quantum behaviors we talked about previously:&lt;/p>
+&lt;p>&lt;em>Quantum mechanics is the study of systems where quantum phenomena, such as superposition, entanglement, and wave-particle duality, are preserved due to relatively weak environmental coupling.&lt;/em>&lt;/p>
+&lt;p>Either way, emphasizing the environmental coupling in the definition instead of the scale is fundamental. Quantum behaviors such as superposition and entanglement arise when the systems are sufficiently isolated from the environment. Environmental coupling results in decoherence and the loss of the quantum state.&lt;/p>
+&lt;!-- Decoherence and measurement are essentially the same phenomenon of environmental coupling; the main difference is the intention. If the environmental coupling is intentional, it is called measurement; if it's unintentional, it is called decoherence. -->
+&lt;p>Placing environmental coupling at the center of the definition has many benefits. One of the main challenges of building a practical quantum computer is preventing the decoherence of quantum information. That&amp;rsquo;s why the photos of quantum computers mostly show a giant refrigerator that aims to shield the quantum chip from thermal noise. Reducing environmental coupling of strongly entangled quantum systems is a multi-billion dollar industry.&lt;/p>
+&lt;p>One approach to deal with environmental coupling is quantum error correction. The idea is to circumvent the no-cloning theorem by storing quantum information in many entangled qubits. When there is some coupling with the environment, the quantum information is preserved as long as the environmental coupling is relatively weak. We will need about a thousand qubits for every logical qubit of a quantum computer.&lt;/p>
+&lt;p>The definition also gives a first peek into the central relevance of concepts like the measurement problem, entanglement entropy, and density matrices by distinguishing the quantum system from its external environment.&lt;/p>
+&lt;p>The definition is not perfect&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>; no definition is. However, I believe it has explanatory power and allows students to understand quantum mechanics better.&lt;/p>
+&lt;script src="https://giscus.app/client.js"
+data-repo="anilzen/anilzen.github.io"
+data-repo-id="MDEwOlJlcG9zaXRvcnkzNzExMzY1Njk="
+data-category="General"
+data-category-id="DIC_kwDOFh8YOc4CTAsV"
+data-mapping="pathname"
+data-strict="0"
+data-reactions-enabled="1"
+data-emit-metadata="1"
+data-input-position="top"
+data-theme="dark"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
+&lt;/script>&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>This approach is reminischent of Wittgenstein&amp;rsquo;s famous statement that the meaning of a word is its use in the language.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Some subtleties, such as the quantum Zeno effect, remain here. I think the definition works even for this special example because the coupling in the case of the quantum Zeno effect is a projective measurement, which is arguably a relatively weak coupling preserving quantum information.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>How to solve wave equations on unbounded domains</title><link>https://anilzen.github.io/post/2023/waves-on-unbounded-domains/</link><pubDate>Thu, 14 Dec 2023 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2023/waves-on-unbounded-domains/</guid><description>&lt;p>This post is a practical guide to numerically solving wave equations on unbounded domains. Using standard numerical methods, I demonstrate a technique called &lt;em>hyperboloidal compactification&lt;/em> to solve unbounded-domain wave equations directly (no truncation, no artificial boundaries) by mapping the unbounded domain to a finite domain.&lt;/p>
 &lt;p>Code for the demonstrations uses public libraries and is available as a Google Colab notebook so that you can run everything from a browser.&lt;/p>
 &lt;a target="_blank" href="https://colab.research.google.com/drive/1w-cmd1UEWqQ6Bu1rHnfASp1ue7eCPLl4?usp=sharing">
 &lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
