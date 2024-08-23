@@ -35,9 +35,9 @@ In a superfluid, the particles share a single quantum wave function. Laboratory 
 
 The most obviously macroscopic quantum objects are astrophysical. Neutron stars weigh more than the Sun. The nucleons in a neutron star form Cooper pairs leading to superfluidity and superconductivity. 
 
-Most impressively, black holes exhibit quantum behavior. The Bekenstein-Hawking entropy, $S_{BH}$, of a black hole is given in units of Planck length, $l_P^2$,
-$$ S_{BH} = \frac{k_B A}{4 l_P^2}, $$
-where $k_B$ is the Boltzmann constant and $A$ is the surface area of the event horizon. Entropy is a measure of information in quantum information science. In this context, the black hole acts as a quantum storage device storing the information about the matter and energy that fell into it. Black holes saturate the theoretical storage limit of quantum information for a region of space.
+Most impressively, black holes exhibit quantum behavior. The Bekenstein-Hawking entropy, $S_{BH}$, of a black hole is given as the event horizon surface area, $A$, counted in units of Planck area, $\ell_P^2$,
+$$ S_{BH} = \frac{A}{\ell_P^2} \frac{k_B}{4}, \qquad \mathrm{where} \qquad \ell_P^2 = \frac{\hbar G}{c^3}.  $$
+Given that entropy measures information, this equation suggests that a black hole functions as a quantum device, storing the information about the matter and energy that have fallen into it. Black holes saturate the theoretical storage limit of quantum information for a region of space.
 
 ![Quantum information on a black hole](BH.webp)
 
