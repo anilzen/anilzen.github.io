@@ -44,7 +44,7 @@ But you probably didn't need that motivation if you're reading this.
 ## The mathematical model
 The simplest equation that describes a wave is aptly named the wave equation. We'll consider the case with one space dimension
 $$ \left(-\partial_t^2 + \partial_x^2\right) u(x,t) = 0. \tag{1} \label{1}$$
-The acceleration (or curvature in time), $\partial_t^2$, is balanced by the curvature in space, $\partial_x^2$. This delicate balance leads to solutions that propagate while maintaining their form. In one dimension, there are only two directions a wave can propagate, and we get the general solution
+The acceleration (or curvature in time), $\partial_t^2$, is bced by the curvature in space, $\partial_x^2$. This delicate balance leads to solutions that propagate while maintaining their form. In one dimension, there are only two directions a wave can propagate, and we get the general solution
 $$ u(x,t) = f_+(x-t) + f_-(x+t). $$
 The functions $f_\pm$ travel unchanged along the curves $x\pm t$. We call these curves *characteristics*. The characteristics extend infinitely in both directions. 
 
