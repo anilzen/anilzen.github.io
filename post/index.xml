@@ -80,7 +80,7 @@ async>
 &lt;h2 id="the-mathematical-model">The mathematical model&lt;/h2>
 &lt;p>The simplest equation that describes a wave is aptly named the wave equation. We&amp;rsquo;ll consider the case with one space dimension
 $$ \left(-\partial_t^2 + \partial_x^2\right) u(x,t) = 0. \tag{1} \label{1}$$
-The acceleration (or curvature in time), $\partial_t^2$, is balanced by the curvature in space, $\partial_x^2$. This delicate balance leads to solutions that propagate while maintaining their form. In one dimension, there are only two directions a wave can propagate, and we get the general solution
+The acceleration (or curvature in time), $\partial_t^2$, is bced by the curvature in space, $\partial_x^2$. This delicate balance leads to solutions that propagate while maintaining their form. In one dimension, there are only two directions a wave can propagate, and we get the general solution
 $$ u(x,t) = f_+(x-t) + f_-(x+t). $$
 The functions $f_\pm$ travel unchanged along the curves $x\pm t$. We call these curves &lt;em>characteristics&lt;/em>. The characteristics extend infinitely in both directions.&lt;/p>
 &lt;p>We solved \eqref{1} explicitly, but more interesting wave equations cannot be solved like this. They include higher dimensions, varying coefficients, potential terms, source functions, nonlinearities, etc. For those cases, we use numerical methods.&lt;/p>
@@ -607,14 +607,14 @@ where $\langle Q \rangle$ is the expectation value of a generalized heat flow ou
 &lt;h2 id="the-death-of-heat">The Death of Heat&lt;/h2>
 &lt;p>At the beginning of the post, I mentioned that the relationship between life and entropy is complicated. When it comes to the Universe, however, things are much simpler. The Universe is evolving towards &lt;a href="https://en.wikipedia.org/wiki/Heat_death_of_the_universe" target="_blank" rel="noopener">heat death&lt;/a>.&lt;/p>
 &lt;p>As the Universe continues to expand and matter becomes more dispersed, it will become increasingly difficult for matter to interact with other matter, and energy will become more evenly distributed. Eventually, all stars will have exhausted their fuel, and the Universe will be a cold, dark, lifeless place where nothing happens.&lt;/p>
-&lt;p>One of my favorite science-fiction short stories is Asimov&amp;rsquo;s &lt;a href="http://users.ece.cmu.edu/~gamvrosi/thelastq.html" target="_blank" rel="noopener">The Last Question&lt;/a>. It&amp;rsquo;s a story about the heat death of the Universe with the perfect punch line. The story begins with two technicians attending to a giant, self-adjusting, and self-correcting computer, called Multivac that found a way to fulfill the Earth&amp;rsquo;s energy needs by drawing energy from the Sun. The technicians argue that the Sun and all the stars in the Universe will eventually run out. They ask Multivac whether entropy can be reversed, to which Multivac replies, &amp;ldquo;INSUFFICIENT DATA FOR MEANINGFUL ANSWER.&amp;rdquo; The story follows the history of humanity across many eons, through interstellar travel and immortality. The last question remains and is asked repeatedly.&lt;/p>
-&lt;p>I won&amp;rsquo;t give away the punchline but it does fit into our observation that &lt;em>learning acts against entropy&lt;/em>. I posed last the question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.&lt;/p>
+&lt;p>One of my favorite science-fiction short stories is Asimov&amp;rsquo;s &lt;a href="http://users.ece.cmu.edu/~gamvrosi/thelastq.html" target="_blank" rel="noopener">The Last Question&lt;/a> from 1956. It&amp;rsquo;s a story about the heat death of the Universe with the perfect punch line. The story begins with two technicians attending to a giant, self-adjusting, and self-correcting computer, called Multivac that found a way to fulfill the Earth&amp;rsquo;s energy needs by drawing energy from the Sun. The technicians argue that the Sun and all the stars in the Universe will eventually run out. They ask Multivac whether entropy can be reversed, to which Multivac replies, &amp;ldquo;INSUFFICIENT DATA FOR MEANINGFUL ANSWER.&amp;rdquo; The story follows the history of humanity across many eons, through interstellar travel and immortality. The last question remains and is asked repeatedly.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./multivac.png" alt="Asking Multivac" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
+&lt;p>I won&amp;rsquo;t give away the punchline but it does fit into our observation that &lt;em>learning acts against entropy&lt;/em>. I posed the last question to ChatGPT, our version of the Multivac. Maybe somewhere among the weights and biases in the billions of its connections, ChatGPT is still thinking about it.&lt;/p>
 &lt;hr>
 &lt;h4 id="footnotes">Footnotes&lt;/h4>
 &lt;!-- As techniques from machine learning are applied to solve problems in physics, and vice versa, the connection between the two areas is likely to become even stronger in the future.
