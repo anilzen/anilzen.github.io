@@ -1,4 +1,243 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Anıl Zenginoğlu</title><link>https://anilzen.github.io/post/</link><atom:link href="https://anilzen.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Wed, 21 Aug 2024 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>Posts</title><link>https://anilzen.github.io/post/</link></image><item><title>Defining quantum mechanics</title><link>https://anilzen.github.io/post/2024/quantum-mechanics-definition/</link><pubDate>Wed, 21 Aug 2024 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2024/quantum-mechanics-definition/</guid><description>&lt;h2 id="the-problem-with-the-standard-definition">The problem with the standard definition&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Anıl Zenginoğlu</title><link>https://anilzen.github.io/post/</link><atom:link href="https://anilzen.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><copyright>Anıl Zenginoğlu</copyright><lastBuildDate>Sat, 07 Feb 2026 00:01:00 +0000</lastBuildDate><image><url>https://anilzen.github.io/media/sharing.jpg</url><title>Posts</title><link>https://anilzen.github.io/post/</link></image><item><title>Banging a black hole</title><link>https://anilzen.github.io/post/2026/black-hole-gravitational-waves/</link><pubDate>Sat, 07 Feb 2026 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2026/black-hole-gravitational-waves/</guid><description>&lt;p>Everything vibrates. Not only do atoms and general quantum systems have characteristic frequencies, but spacetime itself vibrates. Propagating vibrations of spacetime are called gravitational waves.&lt;/p>
+&lt;blockquote>
+&lt;p>You are a function of what the whole universe is doing in the same way that a wave is a function of what the whole ocean is doing.&lt;/p>
+&lt;p>Alan Watts&lt;/p>
+&lt;/blockquote>
+&lt;p>In a &lt;a href="../../2023/waves-on-unbounded-domains">previous post&lt;/a>, I gave a technical guide on how to solve wave equations on unbounded domains. The example was simple: the homogeneous, one-dimensional wave equation. While that&amp;rsquo;s a nice little toy problem, it&amp;rsquo;s too simple. The general solution can be written down explicitly; you don&amp;rsquo;t need numerics to solve it.&lt;/p>
+&lt;p>This post is about a more interesting problem: &lt;em>gravitational waves from black holes&lt;/em>. This sounds cool, and it is. I&amp;rsquo;ll show you that computing gravitational waves is not that different from computing simple waves&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. All you need is an additional potential term. If you want to try it out, and numerically generate your own gravitational waves, you can run the code in Colab.&lt;/p>
+&lt;a target="_blank" href="https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c">
+&lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+&lt;/a>
+&lt;p>We will compute gravitational waves propagating in the spacetime of a black hole by solving the &lt;a href="https://en.wikipedia.org/wiki/Regge%E2%80%93Wheeler%E2%80%93Zerilli_equations" target="_blank" rel="noopener">Regge-Wheeler-Zerilli equation&lt;/a> \eqref{1}.&lt;/p>
+&lt;h2 id="black-hole">Black hole&lt;/h2>
+&lt;p>First, a little pedantry. In general relativity, a black hole is actually not a &amp;ldquo;thing.&amp;rdquo; You may hear that it&amp;rsquo;s a collapsed, dense star. This is how it forms but it&amp;rsquo;s not the right way to think about it in classical relativity. As far as we are concerned, the black hole is a &lt;em>boundary&lt;/em> of our domain&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>. When I write about gravitational waves from a black hole, I don&amp;rsquo;t mean that the black hole is waving. What&amp;rsquo;s waving is the spacetime &lt;em>around&lt;/em> the black hole. Avoid thinking of the black hole as &amp;ldquo;an object in space.&amp;rdquo; Instead, think of it as a &lt;em>boundary&lt;/em> of your domain.&lt;/p>
+&lt;p>A black hole is rigorously defined as the region of spacetime from which no signal can escape to the outside universe where we are. The “surface” of a black hole, called the event horizon, marks the boundary of that region. The black hole’s interior is no longer in causal contact with the external universe. It is literally not part of the manifold in which external physics takes place&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>A black hole is not a hole in the usual sense&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>, and it&amp;rsquo;s not even black&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Rockbiter:&lt;/strong> Near my home, there used to be a beautiful lake. But then… then it… it was gone.&lt;br>
+&lt;strong>Teeny Weeny:&lt;/strong> Did the lake dry up?&lt;br>
+&lt;strong>Rockbiter:&lt;/strong> No. It just wasn’t there anymore. Nothing was there anymore. Not even a dried up lake.&lt;br>
+&lt;strong>Teeny Weeny:&lt;/strong> A hole?&lt;br>
+&lt;strong>Rockbiter:&lt;/strong> A hole would be something. No, it was… nothing.&lt;/p>
+&lt;p>— &lt;em>&lt;a href="https://youtu.be/QQyorpxZ8rs?si=Cn7omN6UV6oQuPGf&amp;amp;t=109" target="_blank" rel="noopener">The NeverEnding Story&lt;/a>&lt;/em> (1984)&lt;/p>
+&lt;/blockquote>
+&lt;p>The simplest black hole solution to Einstein&amp;rsquo;s equations was discovered, amidst heavy &lt;a href="https://www.smithsonianmag.com/blogs/smithsonian-books/2025/03/13/the-man-who-helped-predict-black-holes-both-real-and-hypothetical/" target="_blank" rel="noopener">artillery fire&lt;/a> and freezing conditions, a few months after Einstein published his equations for gravity. The &lt;a href="https://en.wikipedia.org/wiki/Schwarzschild_metric" target="_blank" rel="noopener">Schwarzschild solution&lt;/a> (in Droste coordinates) is given by the metric
+$$ ds^2 = - f(r) dt^2 + \frac{1}{f(r)} dr^2 + r^2 d\sigma^2, $$
+where $d\sigma^2 = d\theta^2 + \sin^2\theta \ d\phi^2$ is the metric on the unit sphere and
+$$ f(r) = 1-\frac{2M}{r}, $$
+with $M$ the mass of the black hole in natural units ($G=c=1$). Note how the function $f(r)$ vanishes at $r=2M$ leading to an apparently singular metric. This is the magic sphere (in Eddington&amp;rsquo;s words) that caused a lot of confusion in the early days of relativity. We now know that this singularity is an artefact of a bad choice of time. Our regular idea of time relies on the possibility of two-way synchronization. Such a construction is not possible at the event horizon because signals sent for synchronization inevitably vanish. We&amp;rsquo;ll fix this later; let&amp;rsquo;s first tickle this monster and see how it laughs.&lt;/p>
+&lt;h2 id="banging">Banging&lt;/h2>
+&lt;p>We now perturb this spacetime&lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup> by adding a small scalar, electromagnetic, or gravitational field. Scalar fields are simplest to demonstrate the basic features of wave propagation in black hole spacetimes. Below is a simulation that I made a few years ago that shows what happens to such a scalar field when you bang the spacetime at a point some distance away from the black hole horizon&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Pe8sRjqtldQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+>&lt;/iframe>
+&lt;/div>
+&lt;br>&lt;/p>
+&lt;p>We won&amp;rsquo;t perform a three-dimensional simulation, yet. To simplify the coding, we take advantage of the spherical symmetry of the black hole and decompose the scalar perturbation in &lt;a href="https://en.wikipedia.org/wiki/Spherical_harmonics" target="_blank" rel="noopener">spherical harmonics&lt;/a>:
+$$ U(t, r,\theta,\phi)=\sum_{\ell=0}^{\infty} \sum_{m=-\ell}^{\ell} u_{\ell m}(t,r) Y_{\ell m}(\theta,\phi). $$
+Each mode, $u_{\ell m}$, satisfies a one-dimensional equation that looks like this:
+$$ \left(\partial_t^2 - \partial_{r_\ast}^2 + V_\ell(r_\ast) \right) u_{\ell m}(t, r_\ast) = S_{\ell m}(t,r_\ast). \tag{1}\label{1}$$
+The coordinate $r_\ast$ is called the &lt;em>tortoise coordinate&lt;/em> and is defined by
+$$ dr_\ast = \frac{dr}{f}, \quad \text{or} \quad \partial_{r_\ast} = f \partial_r.$$
+Its domain is unbounded in both directions with $r_\ast\in(-\infty,\infty)$. A significant portion of research in black-hole perturbation theory consists in solving an equation of the type \eqref{1} for various potentials $V_\ell$ and sources $S_{\ell m}$. We&amp;rsquo;ll assume no sources for this post and omit the mode-dependence in the notation. In general, you can think of the perturbations sourced by particles representing, say, a stellar black hole orbiting in the spacetime of a galactic, supermassive black hole (&lt;a href="https://en.wikipedia.org/wiki/Extreme_mass_ratio_inspiral" target="_blank" rel="noopener">extreme-mass-ratio inspiral&lt;/a>). Yes, you can indeed model crazy things with a simple equation like that.&lt;/p>
+&lt;p>You can simply discretize and solve the equation \eqref{1} as it stands but where&amp;rsquo;s the fun in that&lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>. Let&amp;rsquo;s solve it on the full black-hole spacetime using hyperboloidal compactification. The general structure of the equation \eqref{1} is the same as the one-dimensional wave equation discussed &lt;a href="../../2023/waves-on-unbounded-domains/">previously&lt;/a>. The main difference is the potential term that can represent different types of perturbations. In this post, we want to calculate gravitational waves, so we use the &lt;em>gravitational&lt;/em> potential&lt;sup id="fnref:9">&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref">9&lt;/a>&lt;/sup> given as a function of the areal coordinate $r$ as:
+$$ V_{\ell}(r) = \frac{f(r)}{r^2} \left( \ell(\ell+1) - \frac{6M}{r} \right), \tag{2} \label{2} $$
+where $\ell$ is the angular momentum number in the spherical harmonic decomposition. Note that the potential is given by the areal coordinate $r$ but the wave equation is written in the tortoise coordinate $r_\ast$. We&amp;rsquo;ll fix this problem in a little bit. Let&amp;rsquo;s first handle the unbounded domain in the tortoise coordinate $r_\ast$.&lt;/p>
+&lt;h3 id="hyperboloidal-compactification">Hyperboloidal compactification&lt;/h3>
+&lt;p>To solve \eqref{1} on the infinite spacetime, we apply hyperboloidal compactification described in the &lt;a href="../../2023/waves-on-unbounded-domains">previous post&lt;/a>. The spatial compactification and the time transformation are
+$$ \rho = \rho(r_\ast), \qquad \tau = t + h(r_\ast), $$
+We define
+$$ H_\ast(\rho):= \frac{dh}{dr_\ast}, \qquad G_\ast(\rho):= \frac{d\rho}{dr_\ast} = \left(\frac{d r_\ast}{d\rho}\right)^{-1}. $$
+We write the wave equation \eqref{1} in symmetric hyperbolic form by defining auxiliary variables as before
+$$ \psi := \partial_\rho u, \qquad \pi := \frac{1-H_\ast^2}{G_\ast} \partial_\tau u - H_\ast \partial_\rho u. $$
+The coupled part of the wave equation \eqref{1} is
+$$
+\begin{aligned}
+\partial_\tau u
+&amp;amp;= \frac{G_\ast}{1-H_\ast^2}\bigl(H_\ast \psi + \pi\bigr),\\[6pt]
+\partial_\tau \psi
+&amp;amp;= \partial_\rho \left[\frac{G_\ast}{1-H_\ast^2}\bigl(H_\ast\psi + \pi\bigr)\right],\\[6pt]
+\partial_\tau \pi
+&amp;amp;= \partial_\rho \left[\frac{G_\ast}{1-H_\ast^2}\bigl(\psi + H_\ast \pi\bigr)\right]
+{\color{red}+ \frac{V_\ell}{G_\ast} u}.
+\end{aligned}
+\tag{3}\label{3}
+$$
+The only difference to the flat wave equation is the potential term in red. Since this is the main difference to the flat wave equation that allows us to compute gravitational waves from a black hole, let&amp;rsquo;s spend some time on it.&lt;/p>
+&lt;h3 id="the-gravitational-potential">The gravitational potential&lt;/h3>
+&lt;p>The relevant term of the potential in \eqref{2} for the boundaries is $\frac{f}{r^2}$. The potential vanishes linearly at the event horizon and quadratically towards infinity. But by transforming to the tortoise coordinate we modify this behavior near the horizon because the tortoise coordinate approaches exponentially as $r\to 2M$. Therefore, the potential \eqref{2}, or equivalently the term $\frac{f}{r^2}$, falls off exponentially toward the black-hole horizon and quadratically towards infinity in $r_\ast$. Below are two plots of the potential for $\ell=2$ and $M=\frac{1}{2}$, in $r$ and in $r_\ast$. The semilog plot in $r_\ast$ clearly shows the exponential decay on the left (near the horizon) and a quadratic decay on the right (toward infinity). The red dashed line marks the peak of the potential right outside the &lt;a href="https://en.wikipedia.org/wiki/Photon_sphere" target="_blank" rel="noopener">photon sphere&lt;/a> around $r_p \approx 3.3 M$.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Gravitational potential in semilog scale" srcset="
+/post/2026/black-hole-gravitational-waves/potential_hud426760a1981b690f533c998a7e61933_104189_1b861f7c64738ec8b3142826097deded.webp 400w,
+/post/2026/black-hole-gravitational-waves/potential_hud426760a1981b690f533c998a7e61933_104189_f2c36f0991e1ad7643c440f3ca95db7c.webp 760w,
+/post/2026/black-hole-gravitational-waves/potential_hud426760a1981b690f533c998a7e61933_104189_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/potential_hud426760a1981b690f533c998a7e61933_104189_1b861f7c64738ec8b3142826097deded.webp"
+width="760"
+height="380"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+One of the reasons people like the tortoise coordinate, aside from the resulting familiarity of the equation \eqref{1}, is that it naturally provides increased resolution in the strong field region near the horizon. You can see this clearly in the right plot where the domain $r_\ast&amp;lt;0$ has no sharp gradients. Let&amp;rsquo;s think about this a bit in our setup.&lt;/p>
+&lt;p>In the compactified equation \eqref{3}, the gravitational potential is divided by the Jacobian $G_\ast$, which measures how the compactifying coordinate $\rho$ varies with the tortoise coordinate $r_\ast$. Since the infinite interval $r_\ast\in(-\infty, \infty)$ is mapped to a finite interval in $\rho$, we need $G_\ast\to 0$ at both ends. We must be careful that $G_\ast$ does not vanish faster than the potential for the ratio to be regular. Because the potential decays only quadratically towards infinity, we cannot use the exponential compactification from the &lt;a href="../../2023/waves-on-unbounded-domains">previous post&lt;/a>. In the exponential compactification, $G_\ast$ vanishes faster than $r^2$ grows and the potential term blows up. With $r_\ast = \mathrm{arctanh}(\rho)$ and $G_\ast=1-\rho^2$, and considering that asymptotically $r\sim r_\ast$, we get
+$$ G_\ast\ r^2 \sim (1-\rho^2) \ \mathrm{arctanh}^2\rho \to 0 \quad \text{as} \quad \rho\to 1. $$
+The vanishing of $G_\ast r^2$ at infinity spoils regularity. Instead, we need an algebraic compactification. For example, something like $r_\ast = \tan\rho$ and $G_\ast=\cos^2\rho$, gives
+$$ G_\ast\ r^2 \sim \cos^2\rho \ \tan^2\rho = \sin^2\rho = 1 \quad \text{as} \quad \rho\to \frac{\pi}{2}. $$&lt;/p>
+&lt;p>There&amp;rsquo;s a geometric reason for this restriction in compactification. As $r\to\infty$ the surface area of spheres grow quadratically. Therefore, only an algebraic compactification leads to a regular equation. When we use a compactification that&amp;rsquo;s too fast, the potential blows up. When the compactification behaves algebraically, such as a trigonometric function, the limit is regular.&lt;/p>
+&lt;p>Having figured this out, why do we use $r_\ast$ in the first place? I mentioned that it gives us additional resolution near the horizon, but we&amp;rsquo;re compactifying. We can adjust it to get the resolution we need without going through the tortoise coordinate. Let&amp;rsquo;s get rid of it and compute the potential explicitly in terms of a simpler transformation $r(\rho)$. We just need to be careful about the Jacobian:
+$$ G_\ast = \frac{d\rho}{dr_\ast} = \frac{dr}{dr_\ast} \frac{d\rho}{dr} =: f G, $$
+where we introduced $G:=d\rho/dr$. If we now consider $H_\ast$ also as a function of $r$ and transform directly to $\rho$, we can fully avoid the tortoise coordinate.&lt;/p>
+&lt;p>There are clearly many choices for the compactification. A simple one that I like is this:
+$$ \frac{r}{2M} = \frac{\rho}{1-\rho} \quad \implies \quad G = \frac{(1-\rho)^2}{2M}. $$
+This maps the domain $r\in(2M,\infty)$ to $\rho\in(1/2,1)$. We can numerically include the boundary points because they are regular after the time transformation. The potential term becomes
+$$ \frac{V_\ell}{G_\ast} = \frac{V_\ell}{f G} = \frac{\ell(\ell+1)\rho - 3(1-\rho)}{2M \rho^3}. $$
+And the plot for $\ell=2, M=1$ is below.
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Rescaled gravitational potential" srcset="
+/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_f9a75d00d47fb81b7463cf3091eb0555.webp 400w,
+/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_97a155c2a008c4f6ca945a1ea3a04ade.webp 760w,
+/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_f9a75d00d47fb81b7463cf3091eb0555.webp"
+width="760"
+height="507"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+This is &lt;em>beautiful!&lt;/em> Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. As a consequence, the peak of the &lt;em>rescaled&lt;/em> potential is at the horizon, and it monotonically decreases from the strong field region towards infinity. We&amp;rsquo;ll have no problem solving equations with such a simple term.&lt;/p>
+&lt;h3 id="time-transformation">Time transformation&lt;/h3>
+&lt;p>The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the &lt;a href="https://hyperboloid.al/post/minimal-gauge/" target="_blank" rel="noopener">minimal gauge&lt;/a>. The boost function $H_\ast$ has the remarkably simple form
+$$ H_\ast = -1 + \frac{8M^2}{r^2}. $$
+For a bit of an intuition, observe that $H_\ast\to -1$ as $r\to\infty$ and $H_\ast\to+1$ as $r\to 2M$. So the transformed coordinate $\tau$ behaves as $u=t-r_\ast$ towards infinity and as $v=t+r_\ast$ towards the horizon. The term that ensures the regularity of the compactified equation reads:
+$$ \frac{fG}{1-H_\ast^2} = \frac{\rho^3}{8M}.$$&lt;/p>
+&lt;h3 id="the-numerical-solution">The numerical solution&lt;/h3>
+&lt;p>Let&amp;rsquo;s wrap up. The choices for the compactification and time transformation above give us the following system
+\begin{equation}
+\begin{aligned}
+\partial_\tau u
+&amp;amp;= \frac{\rho^{3}}{8M}\bigl(H_\ast\psi + \pi\bigr),\\[4pt]
+\partial_\tau \psi
+&amp;amp;= \partial_\rho\left[\frac{\rho^{3}}{8M}\bigl(H_\ast\psi + \pi\bigr)\right],\\[4pt]
+\partial_\tau \pi
+&amp;amp;= \partial_\rho\left[\frac{\rho^{3}}{8M}\bigl(\psi + H_\ast\pi\bigr)\right]
++\frac{\ell(\ell+1)\rho - 3(1-\rho)}{2M\rho^{3}}u,
+\end{aligned}
+\end{equation}
+with
+\begin{equation}
+H_\ast
+= -1+\frac{8M^2}{r(\rho)^2}
+= -1 + \frac{2}{\rho^2}(1-\rho)^2
+\end{equation}
+The system doesn&amp;rsquo;t need any boundary data by construction. We simply apply one-sided stencils at the boundaries as before. All we need now is to prescribe some initial data (typically a localized Gaussian) and run the &lt;a href="https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c" target="_blank" rel="noopener">solver&lt;/a>. The simulation in Colab takes about 30 seconds for $1000M$. I also included a different gauge condition based on constant mean curvature foliations (CMC) that&amp;rsquo;s almost 4 times faster&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>. For this case, the boost function is only slightly more complicated
+$$
+H^{CMC}_\ast = - \frac{J}{\sqrt{J^2+f r^4}}, \quad J = \frac{K r^3}{3}-C,
+$$
+with parameters $K$ and $C$.&lt;/p>
+&lt;p>Either case, you get a gravitational wave signal that looks like this at infinity:
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Time domain behavior of gravitational perturbations" srcset="
+/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1efdd7dafe8f0f2fdfb359a4407f1c02.webp 400w,
+/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_67968320134623ccd232e1a63a3fa407.webp 760w,
+/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1efdd7dafe8f0f2fdfb359a4407f1c02.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Why infinity? Infinity is the correct model for the wave signal because we observe gravitational waves from black holes that are hundreds of millions of light years away. That&amp;rsquo;s far. Very far. Mathematically, we model such distances by infinity, which we have wisely mapped to the outer boundary of our numerical domain. We&amp;rsquo;ve done it for technical reasons (to avoid numerical reflections, artificial truncation, to improve efficiency, etc.) but there are physical reasons why we&amp;rsquo;re interested in the data at infinity.&lt;/p>
+&lt;p>What you see in the signal above is a typical time evolution of a black-hole perturbation divided into three distinct phases: prompt response, exponential ringdown, and polynomial tail. This behavior has been studied for over half a century by now, yet we keep discovering new phenomena in the black-hole&amp;rsquo;s response to perturbations.&lt;/p>
+&lt;p>The prompt response is a transient phase triggered by the specifics of the perturbation. We used to discard this part because it depends on the initial data, but in the last 5 years or so there has been more attention to this piece in order to get a handle of the complete picture (see, for example, &lt;a href="https://arxiv.org/abs/2601.11706" target="_blank" rel="noopener">2601.11706&lt;/a>).&lt;/p>
+&lt;p>The ringdown is when the spacetime oscillates at a frequency that only depends on intrinsic properties of the black hole&amp;mdash;in our case the mass. These characteristic modes are called quasinormal modes (QNMs). Intuitively, the energy from the perturbation absorbed by the black hole and escapes to infinity. Some of the energy that goes toward the black hole gets trapped by the photon sphere. This part becomes exponentially weaker with each cycle (see the above YouTube video) which we measure as QNM ringing. The &lt;a href="https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2024.1497601/full" target="_blank" rel="noopener">hyperboloidal approach to QNMs&lt;/a> has uncovered phenomena such as the &lt;a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031003" target="_blank" rel="noopener">pseudospectral instability&lt;/a> that are active areas of research.&lt;/p>
+&lt;p>The part that escapes to infinity scatters off of the background curvature on its way and that scattered piece decays polynomially. It&amp;rsquo;s very weak, so it becomes only visible after the exponential ringdown becomes smaller than the polynomially decaying part. This part is also being studied currently, specifically the &lt;a href="https://journals.aps.org/prl/abstract/10.1103/2brx-xnyr" target="_blank" rel="noopener">nonlinear tails&lt;/a>. The plot on the right below shows the decay rates for observers at different distances from the black hole. For the $\ell=2$ perturbation, the infinity signal decays as $t^{-4}$ whereas the finite distance signal decays as $t^{-7}$.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Tail decay rates" srcset="
+/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_a327f61a2dc5702a9e3e1b1285a3fb69.webp 400w,
+/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_a0c0a194c4ba6e239a5f239a8ecf6315.webp 760w,
+/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_a327f61a2dc5702a9e3e1b1285a3fb69.webp"
+width="760"
+height="380"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="fading-out">Fading out&lt;/h2>
+&lt;p>We just banged on a spacetime with a black hole and now you can &lt;a href="https://www.quantamagazine.org/physicists-create-a-wormhole-using-a-quantum-computer-20221130/" target="_blank" rel="noopener">create your own&lt;/a> gravitational waves using a digital computer. Happy waving 👋&lt;/p>
+&lt;br>
+&lt;!-- To evaluate the potential, we need to understand the tortoise coordinate and compute $r(r_\ast)$.
+### The tortoise coordinate
+The tortoise coordinate is useful because it simplifies the expression describing how disturbances propagate. The Schwarzschild metric in the tortoise coordinate becomes
+$$ ds^2 = - f(r_\ast) \left(dt^2 + dr_\ast^2\right) + r^2 d\sigma^2, $$
+Note that this is independent of the form of $f(r)$. Tortoise coordinates are useful for practically all spherically symmetric spacetimes, including those that describe metrics for alternative theories. Perturbations propagate as functions of $t \pm r_\ast$ which is why equation \eqref{1} looks so familiar in this coordinate[^chars].
+In the Schwarzschild case, we can write down the tortoise coordinate explicitly in terms of the areal coordinate[^constant]
+$$ r_\ast = \int \frac{dr}{f(r)} = \int \left(1+ \frac{2M}{r-2M}\right) dr = r + 2M \log\left|\frac{r}{2M}-1\right|. $$
+The exterior domain of the Schwarzschild black hole, $r\in(2M,\infty)$, is mapped to $r_\ast\in(-\infty,\infty)$. We're in luck because we already know how to deal with such unbounded domains. Though, we'll see that the three dimensional space of an asymptotically flat spacetime wants a slightly different compactification than what we used before.
+We need the inverse relationship that connects the areal coordinate $r$ to the tortoise coordinate $r_\ast$ because the potential $V_\ell(r)$ is given in terms of $r$ but our grid is given in $r_\ast$. Let's restrict ourselves to the exterior domain with $r>2M$ for simplicity. First we get rid of the logarithm by exponentiation
+$$ e^{\frac{r_\ast}{2M}} = e^{\frac{r}{2M}} \left(\frac{r}{2M}-1\right). $$
+We can solve this using the [Lambert W function](https://en.wikipedia.org/wiki/Lambert_W_function) which solves the equation $x = e^y y$ as $y(x) = W(x)$. By comparing with the equation above, we set $y=\frac{r}{2M}-1$ and $x=e^{\frac{r_\ast}{2M}-1}$. We conclude that the inverse relationship is[^branches]
+$$ \frac{r}{2M} = 1 + W\left(e^{\frac{r_\ast}{2M}-1}\right). $$
+The Lambert W function is implemented in the scipy package, so we define the inverse relationship in Python as follows:
+```python
+from scipy.special import lambertw
+def r_ast_to_r(r_ast):
+return 2*M*(1+lambertw(np.exp(r_ast/(2*M)-1)).real)
+```
+When the input becomes very large, which happens because we compactify space, this function becomes inaccurate. There's a trick to deal with this problem. Instead of first taking the exponential and then taking the Lambert W, we use the asymptotic expansion.
+$$ W(x) \sim \ln x - \ln \ln x + \dots \quad \text{as} \quad x\to\infty. $$
+For large values of $r_\ast$, we write the inverse relationship as
+$$ \frac{r}{2M} \sim \frac{r_\ast}{2M} - \ln \left(\frac{r_\ast}{2M}-1\right) + \dots. $$
+We can add more terms into the expansion to make it more accurate. For now, the take away is that we can compute $r$ from $r_\ast$ and they approach each other asymptotically as $r_\ast\to\infty$. -->
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Strictly speaking this is only true for linear perturbations. The full problem requires solving the Einstein equations, which is much harder, both technically and conceptually. In the full problem, there&amp;rsquo;s no background on which waves propagate and the spacetime itself is dynamical. In this post, we&amp;rsquo;re considering a simpler model for gravitational waves that is nevertheless still a topic of active research.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>The technical term is domain of outer communications.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>For the technically oriented, here&amp;rsquo;s the definition. In an asymptotically flat spacetime with a future null infinity, $\mathscr{I}^{+}$, the black hole region, $\mathcal{B}$, is the complement of the causal past of future null infinity, $\mathcal{B}:=\mathcal{M}\setminus J^{-}(\mathscr{I}^+)$. Contrast this with the domain of outer communications, $\mathcal{D}:= J^{-}(\mathscr{I}^+) \cap J^{+}(\mathscr{I}^-)$. This is the region that can influence the future and be influenced by the past. If you don&amp;rsquo;t jump into a black hole, you will spend your entire life in a small subset of the domain of outer communications.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>You can cross the event horizon without even realizing it.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>Due to Hawking radiation.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>Again, we are not &amp;ldquo;perturbing the black hole&amp;rdquo; because there is nothing to perturb where the black hole is. We are perturbing the black-hole spacetime and asking how these spacetime perturbations propagate given that there&amp;rsquo;s a boundary in the spacetime waiting to swallow some of this perturbation.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>Such local perturbations approximate a delta function, so what you&amp;rsquo;re seeing in the video is the &lt;a href="https://en.wikipedia.org/wiki/Green%27s_function" target="_blank" rel="noopener">Green function&lt;/a> of the wave equation in a black hole spacetime. Chad Galley and I wrote a &lt;a href="https://arxiv.org/abs/1206.1109" target="_blank" rel="noopener">paper&lt;/a> on this Green function where we studied caustics that you can also see in your coffee mug.
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Caustic in a coffee mug" srcset="
+/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_44a5bd30e72077c1134bef9d85358401.webp 400w,
+/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_512fd2ba792e820805d6c0b9b695b298.webp 760w,
+/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_44a5bd30e72077c1134bef9d85358401.webp"
+width="760"
+height="505"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:8">
+&lt;p>Aside from fun, there are technical reasons why truncation is bad. First of all, truncation implies that you don&amp;rsquo;t have access to the solution &lt;em>at&lt;/em> the horizon or &lt;em>at&lt;/em> the observer. The horizon and observer signals must be extrapolated from the truncated solution, which can get messy. In addition, truncated boundaries typically cause artificial reflections. And somewhat surprisingly, solving the problem on the infinite hyperboloidal domain is &lt;em>much faster&lt;/em> than solving it on a large truncated domain and waiting for the signal to propagate.&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:9">
+&lt;p>There are different potentials for different types of perturbations (scalar, electromagnetic, even, odd). These types of equations are called &lt;a href="https://en.wikipedia.org/wiki/Regge%e2%80%93Wheeler%e2%80%93Zerilli_equations" target="_blank" rel="noopener">Regge-Wheeler-Zerilli&lt;/a> and they have a long history in relativity. Once you know how to solve this example, you&amp;rsquo;ll have a powerful tool to study other interesting perturbative problems with minor modifications. The one we discuss in \eqref{2} describes axial perturbations and is the simplest gravitational potential.&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:10">
+&lt;p>I performed the &lt;a href="https://arxiv.org/abs/0911.2450" target="_blank" rel="noopener">first hyperboloidal evolution of RWZ equations&lt;/a> using a CMC foliation in 2009. These coordinates go back to the 1980s, first studied in detail by &lt;a href="https://pubs.aip.org/aip/jmp/article-abstract/21/12/2789/444574/K-surfaces-in-the-Schwarzschild-space-time-and-the" target="_blank" rel="noopener">Brill, Cavallo, and Isenberg&lt;/a>. It&amp;rsquo;s remarkable that it took three decades for these coordinates to be applied properly to study black-hole perturbations.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Defining quantum mechanics</title><link>https://anilzen.github.io/post/2024/quantum-mechanics-definition/</link><pubDate>Wed, 21 Aug 2024 00:01:00 +0000</pubDate><guid>https://anilzen.github.io/post/2024/quantum-mechanics-definition/</guid><description>&lt;h2 id="the-problem-with-the-standard-definition">The problem with the standard definition&lt;/h2>
 &lt;p>Wikipedia &lt;a href="https://en.wikipedia.org/wiki/Quantum_mechanics" target="_blank" rel="noopener">defines&lt;/a> quantum mechanics (QM) as &amp;ldquo;a fundamental theory that describes the behavior of nature at and below the scale of atoms.&amp;rdquo; Britannica &lt;a href="https://www.britannica.com/science/quantum-mechanics-physics" target="_blank" rel="noopener">defines&lt;/a> it as the &amp;ldquo;science dealing with the behavior of matter and light on the atomic and subatomic scale.&amp;rdquo; Many other sources and textbooks define QM as the physics of the very small.&lt;/p>
 &lt;p>The problem with this definition is simple: it&amp;rsquo;s wrong.&lt;/p>
 &lt;h4 id="macroscopic-quantum-systems">Macroscopic quantum systems&lt;/h4>
@@ -170,7 +409,7 @@ $$ H:= \frac{dh}{dx}, \qquad G:= \frac{dg}{dx}. $$
 As a compactification, $G$ vanishes at the boundaries. The wave equation becomes after a division by $G$
 $$ \left(-\frac{1-H^2}{G} \partial_\tau^2 + 2 H \partial_\tau \partial_\rho + G \partial_\rho^2 + H&amp;rsquo; \partial_\tau + G&amp;rsquo;\partial_\rho \right) u(\rho,\tau) = 0. $$
 For this equation to be regular, we require $1-H^2 \sim G$ at the boundaries, which means $|H|\sim 1$ at the leading order. We also want $|H|&amp;lt;1$ away from the boundaries to keep the principal part intact&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>. This is the hyperboloidal compactification.&lt;/p>
-&lt;p>To solve the hyperboloidal wave equation \eqref{2}, it&amp;rsquo;s best to write it in symmetric hyperbolic form. We define the auxiliary variables
+&lt;p>To solve the hyperboloidal wave equation \eqref{2}, we can write it in symmetric hyperbolic form. We define the auxiliary variables
 $$ \psi := \partial_\rho u, \qquad \pi := \frac{1-H^2}{G} \partial_\tau u - H \partial_\rho u. $$
 The full system reads
 $$\partial_\tau \pi = \partial_\rho \left[\frac{G}{1-H^2} ( \psi + H \pi ) \right], $$

@@ -100,7 +100,7 @@ $$ H:= \frac{dh}{dx}, \qquad G:= \frac{dg}{dx}. $$
 As a compactification, $G$ vanishes at the boundaries. The wave equation becomes after a division by $G$
 $$ \left(-\frac{1-H^2}{G} \partial_\tau^2 + 2 H \partial_\tau \partial_\rho + G \partial_\rho^2 + H&amp;rsquo; \partial_\tau + G&amp;rsquo;\partial_\rho \right) u(\rho,\tau) = 0. $$
 For this equation to be regular, we require $1-H^2 \sim G$ at the boundaries, which means $|H|\sim 1$ at the leading order. We also want $|H|&amp;lt;1$ away from the boundaries to keep the principal part intact&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>. This is the hyperboloidal compactification.&lt;/p>
-&lt;p>To solve the hyperboloidal wave equation \eqref{2}, it&amp;rsquo;s best to write it in symmetric hyperbolic form. We define the auxiliary variables
+&lt;p>To solve the hyperboloidal wave equation \eqref{2}, we can write it in symmetric hyperbolic form. We define the auxiliary variables
 $$ \psi := \partial_\rho u, \qquad \pi := \frac{1-H^2}{G} \partial_\tau u - H \partial_\rho u. $$
 The full system reads
 $$\partial_\tau \pi = \partial_\rho \left[\frac{G}{1-H^2} ( \psi + H \pi ) \right], $$
