@@ -5,7 +5,6 @@ authors: []
 tags: []
 categories: []
 show_date: false
-show_date: false
 reading_time: false  # Show estimated reading time?
 share: false  # Show social sharing links?
 profile: false  # Show author profile?

@@ -120,7 +120,7 @@ As a compactification, $G$ vanishes at the boundaries. The wave equation becomes
 $$ \left(-\frac{1-H^2}{G} \partial_\tau^2 + 2 H \partial_\tau \partial_\rho + G \partial_\rho^2 + H' \partial_\tau + G'\partial_\rho \right) u(\rho,\tau) = 0. $$
 For this equation to be regular, we require $1-H^2 \sim G$ at the boundaries, which means $|H|\sim 1$ at the leading order. We also want $|H|<1$ away from the boundaries to keep the principal part intact[^characteristic]. This is the hyperboloidal compactification.
 
-To solve the hyperboloidal wave equation \eqref{2}, it's best to write it in symmetric hyperbolic form. We define the auxiliary variables
+To solve the hyperboloidal wave equation \eqref{2}, we can write it in symmetric hyperbolic form. We define the auxiliary variables
 $$ \psi := \partial_\rho u, \qquad \pi := \frac{1-H^2}{G} \partial_\tau u - H \partial_\rho u. $$
 The full system reads
 $$\partial_\tau \pi  = \partial_\rho \left[\frac{G}{1-H^2} ( \psi + H \pi ) \right], $$
