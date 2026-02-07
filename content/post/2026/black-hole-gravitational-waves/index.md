@@ -159,7 +159,7 @@ $$
 with parameters $K$ and $C$. 
 
 Either case, you get a gravitational wave signal that looks like this at infinity:
-![Time domain behavior of gravitational perturbations](featured.png)
+![Time domain behavior of gravitational perturbations](perturbations.png)
 
 Why infinity? Infinity is the correct model for the wave signal because we observe gravitational waves from black holes that are hundreds of millions of light years away. That's far. Very far. Mathematically, we model such distances by infinity, which we have wisely mapped to the outer boundary of our numerical domain. We've done it for technical reasons (to avoid numerical reflections, artificial truncation, to improve efficiency, etc.) but there are physical reasons why we're interested in the data at infinity.
 
@@ -196,7 +196,7 @@ We just banged on a spacetime with a black hole and now you can [create your ow
 [^bang]: Again, we are not "perturbing the black hole" because there is nothing to perturb where the black hole is. We are perturbing the black-hole spacetime and asking how these spacetime perturbations propagate given that there's a boundary in the spacetime waiting to swallow some of this perturbation.
 
 [^green]: Such local perturbations approximate a delta function, so what you're seeing in the video is the [Green function](https://en.wikipedia.org/wiki/Green%27s_function) of the wave equation in a black hole spacetime. Chad Galley and I wrote a [paper](https://arxiv.org/abs/1206.1109) on this Green function where we studied caustics that you can also see in your coffee mug.
-![Caustic in a coffee mug](caustic.webp)
+![Caustic in a coffee mug](featured.webp)
 
 [^pot]: There are different potentials for different types of perturbations (scalar, electromagnetic, even, odd). These types of equations are called [Regge-Wheeler-Zerilli](https://en.wikipedia.org/wiki/Regge–Wheeler–Zerilli_equations) and they have a long history in relativity. Once you know how to solve this example, you'll have a powerful tool to study other interesting perturbative problems with minor modifications. The one we discuss in \eqref{2} describes axial perturbations and is the simplest gravitational potential.
 
