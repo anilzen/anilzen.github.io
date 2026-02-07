@@ -159,7 +159,7 @@ $$
 with parameters $K$ and $C$. 
 
 Either case, you get a gravitational wave signal that looks like this at infinity:
-![Time domain behavior of gravitational perturbations](perturbations.png)
+![Time domain behavior of gravitational perturbations](featured.png)
 
 Why infinity? Infinity is the correct model for the wave signal because we observe gravitational waves from black holes that are hundreds of millions of light years away. That's far. Very far. Mathematically, we model such distances by infinity, which we have wisely mapped to the outer boundary of our numerical domain. We've done it for technical reasons (to avoid numerical reflections, artificial truncation, to improve efficiency, etc.) but there are physical reasons why we're interested in the data at infinity.
 
