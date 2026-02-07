@@ -137,7 +137,7 @@ with parameters $K$ and $C$.&lt;/p>
 &lt;p>Either case, you get a gravitational wave signal that looks like this at infinity:
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="featured.png" alt="Time domain behavior of gravitational perturbations" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img src="perturbations.png" alt="Time domain behavior of gravitational perturbations" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;p>Why infinity? Infinity is the correct model for the wave signal because we observe gravitational waves from black holes that are hundreds of millions of light years away. That&amp;rsquo;s far. Very far. Mathematically, we model such distances by infinity, which we have wisely mapped to the outer boundary of our numerical domain. We&amp;rsquo;ve done it for technical reasons (to avoid numerical reflections, artificial truncation, to improve efficiency, etc.) but there are physical reasons why we&amp;rsquo;re interested in the data at infinity.&lt;/p>
@@ -210,10 +210,10 @@ We can add more terms into the expansion to make it more accurate. For now, the 
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Caustic in a coffee mug" srcset="
-/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_44a5bd30e72077c1134bef9d85358401.webp 400w,
-/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_512fd2ba792e820805d6c0b9b695b298.webp 760w,
-/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
-src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/caustic_hu28445f7468d6dc134924454e8057b561_55570_44a5bd30e72077c1134bef9d85358401.webp"
+/post/2026/black-hole-gravitational-waves/featured_hu28445f7468d6dc134924454e8057b561_55570_acd34570a4cf0d77ef7e52cd62569178.webp 400w,
+/post/2026/black-hole-gravitational-waves/featured_hu28445f7468d6dc134924454e8057b561_55570_d014c944287cf1a5edfb5f24cf545194.webp 760w,
+/post/2026/black-hole-gravitational-waves/featured_hu28445f7468d6dc134924454e8057b561_55570_1200x1200_fit_q75_h2_lanczos_2.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/featured_hu28445f7468d6dc134924454e8057b561_55570_acd34570a4cf0d77ef7e52cd62569178.webp"
 width="760"
 height="505"
 loading="lazy" data-zoomable />&lt;/div>
