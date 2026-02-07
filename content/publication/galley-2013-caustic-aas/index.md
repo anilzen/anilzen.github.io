@@ -31,7 +31,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:18.080504Z'
 publication_types:
-- '1'
+- "paper-conference"
 abstract: The supermassive black hole Sgr A* at the center of our Galaxy is a source
   of bright X-ray flares. In certain cases, the bright flares are followed up by weaker
   ones, also referred to as X-ray hiccups. A recent X-ray Visionary Project (XVP)

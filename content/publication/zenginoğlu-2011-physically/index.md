@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:18.329681Z'
 publication_types:
-- '1'
+- "paper-conference"
 abstract: Black hole perturbation theory is typically studied on time surfaces that
   extend between the bifurcation sphere and spatial infinity. I will argue that--from
   a physical point of view--it is favorable to employ time surfaces that extend between

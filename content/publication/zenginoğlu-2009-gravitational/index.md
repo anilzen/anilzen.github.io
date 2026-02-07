@@ -32,7 +32,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:13.512363Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We study gravitational perturbations of Schwarzschild spacetime by solving
   a hyperboloidal initial value problem for the Bardeen–Press equation. Compactification
   along hyperboloidal surfaces in a scri-fixing gauge allows us to have access to

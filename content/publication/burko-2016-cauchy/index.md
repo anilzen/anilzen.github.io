@@ -31,7 +31,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:15.431181Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: The Cauchy horizon inside a perturbed Kerr black hole develops an instability
   that transforms it into a curvature singularity. We solve for the linearized Weyl
   scalars $ψ_0$ and $ψ_4$ and for the curvature scalar $R_{α β γ δ} R^{α β γ δ}$ along outgoing

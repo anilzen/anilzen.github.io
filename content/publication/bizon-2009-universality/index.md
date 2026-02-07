@@ -30,7 +30,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:13.971797Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We consider the initial value problem for the spherically symmetric, focusing
   cubic wave equation in three spatial dimensions. We give numerical and analytical
   evidence for the existence of a universal attractor which encompasses both global

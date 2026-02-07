@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:15.625287Z'
 publication_types:
-- '7'
+- "thesis"
 abstract: This thesis is concerned with the development and application of conformal
   techniques to numerical calculations of asymptotically flat spacetimes. The conformal
   compactification technique enables us to calculate spatially unbounded domains,

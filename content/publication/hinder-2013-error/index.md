@@ -85,7 +85,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:11.374778Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: The Numerical–Relativity–Analytical–Relativity (NRAR) collaboration is a
   joint effort between members of the numerical relativity, analytical relativity
   and gravitational-wave data analysis communities. The goal of the NRAR collaboration

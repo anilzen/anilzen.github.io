@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:14.608776Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We study linear gravitational perturbations of Schwarzschild spacetime by
   solving numerically Regge–Wheeler–Zerilli equations in a time domain using hyperboloidal
   surfaces and a compactifying radial coordinate. We stress the importance of including

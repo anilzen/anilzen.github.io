@@ -30,7 +30,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:17.695120Z'
 publication_types:
-- '1'
+- "paper-conference"
 abstract: A source of waves (scalar, electromagnetic, or gravitational) near the event
   horizon of a black hole leads to the formation of a caustic on the other side of
   the horizon. The caustic forms from the trapping of energy by the strong curvature

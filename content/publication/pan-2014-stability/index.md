@@ -39,7 +39,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:13.709966Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: The detection of gravitational waves and the extraction of physical information
   from them requires the prediction of accurate waveforms to be used in template banks.
   For that purpose, the accuracy of effective-one-body (EOB) waveforms has been improved

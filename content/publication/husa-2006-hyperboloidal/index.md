@@ -32,7 +32,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:15.003234Z'
 publication_types:
-- '1'
+- "paper-conference"
 abstract: We discuss the hyperboloidal evolution problem in general relativity from
   a numerical perspective, and present some new results. Families of initial data
   which are the hyperboloidal analogue of Brill waves are constructed numerically,

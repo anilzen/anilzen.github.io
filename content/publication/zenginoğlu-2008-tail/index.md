@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:10.733566Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We investigate the asymptotic behavior of spherically symmetric solutions
   to scalar wave and Yang–Mills equations on a Schwarzschild background. The studies
   demonstrate the astrophysical relevance of null infinity in predicting radiation

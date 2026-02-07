@@ -32,7 +32,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:14.816039Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We study the horizon absorption of gravitational waves in coalescing, circularized,
   nonspinning black-hole binaries. The horizon-absorbed fluxes of a binary with a
   large mass ratio (q= 1000) obtained by numerical perturbative simulations are compared

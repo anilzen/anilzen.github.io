@@ -31,7 +31,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:17.886309Z'
 publication_types:
-- '1'
+- "paper-conference"
 abstract: "The numerical investigation of wave propagation in the asymptotic domain\
   \ of Kerr spacetime has only recently been possible thanks to the construction of\
   \ suitable hyperboloidal coordinates. The asymptotics revealed a puzzle in the decay\

@@ -30,7 +30,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:13.091736Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We present two methods to include the asymptotic domain of a background
   spacetime in null directions for numerical solutions of evolution equations so that
   both the radiation extraction problem and the outer boundary problem are solved.

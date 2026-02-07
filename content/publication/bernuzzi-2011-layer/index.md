@@ -32,7 +32,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:12.691497Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We compute and analyze the gravitational waveform emitted to future null
   infinity by a system of two black holes in the large-mass-ratio limit. We consider
   the transition from the quasiadiabatic inspiral to plunge, merger, and ringdown.

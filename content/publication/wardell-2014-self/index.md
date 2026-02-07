@@ -34,7 +34,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:13.292812Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: A compact object moving in curved spacetime interacts with its own gravitational
   field. This leads to both dissipative and conservative corrections to the motion,
   which can be interpreted as a self-force acting on the object. The original formalism

@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:10.934285Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We consider an approach to the hyperboloidal evolution problem based on
   the Einstein equations written for a rescaled metric. It is shown that a conformal
   scale factor can be freely prescribed a priori in terms of coordinates in a well-posed

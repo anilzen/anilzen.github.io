@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:12.242524Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We show how to solve hyperbolic equations numerically on unbounded domains
   by compactification, thereby avoiding the introduction of an artificial outer boundary.
   The essential ingredient is a suitable transformation of the time coordinate in

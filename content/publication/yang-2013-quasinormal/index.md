@@ -35,7 +35,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:11.577076Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We provide an in-depth investigation of quasinormal-mode oscillations of
   Kerr black holes with nearly extremal angular momenta. We first discuss in greater
   detail the two distinct types of quasinormal-mode frequencies presented in a recent

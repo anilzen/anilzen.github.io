@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:10.514445Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: A useful choice of gauge when including null infinity in the computational
   domain is scri-fixing, that is, fixing the spatial coordinate location of null infinity.
   This choice allows us to avoid the introduction of artificial timelike outer boundaries

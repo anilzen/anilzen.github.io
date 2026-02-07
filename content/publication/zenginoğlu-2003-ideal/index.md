@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:17.279187Z'
 publication_types:
-- '7'
+- "thesis"
 abstract: ''
 publication: '*University of Vienna*'
 links:

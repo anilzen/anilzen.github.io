@@ -32,7 +32,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:12.005150Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We discuss the properties of the effective-one-body (EOB) multipolar gravitational
   waveform emitted by nonspinning black-hole binaries of masses μ and M in the extreme-mass-ratio
   limit μ/M= ν≪ 1. We focus on the transition from quasicircular inspiral to plunge,

@@ -30,7 +30,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:12.892168Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We describe the hyperboloidal compactification for Teukolsky equations in
   Kerr spacetime. We include null infinity on the numerical grid by attaching a hyperboloidal
   layer to a compact domain surrounding the rotating black hole and the orbit of an

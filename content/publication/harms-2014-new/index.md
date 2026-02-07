@@ -33,7 +33,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:12.498841Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We present a new approach to solve the 2+ 1 Teukolsky equation for gravitational
   perturbations of a Kerr black hole. Our approach relies on a new horizon penetrating,
   hyperboloidal foliation of Kerr spacetime and spatial compactification. In particular,

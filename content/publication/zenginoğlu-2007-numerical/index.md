@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:17.066226Z'
 publication_types:
-- '1'
+- "paper-conference"
 abstract: After describing in short some problems and methods regarding the smoothness
   of null infinity for isolated systems, I present numerical calculations in which
   both spatial and null infinity can be studied. The reduced conformal field equations

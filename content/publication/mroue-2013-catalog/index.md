@@ -46,7 +46,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:11.135883Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: 'This Letter presents a publicly available catalog of 174 numerical binary
   black hole simulations following up to 35 orbits. The catalog includes 91 precessing
   binaries, mass ratios up to 8∶1, orbital eccentricities from a few percent to $10^{−5}$, 

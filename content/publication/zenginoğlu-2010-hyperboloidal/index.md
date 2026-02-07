@@ -30,7 +30,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:16.048675Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We present the numerical implementation of a clean solution to the outer
   boundary and radiation extraction problems within the 3+ 1 formalism for hyperbolic
   partial differential equations on a given background. Our approach is based on compactification

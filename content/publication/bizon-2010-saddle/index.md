@@ -32,7 +32,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:16.433773Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: 'We consider the Cauchy problem for a spherically symmetric SU (2) Yang–Mills
   field propagating outside the Schwarzschild black hole. Although solutions starting
   from smooth finite energy initial data remain smooth for all times, not all of them

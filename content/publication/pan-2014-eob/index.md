@@ -43,7 +43,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:11.786729Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: Gravitational waves emitted by black-hole binary systems have the highest
   signal-to-noise ratio in LIGO and Virgo detectors when black-hole spins are aligned
   with the orbital angular momentum and extremal. For such systems, we extend the

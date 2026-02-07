@@ -31,7 +31,7 @@ image:
 projects: []
 publishDate: '2021-05-26T02:33:16.654879Z'
 publication_types:
-- '2'
+- "article-journal"
 abstract: We consider the hyperboloidal initial value problem for the cubic focusing wave equation $$ (-\partial_t^2+\Delta_x)v(t,x)+v(t,x)^3=0,\quad x\in \mathbb{R}^3. $$ Without symmetry assumptions, we prove the existence of a co-dimension 4 Lipschitz manifold of initial data that lead to global solutions in forward time which do not scatter to free waves. More precisely, for any $\delta\in (0,1)$, we construct solutions with the asymptotic behavior $$ \|v-v_0\|_{L^4(t,2t)L^4(B)}\lesssim t^{-\frac12+}$$ as $t\to \infty$, where $v_0(t,x)=\frac{\sqrt 2}{t}$ and $B:=\\{x\in \mathbb{R}^3:|x|<(1-\delta)t\\}$.
 
 publication: '*Analysis & PDE*'
