@@ -1,6 +1,6 @@
 ---
 title: "Banging a black hole"
-subtitle: Gravitational waves from a perturbed black hole
+subtitle: To compute gravitational waves from a perturbed black hole
 summary: "The simplest model for gravitational waves from black holes is a perturbed Schwarzschild spacetime. This post shows how to compute numerically gravitational waves that fall into the black hole and escape to an observer at infinity."
 
 projects: []
@@ -76,7 +76,7 @@ The coordinate $r_\ast$ is called the *tortoise coordinate* and is defined by
 $$ dr_\ast = \frac{dr}{f}, \quad \text{or} \quad \partial_{r_\ast} = f \partial_r.$$
 Its domain is unbounded in both directions with $r_\ast\in(-\infty,\infty)$. A significant portion of research in black-hole perturbation theory consists in solving an equation of the type \eqref{1} for various potentials $V_\ell$ and sources $S_{\ell m}$. We'll assume no sources for this post and omit the mode-dependence in the notation. In general, you can think of the perturbations sourced by particles representing, say, a stellar black hole orbiting in the spacetime of a galactic, supermassive black hole ([extreme-mass-ratio inspiral](https://en.wikipedia.org/wiki/Extreme_mass_ratio_inspiral)). Yes, you can indeed model crazy things with a simple equation like that.
 
-You can simply discretize and solve the equation \eqref{1} as it stands but where's the fun in that[^truncation]. Let's solve it on the full black-hole spacetime using hyperboloidal compactification. The general structure of the equation \eqref{1} is the same as the one-dimensional wave equation discussed [previously](../../2023/waves-on-unbounded-domains/). The main difference is the potential term that can represent different types of perturbations. In this post, we want to calculate gravitational waves, so we use the *gravitational* potential[^pot] given as a function of the areal coordinate $r$ as:
+You can simply discretize and solve the equation \eqref{1} on a truncated domain but where's the fun in that[^truncation]. Let's solve it on the full black-hole spacetime using hyperboloidal compactification. The general structure of the equation \eqref{1} is the same as the one-dimensional wave equation discussed [previously](../../2023/waves-on-unbounded-domains/). The main difference is the potential term that can represent different types of perturbations. In this post, we want to calculate gravitational waves, so we use the *gravitational* potential[^pot] given as a function of the areal coordinate $r$ as:
 $$ V_{\ell}(r) = \frac{f(r)}{r^2} \left( \ell(\ell+1) - \frac{6M}{r} \right), \tag{2} \label{2} $$
 where $\ell$ is the angular momentum number in the spherical harmonic decomposition. Note that the potential is given by the areal coordinate $r$ but the wave equation is written in the tortoise coordinate $r_\ast$. We'll fix this problem in a little bit. Let's first handle the unbounded domain in the tortoise coordinate $r_\ast$.
 
@@ -87,7 +87,7 @@ We define
 $$ H_\ast(\rho):= \frac{dh}{dr_\ast}, \qquad G_\ast(\rho):= \frac{d\rho}{dr_\ast} = \left(\frac{d r_\ast}{d\rho}\right)^{-1}. $$
 We write the wave equation \eqref{1} in symmetric hyperbolic form by defining auxiliary variables as before
 $$ \psi := \partial_\rho u, \qquad \pi := \frac{1-H_\ast^2}{G_\ast} \partial_\tau u - H_\ast \partial_\rho u. $$
-The coupled part of the wave equation \eqref{1} is
+The wave equation \eqref{1} becomes first-order symmetric hyperbolic
 $$ 
 \begin{aligned}
 \partial_\tau u
@@ -103,7 +103,7 @@ $$
 The only difference to the flat wave equation is the potential term in red. Since this is the main difference to the flat wave equation that allows us to compute gravitational waves from a black hole, let's spend some time on it.
 
 ### The gravitational potential
-The relevant term of the potential in \eqref{2} for the boundaries is $\frac{f}{r^2}$. The potential vanishes linearly at the event horizon and quadratically towards infinity. But by transforming to the tortoise coordinate we modify this behavior near the horizon because the tortoise coordinate approaches exponentially as $r\to 2M$. Therefore, the potential \eqref{2}, or equivalently the term $\frac{f}{r^2}$, falls off exponentially toward the black-hole horizon and quadratically towards infinity in $r_\ast$. Below are two plots of the potential for $\ell=2$ and $M=\frac{1}{2}$, in $r$ and in $r_\ast$. The semilog plot in $r_\ast$ clearly shows the exponential decay on the left (near the horizon) and a quadratic decay on the right (toward infinity). The red dashed line marks the peak of the potential right outside the [photon sphere](https://en.wikipedia.org/wiki/Photon_sphere) around $r_p \approx 3.3 M$.
+The asymptotic behavior of the potential \eqref{2} is determined by the factor $\frac{f}{r^2}$. The potential vanishes linearly at the event horizon and quadratically towards infinity. But by transforming to the tortoise coordinate we modify this behavior near the horizon because the tortoise coordinate diverges logarithmically as $r\to 2M$. Therefore, the potential \eqref{2}, or equivalently the term $\frac{f}{r^2}$, falls off exponentially toward the black-hole horizon and quadratically towards infinity in $r_\ast$. Below are two plots of the potential for $\ell=2$ and $M=\frac{1}{2}$, in $r$ and in $r_\ast$. The semilog plot in $r_\ast$ clearly shows the exponential decay on the left (near the horizon) and a quadratic decay on the right (toward infinity). The red dashed line marks the peak of the potential right outside the [photon sphere](https://en.wikipedia.org/wiki/Photon_sphere) around $r_p \approx 3.3 M$.
 
 ![Gravitational potential in semilog scale](potential.png)
 One of the reasons people like the tortoise coordinate, aside from the resulting familiarity of the equation \eqref{1}, is that it naturally provides increased resolution in the strong field region near the horizon. You can see this clearly in the right plot where the domain $r_\ast<0$ has no sharp gradients. Let's think about this a bit in our setup. 
