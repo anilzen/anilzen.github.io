@@ -185,10 +185,19 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 This is &lt;em>beautiful!&lt;/em> Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. As a consequence, the peak of the &lt;em>rescaled&lt;/em> potential is at the horizon, and it monotonically decreases from the strong field region towards infinity. We&amp;rsquo;ll have no problem solving equations with such a simple term.&lt;/p>
 &lt;h3 id="time-transformation">Time transformation&lt;/h3>
-&lt;p>The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the &lt;a href="https://hyperboloid.al/post/minimal-gauge/" target="_blank" rel="noopener">minimal gauge&lt;/a>. The boost function $H_\ast$ has the remarkably simple form
+&lt;p>The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the &lt;a href="https://hyperboloid.al/post/minimal-gauge/" target="_blank" rel="noopener">minimal gauge&lt;/a>. You can derive it by just requiring the proper behavior at both boundaries and regularity at infinity. Consider the $(t,r_\ast)$ block of the Schwarzschild metric:
+$$ ds^2_{t,r_\ast} = f \left(-dt^2 +dr_\ast^2\right). $$
+In- and outgoing null rays of this metric are $v=t+r_\ast$ and $u=t-r_\ast$. We want the coordinate $\tau$ to behave as $v$ toward the horizon, and as $u$ towards infinity. This implies $H_\ast\to 1$ as $r\to 2M$ and $H_\ast\to -1$ as $r\to\infty$. Further, we want conformal regularity at infinity for the transformed metric:
+$$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H d\tau dr_\ast + (1-H_\ast^2) dr_\ast^2\right). $$
+Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega=0$. Since $\Omega\sim r^{-1}$, we must satisfy as $r\to\infty$:
+$$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \frac{1}{r^2}, $$
+which means
+$$H_\ast \sim -1 + \frac{C}{r^2}, $$
+as $r\to\infty$. These conditions are true for all time transformations bridging between the future event horizon and future null infinity. By taking only the leading term above, and imposing the requirement $H_\ast(r=2M)=1$ gives us the boost function for the minimal gauge:
 $$ H_\ast = -1 + \frac{8M^2}{r^2}. $$
-For a bit of an intuition, observe that $H_\ast\to -1$ as $r\to\infty$ and $H_\ast\to+1$ as $r\to 2M$. So the transformed coordinate $\tau$ behaves as $u=t-r_\ast$ towards infinity and as $v=t+r_\ast$ towards the horizon. The term that ensures the regularity of the compactified equation reads:
-$$ \frac{fG}{1-H_\ast^2} = \frac{\rho^3}{8M}.$$&lt;/p>
+In our compactifying coordinate $\rho$, the term that ensures the regularity of the compactified equation reads:
+$$ \frac{fG}{1-H_\ast^2} = \frac{\rho^3}{8M}.$$
+The minimal gauge leads to particularly simple expresions for the transformed system.&lt;/p>
 &lt;h3 id="the-numerical-solution">The numerical solution&lt;/h3>
 &lt;p>Let&amp;rsquo;s wrap up. The choices for the compactification and time transformation above give us the following system
 \begin{equation}
@@ -216,7 +225,14 @@ with parameters $K$ and $C$.&lt;/p>
 &lt;p>Either case, you get a gravitational wave signal that looks like this at infinity:
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="perturbations.png" alt="Time domain behavior of gravitational perturbations" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img alt="Time domain behavior of gravitational perturbations" srcset="
+/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1efdd7dafe8f0f2fdfb359a4407f1c02.webp 400w,
+/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_67968320134623ccd232e1a63a3fa407.webp 760w,
+/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1efdd7dafe8f0f2fdfb359a4407f1c02.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;p>Why infinity? Infinity is the correct model for the wave signal because we observe gravitational waves from black holes that are hundreds of millions of light years away. That&amp;rsquo;s far. Very far. Mathematically, we model such distances by infinity, which we have wisely mapped to the outer boundary of our numerical domain. We&amp;rsquo;ve done it for technical reasons (to avoid numerical reflections, artificial truncation, to improve efficiency, etc.) but there are physical reasons why we&amp;rsquo;re interested in the data at infinity.&lt;/p>
