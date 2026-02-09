@@ -128,10 +128,19 @@ And the plot for $\ell=2, M=1$ is below.
 This is *beautiful!* Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. As a consequence, the peak of the *rescaled* potential is at the horizon, and it monotonically decreases from the strong field region towards infinity. We'll have no problem solving equations with such a simple term.
 
 ### Time transformation
-The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the [minimal gauge](https://hyperboloid.al/post/minimal-gauge/). The boost function $H_\ast$ has the remarkably simple form
+The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the [minimal gauge](https://hyperboloid.al/post/minimal-gauge/). You can derive it by just requiring the proper behavior at both boundaries and regularity at infinity. Consider the $(t,r_\ast)$ block of the Schwarzschild metric:
+$$ ds^2_{t,r_\ast} = f \left(-dt^2 +dr_\ast^2\right). $$
+In- and outgoing null rays of this metric are $v=t+r_\ast$ and $u=t-r_\ast$. We want the coordinate $\tau$ to behave as $v$ toward the horizon, and as $u$ towards infinity. This implies $H_\ast\to 1$ as $r\to 2M$ and $H_\ast\to -1$ as $r\to\infty$. Further, we want conformal regularity at infinity for the transformed metric:
+$$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H d\tau dr_\ast + (1-H_\ast^2) dr_\ast^2\right). $$
+Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega=0$. Since $\Omega\sim r^{-1}$, we must satisfy as $r\to\infty$:
+$$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \frac{1}{r^2}, $$
+which means
+$$H_\ast \sim -1 + \frac{C}{r^2}, $$
+as $r\to\infty$. These conditions are true for all time transformations bridging between the future event horizon and future null infinity. By taking only the leading term above, and imposing the requirement $H_\ast(r=2M)=1$ gives us the boost function for the minimal gauge:
 $$ H_\ast = -1 + \frac{8M^2}{r^2}. $$
-For a bit of an intuition, observe that $H_\ast\to -1$ as $r\to\infty$ and $H_\ast\to+1$ as $r\to 2M$. So the transformed coordinate $\tau$ behaves as $u=t-r_\ast$ towards infinity and as $v=t+r_\ast$ towards the horizon. The term that ensures the regularity of the compactified equation reads:
+In our compactifying coordinate $\rho$, the term that ensures the regularity of the compactified equation reads:
 $$ \frac{fG}{1-H_\ast^2} =  \frac{\rho^3}{8M}.$$
+The minimal gauge leads to particularly simple expresions for the transformed system.
 
 ### The numerical solution
 Let's wrap up. The choices for the compactification and time transformation above give us the following system
