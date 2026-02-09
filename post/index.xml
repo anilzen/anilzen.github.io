@@ -113,8 +113,8 @@ $$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H d\tau dr_\ast + (1-H_\ast^2) dr_\
 Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega=0$. Since $\Omega\sim r^{-1}$, we must satisfy as $r\to\infty$:
 $$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \frac{1}{r^2}, $$
 which means
-$$H_\ast \sim -1 + \frac{C}{r^2}, $$
-as $r\to\infty$. These conditions are true for all time transformations bridging between the future event horizon and future null infinity. By taking only the leading term above, and imposing the requirement $H_\ast(r=2M)=1$ gives us the boost function for the minimal gauge:
+$$H_\ast = -1 + \frac{C}{r^2} + \mathcal{O}(r^{-3}), $$
+as $r\to\infty$. These conditions are true for all time transformations bridging between the future event horizon and future null infinity. By omitting the lower order terms above, and imposing the requirement $H_\ast(r=2M)=1$ gives us the boost function for the minimal gauge:
 $$ H_\ast = -1 + \frac{8M^2}{r^2}. $$
 In our compactifying coordinate $\rho$, the term that ensures the regularity of the compactified equation reads:
 $$ \frac{fG}{1-H_\ast^2} = \frac{\rho^3}{8M}.$$
