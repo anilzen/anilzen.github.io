@@ -88,57 +88,54 @@ $$ G_\ast\ r^2 \sim \cos^2\rho \ \tan^2\rho = \sin^2\rho = 1 \quad \text{as} \qu
 &lt;p>Having figured this out, why do we use $r_\ast$ in the first place? I mentioned that it gives us additional resolution near the horizon, but we&amp;rsquo;re compactifying. We can adjust it to get the resolution we need without going through the tortoise coordinate. Let&amp;rsquo;s get rid of it and compute the potential explicitly in terms of a simpler transformation $r(\rho)$. We just need to be careful about the Jacobian:
 $$ G_\ast = \frac{d\rho}{dr_\ast} = \frac{dr}{dr_\ast} \frac{d\rho}{dr} =: f G, $$
 where we introduced $G:=d\rho/dr$. If we now consider $H_\ast$ also as a function of $r$ and transform directly to $\rho$, we can fully avoid the tortoise coordinate.&lt;/p>
-&lt;p>There are clearly many choices for the compactification. A simple one that I like is this:
-$$ \frac{r}{2M} = \frac{\rho}{1-\rho} \quad \implies \quad G = \frac{(1-\rho)^2}{2M}. $$
-This maps the domain $r\in(2M,\infty)$ to $\rho\in(1/2,1)$. We can numerically include the boundary points because they are regular after the time transformation. The potential term becomes
-$$ \frac{V_\ell}{G_\ast} = \frac{V_\ell}{f G} = \frac{\ell(\ell+1)\rho - 3(1-\rho)}{2M \rho^3}. $$
-And the plot for $\ell=2, M=1$ is below.
+&lt;p>There are many possible radial compactifications. In Schwarzschild there is one particularly appealing choice:
+$$ \rho := f(r)=1-\frac{2M}{r} \implies r(\rho) = \frac{2M}{1-\rho}. $$
+With this, the exterior domain $r\in(2M,\infty)$ is mapped to $\rho\in(0,1)$. The inner boundary at $\rho=0$ is the event horizon, $r=2M$, and the outer boundary at $\rho\to 1$ is infinity, $r\to\infty$. The Jacobian reads
+$$G=\frac{d\rho}{dr} = \frac{d}{dr}\Bigl(1-\frac{2M}{r}\Bigr)=\frac{2M}{r^2} =\frac{(1-\rho)^2}{2M},$$
+The rescaled potential term becomes
+$$ \frac{V_\ell}{G_\ast}=\frac{\ell(\ell+1)-3 (1-\rho)}{2M}. $$
+This is &lt;em>beautiful!&lt;/em> The potential varies only linearly with $\rho$. And the plot for $\ell=2, M=1$ is below.
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Rescaled gravitational potential" srcset="
-/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_f9a75d00d47fb81b7463cf3091eb0555.webp 400w,
-/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_97a155c2a008c4f6ca945a1ea3a04ade.webp 760w,
-/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
-src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/rescaled_potential_hu467fbb98157e2d867fd9be90955c9b70_65054_f9a75d00d47fb81b7463cf3091eb0555.webp"
+/post/2026/black-hole-gravitational-waves/rescaled_potential_hu60b10f0091cdecf7d01d34f8b110536e_60165_a0b97f448efd743d55745d9679e1df00.webp 400w,
+/post/2026/black-hole-gravitational-waves/rescaled_potential_hu60b10f0091cdecf7d01d34f8b110536e_60165_e39ee295e2e410d429d21547e6c76b31.webp 760w,
+/post/2026/black-hole-gravitational-waves/rescaled_potential_hu60b10f0091cdecf7d01d34f8b110536e_60165_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/rescaled_potential_hu60b10f0091cdecf7d01d34f8b110536e_60165_a0b97f448efd743d55745d9679e1df00.webp"
 width="760"
 height="507"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-This is &lt;em>beautiful!&lt;/em> Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. As a consequence, the peak of the &lt;em>rescaled&lt;/em> potential is at the horizon, and it monotonically decreases from the strong field region towards infinity. We&amp;rsquo;ll have no problem solving equations with such a simple term.&lt;/p>
+Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. And with this particular compactification, the &lt;em>rescaled&lt;/em> potential is simply a linear function that barely varies over the entire domain. We&amp;rsquo;ll have no problem solving equations with such a simple term.&lt;/p>
 &lt;h3 id="time-transformation">Time transformation&lt;/h3>
 &lt;p>The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the &lt;a href="https://hyperboloid.al/post/minimal-gauge/" target="_blank" rel="noopener">minimal gauge&lt;/a>. You can derive it by just requiring the proper behavior at both boundaries and regularity at infinity. Consider the $(t,r_\ast)$ block of the Schwarzschild metric:
 $$ ds^2_{t,r_\ast} = f \left(-dt^2 +dr_\ast^2\right). $$
 In- and outgoing null rays of this metric are $v=t+r_\ast$ and $u=t-r_\ast$. We want the coordinate $\tau$ to behave as $v$ toward the horizon, and as $u$ towards infinity. This implies $H_\ast\to 1$ as $r\to 2M$ and $H_\ast\to -1$ as $r\to\infty$. Further, we want conformal regularity at infinity for the transformed metric:
-$$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H d\tau dr_\ast + (1-H_\ast^2) dr_\ast^2\right). $$
-Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega=0$. Since $\Omega\sim r^{-1}$, we must satisfy as $r\to\infty$:
-$$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \frac{1}{r^2}, $$
+$$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H_\ast d\tau dr_\ast + (1-H_\ast^2) dr_\ast^2\right). $$
+Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega\sim 1/r \to 0$. With compactification, we have $dr_\ast \sim \Omega^{-2}d\rho$. Therefore, the regularity of the radial component under conformal compactification implies:
+$$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \Omega^2 \sim \frac{1}{r^2}, $$
 which means
 $$H_\ast = -1 + \frac{C}{r^2} + \mathcal{O}(r^{-3}), $$
 as $r\to\infty$. These conditions are true for all time transformations bridging between the future event horizon and future null infinity. By omitting the lower order terms above, and imposing the requirement $H_\ast(r=2M)=1$ gives us the boost function for the minimal gauge:
-$$ H_\ast = -1 + \frac{8M^2}{r^2}. $$
+$$ H_\ast = -1 + \frac{8M^2}{r^2} = -1 + 2(1-\rho)^2. $$
 In our compactifying coordinate $\rho$, the term that ensures the regularity of the compactified equation reads:
-$$ \frac{fG}{1-H_\ast^2} = \frac{\rho^3}{8M}.$$
+$$ \frac{fG}{1-H_\ast^2} = \frac{1}{8M(2-\rho)}.$$
 The minimal gauge leads to particularly simple expresions for the transformed system.&lt;/p>
 &lt;h3 id="the-numerical-solution">The numerical solution&lt;/h3>
 &lt;p>Let&amp;rsquo;s wrap up. The choices for the compactification and time transformation above give us the following system
 \begin{equation}
 \begin{aligned}
 \partial_\tau u
-&amp;amp;= \frac{\rho^{3}}{8M}\bigl(H_\ast\psi + \pi\bigr),\\[4pt]
+&amp;amp;= \frac{1}{8M(2-\rho)}\bigl(H_\ast\psi + \pi\bigr),\\[4pt]
 \partial_\tau \psi
-&amp;amp;= \partial_\rho\left[\frac{\rho^{3}}{8M}\bigl(H_\ast\psi + \pi\bigr)\right],\\[4pt]
+&amp;amp;= \partial_\rho\left[\frac{1}{8M(2-\rho)}\bigl(H_\ast\psi + \pi\bigr)\right],\\[4pt]
 \partial_\tau \pi
-&amp;amp;= \partial_\rho\left[\frac{\rho^{3}}{8M}\bigl(\psi + H_\ast\pi\bigr)\right]
-+\frac{\ell(\ell+1)\rho - 3(1-\rho)}{2M\rho^{3}}u,
+&amp;amp;= \partial_\rho\left[\frac{1}{8M(2-\rho)}\bigl(\psi + H_\ast\pi\bigr)\right]
++\frac{\ell(\ell+1) - 3(1-\rho)}{2M}u,
 \end{aligned}
 \end{equation}
-with
-\begin{equation}
-H_\ast
-= -1+\frac{8M^2}{r(\rho)^2}
-= -1 + \frac{2}{\rho^2}(1-\rho)^2
-\end{equation}
-The system doesn&amp;rsquo;t need any boundary data by construction. We simply apply one-sided stencils at the boundaries as before. All we need now is to prescribe some initial data (typically a localized Gaussian) and run the &lt;a href="https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c" target="_blank" rel="noopener">solver&lt;/a>. The simulation in Colab takes about 30 seconds for $1000M$. I also included a different gauge condition based on constant mean curvature foliations (CMC) that&amp;rsquo;s almost 4 times faster&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>. For this case, the boost function is only slightly more complicated
+with $H_\ast=-1+2(1-\rho)^2$.
+The system doesn&amp;rsquo;t need any boundary data by construction. We simply apply one-sided stencils at the boundaries as before. All we need now is to prescribe some initial data (typically a localized Gaussian) and run the &lt;a href="https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c" target="_blank" rel="noopener">solver&lt;/a>. The simulation in Colab takes about 30 seconds for $1000M$. I also included a different gauge condition based on constant mean curvature foliations (CMC) that&amp;rsquo;s twice as fast&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>. For this case, the boost function is only slightly more complicated
 $$
 H^{CMC}_\ast = - \frac{J}{\sqrt{J^2+f r^4}}, \quad J = \frac{K r^3}{3}-C,
 $$
@@ -147,10 +144,10 @@ with parameters $K$ and $C$.&lt;/p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Time domain behavior of gravitational perturbations" srcset="
-/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1efdd7dafe8f0f2fdfb359a4407f1c02.webp 400w,
-/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_67968320134623ccd232e1a63a3fa407.webp 760w,
-/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
-src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/perturbations_hu8d661b410192f8a628c47b9560274f59_48036_1efdd7dafe8f0f2fdfb359a4407f1c02.webp"
+/post/2026/black-hole-gravitational-waves/perturbations_hu32d46121cd3e380832f580e05114eadb_56904_b812826cb858e26963ba00d30e1ae60d.webp 400w,
+/post/2026/black-hole-gravitational-waves/perturbations_hu32d46121cd3e380832f580e05114eadb_56904_5b7d3d89df17ca7577933b3331e4724b.webp 760w,
+/post/2026/black-hole-gravitational-waves/perturbations_hu32d46121cd3e380832f580e05114eadb_56904_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/perturbations_hu32d46121cd3e380832f580e05114eadb_56904_b812826cb858e26963ba00d30e1ae60d.webp"
 width="760"
 height="570"
 loading="lazy" data-zoomable />&lt;/div>
@@ -165,10 +162,10 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Tail decay rates" srcset="
-/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_a327f61a2dc5702a9e3e1b1285a3fb69.webp 400w,
-/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_a0c0a194c4ba6e239a5f239a8ecf6315.webp 760w,
-/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
-src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/decay_rates_hu46ecaf269a046524936ab99253ea4119_102759_a327f61a2dc5702a9e3e1b1285a3fb69.webp"
+/post/2026/black-hole-gravitational-waves/decay_rates_hu62eb316102183d2e7d7b00f137a67674_105309_d070e993cb632d230df318fc7f8b0126.webp 400w,
+/post/2026/black-hole-gravitational-waves/decay_rates_hu62eb316102183d2e7d7b00f137a67674_105309_ad24c830d8ab4b5bc98a0183c5a66b82.webp 760w,
+/post/2026/black-hole-gravitational-waves/decay_rates_hu62eb316102183d2e7d7b00f137a67674_105309_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://anilzen.github.io/post/2026/black-hole-gravitational-waves/decay_rates_hu62eb316102183d2e7d7b00f137a67674_105309_d070e993cb632d230df318fc7f8b0126.webp"
 width="760"
 height="380"
 loading="lazy" data-zoomable />&lt;/div>
