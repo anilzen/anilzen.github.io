@@ -119,27 +119,29 @@ Having figured this out, why do we use $r_\ast$ in the first place? I mentioned 
 $$ G_\ast = \frac{d\rho}{dr_\ast} = \frac{dr}{dr_\ast} \frac{d\rho}{dr} =: f G, $$
 where we introduced $G:=d\rho/dr$. If we now consider $H_\ast$ also as a function of $r$ and transform directly to $\rho$, we can fully avoid the tortoise coordinate.
 
-There are clearly many choices for the compactification. A simple one that I like is this:
-$$ \frac{r}{2M} = \frac{\rho}{1-\rho} \quad \implies \quad G = \frac{(1-\rho)^2}{2M}. $$
-This maps the domain $r\in(2M,\infty)$ to $\rho\in(1/2,1)$. We can numerically include the boundary points because they are regular after the time transformation. The potential term becomes
-$$ \frac{V_\ell}{G_\ast} = \frac{V_\ell}{f G} = \frac{\ell(\ell+1)\rho - 3(1-\rho)}{2M \rho^3}. $$
-And the plot for $\ell=2, M=1$ is below.
+There are many possible radial compactifications. In Schwarzschild there is one particularly appealing choice:
+$$ \rho := f(r)=1-\frac{2M}{r} \implies r(\rho) = \frac{2M}{1-\rho}. $$
+With this, the exterior domain $r\in(2M,\infty)$ is mapped to $\rho\in(0,1)$. The inner boundary at $\rho=0$ is the event horizon, $r=2M$, and the outer boundary at $\rho\to 1$ is infinity, $r\to\infty$. The Jacobian reads
+$$G=\frac{d\rho}{dr} = \frac{d}{dr}\Bigl(1-\frac{2M}{r}\Bigr)=\frac{2M}{r^2} =\frac{(1-\rho)^2}{2M},$$
+The rescaled potential term becomes
+$$ \frac{V_\ell}{G_\ast}=\frac{\ell(\ell+1)-3 (1-\rho)}{2M}. $$
+This is *beautiful!* The potential varies only linearly with $\rho$. And the plot for $\ell=2, M=1$ is below.
 ![Rescaled gravitational potential](rescaled_potential.png)
-This is *beautiful!* Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. As a consequence, the peak of the *rescaled* potential is at the horizon, and it monotonically decreases from the strong field region towards infinity. We'll have no problem solving equations with such a simple term.
+Note that the compactification cancels the redshift factor $f$ from the original RWZ potential. And with this particular compactification, the *rescaled* potential is simply a linear function that barely varies over the entire domain. We'll have no problem solving equations with such a simple term.
 
 ### Time transformation
 The final remaining ingredient for our system \eqref{3} is the boost $H_\ast$. Again, there are many choices. Arguably, the simplest choice that bridges the horizon and infinity is the [minimal gauge](https://hyperboloid.al/post/minimal-gauge/). You can derive it by just requiring the proper behavior at both boundaries and regularity at infinity. Consider the $(t,r_\ast)$ block of the Schwarzschild metric:
 $$ ds^2_{t,r_\ast} = f \left(-dt^2 +dr_\ast^2\right). $$
 In- and outgoing null rays of this metric are $v=t+r_\ast$ and $u=t-r_\ast$. We want the coordinate $\tau$ to behave as $v$ toward the horizon, and as $u$ towards infinity. This implies $H_\ast\to 1$ as $r\to 2M$ and $H_\ast\to -1$ as $r\to\infty$. Further, we want conformal regularity at infinity for the transformed metric:
-$$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H d\tau dr_\ast + (1-H_\ast^2) dr_\ast^2\right). $$
-Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega=0$. Since $\Omega\sim r^{-1}$, we must satisfy as $r\to\infty$:
-$$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \frac{1}{r^2}, $$
+$$ ds^2_{\tau,r_\ast} = f \left(-d\tau^2 + 2 H_\ast d\tau dr_\ast + (1-H_\ast^2) dr_\ast^2\right). $$
+Conformal regularity means a finite limit for $\Omega^2 ds^2$ when $\Omega\sim 1/r \to 0$. With compactification, we have $dr_\ast \sim \Omega^{-2}d\rho$. Therefore, the regularity of the radial component under conformal compactification implies:
+$$ 1-H_\ast^2 = (1-H_\ast) (1 + H_\ast) \sim \Omega^2 \sim \frac{1}{r^2}, $$
 which means
 $$H_\ast = -1 + \frac{C}{r^2} + \mathcal{O}(r^{-3}), $$
 as $r\to\infty$. These conditions are true for all time transformations bridging between the future event horizon and future null infinity. By omitting the lower order terms above, and imposing the requirement $H_\ast(r=2M)=1$ gives us the boost function for the minimal gauge:
-$$ H_\ast = -1 + \frac{8M^2}{r^2}. $$
+$$ H_\ast = -1 + \frac{8M^2}{r^2} = -1 + 2(1-\rho)^2. $$
 In our compactifying coordinate $\rho$, the term that ensures the regularity of the compactified equation reads:
-$$ \frac{fG}{1-H_\ast^2} =  \frac{\rho^3}{8M}.$$
+$$ \frac{fG}{1-H_\ast^2} =  \frac{1}{8M(2-\rho)}.$$
 The minimal gauge leads to particularly simple expresions for the transformed system.
 
 ### The numerical solution
@@ -147,21 +149,16 @@ Let's wrap up. The choices for the compactification and time transformation abov
 \begin{equation}
 \begin{aligned}
 \partial_\tau u
-  &= \frac{\rho^{3}}{8M}\bigl(H_\ast\psi + \pi\bigr),\\\\[4pt]
+  &= \frac{1}{8M(2-\rho)}\bigl(H_\ast\psi + \pi\bigr),\\\\[4pt\]
 \partial_\tau \psi
-  &= \partial_\rho\left[\frac{\rho^{3}}{8M}\bigl(H_\ast\psi + \pi\bigr)\right],\\\\[4pt]
+  &= \partial_\rho\left[\frac{1}{8M(2-\rho)}\bigl(H_\ast\psi + \pi\bigr)\right],\\\\[4pt\]
 \partial_\tau \pi
-  &= \partial_\rho\left[\frac{\rho^{3}}{8M}\bigl(\psi + H_\ast\pi\bigr)\right]
-   +\frac{\ell(\ell+1)\rho - 3(1-\rho)}{2M\rho^{3}}u,
+  &= \partial_\rho\left[\frac{1}{8M(2-\rho)}\bigl(\psi + H_\ast\pi\bigr)\right]
+   +\frac{\ell(\ell+1) - 3(1-\rho)}{2M}u,
 \end{aligned}
 \end{equation}
-with
-\begin{equation}
-H_\ast
-= -1+\frac{8M^2}{r(\rho)^2}
-= -1 + \frac{2}{\rho^2}(1-\rho)^2
-\end{equation}
-The system doesn't need any boundary data by construction. We simply apply one-sided stencils at the boundaries as before. All we need now is to prescribe some initial data (typically a localized Gaussian) and run the [solver](https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c). The simulation in Colab takes about 30 seconds for $1000M$. I also included a different gauge condition based on constant mean curvature foliations (CMC) that's almost 4 times faster[^CMC]. For this case, the boost function is only slightly more complicated
+with $H_\ast=-1+2(1-\rho)^2$.
+The system doesn't need any boundary data by construction. We simply apply one-sided stencils at the boundaries as before. All we need now is to prescribe some initial data (typically a localized Gaussian) and run the [solver](https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c). The simulation in Colab takes about 30 seconds for $1000M$. I also included a different gauge condition based on constant mean curvature foliations (CMC) that's twice as fast[^CMC]. For this case, the boost function is only slightly more complicated
 $$ 
 H^{CMC}_\ast =  - \frac{J}{\sqrt{J^2+f r^4}}, \quad J = \frac{K r^3}{3}-C,
 $$
