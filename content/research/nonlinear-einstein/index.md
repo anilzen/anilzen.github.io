@@ -2,7 +2,8 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Nonlinear Einstein Equations for Gravitational Wave Astronomy"
-summary: ""
+summary: "Connecting numerical relativity to null infinity through hyperboloidal evolution and gravitational-wave extraction."
+lastmod: "2026-09-14"
 authors: []
 tags: []
 categories: []
@@ -29,10 +30,18 @@ image:
 slides: ""
 ---
 
-One of the most important open problems with the hyperboloidal method is its application to the nonlinear Einstein equations for gravitational wave astronomy. The problem is that the compactification introduces formally singular terms that are numerically unstable.
+Developing robust hyperboloidal evolutions of the nonlinear Einstein equations for gravitational-wave astronomy is a central goal of my research. Compactification introduces formally singular terms near null infinity, so the formulation and gauge choices must preserve regularity and numerical stability.
 
-I proposed an approach for the ["Hyperboloidal evolution with the Einstein equations"](/publication/zenginoglu-2008-einstein/) in 2008. The idea is to prescribe the conformal factor explicitly and choose a gauge that ensures the regularity of each of the formally singular terms. I had implemented this approach in spherical symmetry in my [thesis](/publication/zenginoglu-2007-conformal/) but the method was not sufficiently robust. I spent many years trying to improve the method but without success.
+I proposed an approach for the ["Hyperboloidal evolution with the Einstein equations"](/publication/2008-zenginoglu-hyperboloidal-einstein-evolution/) in 2008. The idea is to prescribe the conformal factor explicitly and choose a gauge that ensures the regularity of each of the formally singular terms. I had implemented this approach in spherical symmetry in my [thesis](/publication/2007-zenginoglu-conformal-numerical-relativity/) but the method was not sufficiently robust. I spent many years trying to improve the method but without success.
 
-In the recent years, Alex Vañó-Viñuales made [significant progress](https://arxiv.org/abs/2304.05384) on this problem. A related approach based on the [dual-frame formalism](https://arxiv.org/abs/1509.02071) is pursued by David Hilditch and collaborators.
+Work in the wider community includes Alex Vañó-Viñuales's [hyperboloidal black-hole evolutions in spherical symmetry](https://arxiv.org/abs/2304.05384) and David Hilditch's [dual-foliation formulations](https://arxiv.org/abs/1509.02071). Our [2025 topical collection](/publication/2025-hilditch-hyperboloidal-collection/) provides an overview of developments connecting mathematical relativity, numerical methods, and astrophysics.
 
-I still consider the application of hyperboloidal compactification to a common formulation of the nonlinear Einstein equations as the most important open problem in the field. My goal in this project is to contribute to the solution of this problem. While this is a high-risk project, a successful implementation would lead to a breakthrough in the numerical computation of astrophysically relevant spacetimes.
+## Recent results
+
+In [*Perturbative Hyperboloidal Extraction of Gravitational Waves in 3+1 Numerical Relativity*](/publication/2025-bernuzzi-hyperboloidal-extraction/) (*Physical Review D*, 2025), we use data from an interior numerical relativity simulation to drive a perturbative evolution reaching null infinity. This provides a practical connection between existing simulations and hyperboloidal wave extraction. The exterior propagation is perturbative and does not capture nonlinear propagation effects.
+
+Our study [*Late-time tails in nonlinear evolutions of merging black holes*](/publication/2024-de-amicis-late-time-tails/) (*Physical Review Letters*, 2025) identifies late-time gravitational-wave tails in fully nonlinear simulations and compares them with perturbative calculations. This comparison helps connect the asymptotic behavior predicted by perturbation theory with signals from nonlinear spacetimes.
+
+## Longer-term goal
+
+My goal is to contribute to hyperboloidal formulations that evolve the full nonlinear spacetime through to null infinity. This involves resolving questions of gauge choice, regularity, and stability while retaining the computational efficiency needed for astrophysical simulations.

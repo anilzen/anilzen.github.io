@@ -2,7 +2,7 @@
 active: true
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
-widget: featured
+widget: pages
 
 # This file represents a page section.
 headless: true
@@ -10,17 +10,14 @@ headless: true
 # Order that this section appears on the page.
 weight: 90
 
-title: Selected Publications
-subtitle: '<br>My work spans a wide range of topics including analysis of PDEs, gravitational waves, numerical relativity, perturbation theory, and computational methods. 
-<br>
-<br>
-Each paper on this list is selected from a different journal: Analysis & PDE, Physical Review Letters, Physical Review D, Physical Review X, Journal of Computational Physics, Nonlinearity, and Classical and Quantum Gravity.'
+title: Recent Publications
+subtitle: 'Recent journal articles and preprints on wave propagation, geometry, and computational methods.'
 
 content:
   # Page type to display. E.g. post, talk, publication...
   page_type: publication
   # Choose how much pages you would like to display (0 = all pages)
-  count: 10
+  count: 6
   # Choose how many pages you would like to offset by
   offset: 0
   # Page order: descending (desc) or ascending (asc) date.
@@ -32,6 +29,9 @@ content:
     publication_type: ''
     author: ''
     exclude_featured: false
+  archive:
+    enable: true
+    text: All publications
 design:
   # Choose a view for the listings:
   #   1 = List
@@ -40,8 +40,3 @@ design:
   #   4 = Citation (publication only)
   view: 4
 ---
-
-{{< callout note >}}
-[Click here](./publication/) for the full list.
-{{< /callout >}}
-

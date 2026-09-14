@@ -41,7 +41,8 @@ permalinks:
   tags: '/tag/:slug/'
   categories: '/category/:slug/'
   publication_types: '/publication-type/:slug/'
-disableAliases: true
+# Generate redirect pages for renamed content on GitHub Pages.
+disableAliases: false
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest] #, headers, redirects]
   section: [HTML, RSS]

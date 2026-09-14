@@ -1,37 +1,28 @@
 ---
-active: false
-# An instance of the Featured widget.
-# Documentation: https://wowchemy.com/docs/page-builder/
-widget: featured
+active: true
+widget: blank
 
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 80
+weight: 95
 
-title: Featured Publications
-subtitle: ""
-
-content:
-  # Page type to display. E.g. post, talk, publication...
-  page_type: publication
-  # Choose how many pages you would like to display (0 = all pages)
-  count: 0
-  # Filter on criteria
-  filters:
-    author: ""
-    category: ""
-    publication_type: ""
-    tag: ""
-  # Page order: descending (desc) or ascending (asc) date.
-  order: desc
+title: Selected Publications
+subtitle: "Three contributions to the geometry and computation of radiation at infinity."
 
 design:
-  # Choose a view for the listings:
-  #   1 = List
-  #   2 = Compact
-  #   3 = Card
-  #   4 = Citation (publication only)
-  view: 3
+  columns: '2'
 ---
+
+### [Hyperboloidal foliations and scri-fixing](/publication/2007-zenginoglu-hyperboloidal-scri-fixing/)
+
+*Classical and Quantum Gravity* (2008). Explicit constructions of coordinates that keep null infinity at a fixed location on the numerical grid in Minkowski, Schwarzschild, and Kerr spacetimes.
+
+### [Hyperboloidal layers for hyperbolic equations on unbounded domains](/publication/2010-zenginoglu-hyperboloidal-layers/)
+
+*Journal of Computational Physics* (2011). A layer method that brings infinity onto a finite grid, allowing wave equations to be solved without an artificial outer boundary.
+
+### [Null infinity waveforms from extreme-mass-ratio inspirals in Kerr spacetime](/publication/2011-zenginoglu-kerr-null-infinity-waveforms/)
+
+With Gaurav Khanna, *Physical Review X* (2011). Gravitational waveforms from inspirals around rotating black holes, computed directly at null infinity using hyperboloidal layers.

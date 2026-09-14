@@ -165,7 +165,7 @@ Dimensionless coordinates are similar to setting $M=1/2$.
 
 The metric is singular where $f(r)$ vanishes, at $r=1$. This surface is the [event horizon](https://en.wikipedia.org/wiki/Event_horizon), but the metric singularity is a coordinate artifact. There are regular coordinates across the event horizon, such as the [Gullstrand–Painlevé](https://en.wikipedia.org/wiki/Gullstrand%E2%80%93Painlev%C3%A9_coordinates) or the [Eddington–Finkelstein](https://en.wikipedia.org/wiki/Eddington%E2%80%93Finkelstein_coordinates) coordinates. In fact, we must use such regular coordinates to draw Penrose diagrams.
 
-Penrose diagrams for Schwarzschild spacetime are traditionally drawn using a compactification of [Kruskal coordinates](https://en.wikipedia.org/wiki/Kruskal%E2%80%93Szekeres_coordinates). Let's copy them from Wikipedia (for a derivation, see, for example, the Appendix of my [thesis](https://anilzen.github.io/publication/zenginoglu-2007-conformal/)):
+Penrose diagrams for Schwarzschild spacetime are traditionally drawn using a compactification of [Kruskal coordinates](https://en.wikipedia.org/wiki/Kruskal%E2%80%93Szekeres_coordinates). Let's copy them from Wikipedia (for a derivation, see, for example, the Appendix of my [thesis](https://anilzen.github.io/publication/2007-zenginoglu-conformal-numerical-relativity/)):
 $$ \tau = (r-1) e^r \sinh \tfrac{t}{2}, $$
 $$ \rho = (r-1) e^r \cosh \tfrac{t}{2}. $$
 The coordinates of the Penrose diagram are compactified along the null directions just as in the Minkowski case:
@@ -193,7 +193,7 @@ for i, t_val in enumerate(t_vals):
                delimiter=',', fmt='%f', header="R,T", comments="")
     print('{'+fn+'},')
 ```
-The Schwarzschild time slices intersect at the bifurcation sphere, $\mathcal{B}$, and at spatial infinity $i^0$. When you're interested in the behavior of fields near the black hole and far away from it (say, to study gravitational waves), it's [better](https://anilzen.github.io/publication/zenginoglu-2011-geometric/) to use non-intersecting time slices.
+The Schwarzschild time slices intersect at the bifurcation sphere, $\mathcal{B}$, and at spatial infinity $i^0$. When you're interested in the behavior of fields near the black hole and far away from it (say, to study gravitational waves), it's [better](https://anilzen.github.io/publication/2011-zenginoglu-geometric-perturbation-framework/) to use non-intersecting time slices.
 
 Most useful time functions are related to the Schwarzschild time by a "height" shift that depends only on the radial coordinate:
 $$ t \to t + h(r). $$

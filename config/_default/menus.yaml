@@ -7,6 +7,12 @@ main:
   - name: Home
     url: '#about'
     weight: 10
+  - name: Research
+    url: '/research/'
+    weight: 20
+  - name: Teaching & Leadership
+    url: '/teaching-and-leadership/'
+    weight: 25
   - name: Posts
     url: '#posts'
     weight: 30

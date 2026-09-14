@@ -1,6 +1,7 @@
 ---
 title: Community
-summary: Community-building activities such as [workshops](https://hyperboloid.al/event) and virtual seminars managed by the [community website](https://hyperboloid.al).
+summary: Workshops, the published topical collection, virtual seminars, and shared resources of the Hyperboloidal Research Network.
+lastmod: "2026-09-14"
 weight: 30
 show_date: false
 reading_time: false  # Show estimated reading time?
@@ -9,32 +10,30 @@ profile: false  # Show author profile?
 comments: false  # Show comments?
 ---
 
-A major objective that this award enables is building a community of researchers working with asymptotic methods in relativity. This is a relatively small community of geographically distributed but thematically focused researchers. 
+*Last updated: September 14, 2026.*
 
-During the years that I was out of active research, I worked as a coordinator of a similarly distributed research network in mathematical sciences on kinetic theory called [KI-Net](https://www.math.umd.edu/~tadmor/ki_net/). With this award, I will employ skills that I acquired during that time to build a community in my own field of research.
+The award supports my work building the [Hyperboloidal Research Network](https://hyperboloid.al/), a geographically distributed community working on hyperboloidal and asymptotic methods in relativity. This is a joint effort with David Hilditch, Rodrigo Panosso Macedo, and Alex Vañó-Viñuales.
 
-This is a joint effort with David Hilditch, Rodrigo Panosso Macedo, and Alex Vaño-Viñuales.
-
-## Website
-The community uses the aptly named website [hyperboloid.al](https://hyperboloid.al). All our events and activities are managed through this website. The website uses the [Wowchemy](https://wowchemy.com/) research group theme; its source code is available through [my GitHub page](https://github.com/anilzen/hyperboloid.al).
+I draw on my earlier experience coordinating [KI-Net](https://www.math.umd.edu/~tadmor/ki_net/), a research network in kinetic theory. Our community website brings together researchers, events, and shared learning materials.
 
 ## Workshops
- The inaugural event of the community was the workshop  [Infinity on a Gridshell](https://hyperboloid.al/event/copenhagen-23/), held in July 2023 at the [Niels Bohr Institute](https://en.wikipedia.org/wiki/Niels_Bohr_Institute) in Copenhagen. The [speakers](https://hyperboloid.al/copenhagen-23-talks/) covered a wide variety of topics including black-hole perturbation theory, mathematical analysis of wave equations, and nonlinear Einstein equations. The workshop was a great success and we are planning to hold another one in 2024.
+We have organized three workshops bringing together mathematical relativity, numerical relativity, and gravitational-wave physics:
+
+- [Infinity on a Gridshell](https://hyperboloid.al/event/copenhagen-23/), July 10–13, 2023, at the Niels Bohr Institute in Copenhagen. The inaugural workshop covered black-hole perturbation theory, analysis of wave equations, and nonlinear Einstein equations.
+- [Virtual Infinity Workshop](https://hyperboloid.al/event/virtual-24/), July 1–2, 2024, held online, with short research talks and discussions aimed at developing collaborations.
+- [Hyperboloidal Foliations and their Application](https://hyperboloid.al/event/vienna-26/), January 12–16, 2026, at the Erwin Schrödinger Institute in Vienna, connecting geometric analysis with applications to gravitational radiation.
 
 ## Topical Collection
-We are planning to publish a topical collection in the journal General Relativity and Gravitation on the topic titled [_Hyperboloidal foliations in the era of gravitational-wave astronomy: from mathematical relativity to astrophysics_](https://link.springer.com/collections/jjghbiafhc). The guest editors for the collection are David Hilditch, Rodrigo Panosso Macedo, Alex Vañó Viñuales, and me. The collection will be open to all researchers working with hyperboloidal foliations. Submissions are accepted starting August 31, 2023.
+Our topical collection in *General Relativity and Gravitation*, [*Hyperboloidal foliations in the era of gravitational-wave astronomy: from mathematical relativity to astrophysics*](https://link.springer.com/collections/jjghbiafhc), contains **17 published articles**, including our [editorial](/publication/2025-hilditch-hyperboloidal-collection/) published on September 12, 2025. The collection is now closed for submissions.
 
-For more information, please see the [collection website](https://link.springer.com/collections/jjghbiafhc).
+David Hilditch, Rodrigo Panosso Macedo, Alex Vañó-Viñuales, and I served as guest editors. The collection grew out of the Copenhagen workshop and includes contributions from the wider research community.
 
 ## Virtual Infinity Seminars
-We run a monthly series of virtual seminars that started in October 2023. More information, along with links to slides and recordings of the seminars,is on our [website](https://hyperboloid.al/event).
-
-
-## YouTube Channel
-Our YouTube channel hosts recordings of the infinity seminars. In the future, we plan to publish recordings of workshop seminars and introductory tutorials covering basics of hyperboloidal compactification and numerical methods.
+The Virtual Infinity Seminar series began in October 2023 and continues to bring researchers together online. The [seminar archive and schedule](https://hyperboloid.al/event/) provide links to individual talks, slides, and video recordings, including seminars from 2024, 2025, and 2026.
 
 ## Newsletter
-We have a newsletter called [Hyperbolic Times](hyperboloidal.substack.com) where we share monthly developments in our research area, including publications. We also announce the monthly seminars through this newsletter.
+Our newsletter, [Hyperbolic Times](https://hyperboloidal.substack.com/), shares research developments, publications, and seminar announcements.
 
-## Code repository
-To make it easier for students entering the field, we will have publicly available codes that demonstrate the basics of hyperboloidal compactification for solving wave equations. The repository will contain codes for solving wave equations using various methods including frequency domain, time domain, pseudo-spectral, finite difference, and finite element, among others.
+## Shared resources
+
+The network's [resource page](https://hyperboloid.al/resources/) links to tutorials and working wave-equation solvers. Our online book [*Hyperboloidal Compactification in NGSolve*](https://markuswess.github.io/hypFEM/intro.html) and its [public repository](https://github.com/markuswess/hypFEM) provide finite element examples. The [education page](/nsf-award-2309084/education/) collects these materials alongside browser-based notebooks for wave propagation and black-hole perturbations.

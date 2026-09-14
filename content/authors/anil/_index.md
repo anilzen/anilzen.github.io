@@ -6,7 +6,7 @@ title: Anıl Zenginoğlu
 superuser: true
 
 # Role/position/tagline
-role: Assistant Research Scientist
+role: Faculty Director, Quantum Computing MS Program
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -16,7 +16,7 @@ organizations:
   url: https://umd.edu
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research scientist and administrator exploring spacetime infinity.
+bio: Research scientist and Faculty Director of UMD's Quantum Computing MS Program, exploring spacetime infinity.
 
 # Interests to show in About widget
 interests:
@@ -81,11 +81,11 @@ email: "anil@umd.edu"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I'm a researcher and administrator at the [Institute for Physical Science & Technology](https://ipst.umd.edu), [University of Maryland](https://umd.edu). Here, you'll find information about my [research](publication/) and [thoughts](post/). 
+I'm the **Faculty Director of the [Quantum Computing MS Program](https://cmns.umd.edu/graduate/science-academy/quantum-computing/quantum-computing-master-science)** at the [University of Maryland](https://umd.edu) and an Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu). Here, you'll find information about my [research](/research/) and [thoughts](/post/).
 
-My [research](publication/) is about numerical computations of waves in infinite domains. Much of my work concerns gravitational waves, but I also apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography. 
+My [research](/research/) is about numerical computations of waves in infinite domains. Much of my work concerns gravitational waves, but I also apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography.
 
-I regard science administration as the highest form of public service. <!-- and enjoy bringing researchers together in thematically focused but geographically distributed networks --> My administrative work started in 2014 with an NSF-funded research network on kinetic theory called [Ki-Net](https://www.ki-net.umd.edu/). Throughout my administrative journey, I took on various roles such as Coordinator, Community Manager, IT Manager, Acting Business Director, and Graduate Program Manager. Currently, I serve the [Maryland Quantum-Thermodynamics Hub](https://qtd-hub.umd.edu), the [Biophysics](https://ipst.umd.edu/graduate-programs/biophysics) and [Chemical Physics](https://ipst.umd.edu/graduate-programs/chemical-physics) Graduate Programs, and the [Burgers Program in Fluid Dynamics](https://ipst.umd.edu/research/burgers).
+I regard science administration as the highest form of public service. Through my [teaching and leadership](/teaching-and-leadership/), I connect graduate education, student mentoring, and scientific communities. I also help organize conferences and workshops, including the [Quantum Biotechnology Conference](https://qbt26.umd.edu/) and [Envisioning Future of AI and Chemistry](https://ai-chem-26.umd.edu/).
 
 <!-- the [Data Science Education Community of Practice](https://dsecop.org)
 I served at the [University Senate](https://www.senate.umd.edu/)

@@ -1,6 +1,7 @@
 ---
 title: Hyperbolic Geometry and Gravitational Waves
-summary: High-level description of my activities for the NSF Award \#2309084.
+summary: Research results, open educational resources, and community activities supported by NSF Award 2309084.
+lastmod: "2026-09-14"
 
 show_date: false
 reading_time: false  # Show estimated reading time?
@@ -14,18 +15,28 @@ header:
   image: ""
 ---
 
-This page presents my activity and plans supported by the NSF Award [#2309084](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2309084).
+This page collects research results, educational resources, and community activities supported by NSF Award [#2309084: Hyperbolic Geometry and Gravitational Waves](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2309084).
+
+**Award period:** May 1, 2023–April 30, 2027. **Principal investigator:** Anıl Zenginoğlu, University of Maryland.
+
+*Last updated: September 14, 2026.*
 
 ## Goal
 
-The goal of the award is to investigate the role of **hyperbolic geometry** in relativity (and related areas) with a focus on the computation of **gravitational waves** from astrophysical sources.
+The award investigates the role of **hyperbolic geometry** in relativity and related areas, with a focus on computing **gravitational waves** from astrophysical sources.
 
-This is a fairly ambitious project, as the reviewers have stated. The [research problems](../research/) include very distinct areas such as black-hole perturbations, nonlinear Einstein equations, applied mathematics for engineering applications, and even quantum gravity.
+The common thread is the use of hyperboloidal surfaces: spacelike surfaces that approach the paths of outgoing light rays at large distances. These surfaces allow us to represent radiation all the way to null infinity, where an idealized distant observer measures gravitational waves. Hyperboloidal compactification brings this infinite domain onto a finite computational grid and avoids imposing an artificial outer boundary.
 
-The common thread is the use of hyperbolic geometry to model the space extending from a source of radiation to a far away observer. The hyperbolic nature of this space is a consequence of the finite speed of light. Incorporating this property of space in numerical computations has resulted in dramatic improvements over the past 15 years. In this award, I will combine mathematical analysis, numerical experiments, and physical insight to explore the applications of hyperbolic geometry in diverse areas of physics and technology.
+I combine mathematical analysis, numerical experiments, and physical insight to study black-hole perturbations, nonlinear Einstein equations, and scattering problems in physics and engineering.
+
+## Research highlights
+
+- [Late-time tails in merging black holes](/publication/2024-de-amicis-late-time-tails/): evidence for late-time gravitational-wave tails in fully nonlinear simulations, published in *Physical Review Letters* in 2025.
+- [Bridging time across null horizons](/publication/2025-zenginoglu-bridging-horizons/): a unified treatment of time coordinates across event horizons, null infinity, and cosmological horizons, published in *General Relativity and Gravitation* in 2025.
+- [A null infinity layer for wave scattering](/publication/2021-zenginoglu-null-infinity-layer/): a method for computing scattering and far-field patterns on compactified domains, published in *SIAM Journal on Scientific Computing* in 2026.
+
+See the [award publications](/category/nsf-award/) for the full list of associated papers.
 
 ## Activities
 
-I divide my activities for this award into three categories.
-
-<p>
+The following pages describe the research program, freely available learning materials—including our online book [*Hyperboloidal Compactification in NGSolve*](https://markuswess.github.io/hypFEM/intro.html)—and the workshops, seminars, and publications of the Hyperboloidal Research Network.

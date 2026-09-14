@@ -2,7 +2,8 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Hyperboloidal Holography"
-summary: ""
+summary: "Exploring the role of hyperboloidal geometry and null boundaries in the description of quantum fields."
+lastmod: "2026-09-14"
 authors: []
 tags: []
 categories: []
@@ -46,4 +47,6 @@ In such a scenario, the idea that quantum fields are a bunch of harmonic oscilla
 
 ### The holographic principle
 
-The spatial geometry of the Minkowski metric in hyperboloidal coordinates matches _exactly_ the spatial geometry of the Anti-de Sitter metric in standard coordinates. I wrote about this observation two years ago in a [blog post](/post/hyperboloidal-holography/). Back then, I thought this was a known curiosity, but there seem to be other advantages of this approach to holography. I'm now exploring this idea with the help of the NSF award. It's more speculative than my usual work, but it's been fun to venture into this unfamiliar territory.
+The spatial geometry of the Minkowski metric in hyperboloidal coordinates matches _exactly_ the spatial geometry of the Anti-de Sitter metric in standard coordinates. I discussed this observation in a [2021 blog post](/post/hyperboloidal-holography/). This motivates an exploratory question: can hyperboloidal surfaces provide a useful setting for holography in isolated systems?
+
+My later papers [*Hyperbolic times in Minkowski space*](/publication/2024-zenginoglu-hyperbolic-times/) (*American Journal of Physics*, 2024) and [*Bridging time across null horizons*](/publication/2025-zenginoglu-bridging-horizons/) (*General Relativity and Gravitation*, 2025) develop the underlying geometry of time functions and null boundaries. Establishing a connection to a quantum-field description or a holographic duality remains an open direction.

@@ -1,6 +1,7 @@
 ---
 title: "Relativistic Perturbations"
-summary: "Applications of hyperboloidal foliations to relativistic perturbations of stars and black holes."
+summary: "Black-hole oscillations, gravitational-wave extraction, and late-time tails using hyperboloidal methods."
+lastmod: "2026-09-14"
 tags: []
 categories: []
 show_date: false
@@ -26,10 +27,18 @@ image:
 slides: ""
 ---
 
-Historically, hyperboloidal compactification has been mainly considered by mathematical relativists. After the explicit construction of [hyperboloidal scri-fixing](/content/publication/zenginoğlu-2008-hyperboloidal/) and the demonstration of its benefits for [scalar](/content/publication/zenginoğlu-2008-tail/) and [gravitational](/content/publication/zenginoğlu-2009-gravitational/) perturbations, the method has become a useful tool with applications to many areas of black-hole perturbation theory, including the self-force and effective-one-body approaches to the binary black-hole problem.
+Historically, hyperboloidal compactification has been mainly considered by mathematical relativists. After the explicit construction of [hyperboloidal scri-fixing](/publication/2007-zenginoglu-hyperboloidal-scri-fixing/) and the demonstration of its benefits for [scalar](/publication/2008-zenginoglu-scalar-yang-mills-tails/) and [gravitational](/publication/2008-zenginoglu-schwarzschild-perturbations/) perturbations, the method has become a useful tool with applications to many areas of black-hole perturbation theory, including the self-force and effective-one-body approaches to the binary black-hole problem.
 
-This project includes the following topics:
-- **Astroseismology:** Extend the applications of hyperboloidal foliations to stellar oscillations.
-- **Cosmological perturbations:** Investigate relativistic perturbations of asymptotically de Sitter spacetimes using hyperboloidal methods.
-- **Time-symmetric methods:** Explore the application of unconditionally stable time-symmetric integrators to long-time evolution of black-hole perturbations.
-- **Massive fields at null infinity:** Study the asymptotic behavior of massive scalar fields near null infinity by using hyperboloidal compactification.
+## Recent results
+
+- **Black-hole oscillations.** With Rodrigo Panosso Macedo, I reviewed the geometric regularization of quasinormal modes in [*Hyperboloidal approach to quasinormal modes*](/publication/2024-macedo-hyperboloidal-quasinormal-modes/) (*Frontiers in Physics*, 2025).
+- **Gravitational-wave extraction.** [*Perturbative Hyperboloidal Extraction of Gravitational Waves in 3+1 Numerical Relativity*](/publication/2025-bernuzzi-hyperboloidal-extraction/) (*Physical Review D*, 2025) uses data from a numerical relativity simulation to drive a perturbative evolution extending to null infinity.
+- **Late-time tails.** Our collaborative study [*Late-time tails in nonlinear evolutions of merging black holes*](/publication/2024-de-amicis-late-time-tails/) (*Physical Review Letters*, 2025) identifies tails in fully nonlinear simulations and compares them with perturbative calculations.
+
+Our [work on symmetric integration of the Teukolsky equation](/publication/2023-markakis-symmetric-teukolsky-integration/) remains available as a preprint. It explores time integration for long evolutions of black-hole perturbations.
+
+## Open directions
+
+The broader program includes stellar oscillations, perturbations of cosmological spacetimes, and the asymptotic behavior of massive fields. These problems require adapting both the geometry of the slices and the numerical treatment to the fields and boundaries involved.
+
+For an introduction with executable code, see [*Banging a black hole*](/post/2026/black-hole-gravitational-waves/), which computes gravitational waves from a perturbed Schwarzschild black hole.

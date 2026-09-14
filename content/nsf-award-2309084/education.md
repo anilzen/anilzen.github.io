@@ -1,6 +1,7 @@
 ---
 title: Education
-summary: Educational activities including a summer school and student training.
+summary: Student training, an online book, and executable tutorials on hyperboloidal methods and wave propagation.
+lastmod: "2026-09-14"
 weight: 20
 show_date: false
 reading_time: false  # Show estimated reading time?
@@ -9,21 +10,23 @@ profile: false  # Show author profile?
 comments: false  # Show comments?
 ---
 
-The educational aspects of the award revolve around three objectives:
-- Develop a summer school on advanced numerical methods for solving wave equations using hyperboloidal foliations.
-- Train a student in the interdisciplinary arts of numerical relativity and applied mathematics.
-- Explain basic ideas of hyperboloidal methods and hyperbolic geometry through blog posts.
+*Last updated: September 14, 2026.*
 
-## Summer School
+The educational work connects numerical relativity with applied mathematics through freely available explanations, an online book, and executable examples. These resources support independent study and student training in the geometry and computation of wave propagation.
 
-The summer school is an online, week-long event that I will hold in July 2025. The primary target for the summer school are advanced students in STEM programs in the [Washington–Baltimore Area](https://en.wikipedia.org/wiki/Washington%E2%80%93Baltimore_combined_statistical_area). I will particularly advertise the school in community colleges but it will be open to all interested students, at no cost, and available online. The school will be organized around a series of lectures, practical demonstrations, and hands-on coding sessions.
+## Online book
 
-## Student Training
+With Markus Wess, I have written [*Hyperboloidal Compactification in NGSolve*](https://markuswess.github.io/hypFEM/intro.html), an online book introducing the implementation of hyperboloidal compactification in the finite element library NGSolve. It develops the scattering problem, compactification of the far field, and the weak formulation, with executable examples in both the frequency and time domains.
 
-The award will partially support a graduate student. The student will pick a research topic from the areas supported by the award. They will present their work at conferences, participate in the summer school, and publish their results in peer-reviewed journals.
+The book is intended for readers already familiar with finite element methods for Helmholtz or wave equations. Its [source code and examples](https://github.com/markuswess/hypFEM) are publicly available. For the accompanying derivation and numerical analysis, see our preprint [*Finite Elements for Helmholtz Scattering with Infinity as a Computational Boundary*](/publication/2026-wess-helmholtz-finite-elements/).
 
-<!-- Ekrem Dağlıkoca is a PhD student in the [AMSC Program](https://amsc.umd.edu/) at the [University of Maryland](https://umd.edu). He is working with me on the computation of black-hole perturbations in cosmological spacetimes. He is expected to graduate in 2028. -->
+## Tutorials and notebooks
 
-## Blog posts
+- [How to solve wave equations on unbounded domains](/post/2023/waves-on-unbounded-domains/) introduces hyperboloidal compactification through the one-dimensional wave equation. Its [Google Colab notebook](https://colab.research.google.com/drive/1w-cmd1UEWqQ6Bu1rHnfASp1ue7eCPLl4?usp=sharing) lets readers run and modify the examples in a browser.
+- [Banging a black hole](/post/2026/black-hole-gravitational-waves/) (2026) extends this approach to gravitational waves from a perturbed Schwarzschild black hole, with an accompanying [Google Colab notebook](https://colab.research.google.com/drive/1ii9zyHE9MlaOW4e9K1IBGPSPQzxltO7c).
 
-I publish [blog posts](/tag/hyperboloidal/) explaining hyperboloidal methods and hyperbolic geometry in general relativity and beyond. The posts are written at a level that is meant to be accessible to a beginning graduate student. 
+Further [blog posts on hyperboloidal methods](/tag/hyperboloidal/) explain the underlying geometry at a level intended for beginning graduate students. Together, these materials provide a route from simple wave equations to black-hole perturbations and finite element scattering calculations.
+
+## Student training
+
+The grant has supported two students: **Ekrem Demirboğa** and **Govind Arun Kumar**. Student training connects numerical relativity with applied mathematics and scientific computing.

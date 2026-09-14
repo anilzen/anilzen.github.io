@@ -55,7 +55,7 @@ Perturbations of a black hole go through an oscillatory period, and subsequently
 
 We are clearly a finite distance away from the black hole, so the intuitive answer is that we would measure the finite distance rate. However, the correct answer is the infinity rate.
 
-Below is a figure from a [paper of mine]({{< relref "/publication/zenginoğlu-2008-tail" >}}) where I studied various decay rates. The figure shows the evolution of the decay rate in time for various distances to the black hole.
+Below is a figure from a [paper of mine]({{< relref "/publication/2008-zenginoglu-scalar-yang-mills-tails" >}}) where I studied various decay rates. The figure shows the evolution of the decay rate in time for various distances to the black hole.
 
 ![Decay rates by distance](featured.png "Decay rates in time at various distances from the source.")
 
