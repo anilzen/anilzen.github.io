@@ -81,7 +81,7 @@ email: "anil@umd.edu"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I'm the **Faculty Director of the [Quantum Computing MS Program](https://cmns.umd.edu/graduate/science-academy/quantum-computing/quantum-computing-master-science)** at the [University of Maryland](https://umd.edu) and an Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu). Here, you'll find information about my [research](/research/) and [thoughts](/post/).
+I'm an Assistant Research Scientist at the [Institute for Physical Science & Technology](https://ipst.umd.edu) and currently serving as the Faculty Director of the [Quantum Computing MS Program](https://cmns.umd.edu/graduate/science-academy/quantum-computing/quantum-computing-master-science) at the [University of Maryland](https://umd.edu). Here, you'll find information about my [research](/research/) and [thoughts](/post/).
 
 My [research](/research/) is about numerical computations of waves in infinite domains. Much of my work concerns gravitational waves, but I also apply relativistic methods to nonrelativistic problems. Lately, I've been interested in hyperbolic geometry as it appears in many areas of science, such as special relativity, black holes, quantum gravity, machine learning, biology, number theory, and oceanography.
 
